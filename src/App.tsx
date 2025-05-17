@@ -101,13 +101,7 @@ function App() {
   </div>
 </section>
 
-      <section className="quote-section">
-        <blockquote>
-          <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
-        </blockquote>
-      </section>
-
-      <section className="newest-classmates">
+<section className="newest-classmates">
         <h2>Newest Classmates Added</h2>
         <div className="classmate-grid">
           <div className="classmate-card">
@@ -132,8 +126,14 @@ function App() {
           </div>
         </div>
       </section>
-
-      <section className="info-cards">
+ 
+<section className="quote-section">
+        <blockquote>
+          <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
+        </blockquote>
+      </section>
+      
+ <section className="info-cards">
         <div className="card">
           <h3>Honor a Classmate</h3>
           <p>Share stories and moments that celebrate the lives of those we've lost.</p>
