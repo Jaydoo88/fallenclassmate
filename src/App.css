@@ -31,26 +31,31 @@ body {
   white-space: nowrap;
 }
 
-.cap-pattern {
+/* Horizontal row of caps */
+.cap-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
   font-size: 20px;
-  line-height: 1.1;
+  margin-bottom: 4px;
 }
 
-.cap-pattern span {
+.cap-row span {
   display: inline-block;
+  transition: transform 0.3s;
 }
 
-.indent-1 {
-  padding-left: 10px;
+/* Create visual curve */
+.offset-1 {
+  margin-top: 6px;
 }
 
-.indent-2 {
-  padding-left: 20px;
+.offset-2 {
+  margin-top: 12px;
 }
 
+/* Fade-in effect left to right */
 .fade-1 { opacity: 0.2; }
 .fade-2 { opacity: 0.4; }
 .fade-3 { opacity: 0.6; }
