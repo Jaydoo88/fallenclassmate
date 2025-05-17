@@ -1,60 +1,4 @@
-# Re-create the files after code execution reset
-import os
-import shutil
-
-# Define destination paths
-assets_folder = "/mnt/data/assets"
-os.makedirs(assets_folder, exist_ok=True)
-hero_source_path = "/mnt/data/shutterstock_664197991.jpg"
-hero_dest_path = os.path.join(assets_folder, "hero.jpg")
-
-# Copy hero image
-shutil.copy(hero_source_path, hero_dest_path)
-
-# Prepare App.tsx content
-app_tsx_content = """import './App.css';
-import Logo from './assets/logo.png';
-
-function App() {
-  return (
-    <>
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-          <span>FallenClassmate</span>
-        </div>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Find School</a>
-          <a href="#">Create Memorial</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
-
-      <section className="hero-image">
-        <div className="hero-overlay">
-          <h1>Never Forget</h1>
-          <p>A place to honor and remember classmates who have passed, from every school and every era.</p>
-          <div className="hero-buttons">
-            <a className="button primary" href="#">Find Your School</a>
-            <a className="button secondary" href="#">Create Memorial</a>
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate &mdash; Never Forget</p>
-      </footer>
-    </>
-  );
-}
-
-export default App;
-"""
-
-# Prepare App.css content
-app_css_content = """@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Roboto&display=swap');
 
 body {
   margin: 0;
@@ -153,15 +97,3 @@ body {
   padding: 1rem;
   color: #333;
 }
-"""
-
-# Save files
-tsx_path = "/mnt/data/App.tsx"
-css_path = "/mnt/data/App.css"
-with open(tsx_path, "w") as f:
-    f.write(app_tsx_content)
-
-with open(css_path, "w") as f:
-    f.write(app_css_content)
-
-tsx_path, css_path, hero_dest_path
