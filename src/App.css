@@ -36,31 +36,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 8px;
-  font-size: 20px;
-  margin-bottom: 4px;
+  gap: 6px;
+  font-size: 18px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
 }
 
-.cap-row span {
-  display: inline-block;
-  transition: transform 0.3s;
+/* Vertical offsets for S-curve */
+.offset-0 {
+  margin-top: 0;
 }
-
-/* Create visual curve */
 .offset-1 {
   margin-top: 6px;
 }
-
 .offset-2 {
   margin-top: 12px;
 }
 
-/* Fade-in effect left to right */
-.fade-1 { opacity: 0.2; }
-.fade-2 { opacity: 0.4; }
-.fade-3 { opacity: 0.6; }
-.fade-4 { opacity: 0.8; }
-.fade-5 { opacity: 1; }
+/* Gradual fade from left to right */
+.fade-1  { opacity: 0.1; }
+.fade-2  { opacity: 0.15; }
+.fade-3  { opacity: 0.2; }
+.fade-4  { opacity: 0.3; }
+.fade-5  { opacity: 0.4; }
+.fade-6  { opacity: 0.5; }
+.fade-7  { opacity: 0.6; }
+.fade-8  { opacity: 0.7; }
+.fade-9  { opacity: 0.8; }
+.fade-10 { opacity: 0.9; }
+.fade-11 { opacity: 1.0; }
+.fade-12 { opacity: 0.9; }
+.fade-13 { opacity: 0.8; }
+.fade-14 { opacity: 0.6; }
+.fade-15 { opacity: 0.4; }
 
 .school-badge small {
   font-size: 0.8em;
