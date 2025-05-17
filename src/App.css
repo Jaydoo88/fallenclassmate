@@ -5,29 +5,38 @@ body {
   color: #333;
 }
 
-/* LOGO BAR */
-.logo-bar {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  flex-wrap: wrap;
+/* ========== SHARED LAYOUT CONTAINER ========== */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* LEFT LOGO */
+/* ========== LOGO BAR & HEADER ========== */
+.logo-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 0;
+  background-color: white;
+}
+
+/* LOGO */
 .logo-left img {
   height: 90px;
   max-width: 100%;
 }
 
-/* CENTER SCHOOL BADGE (horizontal caps) */
+/* CAP ROW WRAPPER */
 .school-badge-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* SCHOOL BADGE INNER */
 .school-badge {
   display: flex;
   flex-direction: column;
@@ -35,28 +44,25 @@ body {
   max-width: 100%;
 }
 
-/* Extended horizontal cap row */
+/* Extended cap row */
 .cap-row {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 6px;
   flex-wrap: nowrap;
   font-size: 18px;
-  gap: 6px;
-  padding: 0 24px;
-  min-width: 700px; /* Makes it wider than the nav */
+  padding: 0;
 }
 
 .cap-row span {
   display: inline-block;
 }
 
-/* S-curve shape */
 .offset-0 { margin-top: 0; }
 .offset-1 { margin-top: 6px; }
 .offset-2 { margin-top: 12px; }
 
-/* Fading effect */
 .fade-1  { opacity: 0.1; }
 .fade-2  { opacity: 0.15; }
 .fade-3  { opacity: 0.2; }
@@ -124,18 +130,16 @@ body {
   padding: 8px;
 }
 
-/* NAVIGATION */
+/* NAVIGATION BAR */
 .navbar {
-  display: flex;
-  justify-content: center;
   background-color: #3b9996;
   color: white;
-  padding: 12px 24px;
-  transition: max-height 0.3s ease;
+  padding: 12px 0;
 }
 
 .navbar nav {
   display: flex;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -239,7 +243,6 @@ body {
 
 .newest-classmates h2 {
   font-size: 1.8em;
-  color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -318,11 +321,16 @@ body {
     display: block;
   }
 
-  .navbar {
+  .navbar nav {
     flex-direction: column;
-    overflow: hidden;
-    max-height: 0;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .navbar {
     padding: 0 24px;
+    max-height: 0;
+    overflow: hidden;
   }
 
   .navbar.open {
@@ -330,27 +338,20 @@ body {
     padding: 12px 24px;
   }
 
-  .navbar nav {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
   .logo-bar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
+  }
+
+  .cap-row {
+    flex-wrap: wrap;
+    font-size: 16px;
+    justify-content: center;
   }
 
   .school-badge-wrapper {
     width: 100%;
     justify-content: center;
-  }
-
-  .cap-row {
-    min-width: unset;
-    flex-wrap: wrap;
-    font-size: 16px;
   }
 
   .search-container {
