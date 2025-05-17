@@ -39,7 +39,7 @@ body {
 
 .hero-image {
   background: url('./assets/hero.jpg') center/cover no-repeat;
-  height: 90vh;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(64, 160, 160, 0.95); /* Match navbar color */
   padding: 3rem;
   text-align: center;
   color: white;
@@ -57,12 +57,12 @@ body {
 
 .hero-overlay h1 {
   font-family: 'Lora', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-overlay p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -74,21 +74,16 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-}
-
-.button.primary {
-  background-color: #80c0c0;
-  color: black;
-}
-
-.button.secondary {
-  background-color: #ffffff;
+  background-color: white;
   color: #40a0a0;
-  border: 1px solid #40a0a0;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
 }
 
-.button:hover {
-  opacity: 0.9;
+.hero-buttons .button:hover {
+  background-color: #f0f0f0;
+  color: #208080;
+  border-color: #208080;
 }
 
 .footer {
