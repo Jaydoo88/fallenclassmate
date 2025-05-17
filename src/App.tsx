@@ -25,15 +25,15 @@ function App() {
           </div>
 
           <div className="school-badge">
-            <div className="cap-pattern">
-              <span className="fade-1">🎓</span>
-              <span className="fade-2 indent-1">🎓</span>
-              <span className="fade-3 indent-2">🎓</span>
-              <span className="fade-4 indent-1">🎓</span>
-              <span className="fade-5">🎓</span>
-            </div>
-            <small>Honoring Every School, Every Era</small>
-          </div>
+  <div className="cap-row">
+    <span className="fade-1 offset-2">🎓</span>
+    <span className="fade-2 offset-1">🎓</span>
+    <span className="fade-3">🎓</span>
+    <span className="fade-4 offset-1">🎓</span>
+    <span className="fade-5 offset-2">🎓</span>
+  </div>
+  <small>Honoring Every School, Every Era</small>
+</div>
 
           <div className="search-container">
             <input
