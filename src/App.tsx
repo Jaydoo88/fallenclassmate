@@ -18,75 +18,59 @@ function App() {
 
   return (
     <>
-      <header>
+<header>
   <div className="logo-bar">
-  <div className="logo-section">
-    <img src={Logo} alt="FallenClassmate Logo" />
-  </div>
+    <div className="logo-section">
+      <img src={Logo} alt="FallenClassmate Logo" />
+    </div>
 
-  <div className="center-section">
-    <div className="cap-row">
-      {/* 15 cap spans go here */}
-      <span className="fade-1 offset-2">🎓</span>
-      <span className="fade-2 offset-1">🎓</span>
-      <span className="fade-3 offset-0">🎓</span>
-      <span className="fade-4 offset-1">🎓</span>
-      <span className="fade-5 offset-2">🎓</span>
-      <span className="fade-6 offset-1">🎓</span>
-      <span className="fade-7 offset-0">🎓</span>
-      <span className="fade-8 offset-1">🎓</span>
-      <span className="fade-9 offset-2">🎓</span>
-      <span className="fade-10 offset-1">🎓</span>
-      <span className="fade-11 offset-0">🎓</span>
-      <span className="fade-12 offset-1">🎓</span>
-      <span className="fade-13 offset-2">🎓</span>
-      <span className="fade-14 offset-1">🎓</span>
-      <span className="fade-15 offset-0">🎓</span>
+    <div className="center-section">
+      <div className="cap-row">
+        <span className="fade-1 offset-2">🎓</span>
+        <span className="fade-2 offset-1">🎓</span>
+        <span className="fade-3 offset-0">🎓</span>
+        <span className="fade-4 offset-1">🎓</span>
+        <span className="fade-5 offset-2">🎓</span>
+        <span className="fade-6 offset-1">🎓</span>
+        <span className="fade-7 offset-0">🎓</span>
+        <span className="fade-8 offset-1">🎓</span>
+        <span className="fade-9 offset-2">🎓</span>
+        <span className="fade-10 offset-1">🎓</span>
+        <span className="fade-11 offset-0">🎓</span>
+        <span className="fade-12 offset-1">🎓</span>
+        <span className="fade-13 offset-2">🎓</span>
+        <span className="fade-14 offset-1">🎓</span>
+        <span className="fade-15 offset-0">🎓</span>
+      </div>
+    </div>
+
+    <div className="search-section">
+      <div className="search-container">
+        <input
+          type="text"
+          className="styled-search-input"
+          placeholder="FIND A CLASSMATE"
+          onChange={handleSearch}
+        />
+        <span className="search-icon">&#128269;</span>
+      </div>
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        &#9776;
+      </div>
     </div>
   </div>
 
-  <div className="search-section">
-    <div className="search-container">
-      <input
-        type="text"
-        className="styled-search-input"
-        placeholder="FIND A CLASSMATE"
-        onChange={handleSearch}
-      />
-      <span className="search-icon">&#128269;</span>
-    </div>
-    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-      &#9776;
-    </div>
+  <div className={`navbar ${menuOpen ? 'open' : ''}`}>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Schools</a>
+      <a href="#">Resources</a>
+      <a href="#">Plans & Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </div>
-</div>
-
-          <div className="search-container">
-            <input
-              type="text"
-              className="styled-search-input"
-              placeholder="FIND A CLASSMATE"
-              onChange={handleSearch}
-            />
-            <span className="search-icon">&#128269;</span>
-          </div>
-
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            &#9776;
-          </div>
-        </div>
-
-        <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-          <nav>
-            <a href="#">Home</a>
-            <a href="#">Schools</a>
-            <a href="#">Resources</a>
-            <a href="#">Plans & Features</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-          </nav>
-        </div>
-      </header>
+</header>
 
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
