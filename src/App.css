@@ -92,3 +92,36 @@ body {
   padding: 1rem;
   color: #333;
 }
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  background-color: #eaf3f3;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 280px;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: #208080;
+  margin-bottom: 0.8rem;
+}
+
+.card.quote {
+  background-color: #f2fbfb;
+  font-style: italic;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
