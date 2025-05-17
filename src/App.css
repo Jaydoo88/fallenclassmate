@@ -34,7 +34,7 @@ nav a {
 }
 
 .hero-image {
-  background: url('/images/shutterstock_664197991.jpg') center/cover no-repeat;
+  background: url('/images/hero.jpg') center/cover no-repeat;
   position: relative;
   text-align: center;
   padding: 100px 20px 60px;
