@@ -12,6 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
+  flex-wrap: wrap;
 }
 
 .logo-left img {
@@ -63,6 +64,7 @@ body {
 .navbar nav {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .navbar nav a {
@@ -105,12 +107,11 @@ body {
   text-align: center;
   color: white;
   max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-overlay-box h1 {
-  font-family: 'Georgia', serif;
-  font-size: 1.8em;
+  font-size: 2.8em;
   margin: 0;
   letter-spacing: 1px;
 }
@@ -156,7 +157,6 @@ body {
 }
 
 .quote-section h2 {
-  font-family: 'Georgia', serif;
   font-size: 1.8em;
   margin-bottom: 12px;
   color: #3b9996;
@@ -167,13 +167,12 @@ body {
   padding: 50px 20px;
   text-align: center;
   background-color: #3b9996;
-  color: white;
+  color: #ffffff;
 }
 
 .newest-classmates h2 {
-  font-family: 'Georgia', serif;
   font-size: 1.8em;
-  color: #FFFFF;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -185,13 +184,14 @@ body {
 }
 
 .classmate-card {
-  background: #f9fdfd;
+  background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 220px;
   text-align: center;
   transition: transform 0.3s;
+  color: #333;
 }
 
 .classmate-card img {
@@ -205,13 +205,13 @@ body {
 .classmate-card h4 {
   margin: 0;
   font-size: 1.1em;
-  color: #333;
+  color: #2c3e50;
 }
 
 .classmate-card p {
   margin-top: 6px;
   font-size: 0.95em;
-  color: #666;
+  color: #555;
 }
 
 .classmate-card:hover {
@@ -234,7 +234,6 @@ body {
   width: 280px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-family: 'Georgia', serif;
 }
 
 /* FOOTER */
@@ -244,4 +243,48 @@ body {
   background-color: #ccc;
   font-size: 0.9em;
   font-style: italic;
+}
+
+/* ===================== */
+/* 📱 MOBILE RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .logo-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .search-container {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-overlay-box {
+    padding: 20px;
+    margin: 0 16px;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classmate-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classmate-card {
+    width: 90%;
+    max-width: 320px;
+  }
 }
