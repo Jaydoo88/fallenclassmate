@@ -84,22 +84,22 @@ function App() {
       </section>
 
       <section className="community-stats">
-        <h2>Our Community</h2>
-        <div className="stats-grid">
-          <div>
-            <h3>276,676</h3>
-            <p>families</p>
-          </div>
-          <div>
-            <h3>228,781,383</h3>
-            <p>visitors</p>
-          </div>
-          <div>
-            <h3>5,716,300</h3>
-            <p>tributes</p>
-          </div>
-        </div>
-      </section>
+  <h2>Together in Tribute</h2>
+  <div className="stats-grid">
+    <div>
+      <h3>276,676</h3>
+      <p>Classmates</p>
+    </div>
+    <div>
+      <h3>228,781,383</h3>
+      <p>Viewers</p>
+    </div>
+    <div>
+      <h3>5,716,300</h3>
+      <p>Shared Memories</p>
+    </div>
+  </div>
+</section>
 
       <section className="quote-section">
         <blockquote>
