@@ -166,7 +166,8 @@ body {
 .newest-classmates {
   padding: 50px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #3b9996;
+  color: white;
 }
 
 .newest-classmates h2 {
