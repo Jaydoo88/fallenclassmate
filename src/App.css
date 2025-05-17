@@ -15,45 +15,48 @@ body {
   flex-wrap: wrap;
 }
 
+/* LEFT LOGO */
 .logo-left img {
   height: 90px;
   max-width: 100%;
 }
 
-/* SCHOOL BADGE (S-shape caps) */
-.badge-subtitle {
-  font-family: 'Georgia', serif;
-  font-size: 0.85em;
-  font-weight: normal;
-  color: #3b9996;
-  margin-top: 4px;
-  text-align: center;
-  display: block;
+/* CENTER SCHOOL BADGE (horizontal caps) */
+.school-badge-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-/* Horizontal row of caps */
+.school-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Extended horizontal cap row */
 .cap-row {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 6px;
+  flex-wrap: nowrap;
   font-size: 18px;
-  margin-bottom: 6px;
-  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 24px;
+  min-width: 700px; /* Makes it wider than the nav */
 }
 
-/* Vertical offsets for S-curve */
-.offset-0 {
-  margin-top: 0;
-}
-.offset-1 {
-  margin-top: 6px;
-}
-.offset-2 {
-  margin-top: 12px;
+.cap-row span {
+  display: inline-block;
 }
 
-/* Gradual fade from left to right */
+/* S-curve shape */
+.offset-0 { margin-top: 0; }
+.offset-1 { margin-top: 6px; }
+.offset-2 { margin-top: 12px; }
+
+/* Fading effect */
 .fade-1  { opacity: 0.1; }
 .fade-2  { opacity: 0.15; }
 .fade-3  { opacity: 0.2; }
@@ -70,10 +73,13 @@ body {
 .fade-14 { opacity: 0.6; }
 .fade-15 { opacity: 0.4; }
 
-.school-badge small {
-  font-size: 0.8em;
+.badge-subtitle {
+  font-family: 'Georgia', serif;
+  font-size: 0.85em;
   font-weight: normal;
-  color: #666;
+  color: #3b9996;
+  margin-top: 4px;
+  text-align: center;
 }
 
 /* SEARCH BAR */
@@ -206,7 +212,7 @@ body {
   border: 2px solid white;
 }
 
-/* SPACER SECTION */
+/* SPACER */
 .spacer-section {
   height: 60px;
   background: transparent;
@@ -223,7 +229,7 @@ body {
   border-bottom: 4px solid #3b9996;
 }
 
-/* NEWEST CLASSMATES SECTION */
+/* NEWEST CLASSMATES */
 .newest-classmates {
   padding: 50px 20px;
   text-align: center;
@@ -334,6 +340,17 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
+  }
+
+  .school-badge-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cap-row {
+    min-width: unset;
+    flex-wrap: wrap;
+    font-size: 16px;
   }
 
   .search-container {
