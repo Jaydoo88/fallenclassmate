@@ -5,46 +5,41 @@ body {
   color: #333;
 }
 
-/* ========== SHARED LAYOUT CONTAINER ========== */
+/* SHARED CONTAINER FOR MAX WIDTH */
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-/* ========== LOGO BAR & HEADER ========== */
+/* LOGO BAR DIVIDED INTO 3 SECTIONS */
 .logo-bar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 12px 0;
+  padding: 12px 24px;
   background-color: white;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-/* LOGO */
-.logo-left img {
-  height: 90px;
-  max-width: 100%;
-}
-
-/* CAP ROW WRAPPER */
-.school-badge-wrapper {
+.logo-section,
+.search-section {
   flex: 1;
   display: flex;
-  justify-content: center;
-}
-
-/* SCHOOL BADGE INNER */
-.school-badge {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  justify-content: center;
+  min-width: 150px;
 }
 
-/* Extended cap row */
+.center-section {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAP ROW */
 .cap-row {
   display: flex;
   justify-content: center;
@@ -79,15 +74,6 @@ body {
 .fade-14 { opacity: 0.6; }
 .fade-15 { opacity: 0.4; }
 
-.badge-subtitle {
-  font-family: 'Georgia', serif;
-  font-size: 0.85em;
-  font-weight: normal;
-  color: #3b9996;
-  margin-top: 4px;
-  text-align: center;
-}
-
 /* SEARCH BAR */
 .search-container {
   position: relative;
@@ -120,17 +106,16 @@ body {
   pointer-events: none;
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER */
 .hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: #3b9996;
-  margin-left: auto;
   padding: 8px;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION */
 .navbar {
   background-color: #3b9996;
   color: white;
@@ -315,7 +300,7 @@ body {
   font-style: italic;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -340,24 +325,26 @@ body {
 
   .logo-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .logo-section,
+  .center-section,
+  .search-section {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 8px;
   }
 
   .cap-row {
     flex-wrap: wrap;
+    justify-content: center;
     font-size: 16px;
-    justify-content: center;
-  }
-
-  .school-badge-wrapper {
-    width: 100%;
-    justify-content: center;
   }
 
   .search-container {
-    margin-top: 12px;
-    width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-overlay-box {
