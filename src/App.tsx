@@ -63,11 +63,10 @@ function App() {
       <section className="spacer-section"></section>
 
       <section className="quote-section">
-        <blockquote>
-          <h2>In Loving Memory</h2>
-          <p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p>
-        </blockquote>
-      </section>
+  <blockquote>
+    <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
+  </blockquote>
+</section>
 
       <section className="newest-classmates">
         <h2>Newest Classmates Added</h2>
