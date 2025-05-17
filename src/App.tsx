@@ -24,7 +24,7 @@ function App() {
             <input
               type="text"
               className="styled-search-input"
-              placeholder="FIND A MEMORIAL"
+              placeholder="Find A Classmate"
               onChange={handleSearch}
             />
             <span className="search-icon">&#128269;</span>
