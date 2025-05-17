@@ -34,9 +34,10 @@ function App() {
         <div className="navbar">
           <nav>
             <a href="#">Home</a>
-            <a href="#">Resources</a>
-            <a href="#">Plans & Features</a>
             <a href="#">About</a>
+            <a href="#">Schools</a>
+            <a href="#">Resources</a>
+            <a href="#">Plans & Features</a>            
             <a href="#">Contact</a>
           </nav>
         </div>
