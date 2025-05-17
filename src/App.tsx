@@ -91,15 +91,15 @@ function App() {
         <h2>Together in Tribute</h2>
         <div className="stats-grid">
           <div>
-            <h3>276,676</h3>
+            <h3>276</h3>
             <p>Classmates</p>
           </div>
           <div>
-            <h3>228,781,383</h3>
+            <h3>228</h3>
             <p>Viewers</p>
           </div>
           <div>
-            <h3>5,716,300</h3>
+            <h3>716</h3>
             <p>Shared Memories</p>
           </div>
         </div>
