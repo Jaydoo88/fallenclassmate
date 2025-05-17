@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9fdfd;
+  font-family: 'Georgia', serif;
+  background: #f9fdfd url('/assets/yearbook-texture.png') repeat;
+  background-blend-mode: overlay;
   color: #333;
 }
 
@@ -99,16 +100,26 @@ body {
 }
 
 .hero-overlay-box {
-  background-color: #3b9996;
+  background-color: rgba(59, 153, 150, 0.9);
   padding: 40px;
   border-radius: 8px;
   text-align: center;
   color: white;
   max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero-overlay-box h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.8em;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
 .hero-sub {
   margin: 12px 0 24px;
+  font-style: italic;
+  font-size: 1.1em;
 }
 
 .hero-buttons .button {
@@ -130,11 +141,19 @@ body {
 
 /* QUOTE SECTION */
 .quote-section {
-  background-color: #e7f5f5;
+  background-color: #fff;
   padding: 40px 20px;
   text-align: center;
   font-style: italic;
   font-size: 1.2em;
+  border-top: 4px solid #3b9996;
+  border-bottom: 4px solid #3b9996;
+}
+
+.quote-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8em;
+  margin-bottom: 12px;
 }
 
 /* INFO CARDS */
@@ -153,6 +172,7 @@ body {
   width: 280px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: 'Georgia', serif;
 }
 
 /* FOOTER */
@@ -161,4 +181,5 @@ body {
   padding: 20px;
   background-color: #ccc;
   font-size: 0.9em;
+  font-style: italic;
 }
