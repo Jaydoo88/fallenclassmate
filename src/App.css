@@ -13,7 +13,7 @@ body {
   padding: 0 16px;
 }
 
-/* LOGO BAR (3-COLUMN LAYOUT) */
+/* LOGO BAR */
 .logo-bar {
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@ body {
 .fade-14 { opacity: 0.6; }
 .fade-15 { opacity: 0.4; }
 
-/* SEARCH BAR */
+/* SEARCH */
 .search-container {
   position: relative;
   display: flex;
@@ -112,7 +112,6 @@ body {
   pointer-events: none;
 }
 
-/* HAMBURGER */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -164,18 +163,18 @@ body {
   width: 100%;
 }
 
-/* HERO SECTION */
+/* HERO SECTION WITH CASKET */
 .hero-image {
   background-size: cover;
-  background-position: center;
-  height: 400px;
+  background-position: center top;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-overlay-box {
-  background-color: rgba(59, 153, 150, 0.9);
+  background-color: #3b9996; /* fully opaque */
   padding: 40px;
   border-radius: 8px;
   text-align: center;
@@ -349,7 +348,7 @@ body {
   font-style: italic;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
