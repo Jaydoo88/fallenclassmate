@@ -57,6 +57,7 @@ function App() {
   <a className="button primary" href="#">Find a School</a>
   <a className="button primary" href="#">Add a Tribute</a>
 </div>
+          </div>
        </section>
 
       <section className="spacer-section"></section>
