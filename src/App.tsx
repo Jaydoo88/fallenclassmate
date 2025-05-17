@@ -29,6 +29,23 @@ function App() {
         </div>
       </section>
 
+
+      <section className="info-cards">
+        <div className="card">
+          <h3>Honor a Memory</h3>
+          <p>Create a lasting memorial for a classmate and share their story.</p>
+        </div>
+        <div className="card quote">
+          <blockquote>
+            “To live in hearts we leave behind is not to die.”<br />— Thomas Campbell
+          </blockquote>
+        </div>
+        <div className="card">
+          <h3>Reconnect</h3>
+          <p>Find your school, remember those lost, and reconnect with old friends.</p>
+        </div>
+      </section>
+
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate &mdash; Never Forget</p>
       </footer>
