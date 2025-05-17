@@ -32,6 +32,11 @@ body {
   min-width: 150px;
 }
 
+.logo-section img {
+  height: 90px;
+  max-width: 100%;
+}
+
 .center-section {
   flex: 2;
   display: flex;
