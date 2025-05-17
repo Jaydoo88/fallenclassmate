@@ -6,7 +6,8 @@ function App() {
     <>
       <header className="navbar">
         <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" className="logo-img" />
+          <img src={Logo} alt="FallenClassmate Logo" />
+          <span>FallenClassmate</span>
         </div>
         <nav>
           <a href="#">Home</a>
@@ -26,8 +27,8 @@ function App() {
             <a className="button secondary" href="#">Create Memorial</a>
           </div>
         </div>
-        <img src="/images/cloud-divider.png" className="cloud-divider" alt="Cloud Divider" />
       </section>
+
 
       <section className="info-cards">
         <div className="card">
