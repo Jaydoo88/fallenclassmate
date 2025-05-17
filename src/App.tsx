@@ -105,22 +105,22 @@ function App() {
         <h2>Newest Classmates Added</h2>
         <div className="classmate-grid">
           <div className="classmate-card">
-            <img src="/assets/sample1.jpg" alt="Classmate 1" />
+            <img src="/assets/Sample1.jpg" alt="Classmate 1" />
             <h4>Jessica Moore</h4>
             <p>Lincoln High School</p>
           </div>
           <div className="classmate-card">
-            <img src="/assets/sample2.jpg" alt="Classmate 2" />
+            <img src="/assets/Sample2.jpg" alt="Classmate 2" />
             <h4>Andre Johnson</h4>
             <p>River Valley High</p>
           </div>
           <div className="classmate-card">
-            <img src="/assets/sample3.jpg" alt="Classmate 3" />
+            <img src="/assets/Sample3.jpg" alt="Classmate 3" />
             <h4>Sophia Lee</h4>
             <p>West Ridge Academy</p>
           </div>
           <div className="classmate-card">
-            <img src="/assets/sample4.jpg" alt="Classmate 4" />
+            <img src="/assets/Sample4.jpg" alt="Classmate 4" />
             <h4>Marcus Allen</h4>
             <p>Eastbrook High School</p>
           </div>
