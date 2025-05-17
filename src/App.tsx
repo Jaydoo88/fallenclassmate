@@ -23,6 +23,18 @@ function App() {
           <div className="logo-left">
             <img src={Logo} alt="FallenClassmate Logo" />
           </div>
+
+          <div className="school-badge">
+            <div className="cap-pattern">
+              <span className="fade-1">🎓</span>
+              <span className="fade-2 indent-1">🎓</span>
+              <span className="fade-3 indent-2">🎓</span>
+              <span className="fade-4 indent-1">🎓</span>
+              <span className="fade-5">🎓</span>
+            </div>
+            <small>Honoring Every School, Every Era</small>
+          </div>
+
           <div className="search-container">
             <input
               type="text"
@@ -32,6 +44,7 @@ function App() {
             />
             <span className="search-icon">&#128269;</span>
           </div>
+
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             &#9776;
           </div>
@@ -52,21 +65,21 @@ function App() {
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-<p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
-<div className="hero-buttons">
-  <a className="button primary" href="#">Find a School</a>
-  <a className="button primary" href="#">Add a Tribute</a>
-</div>
+          <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+          <div className="hero-buttons">
+            <a className="button primary" href="#">Find a School</a>
+            <a className="button primary" href="#">Add a Tribute</a>
           </div>
-       </section>
+        </div>
+      </section>
 
       <section className="spacer-section"></section>
 
       <section className="quote-section">
-  <blockquote>
-    <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
-  </blockquote>
-</section>
+        <blockquote>
+          <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
+        </blockquote>
+      </section>
 
       <section className="newest-classmates">
         <h2>Newest Classmates Added</h2>
