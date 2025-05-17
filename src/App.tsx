@@ -1,5 +1,6 @@
 import './App.css';
 import Logo from './assets/logo.png';
+import HeroImage from './assets/hero.jpg';
 
 function App() {
   return (
@@ -7,7 +8,6 @@ function App() {
       <header className="navbar">
         <div className="nav-logo">
           <img src={Logo} alt="FallenClassmate Logo" />
-          <span>FallenClassmate</span>
         </div>
         <nav>
           <a href="#">Home</a>
@@ -18,26 +18,27 @@ function App() {
         </nav>
       </header>
 
-      <section className="hero-image">
+      <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
-          <h1>Never Forget</h1>
-          <p><em>Though gone, their memory walks our halls.</em></p>
+          <h1>Never Forget!</h1>
+          <p className="hero-sub"><em>Though gone, their memory walks our halls.</em></p>
           <div className="hero-buttons">
             <a className="button primary" href="#">Find Your School</a>
-            <a className="button secondary" href="#">Create Memorial</a>
+            <a className="button primary" href="#">Create Memorial</a>
           </div>
         </div>
+      </section>
+
+      <section className="quote-section">
+        <blockquote>
+          “To live in hearts we leave behind is not to die.”<br />— Thomas Campbell
+        </blockquote>
       </section>
 
       <section className="info-cards">
         <div className="card">
           <h3>Honor a Memory</h3>
           <p>Create a lasting memorial for a classmate and share their story.</p>
-        </div>
-        <div className="card quote">
-          <blockquote>
-            “To live in hearts we leave behind is not to die.”<br />— Thomas Campbell
-          </blockquote>
         </div>
         <div className="card">
           <h3>Reconnect</h3>
@@ -46,7 +47,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate &mdash; Never Forget</p>
+        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
       </footer>
     </>
   );
