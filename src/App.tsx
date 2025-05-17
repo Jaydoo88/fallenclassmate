@@ -5,10 +5,30 @@ import HeroImage from './assets/hero.jpg';
 function App() {
   return (
     <>
-      <header>
+<header>
   <div className="logo-bar">
-    <img src={Logo} alt="FallenClassmate Logo" />
+    <div className="logo-left">
+      <img src={Logo} alt="FallenClassmate Logo" />
+    </div>
+    <div className="search-right">
+      <input
+        type="text"
+        placeholder="Enter the last name"
+        className="search-input"
+        onChange={(e) => {
+          const query = e.target.value.toLowerCase();
+          const elements = document.querySelectorAll('body *');
+          elements.forEach(el => {
+            if (el.textContent?.toLowerCase().includes(query)) {
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          });
+        }}
+      />
+      <div className="search-label">Find a Classmate</div>
+    </div>
   </div>
+
   <div className="navbar">
     <nav>
       <a href="#">Home</a>
