@@ -19,15 +19,14 @@ function App() {
   return (
     <>
       <header>
-        <div className="logo-bar">
-          <div className="logo-left">
-            <img src={Logo} alt="FallenClassmate Logo" />
-          </div>
+  <div className="logo-bar">
+  <div className="logo-section">
+    <img src={Logo} alt="FallenClassmate Logo" />
+  </div>
 
-  <div className="school-badge-wrapper">
-  <div className="school-badge">
+  <div className="center-section">
     <div className="cap-row">
-      {/* 15 caps with fade classes as before */}
+      {/* 15 cap spans go here */}
       <span className="fade-1 offset-2">🎓</span>
       <span className="fade-2 offset-1">🎓</span>
       <span className="fade-3 offset-0">🎓</span>
@@ -44,7 +43,21 @@ function App() {
       <span className="fade-14 offset-1">🎓</span>
       <span className="fade-15 offset-0">🎓</span>
     </div>
-   
+  </div>
+
+  <div className="search-section">
+    <div className="search-container">
+      <input
+        type="text"
+        className="styled-search-input"
+        placeholder="FIND A CLASSMATE"
+        onChange={handleSearch}
+      />
+      <span className="search-icon">&#128269;</span>
+    </div>
+    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      &#9776;
+    </div>
   </div>
 </div>
 
