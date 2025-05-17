@@ -3,41 +3,43 @@ import Logo from './assets/logo.png';
 import HeroImage from './assets/hero.jpg';
 
 function App() {
+  const handleSearch = (e) => {
+    const query = e.target.value.toLowerCase();
+    const elements = document.querySelectorAll('body *');
+    elements.forEach(el => {
+      if (el.textContent?.toLowerCase().includes(query)) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  };
+
   return (
     <>
-<header>
-  <div className="logo-bar">
-    <div className="logo-left">
-      <img src={Logo} alt="FallenClassmate Logo" />
-    </div>
-    <div className="search-right">
-      <input
-        type="text"
-        placeholder="Enter the last name"
-        className="search-input"
-        onChange={(e) => {
-          const query = e.target.value.toLowerCase();
-          const elements = document.querySelectorAll('body *');
-          elements.forEach(el => {
-            if (el.textContent?.toLowerCase().includes(query)) {
-              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          });
-        }}
-      />
-      <div className="search-label">Find a Classmate</div>
-    </div>
-  </div>
+      <header>
+        <div className="logo-bar">
+          <div className="logo-left">
+            <img src={Logo} alt="FallenClassmate Logo" />
+          </div>
+          <div className="search-container">
+            <input
+              type="text"
+              className="styled-search-input"
+              placeholder="FIND A MEMORIAL"
+              onChange={handleSearch}
+            />
+            <span className="search-icon">&#128269;</span>
+          </div>
+        </div>
 
-  <div className="navbar">
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Resources</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-</header>
+        <div className="navbar">
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
 
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
