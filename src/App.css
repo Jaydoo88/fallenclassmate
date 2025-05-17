@@ -300,7 +300,8 @@ body {
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #ccc;
+  background-color: #3b9996; /* Same as navbar */
+  color: white;
   font-size: 0.9em;
   font-style: italic;
 }
