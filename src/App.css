@@ -1,4 +1,3 @@
-/* App.css */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -22,26 +21,27 @@ body {
 }
 
 .logo-img {
-  height: 50px;
   background-color: white;
   border-radius: 6px;
   padding: 4px;
-  margin-right: 10px;
+}
+
+.logo-img.large {
+  height: 70px;
 }
 
 nav {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+  position: relative;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  position: relative;
 }
 
 .nav-item {
@@ -51,27 +51,29 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
-  left: -50px;
+  top: 120%;
+  left: 0;
   background-color: white;
   color: black;
   padding: 1rem;
-  display: flex;
   gap: 2rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   border-radius: 6px;
   min-width: 400px;
   z-index: 999;
+  flex-direction: row;
 }
 
 .dropdown-content a {
   text-align: center;
   color: #208080;
   text-decoration: none;
+  display: block;
 }
 
 .dropdown-content img {
   width: 100px;
+  height: auto;
   border-radius: 4px;
   margin-bottom: 5px;
 }
