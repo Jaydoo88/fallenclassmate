@@ -21,7 +21,7 @@ function App() {
       <section className="hero-image">
         <div className="hero-overlay">
           <h1>Never Forget</h1>
-          <p>A place to honor and remember classmates who have passed, from every school and every era.</p>
+          <p><em>A tribute to classmates from all schools and eras, preserving their memory with honor and respect.</em></p>
           <div className="hero-buttons">
             <a className="button primary" href="#">Find Your School</a>
             <a className="button secondary" href="#">Create Memorial</a>
