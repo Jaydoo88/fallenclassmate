@@ -17,60 +17,60 @@ function App() {
   };
 
   return (
-    <>
-<header>
-  <div className="logo-bar">
-    <div className="logo-section">
-      <img src={Logo} alt="FallenClassmate Logo" />
-    </div>
+    <div className="page-container">
+      <header>
+        <div className="logo-bar">
+          <div className="logo-section">
+            <img src={Logo} alt="FallenClassmate Logo" />
+          </div>
 
-    <div className="center-section">
-      <div className="cap-row">
-        <span className="fade-1 offset-2">🎓</span>
-        <span className="fade-2 offset-1">🎓</span>
-        <span className="fade-3 offset-0">🎓</span>
-        <span className="fade-4 offset-1">🎓</span>
-        <span className="fade-5 offset-2">🎓</span>
-        <span className="fade-6 offset-1">🎓</span>
-        <span className="fade-7 offset-0">🎓</span>
-        <span className="fade-8 offset-1">🎓</span>
-        <span className="fade-9 offset-2">🎓</span>
-        <span className="fade-10 offset-1">🎓</span>
-        <span className="fade-11 offset-0">🎓</span>
-        <span className="fade-12 offset-1">🎓</span>
-        <span className="fade-13 offset-2">🎓</span>
-        <span className="fade-14 offset-1">🎓</span>
-        <span className="fade-15 offset-0">🎓</span>
-      </div>
-    </div>
+          <div className="center-section">
+            <div className="cap-row">
+              <span className="fade-1 offset-2">🎓</span>
+              <span className="fade-2 offset-1">🎓</span>
+              <span className="fade-3 offset-0">🎓</span>
+              <span className="fade-4 offset-1">🎓</span>
+              <span className="fade-5 offset-2">🎓</span>
+              <span className="fade-6 offset-1">🎓</span>
+              <span className="fade-7 offset-0">🎓</span>
+              <span className="fade-8 offset-1">🎓</span>
+              <span className="fade-9 offset-2">🎓</span>
+              <span className="fade-10 offset-1">🎓</span>
+              <span className="fade-11 offset-0">🎓</span>
+              <span className="fade-12 offset-1">🎓</span>
+              <span className="fade-13 offset-2">🎓</span>
+              <span className="fade-14 offset-1">🎓</span>
+              <span className="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
 
-    <div className="search-section">
-      <div className="search-container">
-        <input
-          type="text"
-          className="styled-search-input"
-          placeholder="FIND A CLASSMATE"
-          onChange={handleSearch}
-        />
-        <span className="search-icon">&#128269;</span>
-      </div>
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        &#9776;
-      </div>
-    </div>
-  </div>
+          <div className="search-section">
+            <div className="search-container">
+              <input
+                type="text"
+                className="styled-search-input"
+                placeholder="FIND A CLASSMATE"
+                onChange={handleSearch}
+              />
+              <span className="search-icon">&#128269;</span>
+            </div>
+            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+              &#9776;
+            </div>
+          </div>
+        </div>
 
-  <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Schools</a>
-      <a href="#">Resources</a>
-      <a href="#">Plans & Features</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-</header>
+        <div className={`navbar ${menuOpen ? 'open' : ''}`}>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Schools</a>
+            <a href="#">Resources</a>
+            <a href="#">Plans & Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
 
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
@@ -83,7 +83,23 @@ function App() {
         </div>
       </section>
 
-      <section className="spacer-section"></section>
+      <section className="community-stats">
+        <h2>Our Community</h2>
+        <div className="stats-grid">
+          <div>
+            <h3>276,676</h3>
+            <p>families</p>
+          </div>
+          <div>
+            <h3>228,781,383</h3>
+            <p>visitors</p>
+          </div>
+          <div>
+            <h3>5,716,300</h3>
+            <p>tributes</p>
+          </div>
+        </div>
+      </section>
 
       <section className="quote-section">
         <blockquote>
@@ -131,7 +147,7 @@ function App() {
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate • A place to remember, reconnect, and reflect.</p>
       </footer>
-    </>
+    </div>
   );
 }
 
