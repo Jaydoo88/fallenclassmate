@@ -205,6 +205,9 @@ body {
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
+  min-width: 160px; /* ensures both buttons have same base width */
+  text-align: center;
+  display: inline-block;
 }
 
 .hero-buttons .button:hover {
