@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
-import HeroImage from './assets/casket.jpg';
+import HeroImage from './assets/casket.jpg'; // ✅ Updated hero image
 import Sample1 from './assets/Sample1.jpg';
 import Sample2 from './assets/Sample2.jpg';
 import Sample3 from './assets/Sample3.jpg';
@@ -88,56 +88,56 @@ function App() {
       </section>
 
       <section className="community-stats">
-  <h2>Together in Tribute</h2>
-  <div className="stats-grid">
-    <div>
-      <h3>276,676</h3>
-      <p>Classmates</p>
-    </div>
-    <div>
-      <h3>228,781,383</h3>
-      <p>Viewers</p>
-    </div>
-    <div>
-      <h3>5,716,300</h3>
-      <p>Shared Memories</p>
-    </div>
-  </div>
-</section>
+        <h2>Together in Tribute</h2>
+        <div className="stats-grid">
+          <div>
+            <h3>276,676</h3>
+            <p>Classmates</p>
+          </div>
+          <div>
+            <h3>228,781,383</h3>
+            <p>Viewers</p>
+          </div>
+          <div>
+            <h3>5,716,300</h3>
+            <p>Shared Memories</p>
+          </div>
+        </div>
+      </section>
 
-<section className="newest-classmates">
-  <h2>Newest Classmates Added</h2>
-  <div className="classmate-grid">
-    <div className="classmate-card">
-      <img src={Sample1} alt="Classmate 1" />
-      <h4>Jessica Moore</h4>
-      <p>Lincoln High School</p>
-    </div>
-    <div className="classmate-card">
-      <img src={Sample2} alt="Classmate 2" />
-      <h4>Andre Johnson</h4>
-      <p>River Valley High</p>
-    </div>
-    <div className="classmate-card">
-      <img src={Sample3} alt="Classmate 3" />
-      <h4>Sophia Lee</h4>
-      <p>West Ridge Academy</p>
-    </div>
-    <div className="classmate-card">
-      <img src={Sample4} alt="Classmate 4" />
-      <h4>Marcus Allen</h4>
-      <p>Eastbrook High School</p>
-    </div>
-  </div>
-</section>
- 
-<section className="quote-section">
+      <section className="newest-classmates">
+        <h2>Newest Classmates Added</h2>
+        <div className="classmate-grid">
+          <div className="classmate-card">
+            <img src={Sample1} alt="Classmate 1" />
+            <h4>Jessica Moore</h4>
+            <p>Lincoln High School</p>
+          </div>
+          <div className="classmate-card">
+            <img src={Sample2} alt="Classmate 2" />
+            <h4>Andre Johnson</h4>
+            <p>River Valley High</p>
+          </div>
+          <div className="classmate-card">
+            <img src={Sample3} alt="Classmate 3" />
+            <h4>Sophia Lee</h4>
+            <p>West Ridge Academy</p>
+          </div>
+          <div className="classmate-card">
+            <img src={Sample4} alt="Classmate 4" />
+            <h4>Marcus Allen</h4>
+            <p>Eastbrook High School</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="quote-section">
         <blockquote>
           <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
         </blockquote>
       </section>
-      
- <section className="info-cards">
+
+      <section className="info-cards">
         <div className="card">
           <h3>Honor a Classmate</h3>
           <p>Share stories and moments that celebrate the lives of those we've lost.</p>
