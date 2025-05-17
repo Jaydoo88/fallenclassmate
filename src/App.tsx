@@ -52,13 +52,12 @@ function App() {
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-          <p className="hero-sub"><em>Though gone from the halls, their memory walks with us always.</em></p>
-          <div className="hero-buttons">
-            <a className="button primary" href="#">Browse Memorials</a>
-            <a className="button primary" href="#">Add a Tribute</a>
-          </div>
-        </div>
-      </section>
+<p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+<div className="hero-buttons">
+  <a className="button primary" href="#">Find a School</a>
+  <a className="button primary" href="#">Add a Tribute</a>
+</div>
+       </section>
 
       <section className="spacer-section"></section>
 
