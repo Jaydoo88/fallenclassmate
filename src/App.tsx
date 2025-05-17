@@ -11,8 +11,7 @@ function App() {
         </div>
         <nav>
           <a href="#">Home</a>
-          <a href="#">Find School</a>
-          <a href="#">Create Memorial</a>
+          <a href="#">Resources</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
         </nav>
