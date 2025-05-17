@@ -21,7 +21,7 @@ function App() {
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-          <p className="hero-sub"><em>Though gone, their memory walks our halls.</em></p>
+          <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
           <div className="hero-buttons">
             <a className="button primary" href="#">Find Your School</a>
             <a className="button primary" href="#">Create Memorial</a>
