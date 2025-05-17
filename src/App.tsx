@@ -19,7 +19,7 @@ function App() {
       </header>
 
       <section className="hero-image">
-        <div className="hero-overlay">
+        <div className="hero-overlay-box">
           <h1>Never Forget</h1>
           <p><em>Though gone, their memory walks our halls.</em></p>
           <div className="hero-buttons">
