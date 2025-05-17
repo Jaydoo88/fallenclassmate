@@ -30,7 +30,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+        <p>&copy; {new Date().getFullYear()} FallenClassmate &mdash; Never Forget</p>
       </footer>
     </>
   );
