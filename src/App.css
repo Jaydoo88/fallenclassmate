@@ -167,10 +167,11 @@ body {
 .hero-image {
   background-size: cover;
   background-position: center top;
-  height: 600px;
+  height: 400px; /* restored */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* move overlay toward top */
   justify-content: center;
+  padding-top: 40px; /* spacing from very top */
 }
 
 .hero-overlay-box {
