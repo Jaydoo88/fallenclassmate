@@ -17,11 +17,8 @@ body {
   align-items: center;
 }
 
-.logo-img {
+.nav-logo img {
   height: 50px;
-  background-color: white;
-  border-radius: 6px;
-  padding: 4px;
   margin-right: 10px;
 }
 
@@ -76,12 +73,6 @@ nav a {
 
 .button:hover {
   opacity: 0.9;
-}
-
-.cloud-divider {
-  width: 100%;
-  margin-top: -10px;
-  display: block;
 }
 
 .info-cards {
