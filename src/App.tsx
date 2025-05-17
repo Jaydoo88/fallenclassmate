@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
 import HeroImage from './assets/hero.jpg';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     const elements = document.querySelectorAll('body *');
@@ -29,15 +32,18 @@ function App() {
             />
             <span className="search-icon">&#128269;</span>
           </div>
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            &#9776;
+          </div>
         </div>
 
-        <div className="navbar">
+        <div className={`navbar ${menuOpen ? 'open' : ''}`}>
           <nav>
             <a href="#">Home</a>
-            <a href="#">About</a>
             <a href="#">Schools</a>
             <a href="#">Resources</a>
-            <a href="#">Plans & Features</a>            
+            <a href="#">Plans & Features</a>
+            <a href="#">About</a>
             <a href="#">Contact</a>
           </nav>
         </div>
@@ -46,41 +52,48 @@ function App() {
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-          <p className="hero-sub"><em>Though gone, their memory walks our halls.</em></p>
+          <p className="hero-sub"><em>Though gone from the halls, their memory walks with us always.</em></p>
           <div className="hero-buttons">
-            <a className="button primary" href="#">Find a School</a>
+            <a className="button primary" href="#">Browse Memorials</a>
             <a className="button primary" href="#">Add a Tribute</a>
           </div>
         </div>
       </section>
-      <section className="spacer-section"><blockquote>
-         <center><i><p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p></i></center>
-        </blockquote></section>
+
+      <section className="spacer-section"></section>
+
+      <section className="quote-section">
+        <blockquote>
+          <h2>In Loving Memory</h2>
+          <p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p>
+        </blockquote>
+      </section>
+
       <section className="newest-classmates">
-  <h2>Newest Classmates Added</h2>
-  <div className="classmate-grid">
-    <div className="classmate-card">
-      <img src="/assets/sample1.jpg" alt="Classmate 1" />
-      <h4>Jessica Moore</h4>
-      <p>Lincoln High School</p>
-    </div>
-    <div className="classmate-card">
-      <img src="/assets/sample2.jpg" alt="Classmate 2" />
-      <h4>Andre Johnson</h4>
-      <p>River Valley High</p>
-    </div>
-    <div className="classmate-card">
-      <img src="/assets/sample3.jpg" alt="Classmate 3" />
-      <h4>Sophia Lee</h4>
-      <p>West Ridge Academy</p>
-    </div>
-    <div className="classmate-card">
-      <img src="/assets/sample4.jpg" alt="Classmate 4" />
-      <h4>Marcus Allen</h4>
-      <p>Eastbrook High School</p>
-    </div>
-  </div>
-</section>
+        <h2>Newest Classmates Added</h2>
+        <div className="classmate-grid">
+          <div className="classmate-card">
+            <img src="/assets/sample1.jpg" alt="Classmate 1" />
+            <h4>Jessica Moore</h4>
+            <p>Lincoln High School</p>
+          </div>
+          <div className="classmate-card">
+            <img src="/assets/sample2.jpg" alt="Classmate 2" />
+            <h4>Andre Johnson</h4>
+            <p>River Valley High</p>
+          </div>
+          <div className="classmate-card">
+            <img src="/assets/sample3.jpg" alt="Classmate 3" />
+            <h4>Sophia Lee</h4>
+            <p>West Ridge Academy</p>
+          </div>
+          <div className="classmate-card">
+            <img src="/assets/sample4.jpg" alt="Classmate 4" />
+            <h4>Marcus Allen</h4>
+            <p>Eastbrook High School</p>
+          </div>
+        </div>
+      </section>
 
       <section className="info-cards">
         <div className="card">
