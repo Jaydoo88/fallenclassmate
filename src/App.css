@@ -21,14 +21,14 @@ body {
 }
 
 /* SCHOOL BADGE (S-shape caps) */
-.school-badge {
-  text-align: center;
+.badge-subtitle {
   font-family: 'Georgia', serif;
+  font-size: 0.85em;
+  font-weight: normal;
   color: #3b9996;
-  font-weight: bold;
-  padding: 0 16px;
-  line-height: 1.4;
-  white-space: nowrap;
+  margin-top: 4px;
+  text-align: center;
+  display: block;
 }
 
 /* Horizontal row of caps */
