@@ -2,6 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
 import HeroImage from './assets/hero.jpg';
+import Sample1 from './assets/Sample1.jpg';
+import Sample2 from './assets/Sample2.jpg';
+import Sample3 from './assets/Sample3.jpg';
+import Sample4 from './assets/Sample4.jpg';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -102,30 +106,30 @@ function App() {
 </section>
 
 <section className="newest-classmates">
-        <h2>Newest Classmates Added</h2>
-        <div className="classmate-grid">
-          <div className="classmate-card">
-            <img src="/assets/Sample1.jpg" alt="Classmate 1" />
-            <h4>Jessica Moore</h4>
-            <p>Lincoln High School</p>
-          </div>
-          <div className="classmate-card">
-            <img src="/assets/Sample2.jpg" alt="Classmate 2" />
-            <h4>Andre Johnson</h4>
-            <p>River Valley High</p>
-          </div>
-          <div className="classmate-card">
-            <img src="/assets/Sample3.jpg" alt="Classmate 3" />
-            <h4>Sophia Lee</h4>
-            <p>West Ridge Academy</p>
-          </div>
-          <div className="classmate-card">
-            <img src="/assets/Sample4.jpg" alt="Classmate 4" />
-            <h4>Marcus Allen</h4>
-            <p>Eastbrook High School</p>
-          </div>
-        </div>
-      </section>
+  <h2>Newest Classmates Added</h2>
+  <div className="classmate-grid">
+    <div className="classmate-card">
+      <img src={Sample1} alt="Classmate 1" />
+      <h4>Jessica Moore</h4>
+      <p>Lincoln High School</p>
+    </div>
+    <div className="classmate-card">
+      <img src={Sample2} alt="Classmate 2" />
+      <h4>Andre Johnson</h4>
+      <p>River Valley High</p>
+    </div>
+    <div className="classmate-card">
+      <img src={Sample3} alt="Classmate 3" />
+      <h4>Sophia Lee</h4>
+      <p>West Ridge Academy</p>
+    </div>
+    <div className="classmate-card">
+      <img src={Sample4} alt="Classmate 4" />
+      <h4>Marcus Allen</h4>
+      <p>Eastbrook High School</p>
+    </div>
+  </div>
+</section>
  
 <section className="quote-section">
         <blockquote>
