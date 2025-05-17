@@ -45,19 +45,18 @@ function App() {
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-          <p className="hero-sub"><em>Though gone from the halls, their memory walks with us always.</em></p>
+          <p className="hero-sub"><em>Though gone, their memory walks our halls.</em></p>
           <div className="hero-buttons">
-            <a className="button primary" href="#">Browse Memorials</a>
+            <a className="button primary" href="#">Find a School</a>
             <a className="button primary" href="#">Add a Tribute</a>
           </div>
         </div>
       </section>
-
-      <section className="quote-section">
-        <blockquote>
-          <h2>In Loving Memory</h2>
+      <section className="spacer-section"><blockquote>
           <p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p>
-        </blockquote>
+        </blockquote></section>
+      <section className="quote-section">
+        
       </section>
 
       <section className="info-cards">
