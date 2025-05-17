@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Roboto&display=swap');
-
+/* App.css */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: #f4f7f8;
-  color: #222;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .navbar {
@@ -12,8 +9,11 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #40a0a0;
-  color: white;
   padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -21,76 +21,111 @@ body {
   align-items: center;
 }
 
-.nav-logo img {
-  height: 40px;
+.logo-img {
+  height: 50px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 4px;
   margin-right: 10px;
 }
 
-.navbar nav a {
-  color: white;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: 500;
+nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.navbar nav a:hover {
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
   text-decoration: underline;
 }
 
-.hero-image {
-  background: url('./assets/hero.jpg') center/cover no-repeat;
-  height: 60vh;
+.nav-item {
   position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -50px;
+  background-color: white;
+  color: black;
+  padding: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  min-width: 400px;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  text-align: center;
+  color: #208080;
+  text-decoration: none;
+}
+
+.dropdown-content img {
+  width: 100px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-content {
+  display: flex;
+}
+
+.hero-image {
+  background: url('/images/shutterstock_664197991.jpg') center/cover no-repeat;
+  position: relative;
+  text-align: center;
+  padding: 100px 20px 60px;
+  color: white;
 }
 
 .hero-overlay {
-  background: rgba(64, 160, 160, 0.95); /* Match navbar color */
-  padding: 3rem;
-  text-align: center;
-  color: white;
   max-width: 700px;
-  border-radius: 8px;
+  margin: 0 auto;
 }
 
-.hero-overlay h1 {
-  font-family: 'Lora', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero-buttons {
+  margin-top: 20px;
 }
 
-.hero-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.hero-buttons .button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
+.button {
+  padding: 12px 20px;
+  margin: 10px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.button.primary {
+  background-color: #3d9a9a;
+  color: white;
+  border: none;
+}
+
+.button.secondary {
   background-color: white;
-  color: #40a0a0;
-  border: 2px solid #ffffff;
-  transition: all 0.3s ease;
+  color: #3d9a9a;
+  border: 2px solid #3d9a9a;
 }
 
-.hero-buttons .button:hover {
-  background-color: #f0f0f0;
-  color: #208080;
-  border-color: #208080;
+.button:hover {
+  opacity: 0.9;
 }
 
-.footer {
-  background: #c0c0c0;
-  text-align: center;
-  padding: 1rem;
-  color: #333;
+.cloud-divider {
+  width: 100%;
+  margin-top: -10px;
+  display: block;
 }
 
 .info-cards {
@@ -124,4 +159,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  background: #c0c0c0;
+  text-align: center;
+  padding: 1rem;
+  color: #333;
 }
