@@ -6,12 +6,23 @@ function App() {
     <>
       <header className="navbar">
         <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
+          <img src={Logo} alt="FallenClassmate Logo" className="logo-img" />
           <span>FallenClassmate</span>
         </div>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Find School</a>
+          <div className="nav-item dropdown">
+            <a href="#">Find School</a>
+            <div className="dropdown-content">
+              <a href="/usa-schools">
+                <img src="/images/usa_map.png" alt="USA High Schools" />
+                <p>USA High Schools</p>
+              </a>
+              <a href="/overseas-schools">
+                <img src="/images/asia_map.png" alt="Overseas Schools" />
+                <p>Overseas & Other High Schools</p>
+              </a>
+            </div>
+          </div>
           <a href="#">Create Memorial</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
@@ -27,8 +38,8 @@ function App() {
             <a className="button secondary" href="#">Create Memorial</a>
           </div>
         </div>
+        <img src="/images/cloud-divider.png" className="cloud-divider" alt="Cloud Divider" />
       </section>
-
 
       <section className="info-cards">
         <div className="card">
