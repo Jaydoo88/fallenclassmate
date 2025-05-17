@@ -44,7 +44,7 @@ function App() {
       <span className="fade-14 offset-1">🎓</span>
       <span className="fade-15 offset-0">🎓</span>
     </div>
-    <small className="badge-subtitle">Honoring Every School, Every Era</small>
+   
   </div>
 </div>
 
