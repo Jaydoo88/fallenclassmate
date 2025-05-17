@@ -6,11 +6,11 @@ function App() {
     <>
       <header className="navbar">
         <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" className="logo-img" />
-          <span>FallenClassmate</span>
+          <img src={Logo} alt="FallenClassmate Logo" className="logo-img large" />
         </div>
         <nav>
-          <div className="nav-item dropdown">
+          <a href="#">Home</a>
+          <div className="nav-item">
             <a href="#">Find School</a>
             <div className="dropdown-content">
               <a href="/usa-schools">
