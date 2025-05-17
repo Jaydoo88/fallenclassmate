@@ -29,7 +29,6 @@ function App() {
         </div>
       </section>
 
-
       <section className="info-cards">
         <div className="card">
           <h3>Honor a Memory</h3>
