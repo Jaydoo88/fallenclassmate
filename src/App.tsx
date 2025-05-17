@@ -53,7 +53,7 @@ function App() {
         </div>
       </section>
       <section className="spacer-section"><blockquote>
-         <center> <p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p></center>
+         <center><i><p>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</p></i></center>
         </blockquote></section>
       <section className="quote-section">
         
