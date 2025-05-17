@@ -5,17 +5,19 @@ import HeroImage from './assets/hero.jpg';
 function App() {
   return (
     <>
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Resources</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
+      <header>
+  <div className="logo-bar">
+    <img src={Logo} alt="FallenClassmate Logo" />
+  </div>
+  <div className="navbar">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Resources</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="hero-overlay-box">
