@@ -82,7 +82,7 @@ function App() {
           <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
           <div className="hero-buttons">
             <a className="button primary" href="#">Find a School</a>
-            <a className="button primary" href="#">Add a Tribute</a>
+            <a className="button primary" href="#">Create Memorial</a>
           </div>
         </div>
       </section>
