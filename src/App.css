@@ -5,7 +5,7 @@ body {
   color: #333;
 }
 
-/* LOGO BAR WITH SEARCH */
+/* LOGO BAR */
 .logo-bar {
   background-color: white;
   display: flex;
@@ -20,7 +20,7 @@ body {
   max-width: 100%;
 }
 
-/* SEARCH BAR */
+/* SEARCH */
 .search-container {
   position: relative;
   display: flex;
@@ -52,13 +52,24 @@ body {
   pointer-events: none;
 }
 
-/* NAVIGATION BAR */
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #3b9996;
+  margin-left: auto;
+  padding: 8px;
+}
+
+/* NAVIGATION */
 .navbar {
   display: flex;
   justify-content: center;
   background-color: #3b9996;
   color: white;
   padding: 12px 24px;
+  transition: max-height 0.3s ease;
 }
 
 .navbar nav {
@@ -139,7 +150,7 @@ body {
   border: 2px solid white;
 }
 
-/* SPACER SECTION */
+/* SPACER */
 .spacer-section {
   height: 60px;
   background: transparent;
@@ -162,7 +173,7 @@ body {
   color: #3b9996;
 }
 
-/* NEWEST CLASSMATES SECTION */
+/* NEWEST CLASSMATES */
 .newest-classmates {
   padding: 50px 20px;
   text-align: center;
@@ -245,11 +256,32 @@ body {
   font-style: italic;
 }
 
-/* ===================== */
-/* 📱 MOBILE RESPONSIVE */
-/* ===================== */
-
+/* ======================== */
+/* 📱 MOBILE RESPONSIVE CSS */
+/* ======================== */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 24px;
+  }
+
+  .navbar.open {
+    max-height: 500px;
+    padding: 12px 24px;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
   .logo-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -260,12 +292,6 @@ body {
     margin-top: 12px;
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .navbar nav {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
   }
 
   .hero-overlay-box {
