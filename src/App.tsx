@@ -35,6 +35,7 @@ function App() {
           <nav>
             <a href="#">Home</a>
             <a href="#">Resources</a>
+            <a href="#">Plans & Features</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
           </nav>
