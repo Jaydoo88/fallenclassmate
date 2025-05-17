@@ -24,13 +24,23 @@ function App() {
             <img src={Logo} alt="FallenClassmate Logo" />
           </div>
 
-          <div className="school-badge">
+  <div className="school-badge">
   <div className="cap-row">
     <span className="fade-1 offset-2">🎓</span>
     <span className="fade-2 offset-1">🎓</span>
-    <span className="fade-3">🎓</span>
+    <span className="fade-3 offset-0">🎓</span>
     <span className="fade-4 offset-1">🎓</span>
     <span className="fade-5 offset-2">🎓</span>
+    <span className="fade-6 offset-1">🎓</span>
+    <span className="fade-7 offset-0">🎓</span>
+    <span className="fade-8 offset-1">🎓</span>
+    <span className="fade-9 offset-2">🎓</span>
+    <span className="fade-10 offset-1">🎓</span>
+    <span className="fade-11 offset-0">🎓</span>
+    <span className="fade-12 offset-1">🎓</span>
+    <span className="fade-13 offset-2">🎓</span>
+    <span className="fade-14 offset-1">🎓</span>
+    <span className="fade-15 offset-0">🎓</span>
   </div>
   <small>Honoring Every School, Every Era</small>
 </div>
