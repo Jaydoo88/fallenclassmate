@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
-import HeroImage from './assets/Casket1.jpg';
+import HeroImage from './assets/Casket1.jpg'; // ✅ Updated hero image
 import Sample1 from './assets/Sample1.jpg';
 import Sample2 from './assets/Sample2.jpg';
 import Sample3 from './assets/Sample3.jpg';
 import Sample4 from './assets/Sample4.jpg';
 
-function HomePage() {
+function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSearch = (e) => {
@@ -30,10 +30,21 @@ function HomePage() {
 
           <div className="center-section">
             <div className="cap-row">
-              {/* 🎓 emojis here */}
-              {[...Array(15)].map((_, i) => (
-                <span key={i} className={`fade-${i + 1} offset-${i % 3}`}>🎓</span>
-              ))}
+              <span className="fade-1 offset-2">🎓</span>
+              <span className="fade-2 offset-1">🎓</span>
+              <span className="fade-3 offset-0">🎓</span>
+              <span className="fade-4 offset-1">🎓</span>
+              <span className="fade-5 offset-2">🎓</span>
+              <span className="fade-6 offset-1">🎓</span>
+              <span className="fade-7 offset-0">🎓</span>
+              <span className="fade-8 offset-1">🎓</span>
+              <span className="fade-9 offset-2">🎓</span>
+              <span className="fade-10 offset-1">🎓</span>
+              <span className="fade-11 offset-0">🎓</span>
+              <span className="fade-12 offset-1">🎓</span>
+              <span className="fade-13 offset-2">🎓</span>
+              <span className="fade-14 offset-1">🎓</span>
+              <span className="fade-15 offset-0">🎓</span>
             </div>
           </div>
 
@@ -53,21 +64,19 @@ function HomePage() {
           </div>
         </div>
 
-        <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-  <div className="page-container">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/schools">Schools</a>
-      <a href="#">Resources</a>
-      <a href="#">Plans & Features</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-</div>
+        <div className={navbar ${menuOpen ? 'open' : ''}}>
+          <nav>
+            <a href="#">Home</a>
+            <a href="/schools">Schools</a>
+            <a href="#">Resources</a>
+            <a href="#">Plans & Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
       </header>
 
-      <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
+      <section className="hero-image" style={{ backgroundImage: url(${HeroImage}) }}>
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
           <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
@@ -81,9 +90,18 @@ function HomePage() {
       <section className="community-stats">
         <h2>Together in Tribute</h2>
         <div className="stats-grid">
-          <div><h3>276</h3><p>Classmates</p></div>
-          <div><h3>228</h3><p>Viewers</p></div>
-          <div><h3>716</h3><p>Shared Memories</p></div>
+          <div>
+            <h3>276</h3>
+            <p>Classmates</p>
+          </div>
+          <div>
+            <h3>228</h3>
+            <p>Viewers</p>
+          </div>
+          <div>
+            <h3>716</h3>
+            <p>Shared Memories</p>
+          </div>
         </div>
       </section>
 
@@ -137,4 +155,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default App;
