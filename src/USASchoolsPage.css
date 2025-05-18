@@ -1,57 +1,108 @@
-.usa-hero {
-  background-size: cover;
-  background-position: center;
-  height: 400px;
+.usa-schools-page-container { 
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Sticky navbar */
+.usa-schools-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.usa-overlay-box {
-  background-color: #3b9996;
-  padding: 40px;
-  border-radius: 8px;
-  text-align: center;
+.usa-schools-navbar nav a {
+  margin: 0 15px;
   color: white;
-  max-width: 500px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
 }
 
-.usa-overlay-box .search-input {
-  margin-top: 16px;
-  padding: 10px;
+.usa-schools-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.usa-schools-navbar nav a:hover::after {
   width: 100%;
-  max-width: 300px;
-  border: none;
-  border-radius: 4px;
 }
 
-.featured-schools {
-  background-color: #f1f8f8;
-  padding: 40px 20px;
+/* Logo */
+.usa-schools-logo-bar {
   text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
 }
 
-.featured-schools h2 {
-  margin-bottom: 24px;
+.usa-schools-logo-img {
+  height: 90px;
+  max-width: 100%;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-.school-cards {
+/* Content section */
+.usa-schools-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.usa-schools-content h2 {
+  color: #3b9996;
+  font-size: 1.8em;
+  margin-bottom: 16px;
+}
+
+.usa-schools-note {
+  font-size: 1em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* State grid */
+.usa-schools-grid {
   display: flex;
   justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 280px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
+.state-tile {
+  background-color: white;
+  color: #3b9996;
+  border: 2px solid #3b9996;
+  border-radius: 6px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.usa-footer {
+.state-tile:hover {
   background-color: #3b9996;
   color: white;
+}
+
+/* Footer */
+.usa-schools-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b9996;
+  color: white;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
