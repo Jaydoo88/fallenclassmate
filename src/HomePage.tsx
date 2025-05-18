@@ -7,7 +7,7 @@ import Sample2 from './assets/Sample2.jpg';
 import Sample3 from './assets/Sample3.jpg';
 import Sample4 from './assets/Sample4.jpg';
 
-function App() {
+function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSearch = (e) => {
@@ -178,4 +178,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
