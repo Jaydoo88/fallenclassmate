@@ -1,5 +1,6 @@
 import './USASchoolsPage.css';
 import Logo from './assets/logo.png';
+import UsaMap from './assets/usa_map.png';
 
 function USASchoolsPage() {
   return (
@@ -20,7 +21,9 @@ function USASchoolsPage() {
       <section className="usa-schools-logo-bar">
         <img src={Logo} alt="FallenClassmate Logo" className="usa-schools-logo-img" />
       </section>
-
+<div className="usa-schools-map-banner">
+  <img src={UsaMap} alt="USA Map Banner" />
+</div>
       {/* Content Placeholder */}
       <section className="usa-schools-content">
         <h2>Explore High Schools by State</h2>
