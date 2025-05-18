@@ -1,68 +1,66 @@
-import './USASchoolsPage.css';
-import { useState } from 'react';
-import Logo from './assets/logo.png';
-import UsaMap from './assets/usa_map.png';
-
-function USASchoolsPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const featuredSchools = [
-    { name: 'Lincoln High School', city: 'Phoenix, AZ' },
-    { name: 'Roosevelt Academy', city: 'Tucson, AZ' },
-    { name: 'Jefferson Prep', city: 'Flagstaff, AZ' },
-  ];
-
-  const filteredSchools = featuredSchools.filter((school) =>
-    school.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    school.city.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  return (
-    <>
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/schools">Find School</a>
-          <a href="#">Create Memorial</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
-
-      <section className="usa-hero" style={{ backgroundImage: `url(${UsaMap})` }}>
-        <div className="usa-overlay-box">
-          <h1>USA Schools</h1>
-          <p><em>Explore schools and honor classmates across the country.</em></p>
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search by school or city..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-      </section>
-
-      <section className="featured-schools">
-        <h2>Featured Schools</h2>
-        <div className="school-cards">
-          {filteredSchools.map((school, index) => (
-            <div className="card" key={index}>
-              <h3>{school.name}</h3>
-              <p>{school.city}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <footer className="footer usa-footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
-      </footer>
-    </>
-  );
+.usa-schools-page-container { 
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
 }
 
-export default USASchoolsPage;
+/* Sticky navbar */
+.usa-schools-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.usa-schools-navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.usa-schools-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.usa-schools-navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Logo */
+.usa-schools-logo-bar {
+  text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
+}
+
+.usa-schools-logo-img {
+  height: 90px;
+  max-width: 100%;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Footer */
+.usa-schools-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b9996;
+  color: white;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
