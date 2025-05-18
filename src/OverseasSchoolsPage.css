@@ -1,0 +1,56 @@
+.overseas-schools-page-container {
+  background-color: #f9fdfd;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-section h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  justify-items: center;
+}
+
+.state-tile {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #3b9996;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  width: 160px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.state-tile:hover {
+  background-color: #2f7f7c;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+  font-size: 0.9em;
+}
