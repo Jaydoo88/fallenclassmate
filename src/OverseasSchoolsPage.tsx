@@ -1,4 +1,3 @@
-import React from 'react';
 import './OverseasSchoolsPage.css';
 import Logo from './assets/logo.png';
 import AsiaMap from './assets/asia_map.jpg';
@@ -6,24 +5,30 @@ import AsiaMap from './assets/asia_map.jpg';
 function OverseasSchoolsPage() {
   return (
     <div className="overseas-schools-page-container">
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
+      {/* Navigation */}
+      <header className="usa-schools-navbar">
         <nav>
           <a href="/">Home</a>
-          <a href="/schools/usa">Find School</a>
-          <a href="/create">Create Memorial</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+          <a href="/schools">Schools</a>
+          <a href="#">Resources</a>
+          <a href="#">Plans & Features</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
         </nav>
       </header>
 
+      {/* Logo */}
+      <section className="usa-schools-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="usa-schools-logo-img" />
+      </section>
+
+      {/* Hero Section with Map */}
       <section className="hero-section">
         <h1>Overseas High Schools</h1>
         <img className="map-image" src={AsiaMap} alt="Overseas Map" />
       </section>
 
+      {/* Grid of Countries */}
       <section className="state-grid">
         <a className="state-tile" href="/schools/overseas/germany">Germany</a>
         <a className="state-tile" href="/schools/overseas/united-kingdom">United Kingdom</a>
@@ -42,8 +47,9 @@ function OverseasSchoolsPage() {
         <a className="state-tile" href="/schools/overseas/bahrain">Bahrain</a>
       </section>
 
+      {/* Footer */}
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
       </footer>
     </div>
   );
