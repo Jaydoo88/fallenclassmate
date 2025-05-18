@@ -5,7 +5,6 @@ import UsaMap from './assets/usa_map.png';
 import AsiaMap from './assets/asia_map.jpg';
 
 function SchoolsPage() {
-  const [searchTerm, setSearchTerm] = useState('');
   const [highlight, setHighlight] = useState('');
 
   const messages = [
@@ -22,15 +21,11 @@ function SchoolsPage() {
     { name: 'Jefferson Prep', city: 'Flagstaff, AZ' },
   ];
 
-  const filteredSchools = schools.filter((school) =>
-    school.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   useEffect(() => {
     setHighlight(messages[Math.floor(Math.random() * messages.length)]);
     const interval = setInterval(() => {
       setHighlight(messages[Math.floor(Math.random() * messages.length)]);
-    }, 10000); // changes every 10 seconds
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -66,26 +61,16 @@ function SchoolsPage() {
         </div>
       </section>
 
-      <div className="schools-search-bar">
-        <input
-          type="text"
-          placeholder="Search for a School"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
-
-      <section className="schools-listing">
-        {filteredSchools.length > 0 ? (
-          filteredSchools.map((school, index) => (
+      <section className="schools-featured">
+        <h2>Newly Added Schools</h2>
+        <div className="schools-listing">
+          {schools.slice(-3).reverse().map((school, index) => (
             <div className="schools-card" key={index}>
               <h3>{school.name}</h3>
               <p>{school.city}</p>
             </div>
-          ))
-        ) : (
-          <p className="schools-no-results">No schools found.</p>
-        )}
+          ))}
+        </div>
       </section>
 
       <section className="schools-spotlight">
