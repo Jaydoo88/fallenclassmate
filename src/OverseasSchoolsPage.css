@@ -2,55 +2,114 @@
   background-color: #f9fdfd;
   color: #333;
   font-family: 'Segoe UI', sans-serif;
-  padding: 20px;
+  min-height: 100vh;
 }
 
+/* Reuses shared navbar styling */
+.usa-schools-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.usa-schools-navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.usa-schools-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.usa-schools-navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Logo */
+.usa-schools-logo-bar {
+  text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
+}
+
+.usa-schools-logo-img {
+  height: 90px;
+  max-width: 100%;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Hero Section */
 .hero-section {
   text-align: center;
   margin-bottom: 30px;
 }
 
 .hero-section h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #3b9996;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .map-image {
-  max-width: 100%;
-  height: auto;
+  height: 200px;
+  max-width: 90%;
+  object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Grid Section */
 .state-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  padding: 40px 20px;
-  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .state-tile {
-  display: inline-block;
-  padding: 12px 18px;
-  background-color: #3b9996;
-  color: white;
+  background-color: white;
+  color: #3b9996;
+  border: 2px solid #3b9996;
   border-radius: 6px;
+  padding: 12px 24px;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  width: 160px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .state-tile:hover {
-  background-color: #2f7f7c;
+  background-color: #3b9996;
+  color: white;
 }
 
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #ccc;
+  background-color: #3b9996;
+  color: white;
   font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
