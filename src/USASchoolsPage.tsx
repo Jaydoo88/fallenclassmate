@@ -1,66 +1,46 @@
-.usa-schools-page-container { 
-  background-color: #f9fdfd;
-  color: #333;
-  min-height: 100vh;
+import './USASchoolsPage.css';
+import Logo from './assets/logo.png';
+
+function USASchoolsPage() {
+  return (
+    <div className="usa-schools-page-container">
+      {/* Sticky Nav */}
+      <header className="usa-schools-navbar">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/schools">Schools</a>
+          <a href="#">Resources</a>
+          <a href="#">Plans & Features</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      {/* Logo */}
+      <section className="usa-schools-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="usa-schools-logo-img" />
+      </section>
+
+      {/* Content Placeholder */}
+      <section className="usa-schools-content">
+        <h2>Explore High Schools by State</h2>
+        <p className="usa-schools-note">Select a state to view schools and tributes from that region.</p>
+
+        {/* Example buttons — replace or expand with state list */}
+        <div className="usa-schools-grid">
+          <a className="state-tile" href="/schools/usa/arizona">Arizona</a>
+          <a className="state-tile" href="/schools/usa/texas">Texas</a>
+          <a className="state-tile" href="/schools/usa/california">California</a>
+          <a className="state-tile" href="/schools/usa/florida">Florida</a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="usa-schools-footer">
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
+      </footer>
+    </div>
+  );
 }
 
-/* Sticky navbar */
-.usa-schools-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #3b9996;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-.usa-schools-navbar nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-}
-
-.usa-schools-navbar nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: white;
-  transition: width 0.3s;
-}
-
-.usa-schools-navbar nav a:hover::after {
-  width: 100%;
-}
-
-/* Logo */
-.usa-schools-logo-bar {
-  text-align: center;
-  padding: 24px 0;
-  background-color: #f9fdfd;
-}
-
-.usa-schools-logo-img {
-  height: 90px;
-  max-width: 100%;
-  border-radius: 0;
-  padding: 0;
-  background-color: transparent;
-}
-
-/* Footer */
-.usa-schools-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #3b9996;
-  color: white;
-  font-size: 0.9em;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
-}
+export default USASchoolsPage;
