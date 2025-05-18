@@ -22,13 +22,13 @@ function OverseasSchoolsPage() {
         <img src={Logo} alt="FallenClassmate Logo" className="usa-schools-logo-img" />
       </section>
 
-      {/* Hero Section with Map */}
+      {/* Hero with map */}
       <section className="hero-section">
         <h1>Overseas High Schools</h1>
         <img className="map-image" src={AsiaMap} alt="Overseas Map" />
       </section>
 
-      {/* Grid of Countries */}
+      {/* Grid of countries */}
       <section className="state-grid">
         <a className="state-tile" href="/schools/overseas/germany">Germany</a>
         <a className="state-tile" href="/schools/overseas/united-kingdom">United Kingdom</a>
