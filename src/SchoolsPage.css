@@ -50,9 +50,9 @@
 .schools-logo-img {
   height: 90px;
   max-width: 100%;
-  background-color: white;
-  padding: 6px;
-  border-radius: 8px;
+  border-radius: 0; /* Optional: no rounding if background is gone */
+  padding: 0;       /* Removes any unnecessary spacing */
+  background-color: transparent;
 }
 
 /* Map section */
