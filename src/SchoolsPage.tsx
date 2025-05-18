@@ -1,6 +1,8 @@
 import './SchoolsPage.css';
 import { useState } from 'react';
 import Logo from './assets/logo.png';
+import UsaMap from './assets/usa_map.png';
+import AsiaMap from './assets/asia_map.jpg';
 
 function SchoolsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,7 +19,7 @@ function SchoolsPage() {
 
   return (
     <div className="schools-page-container">
-      {/* Schools Nav */}
+      {/* Sticky navbar */}
       <header className="schools-navbar">
         <nav>
           <a href="/">Home</a>
@@ -29,12 +31,24 @@ function SchoolsPage() {
         </nav>
       </header>
 
-      {/* Logo Row */}
+      {/* Logo */}
       <section className="schools-logo-bar">
         <img src={Logo} alt="FallenClassmate Logo" className="schools-logo-img" />
       </section>
 
-      {/* Search Bar */}
+      {/* Map Section */}
+      <section className="schools-map-section">
+        <div className="map-item">
+          <h3>USA High Schools</h3>
+          <img src={UsaMap} alt="USA High Schools Map" />
+        </div>
+        <div className="map-item">
+          <h3>Overseas and Other High Schools</h3>
+          <img src={AsiaMap} alt="Overseas High Schools Map" />
+        </div>
+      </section>
+
+      {/* Search */}
       <div className="schools-search-bar">
         <input
           type="text"
