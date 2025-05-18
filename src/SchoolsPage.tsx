@@ -1,53 +1,77 @@
 import './SchoolsPage.css';
+import { useState } from 'react';
 import Logo from './assets/logo.png';
 
 function SchoolsPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Dummy school data
+  const schools = [
+    { name: 'Lincoln High School', city: 'Phoenix, AZ' },
+    { name: 'Roosevelt Academy', city: 'Tucson, AZ' },
+    { name: 'Jefferson Prep', city: 'Flagstaff, AZ' },
+  ];
+
+  const filteredSchools = schools.filter((school) =>
+    school.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <>
+    <div className="page-container">
+      {/* Sticky Top Nav */}
       <header className="navbar">
-        <div className="nav-logo logo-box">
-  <img src={Logo} alt="FallenClassmate Logo" />
-</div>
         <nav>
           <a href="/">Home</a>
-          <a href="/schools">Find School</a>
-          <a href="#">Create Memorial</a>
+          <a href="/schools">Schools</a>
+          <a href="#">Resources</a>
+          <a href="#">Plans & Features</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
         </nav>
       </header>
 
-      <section className="schools-hero">
-        <div className="schools-hero-box">
-          <h1>Find a School</h1>
-          <p className="schools-subtext">
-            <em>Search for your school and honor the classmates we've lost.</em>
-          </p>
-          <div className="schools-search-bar">
-            <input type="text" placeholder="Find a Classmate or School" />
-          </div>
+      {/* Logo Row */}
+      <section className="logo-bar">
+        <div className="logo-section">
+          <img src={Logo} alt="FallenClassmate Logo" />
         </div>
       </section>
 
+      {/* Cap Row and Search */}
+      <section className="cap-row">
+        {[...Array(20)].map((_, i) => (
+          <span key={i} className={`fade-${i + 1} offset-${i % 3}`}>🎓</span>
+        ))}
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="FIND A CLASSMATE OR SCHOOL"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <span className="search-icon">🔍</span>
+        </div>
+      </section>
+
+      {/* School Listings */}
       <section className="schools-listing">
-        <div className="card">
-          <h3>Lincoln High School</h3>
-          <p>Phoenix, Arizona</p>
-        </div>
-        <div className="card">
-          <h3>Roosevelt Academy</h3>
-          <p>Tucson, Arizona</p>
-        </div>
-        <div className="card">
-          <h3>Jefferson Prep</h3>
-          <p>Flagstaff, Arizona</p>
-        </div>
+        {filteredSchools.length > 0 ? (
+          filteredSchools.map((school, index) => (
+            <div className="card" key={index}>
+              <h3>{school.name}</h3>
+              <p>{school.city}</p>
+            </div>
+          ))
+        ) : (
+          <p>No schools found.</p>
+        )}
       </section>
 
+      {/* Footer */}
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
       </footer>
-    </>
+    </div>
   );
 }
 
