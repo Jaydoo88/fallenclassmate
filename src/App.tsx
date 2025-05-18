@@ -67,7 +67,7 @@ function App() {
         <div className={`navbar ${menuOpen ? 'open' : ''}`}>
           <nav>
             <a href="#">Home</a>
-            <a href="#">Schools</a>
+            <a href="/schools">Schools</a>
             <a href="#">Resources</a>
             <a href="#">Plans & Features</a>
             <a href="#">About</a>
@@ -81,7 +81,7 @@ function App() {
           <h1>Never Forget!</h1>
           <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
           <div className="hero-buttons">
-            <a className="button primary" href="#">Find a School</a>
+            <a className="button primary" href="/schools">Find a School</a>
             <a className="button primary" href="#">Create Memorial</a>
           </div>
         </div>
