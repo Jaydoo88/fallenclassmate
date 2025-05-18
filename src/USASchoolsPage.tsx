@@ -22,7 +22,7 @@ function USASchoolsPage() {
         <img src={Logo} alt="FallenClassmate Logo" className="usa-schools-logo-img" />
       </section>
 <div className="usa-schools-map-banner">
-  <h2 className="usa-map-title">USA High Schools</h2>
+  <h3 className="usa-map-title">USA High Schools</h3>
   <img src={UsaMap} alt="USA Map Banner" />
 </div>
       {/* Content Placeholder */}
