@@ -1,49 +1,53 @@
 import './SchoolsPage.css';
-import { useState } from 'react';
+import Logo from '../assets/logo.png';
 
 function SchoolsPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  // Example static data — replace with API or real data later
-  const schools = [
-    { name: 'Lincoln High School', city: 'Phoenix, AZ' },
-    { name: 'Roosevelt Academy', city: 'Tucson, AZ' },
-    { name: 'Jefferson Prep', city: 'Flagstaff, AZ' },
-  ];
-
-  const filteredSchools = schools.filter((school) =>
-    school.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
-    <div className="school-page">
-      <div className="school-header">
-        <h1>Find a School</h1>
-        <p>Search and explore schools to honor fallen classmates.</p>
-      </div>
+    <>
+      <header className="navbar">
+        <div className="nav-logo">
+          <img src={Logo} alt="FallenClassmate Logo" />
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/schools">Find School</a>
+          <a href="#">Create Memorial</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
 
-      <div className="school-search">
-        <input
-          type="text"
-          placeholder="Find a Classmate or School"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+      <section className="schools-hero">
+        <div className="schools-hero-box">
+          <h1>Find a School</h1>
+          <p className="schools-subtext">
+            <em>Search for your school and honor the classmates we've lost.</em>
+          </p>
+          <div className="schools-search-bar">
+            <input type="text" placeholder="Find a Classmate or School" />
+          </div>
+        </div>
+      </section>
 
-      <div className="school-list">
-        {filteredSchools.length > 0 ? (
-          filteredSchools.map((school, index) => (
-            <div className="school-card" key={index}>
-              <h3>{school.name}</h3>
-              <p>{school.city}</p>
-            </div>
-          ))
-        ) : (
-          <p>No schools found.</p>
-        )}
-      </div>
-    </div>
+      <section className="schools-listing">
+        <div className="card">
+          <h3>Lincoln High School</h3>
+          <p>Phoenix, Arizona</p>
+        </div>
+        <div className="card">
+          <h3>Roosevelt Academy</h3>
+          <p>Tucson, Arizona</p>
+        </div>
+        <div className="card">
+          <h3>Jefferson Prep</h3>
+          <p>Flagstaff, Arizona</p>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+      </footer>
+    </>
   );
 }
 
