@@ -54,15 +54,17 @@ function HomePage() {
         </div>
 
         <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/schools">Schools</a>
-            <a href="#">Resources</a>
-            <a href="#">Plans & Features</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-          </nav>
-        </div>
+  <div className="page-container">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/schools">Schools</a>
+      <a href="#">Resources</a>
+      <a href="#">Plans & Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</div>
       </header>
 
       <section className="hero-image" style={{ backgroundImage: `url(${HeroImage})` }}>
