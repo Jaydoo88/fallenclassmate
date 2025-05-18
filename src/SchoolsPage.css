@@ -57,3 +57,11 @@
 .nav-logo img {
   height: 50px;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b9996;
+  color: white;
+  padding: 12px 24px;
+}
