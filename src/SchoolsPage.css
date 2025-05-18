@@ -1,5 +1,11 @@
-/* Navbar: sticky, top aligned */
-.navbar {
+.schools-page-container {
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar specific to schools page */
+.schools-navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -9,7 +15,7 @@
   padding: 12px 24px;
 }
 
-.navbar nav a {
+.schools-navbar nav a {
   margin: 0 15px;
   color: white;
   text-decoration: none;
@@ -17,7 +23,7 @@
   position: relative;
 }
 
-.navbar nav a::after {
+.schools-navbar nav a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -28,63 +34,41 @@
   transition: width 0.3s;
 }
 
-.navbar nav a:hover::after {
+.schools-navbar nav a:hover::after {
   width: 100%;
 }
 
-/* Logo section below navbar */
-.logo-bar {
-  background-color: #f9fdfd;
-  padding: 24px;
+/* Logo below nav */
+.schools-logo-bar {
   text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
 }
 
-.logo-section img {
+.schools-logo-img {
   height: 60px;
   background-color: white;
   padding: 6px;
   border-radius: 8px;
 }
 
-/* Cap row and search */
-.cap-row {
+/* Search input */
+.schools-search-bar {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  margin: 30px auto;
 }
 
-.cap-row span {
-  font-size: 20px;
-}
-
-.search-container {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 24px;
-  background: #f2f2f2;
-  padding: 10px 20px;
-  border-radius: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.search-container input {
-  border: none;
-  background: transparent;
+.schools-search-bar input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #3b9996;
+  border-radius: 6px;
   font-size: 1em;
   color: #3b9996;
-  outline: none;
 }
 
-.search-icon {
-  margin-left: 8px;
-}
-
-/* School listing grid */
+/* School list */
 .schools-listing {
   display: flex;
   justify-content: center;
@@ -94,7 +78,7 @@
   background-color: #f1f8f8;
 }
 
-.card {
+.schools-card {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -103,8 +87,14 @@
   text-align: center;
 }
 
+.schools-no-results {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
 /* Footer */
-.footer {
+.schools-footer {
   text-align: center;
   padding: 20px;
   background-color: #ccc;
