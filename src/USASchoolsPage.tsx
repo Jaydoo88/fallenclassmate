@@ -28,7 +28,7 @@ function USASchoolsPage() {
       {/* Content Placeholder */}
       <section className="usa-schools-content">
         <h2>Explore High Schools by State</h2>
-        <p className="usa-schools-note">Select a state to view schools and tributes from that region.</p>
+        <p className="usa-schools-note">Select a state to view schools and memorials from that region.</p>
 
         {/* Example buttons — replace or expand with state list */}
         <div className="usa-schools-grid">
