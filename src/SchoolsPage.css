@@ -1,27 +1,12 @@
-/* Top Navbar Matching Home Style */
+/* Navbar: sticky, top aligned */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #3b9996;
-  color: white;
-  padding: 12px 24px;
-}
-
-.nav-logo {
   display: flex;
-  align-items: center;
-}
-
-.logo-box {
-  background-color: white;
-  padding: 6px;
-  border-radius: 6px;
-  display: inline-block;
-}
-
-.nav-logo img {
-  height: 50px;
+  justify-content: center;
+  padding: 12px 24px;
 }
 
 .navbar nav a {
@@ -47,47 +32,66 @@
   width: 100%;
 }
 
-/* Hero Section */
-.schools-hero {
-  background-color: #3b9996;
-  padding: 60px 20px;
+/* Logo section below navbar */
+.logo-bar {
+  background-color: #f9fdfd;
+  padding: 24px;
   text-align: center;
-  color: white;
 }
 
-.schools-hero-box {
-  max-width: 600px;
-  margin: 0 auto;
+.logo-section img {
+  height: 60px;
+  background-color: white;
+  padding: 6px;
+  border-radius: 8px;
 }
 
-.schools-hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+/* Cap row and search */
+.cap-row {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
-.schools-subtext {
-  margin: 12px 0 24px;
-  font-size: 1.2em;
+.cap-row span {
+  font-size: 20px;
 }
 
-.schools-search-bar input {
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  border: 2px solid white;
-  border-radius: 6px;
+.search-container {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 24px;
+  background: #f2f2f2;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
   font-size: 1em;
   color: #3b9996;
+  outline: none;
 }
 
-/* School Listing Section */
+.search-icon {
+  margin-left: 8px;
+}
+
+/* School listing grid */
 .schools-listing {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
   padding: 40px 20px;
   background-color: #f1f8f8;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -95,7 +99,7 @@
   padding: 20px;
   border-radius: 8px;
   width: 280px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
