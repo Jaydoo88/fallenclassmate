@@ -75,10 +75,12 @@
 
 /* State grid */
 .usa-schools-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .state-tile {
