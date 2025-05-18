@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
-import HeroImage from './assets/Casket1.jpg'; // ✅ Updated hero image
+import HeroImage from './assets/Casket1.jpg';
 import Sample1 from './assets/Sample1.jpg';
 import Sample2 from './assets/Sample2.jpg';
 import Sample3 from './assets/Sample3.jpg';
@@ -13,7 +13,7 @@ function App() {
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     const elements = document.querySelectorAll('body *');
-    elements.forEach(el => {
+    elements.forEach((el) => {
       if (el.textContent?.toLowerCase().includes(query)) {
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
@@ -64,7 +64,7 @@ function App() {
           </div>
         </div>
 
-        <div className={navbar ${menuOpen ? 'open' : ''}}>
+        <div className={`navbar ${menuOpen ? 'open' : ''}`}>
           <nav>
             <a href="#">Home</a>
             <a href="/schools">Schools</a>
@@ -76,13 +76,22 @@ function App() {
         </div>
       </header>
 
-      <section className="hero-image" style={{ backgroundImage: url(${HeroImage}) }}>
+      <section
+        className="hero-image"
+        style={{ backgroundImage: `url(${HeroImage})` }}
+      >
         <div className="hero-overlay-box">
           <h1>Never Forget!</h1>
-          <p className="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+          <p className="hero-sub">
+            <em>Gone from the halls, never from our hearts.</em>
+          </p>
           <div className="hero-buttons">
-            <a className="button primary" href="/schools">Find a School</a>
-            <a className="button primary" href="#">Create Memorial</a>
+            <a className="button primary" href="/schools">
+              Find a School
+            </a>
+            <a className="button primary" href="#">
+              Create Memorial
+            </a>
           </div>
         </div>
       </section>
@@ -133,23 +142,37 @@ function App() {
 
       <section className="quote-section">
         <blockquote>
-          <p><em>“To live in hearts we leave behind is not to die.”<br />— Thomas Campbell</em></p>
+          <p>
+            <em>
+              “To live in hearts we leave behind is not to die.”
+              <br />— Thomas Campbell
+            </em>
+          </p>
         </blockquote>
       </section>
 
       <section className="info-cards">
         <div className="card">
           <h3>Honor a Classmate</h3>
-          <p>Share stories and moments that celebrate the lives of those we've lost.</p>
+          <p>
+            Share stories and moments that celebrate the lives of those we've
+            lost.
+          </p>
         </div>
         <div className="card">
           <h3>Reconnect & Reflect</h3>
-          <p>Remember familiar faces, revisit shared memories, and rekindle bonds.</p>
+          <p>
+            Remember familiar faces, revisit shared memories, and rekindle
+            bonds.
+          </p>
         </div>
       </section>
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate • A place to remember, reconnect, and reflect.</p>
+        <p>
+          &copy; {new Date().getFullYear()} FallenClassmate • A place to
+          remember, reconnect, and reflect.
+        </p>
       </footer>
     </div>
   );
