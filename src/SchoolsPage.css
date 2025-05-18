@@ -1,65 +1,49 @@
-.school-page {
-  padding: 40px 20px;
-  background-color: #f9fdfd;
-  color: #333;
-  min-height: 100vh;
-}
-
-.school-header {
+.schools-hero {
+  background-color: #3b9996;
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 40px;
+  color: white;
 }
 
-.school-header h1 {
-  font-size: 2.5em;
-  color: #3b9996;
-  margin: 0;
-}
-
-.school-header p {
-  font-size: 1.2em;
-  color: #666;
-}
-
-.school-search {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.school-search input {
-  padding: 10px;
-  width: 280px;
-  border: 2px solid #3b9996;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-.school-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
+.schools-hero-box {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.school-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s;
+.schools-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.school-card:hover {
-  transform: scale(1.02);
+.schools-subtext {
+  margin: 12px 0 24px;
+  font-size: 1.2em;
 }
 
-.school-card h3 {
-  margin-top: 0;
+.schools-search-bar input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-size: 1em;
   color: #3b9996;
 }
 
-.school-card p {
-  color: #555;
+.schools-listing {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f1f8f8;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
