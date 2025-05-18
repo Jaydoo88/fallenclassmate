@@ -24,7 +24,7 @@ function OverseasSchoolsPage() {
 
       {/* Hero with map */}
       <section className="hero-section">
-        <h1>Overseas High Schools</h1>
+        <h2>Overseas High Schools</h2>
         <img className="map-image" src={AsiaMap} alt="Overseas Map" />
       </section>
 
