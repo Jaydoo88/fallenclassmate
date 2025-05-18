@@ -1,7 +1,7 @@
 import React from 'react';
 import './OverseasSchoolsPage.css';
-import Logo from '../assets/logo.png';
-import AsiaMap from '../assets/asia_map.jpg';
+import Logo from './assets/logo.png';
+import AsiaMap from './assets/asia_map.jpg';
 
 function OverseasSchoolsPage() {
   return (
