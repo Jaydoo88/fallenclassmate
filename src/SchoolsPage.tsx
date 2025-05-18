@@ -5,9 +5,9 @@ function SchoolsPage() {
   return (
     <>
       <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
+        <div className="nav-logo logo-box">
+  <img src={Logo} alt="FallenClassmate Logo" />
+</div>
         <nav>
           <a href="/">Home</a>
           <a href="/schools">Find School</a>
