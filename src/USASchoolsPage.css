@@ -109,6 +109,11 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+.usa-map-title {
+  font-size: 1.8em;
+  color: #3b9996;
+  margin-bottom: 16px;
+}
 /* Footer */
 .usa-schools-footer {
   text-align: center;
