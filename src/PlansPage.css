@@ -166,6 +166,18 @@ input:checked + .slider:before {
   color: #666;
 }
 
+.plan-savings-label {
+  display: inline-block;
+  background-color: #e0f2f1;
+  color: #3b9996;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding: 4px 10px;
+  border-radius: 16px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
 .comparison-table {
   max-width: 900px;
   margin: 0 auto;
