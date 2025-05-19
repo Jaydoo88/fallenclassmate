@@ -60,7 +60,8 @@ function PlansPage() {
           <a href="#" className="button primary">Select</a>
         </div>
 
-        <div className="plan-card">
+        <div className="plan-card highlight">
+          <span className="popular-badge">Most Popular</span>
           <h3>Legacy Locker</h3>
           <p className="plan-price">$99.00</p>
           <p className="plan-desc">Preserve their memory forever.</p>
