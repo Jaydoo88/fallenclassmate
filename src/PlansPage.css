@@ -48,7 +48,9 @@
 }
 
 .plans-logo-img {
-  height: 60px;
+  height: 90px;
+  max-width: 100%;
+  background-color: transparent;
 }
 
 /* HERO SECTION */
