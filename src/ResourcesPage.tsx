@@ -1,54 +1,59 @@
 import './ResourcesPage.css';
 import Logo from './assets/logo.png';
+import UsaMap from './assets/usa_map.png';
+import AsiaMap from './assets/asia_map.jpg';
 
 function ResourcesPage() {
   return (
-    <>
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
+    <div className="resources-page-container">
+      <header className="resources-navbar">
         <nav>
           <a href="/">Home</a>
-          <a href="/schools">Find School</a>
-          <a href="/create-memorial">Create Memorial</a>
-          <a href="/about">About</a>
+          <a href="/schools">Schools</a>
           <a href="/resources">Resources</a>
-          <a href="/contact">Contact</a>
+          <a href="#">Plans & Features</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
         </nav>
       </header>
 
-      <section className="resources-hero">
-        <div className="resources-overlay">
-          <h1>Support & Healing</h1>
-          <p className="resources-subtext">Guidance and resources to help you honor and remember.</p>
+      <section className="resources-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="resources-logo-img" />
+      </section>
+
+      <section className="resources-map-section">
+        <div className="map-item">
+          <h3>USA Grief & Tribute Resources</h3>
+          <a href="/resources/usa">
+            <img src={UsaMap} alt="USA Resources Map" />
+          </a>
+        </div>
+        <div className="map-item">
+          <h3>Overseas & Global Resources</h3>
+          <a href="/resources/overseas">
+            <img src={AsiaMap} alt="Overseas Resources Map" />
+          </a>
         </div>
       </section>
 
-      <section className="resources-content">
-        <div className="resource-card">
-          <h3>How to Create a Memorial</h3>
-          <p>Step-by-step guide for creating a respectful and heartfelt tribute to a classmate.</p>
-          <a className="button" href="/create-memorial">Create Memorial</a>
-        </div>
-
-        <div className="resource-card">
-          <h3>Grief Support</h3>
-          <p>Access hotlines, grief counselors, and communities that understand loss.</p>
-          <a className="button" href="#">View Support Options</a>
-        </div>
-
-        <div className="resource-card">
-          <h3>Writing a Tribute</h3>
-          <p>Tips and examples to help you write a meaningful message, story, or letter.</p>
-          <a className="button" href="#">Tribute Writing Guide</a>
+      <section className="resources-featured">
+        <h2>Featured Resources</h2>
+        <div className="resources-listing">
+          {/* Placeholder for future content */}
         </div>
       </section>
 
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+      <section className="resources-spotlight">
+        <h2>Did You Know?</h2>
+        <div className="spotlight-box">
+          <p>Helpful information and stories will appear here soon.</p>
+        </div>
+      </section>
+
+      <footer className="resources-footer">
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
       </footer>
-    </>
+    </div>
   );
 }
 
