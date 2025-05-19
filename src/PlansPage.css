@@ -1,29 +1,75 @@
-.plans-page {
+.plans-page-container {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9fdfd;
   color: #333;
-  padding-bottom: 60px;
+  min-height: 100vh;
 }
 
-.plans-hero {
+.plans-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.plans-navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.plans-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.plans-navbar nav a:hover::after {
+  width: 100%;
+}
+
+.plans-logo-bar {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.plans-logo-img {
+  height: 60px;
+}
+
+.plans-header-section {
+  background-color: #f1f8f8;
   text-align: center;
   padding: 40px 20px;
-  background-color: #e7f5f5;
 }
 
-.plans-hero h1 {
+.plans-header-title {
+  font-size: 1.8em;
   color: #3b9996;
-  font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: bold;
 }
 
-.plans-subtitle {
+.plans-header-subtext {
   font-size: 1.1em;
   color: #555;
+  margin-bottom: 20px;
 }
 
 .billing-toggle {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,4 +198,11 @@ input:checked + .slider:before {
 
 .comparison-table td {
   font-size: 0.95em;
+}
+
+.plans-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+  font-size: 0.9em;
 }
