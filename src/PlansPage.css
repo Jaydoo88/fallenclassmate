@@ -146,18 +146,9 @@ input:checked + .slider:before {
   padding: 24px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
+  border: 3px solid #3b9996;
   position: relative;
-  border: 3px solid #ccc; /* default border */
   transition: border-color 0.3s ease;
-}
-
-.plan-card.popular,
-.plan-card.highlight {
-  border-color: #3b9996 !important; /* green border override */
-}
-
-.plan-card.highlight {
-  border-color: #3b9996;
 }
 
 .plan-card h3 {
@@ -178,7 +169,6 @@ input:checked + .slider:before {
   color: #666;
 }
 
-/* SAVINGS TAG FOR YEARLY */
 .plan-savings-label {
   display: inline-block;
   background-color: #e0f2f1;
