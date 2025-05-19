@@ -44,7 +44,7 @@ function PlansPage() {
         <div className="plan-card">
           <h3>Hall Pass</h3>
           <p className="plan-price">Free</p>
-          <p className="plan-desc">Always free. A simple way to honor someone.</p>
+          <p className="plan-desc">Always free. A heartfelt way to honor a fallen classmate.</p>
           <a href="#" className="button primary">Select</a>
         </div>
 
@@ -56,7 +56,7 @@ function PlansPage() {
           {billingCycle === 'yearly' && (
             <p className="plan-savings-label">Save 21% when paid in full</p>
           )}
-          <p className="plan-desc">Unlock richer memorial features.</p>
+          <p className="plan-desc">Unlock enhanced ways to remember and share your classmate’s legacy.</p>
           <a href="#" className="button primary">Select</a>
         </div>
 
@@ -64,7 +64,7 @@ function PlansPage() {
           <span className="popular-badge">Most Popular</span>
           <h3>Legacy Locker</h3>
           <p className="plan-price">$129.00</p>
-          <p className="plan-desc">Preserve their memory forever.</p>
+          <p className="plan-desc">Preserve your classmate’s legacy with a permanent memorial.</p>
           <a href="#" className="button primary">Select</a>
         </div>
       </section>
