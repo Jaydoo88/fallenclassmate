@@ -1,17 +1,132 @@
-.resources-header-section {
-  background-color: #f1f8f8;
-  text-align: center;
-  padding: 60px 20px;
+.resources-page-container {
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
 }
 
-.resources-header-title {
-  font-size: 1.8em;
+/* Navbar */
+.resources-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.resources-navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.resources-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.resources-navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Logo Bar */
+.resources-logo-bar {
+  text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
+}
+
+.resources-logo-img {
+  height: 90px;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+/* Hero Section */
+.resources-hero {
+  background-color: #f1f8f8;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.resources-hero-title {
+  font-size: 1.9em;
   color: #3b9996;
   margin-bottom: 12px;
   font-weight: bold;
 }
 
-.resources-header-subtext {
+.resources-hero-subtext {
   font-size: 1.1em;
   color: #555;
+}
+
+/* Card Layout */
+.resources-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.resource-card {
+  background-color: white;
+  width: 300px;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-card h3 {
+  color: #3b9996;
+  font-size: 1.3em;
+  margin-bottom: 12px;
+}
+
+.resource-card p {
+  font-size: 0.95em;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.resource-link {
+  display: inline-block;
+  background-color: #3b9996;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  background-color: #337d7a;
+}
+
+/* Footer */
+.resources-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b9996;
+  color: white;
+  font-size: 0.9em;
 }
