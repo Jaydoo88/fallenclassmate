@@ -41,29 +41,29 @@ function PlansPage() {
       </section>
 
       <section className="plan-cards">
-        <div className="plan-card bordered">
+        <div className="plan-card">
           <h3>Hall Pass</h3>
           <p className="plan-price">Free</p>
           <p className="plan-desc">Always free. A simple way to honor someone.</p>
           <a href="#" className="button primary">Select</a>
         </div>
 
-        <div className="plan-card popular">
+        <div className="plan-card">
           <h3>Memory Lane</h3>
           <p className="plan-price">
-            {billingCycle === 'monthly' ? '$4.95/mo' : '$49.40/yr'}
+            {billingCycle === 'monthly' ? '$4.95/mo' : '$47.00/yr'}
           </p>
           {billingCycle === 'yearly' && (
-            <p className="plan-savings-label">Save 17% when paid in full</p>
+            <p className="plan-savings-label">Save 21% when paid in full</p>
           )}
           <p className="plan-desc">Unlock richer memorial features.</p>
           <a href="#" className="button primary">Select</a>
         </div>
 
-        <div className="plan-card highlight">
+        <div className="plan-card">
           <span className="popular-badge">Most Popular</span>
           <h3>Legacy Locker</h3>
-          <p className="plan-price">$99.00</p>
+          <p className="plan-price">$129.00</p>
           <p className="plan-desc">Preserve their memory forever.</p>
           <a href="#" className="button primary">Select</a>
         </div>
