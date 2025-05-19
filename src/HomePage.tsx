@@ -89,7 +89,7 @@ function HomePage() {
             <a className="button primary" href="/schools">
               Find a School
             </a>
-            <a className="button primary" href="#">
+            <a className="button primary" href="/plans">
               Create Memorial
             </a>
           </div>
