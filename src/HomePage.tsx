@@ -66,7 +66,7 @@ function HomePage() {
 
         <div className={`navbar ${menuOpen ? 'open' : ''}`}>
           <nav>
-            <a href="#">Home</a>
+            <a href="/home">Home</a>
             <a href="/schools">Schools</a>
             <a href="/resources">Resources</a>
             <a href="/plans">Plans & Features</a>
