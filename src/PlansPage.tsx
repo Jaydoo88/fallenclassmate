@@ -41,7 +41,7 @@ function PlansPage() {
       </section>
 
       <section className="plan-cards">
-        <div className="plan-card">
+        <div className="plan-card bordered">
           <h3>Hall Pass</h3>
           <p className="plan-price">Free</p>
           <p className="plan-desc">Always free. A simple way to honor someone.</p>
