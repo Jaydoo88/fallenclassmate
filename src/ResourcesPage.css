@@ -1,0 +1,50 @@
+.resources-hero {
+  background-color: #3b9996;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.resources-overlay {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.resources-subtext {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.resources-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #f1f8f8;
+}
+
+.resource-card {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.resource-card .button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3b9996;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resource-card .button:hover {
+  background-color: #2d7f7d;
+}
