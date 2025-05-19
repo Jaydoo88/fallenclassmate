@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './plans.css';
+import './PlansPage.css';
 
 function PlansPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
