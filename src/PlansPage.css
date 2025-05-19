@@ -5,6 +5,7 @@
   min-height: 100vh;
 }
 
+/* NAVIGATION */
 .plans-navbar {
   position: sticky;
   top: 0;
@@ -40,6 +41,7 @@
   width: 100%;
 }
 
+/* LOGO */
 .plans-logo-bar {
   text-align: center;
   padding: 30px 0;
@@ -49,6 +51,7 @@
   height: 60px;
 }
 
+/* HERO SECTION */
 .plans-header-section {
   background-color: #f1f8f8;
   text-align: center;
@@ -68,6 +71,7 @@
   margin-bottom: 20px;
 }
 
+/* BILLING TOGGLE */
 .billing-toggle {
   margin-top: 10px;
   display: flex;
@@ -126,6 +130,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* PLAN CARDS */
 .plan-cards {
   display: flex;
   justify-content: center;
@@ -141,7 +146,7 @@ input:checked + .slider:before {
   padding: 24px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  border: 3px solid transparent;
+  border: 3px solid #ccc;
   position: relative;
 }
 
@@ -171,6 +176,7 @@ input:checked + .slider:before {
   color: #666;
 }
 
+/* SAVINGS TAG FOR YEARLY */
 .plan-savings-label {
   display: inline-block;
   background-color: #e0f2f1;
@@ -183,7 +189,7 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 
-/* Most Popular Badge Animation */
+/* MOST POPULAR BADGE */
 @keyframes fadeInBadge {
   from {
     opacity: 0;
@@ -211,6 +217,7 @@ input:checked + .slider:before {
   animation: fadeInBadge 0.8s ease-in-out;
 }
 
+/* COMPARISON TABLE */
 .comparison-table {
   max-width: 900px;
   margin: 0 auto;
@@ -245,6 +252,7 @@ input:checked + .slider:before {
   font-size: 0.95em;
 }
 
+/* FOOTER */
 .plans-footer {
   text-align: center;
   padding: 20px;
