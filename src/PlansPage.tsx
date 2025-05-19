@@ -27,7 +27,7 @@ function PlansPage() {
       </section>
 
       <section className="plans-header-section">
-        <h2 className="plans-header-title">Choose a Tribute Plan</h2>
+        <h2 className="plans-header-title">Start Free or Keep Their Memory Forever</h2>
         <p className="plans-header-subtext">Find the right way to remember your classmate — free or forever.</p>
 
         <div className="billing-toggle">
@@ -50,7 +50,12 @@ function PlansPage() {
 
         <div className="plan-card popular">
           <h3>Memory Lane</h3>
-          <p className="plan-price">{billingCycle === 'monthly' ? '$4.95/mo' : '$49.95/yr'}</p>
+          <p className="plan-price">
+            {billingCycle === 'monthly' ? '$4.95/mo' : '$49.40/yr'}
+          </p>
+          {billingCycle === 'yearly' && (
+            <p className="plan-savings-label">Save 17% when paid in full</p>
+          )}
           <p className="plan-desc">Unlock richer memorial features.</p>
           <a href="#" className="button primary">Select</a>
         </div>
