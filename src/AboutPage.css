@@ -1,40 +1,98 @@
 .about-page-container {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
   background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
 }
 
-.about-hero {
+/* Sticky navbar */
+.about-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.about-navbar nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.about-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.about-navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* Logo Bar */
+.about-logo-bar {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 30px 0 0;
 }
 
-.about-hero h1 {
-  font-size: 2.2em;
+.about-logo-img {
+  height: 90px;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+/* Header Section */
+.about-header-section {
+  background-color: #f1f8f8;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about-header-title {
+  font-size: 1.8em;
   color: #3b9996;
   margin-bottom: 12px;
+  font-weight: bold;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  color: #666;
-  font-style: italic;
+.about-header-subtext {
+  font-size: 1.1em;
+  color: #555;
 }
 
-.about-content p {
+/* Main Content */
+.about-main-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
   font-size: 1.05em;
   line-height: 1.6;
-  margin-bottom: 20px;
 }
 
-.about-content strong {
+.about-main-content strong {
   color: #3b9996;
 }
 
-.about-content em {
+.about-main-content em {
   color: #3b9996;
   font-style: italic;
+}
+
+/* Footer */
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+  font-size: 0.9em;
 }
