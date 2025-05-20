@@ -1,21 +1,7 @@
 import './ContactPage.css';
 import Logo from './assets/logo.png';
-import { useState } from 'react';
 
 function ContactPage() {
-  const [fromName, setFromName] = useState('');
-  const [fromEmail, setFromEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const subject = encodeURIComponent(`Contact from ${fromName}`);
-    const body = encodeURIComponent(`Name: ${fromName}\nEmail: ${fromEmail}\n\nMessage:\n${message}`);
-
-    window.location.href = `mailto:jaydoo88@yahoo.com?subject=${subject}&body=${body}`;
-  };
-
   return (
     <div className="contact-page-container">
       <header className="contact-navbar">
@@ -41,30 +27,13 @@ function ContactPage() {
       </section>
 
       <section className="contact-form-section">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={fromName}
-            onChange={(e) => setFromName(e.target.value)}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={fromEmail}
-            onChange={(e) => setFromEmail(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="Your Message"
-            rows={6}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-          <button type="submit" className="submit-button">Send Message</button>
-        </form>
+        <iframe
+          title="Contact Form"
+          src="https://form.jotform.com/251395007217150"
+          frameBorder="0"
+          style={{ width: '100%', height: '600px', border: 'none' }}
+          scrolling="no"
+        />
       </section>
 
       <footer className="contact-footer">
