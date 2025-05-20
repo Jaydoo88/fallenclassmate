@@ -1,15 +1,30 @@
-// src/AboutPage.tsx
 import './AboutPage.css';
+import Logo from './assets/logo.png';
 
 function AboutPage() {
   return (
     <div className="about-page-container">
-      <section className="about-hero">
-        <h1>About FallenClassmate</h1>
-        <p className="subtitle">Honoring the memories of those we lost — together.</p>
+      <header className="about-navbar">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/schools">Schools</a>
+          <a href="/resources">Resources</a>
+          <a href="/plans">Plans & Features</a>
+          <a href="/about">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      <section className="about-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="about-logo-img" />
       </section>
 
-      <section className="about-content">
+      <section className="about-header-section">
+        <h2 className="about-header-title">About FallenClassmate</h2>
+        <p className="about-header-subtext">Honoring the memories of those we lost — together.</p>
+      </section>
+
+      <section className="about-main-content">
         <p>
           FallenClassmate was created with one purpose: to ensure no classmate is ever forgotten. From every school and every generation, we provide a dedicated place where friends, families, and former classmates can come together to remember those who are no longer with us.
         </p>
@@ -24,6 +39,10 @@ function AboutPage() {
           <em>Together, we remember. Together, we honor. Together, we heal.</em>
         </p>
       </section>
+
+      <footer className="about-footer">
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
+      </footer>
     </div>
   );
 }
