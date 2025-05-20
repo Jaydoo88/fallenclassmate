@@ -2,8 +2,8 @@
   "name": "fallenclassmate",
   "private": true,
   "version": "1.0.0",
-  "scripts": {
-  "build": "chmod +x node_modules/.bin/vite && vite build",
+ "scripts": {
+  "build": "vite build",
   "dev": "vite",
   "preview": "vite preview"
 },
