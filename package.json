@@ -3,11 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "./vercel-build.sh",
-    "vite-build": "vite build",
-    "dev": "vite",
-    "preview": "vite preview"
-  },
+  "build": "chmod +x node_modules/.bin/vite && vite build",
+  "dev": "vite",
+  "preview": "vite preview"
+},
   "dependencies": {
     "nodemailer": "^7.0.3",
     "react": "^18.2.0",
