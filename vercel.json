@@ -1,5 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "functions": {
+    "api/contact.js": {
+      "source": "vercel-api/contact.js"
+    }
+  }
 }
