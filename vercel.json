@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/contact.js": {
-      "source": "vercel-api/contact.js"
+      "source": "vercel-api/contact.js",
+      "runtime": "nodejs18.x"
     }
   }
 }
