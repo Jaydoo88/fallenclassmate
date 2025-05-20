@@ -40,6 +40,20 @@ function AboutPage() {
         </p>
       </section>
 
+      <section className="about-why-section">
+        <h3 className="about-why-title">🕯️ Why We Created FallenClassmate</h3>
+        <p>
+          We’ve all had that moment — scrolling through social media or talking with an old friend — when we suddenly hear about a classmate who passed away. The news hits hard, not just because of the loss, but because it often feels like there was no place to remember them properly.
+        </p>
+        <p>
+          FallenClassmate was born from that feeling. We created this space so no classmate is forgotten, no matter how much time has passed. Whether it was someone you knew well or only from a distance, they were part of your journey — part of your school, your community, your memories.
+        </p>
+        <p>
+          This platform is our way of saying: your life mattered, and you’ll always be part of the class.
+        </p>
+        <p className="about-why-signature">– The FallenClassmate Team</p>
+      </section>
+
       <footer className="about-footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
       </footer>
