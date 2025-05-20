@@ -3,29 +3,19 @@ import Logo from './assets/logo.png';
 import { useState } from 'react';
 
 function ContactPage() {
-  const [from_name, setFromName] = useState('');
-  const [from_email, setFromEmail] = useState('');
+  const [fromName, setFromName] = useState('');
+  const [fromEmail, setFromEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('Sending...');
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from_name, from_email, message }),
-    });
+    // Construct mailto link
+    const subject = encodeURIComponent(`Contact from ${fromName}`);
+    const body = encodeURIComponent(`Name: ${fromName}\nEmail: ${fromEmail}\n\nMessage:\n${message}`);
 
-    if (res.ok) {
-      setStatus('Message sent successfully!');
-      setFromName('');
-      setFromEmail('');
-      setMessage('');
-    } else {
-      setStatus('Failed to send message. Please try again.');
-    }
+    // Open default mail client with prefilled fields
+    window.location.href = `mailto:jaydoo88@yahoo.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -48,7 +38,7 @@ function ContactPage() {
       <section className="contact-header-section">
         <h2 className="contact-header-title">Contact Us</h2>
         <p className="contact-header-subtext">
-          We’re based in Avondale, AZ. Use the form below to get in touch.
+          We’re based in Avondale, AZ. Send us a message using the form below.
         </p>
       </section>
 
@@ -56,22 +46,19 @@ function ContactPage() {
         <form className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="from_name"
             placeholder="Your Name"
-            value={from_name}
+            value={fromName}
             onChange={(e) => setFromName(e.target.value)}
             required
           />
           <input
             type="email"
-            name="from_email"
             placeholder="Your Email"
-            value={from_email}
+            value={fromEmail}
             onChange={(e) => setFromEmail(e.target.value)}
             required
           />
           <textarea
-            name="message"
             placeholder="Your Message"
             rows={6}
             value={message}
@@ -79,7 +66,6 @@ function ContactPage() {
             required
           ></textarea>
           <button type="submit" className="submit-button">Send Message</button>
-          <p className="status-text">{status}</p>
         </form>
       </section>
 
