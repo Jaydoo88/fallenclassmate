@@ -10,10 +10,10 @@ function USASchoolsPage() {
         <nav>
           <a href="/">Home</a>
           <a href="/schools">Schools</a>
-          <a href="#">Resources</a>
-          <a href="#">Plans & Features</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="/resources">Resources</a>
+          <a href="/plans">Plans & Features</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
         </nav>
       </header>
 
