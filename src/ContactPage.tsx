@@ -22,8 +22,20 @@ function ContactPage() {
       <section className="contact-header-section">
         <h2 className="contact-header-title">Contact Us</h2>
         <p className="contact-header-subtext">
-          Reach out to us with questions, feedback, or ideas. We're here to help and listen.
+          We’re based in Avondale, AZ. Use the form below to send us your questions or feedback.
         </p>
+      </section>
+
+      <section className="contact-form-section">
+        <div className="contact-form">
+          <iframe
+            title="FallenClassmate Contact Form"
+            src="https://form.jotform.com/251395007217150"
+            frameBorder="0"
+            style={{ width: '100%', height: '650px', border: 'none' }}
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
 
       <footer className="contact-footer">
