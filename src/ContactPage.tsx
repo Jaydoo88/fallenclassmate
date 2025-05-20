@@ -27,14 +27,16 @@ function ContactPage() {
       </section>
 
       <section className="contact-form-section">
-        <iframe
-          title="Contact Form"
-          src="https://form.jotform.com/251395007217150"
-          frameBorder="0"
-          style={{ width: '100%', height: '600px', border: 'none' }}
-          scrolling="no"
-        />
-      </section>
+  <div className="form-container">
+    <iframe
+      title="Contact Form"
+      src="https://form.jotform.com/251395007217150"
+      frameBorder="0"
+      scrolling="no"
+      allowFullScreen
+    />
+  </div>
+</section>
 
       <footer className="contact-footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
