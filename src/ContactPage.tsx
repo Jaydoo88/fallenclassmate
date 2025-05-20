@@ -10,11 +10,9 @@ function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Construct mailto link
     const subject = encodeURIComponent(`Contact from ${fromName}`);
     const body = encodeURIComponent(`Name: ${fromName}\nEmail: ${fromEmail}\n\nMessage:\n${message}`);
 
-    // Open default mail client with prefilled fields
     window.location.href = `mailto:jaydoo88@yahoo.com?subject=${subject}&body=${body}`;
   };
 
@@ -38,7 +36,7 @@ function ContactPage() {
       <section className="contact-header-section">
         <h2 className="contact-header-title">Contact Us</h2>
         <p className="contact-header-subtext">
-          We’re based in Avondale, AZ. Send us a message using the form below.
+          We’re based in Avondale, AZ. Use the form below to send us a message.
         </p>
       </section>
 
@@ -64,7 +62,7 @@ function ContactPage() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-          ></textarea>
+          />
           <button type="submit" className="submit-button">Send Message</button>
         </form>
       </section>
