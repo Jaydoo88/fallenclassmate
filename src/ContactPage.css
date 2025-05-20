@@ -1,78 +1,3 @@
-.contact-page-container {
-  background-color: #f9fdfd;
-  color: #333;
-  min-height: 100vh;
-}
-
-/* Sticky navigation bar */
-.contact-navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3b9996;
-  color: white;
-  padding: 12px 24px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-.contact-navbar nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-}
-
-.contact-navbar nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: white;
-  transition: width 0.3s;
-}
-
-.contact-navbar nav a:hover::after {
-  width: 100%;
-}
-
-/* Logo Bar */
-.contact-logo-bar {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.contact-logo-img {
-  height: 90px;
-  max-width: 100%;
-  background-color: transparent;
-}
-
-/* Header section */
-.contact-header-section {
-  background-color: #f1f8f8;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.contact-header-title {
-  font-size: 1.8em;
-  color: #3b9996;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-.contact-header-subtext {
-  font-size: 1.1em;
-  color: #555;
-}
-
-/* Form section with embedded Jotform */
 .contact-form-section {
   display: flex;
   justify-content: center;
@@ -80,14 +5,50 @@
 }
 
 .contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Footer */
-.contact-footer {
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3b9996;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #3b9996;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #337e7b;
+}
+
+.status-text {
   text-align: center;
-  padding: 20px;
-  background-color: #ccc;
-  font-size: 0.9em;
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #3b9996;
 }
