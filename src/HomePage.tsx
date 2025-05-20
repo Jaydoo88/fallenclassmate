@@ -71,7 +71,7 @@ function HomePage() {
             <a href="/resources">Resources</a>
             <a href="/plans">Plans & Features</a>
             <a href="/about">About</a>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
           </nav>
         </div>
       </header>
