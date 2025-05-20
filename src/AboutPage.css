@@ -2,6 +2,7 @@
   background-color: #f9fdfd;
   color: #333;
   min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 /* Sticky navbar */
@@ -87,6 +88,37 @@
 .about-main-content em {
   color: #3b9996;
   font-style: italic;
+}
+
+/* Why We Created Section */
+.about-why-section {
+  background-color: #e7f5f5;
+  border-left: 6px solid #3b9996;
+  padding: 30px 24px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.about-why-title {
+  font-size: 1.5em;
+  color: #3b9996;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.about-why-section p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.about-why-signature {
+  text-align: right;
+  font-style: italic;
+  color: #3b9996;
+  margin-top: 10px;
 }
 
 /* Footer */
