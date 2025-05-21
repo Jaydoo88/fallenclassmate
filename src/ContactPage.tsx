@@ -56,24 +56,26 @@ function ContactPage() {
       ) : (
         <section className="contact-form-wrapper">
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          
             <div className="form-row">
-              <label htmlFor="typeInquiry">Type of Inquiry</label>
-              <select
-                id="typeInquiry"
-                value={typeInquiry}
-                onChange={(e) => setTypeInquiry(e.target.value)}
-                required
-              >
-                <option value="" disabled>
-                  Make a selection...
-                </option>
-                <option value="General Question">General Question</option>
-                <option value="Technical Support">Technical Support</option>
-                <option value="Memorial Request">Memorial Request</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
+  <label htmlFor="typeInquiry">Type of Inquiry</label>
+  <select
+    id="typeInquiry"
+    value={typeInquiry}
+    onChange={(e) => setTypeInquiry(e.target.value)}
+    required
+  >
+    <option value="" disabled>
+      Make a selection...
+    </option>
+    <option value="General Question">General Question</option>
+    <option value="Billing Question">Billing Question</option>
+    <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
+    <option value="Share Feedback">Share Feedback</option>
+    <option value="Testimonials">Testimonials</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
             <div className="form-row half-width">
               <label htmlFor="name">Your Name</label>
               <input
@@ -111,15 +113,15 @@ function ContactPage() {
             </div>
 
             <div className="form-row half-width">
-              <label htmlFor="memorialName">Memorial Name <small>(if applies)</small></label>
-              <input
-                id="memorialName"
-                type="text"
-                placeholder="Memorial name"
-                value={memorialName}
-                onChange={(e) => setMemorialName(e.target.value)}
-              />
-            </div>
+  <label htmlFor="classmateName">Classmate Name <small>(if applies)</small></label>
+  <input
+    id="classmateName"
+    type="text"
+    placeholder="Classmate's name"
+    value={memorialName}   // keep state variable name as is or rename if you want
+    onChange={(e) => setMemorialName(e.target.value)}
+  />
+</div>
 
             <div className="form-row full-width">
               <label htmlFor="subject">Your Message</label>
