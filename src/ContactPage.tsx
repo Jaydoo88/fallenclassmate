@@ -148,21 +148,15 @@ function ContactPage() {
           </form>
 
           <aside className="contact-sidebar">
-            <div className="sidebar-box">
-              <h3>Learn more about FallenClassmate</h3>
-              <p>
-                Discover how FallenClassmate helps honor memories and connect communities.
-                <br />
-                <a href="/about" className="sidebar-link">About Us</a>
-              </p>
-            </div>
-            <div className="sidebar-box">
-              <h3>Address</h3>
-              <address>
-                Avondale, AZ
-              </address>
-            </div>
-          </aside>
+  <div className="sidebar-box">
+    <h3>Learn more about FallenClassmate</h3>
+    <p>
+      Discover how FallenClassmate helps honor memories and connect communities.
+      <br />
+      <a href="/about" className="sidebar-link">About Us</a>
+    </p>
+  </div>
+</aside>
         </section>
       )}
 
