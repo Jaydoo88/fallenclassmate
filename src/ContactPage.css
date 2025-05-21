@@ -80,13 +80,28 @@
   align-items: flex-start;  /* Prevent children stretching */
 }
 
+/* Form row full width */
 .form-row {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
 }
 
-/* Full width for inputs, selects, textareas */
+/* Half-width fields */
+.form-row.half-width {
+  width: 48%;
+  margin-right: 4%;
+  box-sizing: border-box;
+  flex: none;
+}
+
+.form-row.half-width:last-child {
+  margin-right: 0;
+}
+
+/* Inputs/selects/textareas fill their containers */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -107,24 +122,6 @@
   border-color: #3b9996;
   outline: none;
   box-shadow: 0 0 6px #3b9996;
-}
-
-/* Half-width fields */
-.form-row.half-width {
-  flex: none;
-  width: 48%;
-  margin-right: 4%;
-  box-sizing: border-box;
-}
-
-.form-row.half-width:last-child {
-  margin-right: 0;
-}
-
-.form-row.half-width input,
-.form-row.half-width select,
-.form-row.half-width textarea {
-  width: 100%;
 }
 
 /* Submit button sized only to text */
@@ -209,7 +206,7 @@
 
   .form-row.half-width {
     margin-right: 0;
-    flex: 1 1 100%;
+    width: 100%;
   }
 
   .contact-sidebar {
