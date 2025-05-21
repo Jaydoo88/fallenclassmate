@@ -1,3 +1,5 @@
+/* ContactPage.css */
+
 .contact-page-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -59,11 +61,11 @@
 
 .contact-form-wrapper {
   display: flex;
-  max-width: 1024px;
+  max-width: 900px;
   margin: 40px auto 60px auto;
-  gap: 40px;
   padding: 0 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-form {
@@ -71,25 +73,23 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex: 1 1 600px;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  align-items: flex-start;
 }
 
+/* Make every form row full width */
 .form-row {
-  width: 48%;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
 }
 
-.form-row:last-child {
-  width: 100%;
-}
-
+/* All inputs, selects, textareas fill their containers */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -112,10 +112,11 @@
   box-shadow: 0 0 6px #3b9996;
 }
 
+/* Center and shrink-wrap the submit button */
 .submit-button {
   width: auto !important;
   max-width: none !important;
-  display: block !important;
+  display: inline-block !important;
   margin: 20px auto 0 auto;
   padding: 10px 24px;
   background-color: #3b9996;
@@ -126,7 +127,6 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: center !important;
 }
 
 .submit-button:hover {
@@ -134,13 +134,13 @@
 }
 
 .contact-sidebar {
-  flex: 1 1 300px;
   background: #f1f8f8;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   color: #3b9996;
   font-size: 0.95em;
+  margin-top: 30px;
 }
 
 .contact-sidebar h3 {
@@ -170,6 +170,7 @@
   text-align: center;
 }
 
+/* Footer */
 .contact-footer {
   background-color: #3b9996;
   color: white;
@@ -179,18 +180,9 @@
   margin-top: auto;
 }
 
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .contact-form-wrapper {
-    flex-direction: column;
-  }
-
-  .form-row {
-    width: 100% !important;
-    margin-right: 0 !important;
-  }
-
-  .contact-sidebar {
-    flex: 1 1 100%;
-    margin-top: 40px;
+    padding: 0 10px;
   }
 }
