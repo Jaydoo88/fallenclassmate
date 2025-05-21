@@ -1,3 +1,5 @@
+/* ContactPage.css */
+
 .contact-page-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -104,21 +106,24 @@
   margin-left: 4px;
 }
 
-.form-row input,
-.form-row select,
-.form-row textarea {
+/* Ensure all inputs, selects, and textareas are full width and consistent */
+.contact-form select,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 10px 12px;
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-family: inherit;
   resize: vertical;
+  box-sizing: border-box; /* Important for consistent sizing */
   transition: border-color 0.3s ease;
 }
 
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
+.contact-form select:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: #3b9996;
   outline: none;
   box-shadow: 0 0 6px #3b9996;
@@ -181,11 +186,15 @@
   font-size: 1.2em;
   text-align: center;
 }
-.contact-form select,
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  box-sizing: border-box; /* include padding/border in width */
+
+/* Footer */
+.contact-footer {
+  background-color: #3b9996;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  margin-top: auto;
 }
 
 /* Responsive */
@@ -202,14 +211,5 @@
   .contact-sidebar {
     flex: 1 1 100%;
     margin-top: 40px;
- }
-/* Footer */
-.contact-footer {
-  background-color: #3b9996;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9em;
-  margin-top: auto;
+  }
 }
- }
