@@ -14,7 +14,6 @@ function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // For now just open mail client with message details
     const mailSubject = encodeURIComponent(subject || `Contact Inquiry: ${typeInquiry}`);
     const mailBody = encodeURIComponent(
       `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nMemorial Name: ${memorialName}\n\nMessage:\n${message}`
@@ -44,9 +43,8 @@ function ContactPage() {
       <section className="contact-header-section">
         <h2>Contact Customer Support</h2>
         <p className="contact-intro">
-          Do you have any questions or ideas to improve this website? Please email us at{' '}
-          <a href="mailto:jaydoo88@yahoo.com">jaydoo88@yahoo.com</a> or use the contact form below,
-          and a customer service representative will contact you shortly.
+          Have questions or ideas about FallenClassmate.com? Please use the contact form below,
+          and a customer service representative will get back to you shortly.
         </p>
       </section>
 
@@ -151,19 +149,17 @@ function ContactPage() {
 
           <aside className="contact-sidebar">
             <div className="sidebar-box">
-              <h3>Affiliate with us:</h3>
+              <h3>Learn more about FallenClassmate</h3>
               <p>
-                Support your customers with valuable service while sharing the profits.
+                Discover how FallenClassmate helps honor memories and connect communities.
                 <br />
-                <a href="#" className="sidebar-link">Learn more about FallenClassmate affiliate program ...</a>
+                <a href="/about" className="sidebar-link">About Us</a>
               </p>
             </div>
             <div className="sidebar-box">
-              <h3>Mail Address</h3>
+              <h3>Address</h3>
               <address>
-                FallenClassmate.com<br />
-                1234 Your Street<br />
-                Avondale, AZ 85323
+                Avondale, AZ
               </address>
             </div>
           </aside>
