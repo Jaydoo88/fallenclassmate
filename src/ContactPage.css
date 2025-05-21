@@ -110,9 +110,11 @@
 
 /* Submit button sized to text */
 .submit-button {
-  width: auto;             /* shrink to fit text */
-  padding: 10px 24px;      /* some padding left/right */
-  display: inline-block;   /* let it shrink-wrap */
+  width: auto !important;
+  max-width: none !important;
+  display: inline-block !important;
+  padding: 10px 24px;
+  margin-top: 10px;
   background-color: #3b9996;
   color: white;
   border: none;
@@ -121,7 +123,6 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px;        /* space above the button */
 }
 
 .submit-button:hover {
