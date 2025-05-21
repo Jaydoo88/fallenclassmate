@@ -250,6 +250,7 @@ input:checked + .slider:before {
 .plans-footer {
   text-align: center;
   padding: 20px;
-  background-color: #ccc;
+  background-color: #3b9996;
+  color: white;
   font-size: 0.9em;
 }
