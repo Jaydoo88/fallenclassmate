@@ -3,18 +3,24 @@ import Logo from './assets/logo.png';
 import { useState } from 'react';
 
 function ContactPage() {
+  const [typeInquiry, setTypeInquiry] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [emailConfirm, setEmailConfirm] = useState('');
+  const [memorialName, setMemorialName] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // For now just open mail client with message details
+    const mailSubject = encodeURIComponent(subject || `Contact Inquiry: ${typeInquiry}`);
+    const mailBody = encodeURIComponent(
+      `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nMemorial Name: ${memorialName}\n\nMessage:\n${message}`
+    );
 
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-    window.location.href = `mailto:jaydoo88@yahoo.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:jaydoo88@yahoo.com?subject=${mailSubject}&body=${mailBody}`;
     setSubmitted(true);
   };
 
@@ -31,54 +37,138 @@ function ContactPage() {
         </nav>
       </header>
 
-      <section className="contact-hero">
-        <img src={Logo} alt="FallenClassmate Logo" className="contact-hero-logo" />
-        <h1>Contact FallenClassmate</h1>
-        <p>We’re here for you. Reach out with questions, memories, or support.</p>
+      <section className="contact-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="contact-logo-img" />
       </section>
 
-      <section className="contact-form-section">
-        {submitted ? (
-          <div className="thank-you-message">
-            <h2>Thank you for reaching out!</h2>
-            <p>We appreciate your message and will get back to you soon.</p>
-          </div>
-        ) : (
+      <section className="contact-header-section">
+        <h2>Contact Customer Support</h2>
+        <p className="contact-intro">
+          Do you have any questions or ideas to improve this website? Please email us at{' '}
+          <a href="mailto:jaydoo88@yahoo.com">jaydoo88@yahoo.com</a> or use the contact form below,
+          and a customer service representative will contact you shortly.
+        </p>
+      </section>
+
+      {submitted ? (
+        <section className="thank-you-message">
+          <h3>Thank you for contacting us!</h3>
+          <p>We will get back to you shortly.</p>
+        </section>
+      ) : (
+        <section className="contact-form-wrapper">
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Your full name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              required
-            />
+            <div className="form-row">
+              <label htmlFor="typeInquiry">Type of Inquiry</label>
+              <select
+                id="typeInquiry"
+                value={typeInquiry}
+                onChange={(e) => setTypeInquiry(e.target.value)}
+                required
+              >
+                <option value="" disabled>
+                  Make a selection...
+                </option>
+                <option value="General Question">General Question</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Memorial Request">Memorial Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-            />
+            <div className="form-row half-width">
+              <label htmlFor="name">Your Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
 
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              placeholder="Write your message here"
-              rows={6}
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-              required
-            />
+            <div className="form-row half-width">
+              <label htmlFor="email">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
 
-            <button type="submit" className="submit-button">Send Message</button>
+            <div className="form-row half-width">
+              <label htmlFor="emailConfirm">Re-enter Email</label>
+              <input
+                id="emailConfirm"
+                type="email"
+                placeholder="Re-enter email"
+                value={emailConfirm}
+                onChange={(e) => setEmailConfirm(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-row half-width">
+              <label htmlFor="memorialName">Memorial Name <small>(if applies)</small></label>
+              <input
+                id="memorialName"
+                type="text"
+                placeholder="Memorial name"
+                value={memorialName}
+                onChange={(e) => setMemorialName(e.target.value)}
+              />
+            </div>
+
+            <div className="form-row full-width">
+              <label htmlFor="subject">Your Message</label>
+              <input
+                id="subject"
+                type="text"
+                placeholder="Please add your subject here"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-row full-width">
+              <textarea
+                id="message"
+                placeholder="Please enter the specific details of your request. Please provide as much information as possible so we can help you quickly."
+                rows={5}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </div>
+
+            <button type="submit" className="submit-button">Submit</button>
           </form>
-        )}
-      </section>
+
+          <aside className="contact-sidebar">
+            <div className="sidebar-box">
+              <h3>Affiliate with us:</h3>
+              <p>
+                Support your customers with valuable service while sharing the profits.
+                <br />
+                <a href="#" className="sidebar-link">Learn more about FallenClassmate affiliate program ...</a>
+              </p>
+            </div>
+            <div className="sidebar-box">
+              <h3>Mail Address</h3>
+              <address>
+                FallenClassmate.com<br />
+                1234 Your Street<br />
+                Avondale, AZ 85323
+              </address>
+            </div>
+          </aside>
+        </section>
+      )}
 
       <footer className="contact-footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
