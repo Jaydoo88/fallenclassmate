@@ -181,15 +181,11 @@
   font-size: 1.2em;
   text-align: center;
 }
-
-/* Footer */
-.contact-footer {
-  background-color: #3b9996;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9em;
-  margin-top: auto;
+.contact-form select,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box; /* include padding/border in width */
 }
 
 /* Responsive */
@@ -206,5 +202,14 @@
   .contact-sidebar {
     flex: 1 1 100%;
     margin-top: 40px;
-  }
+ }
+/* Footer */
+.contact-footer {
+  background-color: #3b9996;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  margin-top: auto;
 }
+ }
