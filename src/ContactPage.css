@@ -85,41 +85,11 @@
   margin-bottom: 12px;
 }
 
-/* Fix widths and prevent flex-grow on half-width columns */
-.form-row.half-width {
-  flex: none;
-  width: 48%;
-  margin-right: 4%;
-  box-sizing: border-box;
-}
-
-.form-row.half-width:last-child {
-  margin-right: 0;
-}
-
-/* Make inputs, selects, textareas fill their containers */
-.form-row.half-width input,
-.form-row.half-width select,
-.form-row.half-width textarea {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.form-row label {
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.form-row small {
-  font-weight: normal;
-  font-size: 0.8em;
-  color: #666;
-  margin-left: 4px;
-}
-
-.contact-form select,
+/* Make all inputs, selects, textareas full width */
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
+  width: 100% !important;
   padding: 10px 12px;
   font-size: 1em;
   border-radius: 6px;
@@ -138,11 +108,14 @@
   box-shadow: 0 0 6px #3b9996;
 }
 
+/* Submit button sized to text */
 .submit-button {
+  width: auto !important;
+  padding: 10px 24px;
+  display: inline-block;
   background-color: #3b9996;
   color: white;
   border: none;
-  padding: 14px;
   font-weight: 700;
   font-size: 1.1em;
   border-radius: 6px;
@@ -210,11 +183,6 @@
 @media (max-width: 768px) {
   .contact-form-wrapper {
     flex-direction: column;
-  }
-
-  .form-row.half-width {
-    margin-right: 0;
-    flex: 1 1 100%;
   }
 
   .contact-sidebar {
