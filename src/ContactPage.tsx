@@ -56,7 +56,7 @@ function ContactPage() {
       ) : (
         <section className="contact-form-wrapper">
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
-            <div className="form-row">
+            <div className="form-row half-width">
               <label htmlFor="typeInquiry">How can we help?</label>
               <select
                 id="typeInquiry"
@@ -121,7 +121,7 @@ function ContactPage() {
               />
             </div>
 
-            <div className="form-row full-width">
+            <div className="form-row half-width">
               <label htmlFor="subject">Your Message</label>
               <input
                 id="subject"
@@ -133,7 +133,7 @@ function ContactPage() {
               />
             </div>
 
-            <div className="form-row full-width">
+            <div className="form-row half-width">
               <textarea
                 id="message"
                 placeholder="Please enter the specific details of your request. Please provide as much information as possible so we can help you quickly."
