@@ -7,7 +7,7 @@ function ContactPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [emailConfirm, setEmailConfirm] = useState('');
-  const [memorialName, setMemorialName] = useState('');
+  const [classmateName, setClassmateName] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -16,7 +16,7 @@ function ContactPage() {
     e.preventDefault();
     const mailSubject = encodeURIComponent(subject || `Contact Inquiry: ${typeInquiry}`);
     const mailBody = encodeURIComponent(
-      `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nMemorial Name: ${memorialName}\n\nMessage:\n${message}`
+      `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nClassmate Name: ${classmateName}\n\nMessage:\n${message}`
     );
 
     window.location.href = `mailto:jaydoo88@yahoo.com?subject=${mailSubject}&body=${mailBody}`;
@@ -56,24 +56,24 @@ function ContactPage() {
       ) : (
         <section className="contact-form-wrapper">
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
-          
             <div className="form-row">
-  <label htmlFor="typeInquiry">How can we help?</label>
-<select
-  id="typeInquiry"
-  value={typeInquiry}
-  onChange={(e) => setTypeInquiry(e.target.value)}
-  required
->
-  <option value="" disabled>Make a selection...</option>
-  <option value="General Question">General Question</option>
-  <option value="Billing Question">Billing Question</option>
-  <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
-  <option value="Share Feedback">Share Feedback</option>
-  <option value="Testimonials">Testimonials</option>
-  <option value="Other">Other</option>
-</select>
-</div>
+              <label htmlFor="typeInquiry">How can we help?</label>
+              <select
+                id="typeInquiry"
+                value={typeInquiry}
+                onChange={(e) => setTypeInquiry(e.target.value)}
+                required
+              >
+                <option value="" disabled>Make a selection...</option>
+                <option value="General Question">General Question</option>
+                <option value="Billing Question">Billing Question</option>
+                <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
+                <option value="Share Feedback">Share Feedback</option>
+                <option value="Testimonials">Testimonials</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
             <div className="form-row half-width">
               <label htmlFor="name">Your Name</label>
               <input
@@ -111,15 +111,15 @@ function ContactPage() {
             </div>
 
             <div className="form-row half-width">
-  <label htmlFor="classmateName">Classmate Name <small>(if applies)</small></label>
-  <input
-    id="classmateName"
-    type="text"
-    placeholder="Classmate's name"
-    value={memorialName}   // keep state variable name as is or rename if you want
-    onChange={(e) => setMemorialName(e.target.value)}
-  />
-</div>
+              <label htmlFor="classmateName">Classmate Name <small>(if applies)</small></label>
+              <input
+                id="classmateName"
+                type="text"
+                placeholder="Classmate's name"
+                value={classmateName}
+                onChange={(e) => setClassmateName(e.target.value)}
+              />
+            </div>
 
             <div className="form-row full-width">
               <label htmlFor="subject">Your Message</label>
@@ -148,15 +148,15 @@ function ContactPage() {
           </form>
 
           <aside className="contact-sidebar">
-  <div className="sidebar-box">
-    <h3>Learn more about FallenClassmate</h3>
-    <p>
-      Discover how FallenClassmate helps honor memories and connect communities.
-      <br />
-      <a href="/about" className="sidebar-link">About Us</a>
-    </p>
-  </div>
-</aside>
+            <div className="sidebar-box">
+              <h3>Learn more about FallenClassmate</h3>
+              <p>
+                Discover how FallenClassmate helps honor memories and connect communities.
+                <br />
+                <a href="/about" className="sidebar-link">About Us</a>
+              </p>
+            </div>
+          </aside>
         </section>
       )}
 
