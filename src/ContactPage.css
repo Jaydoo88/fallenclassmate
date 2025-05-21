@@ -85,13 +85,24 @@
   margin-bottom: 12px;
 }
 
+/* Fix widths and prevent flex-grow on half-width columns */
 .form-row.half-width {
-  flex: 1 1 48%;
+  flex: none;
+  width: 48%;
   margin-right: 4%;
+  box-sizing: border-box;
 }
 
 .form-row.half-width:last-child {
   margin-right: 0;
+}
+
+/* Make inputs, selects, textareas fill their containers */
+.form-row.half-width input,
+.form-row.half-width select,
+.form-row.half-width textarea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-row label {
@@ -106,18 +117,16 @@
   margin-left: 4px;
 }
 
-/* Ensure all inputs, selects, and textareas are full width and consistent */
 .contact-form select,
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
   padding: 10px 12px;
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-family: inherit;
   resize: vertical;
-  box-sizing: border-box; /* Important for consistent sizing */
+  box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
 
