@@ -58,23 +58,21 @@ function ContactPage() {
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
           
             <div className="form-row">
-  <label htmlFor="typeInquiry">Type of Inquiry</label>
-  <select
-    id="typeInquiry"
-    value={typeInquiry}
-    onChange={(e) => setTypeInquiry(e.target.value)}
-    required
-  >
-    <option value="" disabled>
-      Make a selection...
-    </option>
-    <option value="General Question">General Question</option>
-    <option value="Billing Question">Billing Question</option>
-    <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
-    <option value="Share Feedback">Share Feedback</option>
-    <option value="Testimonials">Testimonials</option>
-    <option value="Other">Other</option>
-  </select>
+  <label htmlFor="typeInquiry">How can we help?</label>
+<select
+  id="typeInquiry"
+  value={typeInquiry}
+  onChange={(e) => setTypeInquiry(e.target.value)}
+  required
+>
+  <option value="" disabled>Make a selection...</option>
+  <option value="General Question">General Question</option>
+  <option value="Billing Question">Billing Question</option>
+  <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
+  <option value="Share Feedback">Share Feedback</option>
+  <option value="Testimonials">Testimonials</option>
+  <option value="Other">Other</option>
+</select>
 </div>
             <div className="form-row half-width">
               <label htmlFor="name">Your Name</label>
