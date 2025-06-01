@@ -2,16 +2,16 @@
   "name": "fallenclassmate",
   "private": true,
   "version": "1.0.0",
- "scripts": {
-  "build": "vite build",
-  "dev": "vite",
-  "preview": "vite preview"
-},
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "nodemailer": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
     "@supabase/supabase-js": "^2.39.5"
   },
   "devDependencies": {
