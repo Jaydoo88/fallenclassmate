@@ -1,0 +1,40 @@
+.add-school-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 12px;
+  padding: 20px;
+}
+
+.add-school-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.add-school-form button {
+  background-color: #3b9996;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-school-form button:hover {
+  background-color: #317f7c;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+}
+
+.form-section {
+  padding: 40px 20px;
+  text-align: center;
+}
