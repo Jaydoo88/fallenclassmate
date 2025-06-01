@@ -14,6 +14,7 @@ function USASchoolsPage() {
           <a href="/plans">Plans & Features</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
+          <a href="/add-school">Add a School</a>
         </nav>
       </header>
 
