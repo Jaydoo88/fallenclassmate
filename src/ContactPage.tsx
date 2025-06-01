@@ -33,6 +33,7 @@ function ContactPage() {
           <a href="/plans">Plans & Features</a>
           <a href="/about">About</a>
           <a href="/contact" className="active">Contact</a>
+          <a href="/add-school">Add a School</a>
         </nav>
       </header>
 
