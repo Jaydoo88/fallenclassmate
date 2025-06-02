@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import './AddSchoolForm.css';
 import AddSchoolForm from './AddSchoolForm';
 import Logo from './assets/logo.png';
+import { Link } from 'react-router-dom'; // ✅ Fix: Import Link properly
 
 function AddSchoolPage() {
   return (
