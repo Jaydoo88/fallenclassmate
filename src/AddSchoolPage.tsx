@@ -22,10 +22,10 @@ function AddSchoolPage() {
       </header>
 
       <section className="form-section">
-        <h2>Add a School</h2>
-        <p>Help us grow the database. Please enter accurate information to support others creating memorials.</p>
-        <AddSchoolForm />
-      </section>
+  <h2>Add a School</h2>
+  <p>This is a test message to confirm the page loads correctly.</p>
+  {/* <AddSchoolForm /> */}
+</section>
 
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
