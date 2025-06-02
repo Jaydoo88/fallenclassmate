@@ -20,7 +20,7 @@ function App() {
       <Route path="/plans" element={<PlansPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      {/* <Route path="/add-school" element={<AddSchoolPage />} /> */}
+      <Route path="/add-school" element={<AddSchoolPage />} /> {/* ✅ Enable this */}
     </Routes>
   );
 }
