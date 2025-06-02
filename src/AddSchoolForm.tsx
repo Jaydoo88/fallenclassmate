@@ -3,44 +3,18 @@ import { supabase } from './supabaseClient';
 import './AddSchoolForm.css';
 
 const countries = [
-  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina",
-  "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
-  "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana",
-  "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon",
-  "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo",
-  "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Democratic Republic of the Congo",
-  "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
-  "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France",
-  "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea",
-  "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia",
-  "Iran", "Iraq", "Ireland", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan",
-  "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon",
-  "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar",
-  "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania",
-  "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro",
-  "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands",
-  "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia",
-  "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea",
-  "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia",
-  "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines",
-  "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia",
-  "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands",
-  "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan",
-  "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania",
-  "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
-  "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
-  "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela",
-  "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+  '', 'USA', 'Canada', 'United Kingdom', 'Germany', 'France', 'Italy', 'Australia',
+  'Japan', 'South Korea', 'Mexico', 'India', 'Brazil', 'Philippines', 'Spain'
 ];
 
-const states = [
-  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
-  "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
-  "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi",
-  "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
-  "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
-  "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
-  "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+const usStates = [
+  '', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+  'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
+  'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina',
+  'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
+  'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
+  'West Virginia', 'Wisconsin', 'Wyoming'
 ];
 
 function AddSchoolForm() {
@@ -53,8 +27,16 @@ function AddSchoolForm() {
     school_link: ''
   });
 
+  const [errors, setErrors] = useState({
+    name: false,
+    city: false,
+    state: false,
+    country: false
+  });
+
   const [status, setStatus] = useState('');
-  const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
+
+  const isUSorCanada = formData.country === 'USA' || formData.country === 'Canada';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -63,20 +45,20 @@ function AddSchoolForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('');
 
-    const newErrors: { [key: string]: boolean } = {};
-    ['name', 'city', 'state', 'country'].forEach((field) => {
-      if (!formData[field as keyof typeof formData]) newErrors[field] = true;
-    });
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      setStatus('Please fill in all required fields.');
+    if (!formData.name || !formData.city || !formData.country || (isUSorCanada && !formData.state)) {
+      setErrors({
+        name: !formData.name,
+        city: !formData.city,
+        country: !formData.country,
+        state: isUSorCanada && !formData.state
+      });
+      setStatus("⚠️ Please fill all required fields.");
       return;
     }
 
-    setStatus('Submitting...');
-
+    // Check for duplicates
     const { data: existing, error: checkError } = await supabase
       .from('schools')
       .select('*')
@@ -85,54 +67,60 @@ function AddSchoolForm() {
       .eq('state', formData.state);
 
     if (checkError) {
-      setStatus(`Error checking for duplicates: ${checkError.message}`);
+      setStatus(`⚠️ Error checking for duplicates: ${checkError.message}`);
       return;
     }
 
     if (existing && existing.length > 0) {
-      setStatus('⚠️ A school with this name, city, and state already exists.');
+      setStatus("⚠️ A school with this name, city, and state already exists.");
       return;
     }
 
     const { error } = await supabase.from('schools').insert([
-      { ...formData, is_verified: false }
+      {
+        ...formData,
+        is_verified: false
+      }
     ]);
 
     if (error) {
-      setStatus(`❌ Error: ${error.message}`);
+      setStatus(`❌ Submission failed: ${error.message}`);
     } else {
       setStatus('✅ School added successfully!');
       setFormData({ name: '', city: '', state: '', county: '', country: '', school_link: '' });
+      setErrors({ name: false, city: false, state: false, country: false });
     }
   };
 
   return (
     <form className="add-school-form" onSubmit={handleSubmit}>
       <input
+        className={errors.name ? 'error' : ''}
         type="text"
         name="name"
         placeholder="School Name *"
-        className={errors.name ? 'error' : ''}
         value={formData.name}
         onChange={handleChange}
       />
       <input
+        className={errors.city ? 'error' : ''}
         type="text"
         name="city"
         placeholder="City *"
-        className={errors.city ? 'error' : ''}
         value={formData.city}
         onChange={handleChange}
       />
       <select
         name="state"
-        className={errors.state ? 'error' : ''}
         value={formData.state}
         onChange={handleChange}
+        className={errors.state ? 'error' : ''}
       >
-        <option value="">State *</option>
-        {states.map((state) => (
-          <option key={state} value={state}>{state}</option>
+        <option value="">State {isUSorCanada ? '*' : '(Optional)'}</option>
+        {usStates.map((state) => (
+          <option key={state} value={state}>
+            {state}
+          </option>
         ))}
       </select>
       <input
@@ -144,13 +132,15 @@ function AddSchoolForm() {
       />
       <select
         name="country"
-        className={errors.country ? 'error' : ''}
         value={formData.country}
         onChange={handleChange}
+        className={errors.country ? 'error' : ''}
       >
         <option value="">Country *</option>
-        {countries.map((c) => (
-          <option key={c} value={c}>{c}</option>
+        {countries.map((country) => (
+          <option key={country} value={country}>
+            {country}
+          </option>
         ))}
       </select>
       <input
