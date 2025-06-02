@@ -19,47 +19,30 @@ function AddSchoolForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('🔍 Checking for duplicates...');
+    setStatus('');
 
-    const { data: existing, error: checkError } = await supabase
-      .from('schools')
-      .select('*')
-      .eq('name', formData.name.trim())
-      .eq('city', formData.city.trim())
-      .eq('state', formData.state.trim());
-
-    if (checkError) {
-      setStatus(`❌ Error checking duplicates: ${checkError.message}`);
+    // Basic validation for required fields
+    if (!formData.name || !formData.city || !formData.state) {
+      setStatus('Please enter school name, city, and state — all are required.');
       return;
     }
-
-    if (existing && existing.length > 0) {
-      setStatus('⚠️ A school with this name, city, and state already exists.');
-      return;
-    }
-
-    setStatus('📤 Submitting...');
 
     const { error } = await supabase.from('schools').insert([
       {
         ...formData,
         is_verified: false
-        // optionally add updated_by_user: user?.id if using auth
       }
     ]);
 
     if (error) {
-      setStatus(`❌ Submission failed: ${error.message}`);
+      if (error.code === '23505') {
+        setStatus('⚠️ A school with this name, city, and state already exists.');
+      } else {
+        setStatus(`❌ Error: ${error.message}`);
+      }
     } else {
       setStatus('✅ School added successfully!');
-      setFormData({
-        name: '',
-        city: '',
-        state: '',
-        county: '',
-        country: '',
-        school_link: ''
-      });
+      setFormData({ name: '', city: '', state: '', county: '', country: '', school_link: '' });
     }
   };
 
@@ -76,14 +59,16 @@ function AddSchoolForm() {
       <input
         type="text"
         name="city"
-        placeholder="City"
+        placeholder="City *"
+        required
         value={formData.city}
         onChange={handleChange}
       />
       <input
         type="text"
         name="state"
-        placeholder="State"
+        placeholder="State *"
+        required
         value={formData.state}
         onChange={handleChange}
       />
