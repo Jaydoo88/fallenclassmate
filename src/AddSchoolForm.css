@@ -1,53 +1,40 @@
 .add-school-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: 40px auto;
-  gap: 14px;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .add-school-form input,
 .add-school-form select {
   padding: 12px;
-  border: 2px solid #ccc;
-  border-radius: 6px;
   font-size: 1em;
-  font-family: inherit;
-  transition: border-color 0.3s;
-}
-
-.add-school-form input:focus,
-.add-school-form select:focus {
-  outline: none;
-  border-color: #3b9996;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .add-school-form input.error,
 .add-school-form select.error {
-  border-color: red;
-}
-
-.add-school-form label {
-  font-weight: bold;
-  margin-bottom: 4px;
-  text-align: left;
+  border: 2px solid red;
+  background-color: #fff7f7;
 }
 
 .add-school-form button {
+  padding: 12px;
+  font-weight: bold;
   background-color: #3b9996;
   color: white;
   border: none;
-  padding: 12px;
-  font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s ease;
 }
 
 .add-school-form button:hover {
@@ -55,14 +42,15 @@
 }
 
 .form-status {
-  margin-top: 12px;
+  margin-top: 10px;
+  text-align: center;
   font-style: italic;
   color: #444;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .add-school-form {
     padding: 20px;
-    width: 90%;
+    max-width: 90%;
   }
 }
