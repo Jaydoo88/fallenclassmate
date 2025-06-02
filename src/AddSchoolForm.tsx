@@ -58,7 +58,6 @@ function AddSchoolForm() {
       return;
     }
 
-    // Check for duplicates
     const { data: existing, error: checkError } = await supabase
       .from('schools')
       .select('*')
