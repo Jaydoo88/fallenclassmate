@@ -1,38 +1,39 @@
-import './AddSchoolPage.css';
-import './AddSchoolForm.css';
+import './ResourcesPage.css'; // ✅ Use the same CSS structure for consistency
 import AddSchoolForm from './AddSchoolForm';
 import Logo from './assets/logo.png';
-import { Link } from 'react-router-dom';
 
 function AddSchoolPage() {
   return (
-    <div className="add-school-page">
-      {/* NAVBAR */}
-      <header className="navbar">
-        <div className="nav-logo">
-          <img src={Logo} alt="FallenClassmate Logo" />
-        </div>
+    <div className="resources-page-container">
+      <header className="resources-navbar">
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/schools">Schools</Link>
-          <Link to="/resources">Resources</Link>
-          <Link to="/plans">Plans & Features</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/add-school">Add a School</Link>
+          <a href="/">Home</a>
+          <a href="/schools">Schools</a>
+          <a href="/resources">Resources</a>
+          <a href="/plans">Plans & Features</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/add-school">Add a School</a>
         </nav>
       </header>
 
-      {/* FORM SECTION */}
+      <section className="resources-logo-bar">
+        <img src={Logo} alt="FallenClassmate Logo" className="resources-logo-img" />
+      </section>
+
+      <section className="resources-hero">
+        <h2 className="resources-hero-title">Add a School</h2>
+        <p className="resources-hero-subtext">
+          Help us grow the database. Please enter accurate information to support others creating memorials.
+        </p>
+      </section>
+
       <section className="form-section">
-        <h2>Add a School</h2>
-        <p>Help us grow the database. Please enter accurate information to support others creating memorials.</p>
         <AddSchoolForm />
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} FallenClassmate — Never Forget</p>
+      <footer className="resources-footer">
+        <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
       </footer>
     </div>
   );
