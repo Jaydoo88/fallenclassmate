@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './AddSchoolForm.css';
 import AddSchoolForm from './AddSchoolForm';
 import Logo from './assets/logo.png';
