@@ -1,9 +1,14 @@
+/* Page background and text */
 .add-school-page {
   background-color: #f9fdfd;
   color: #333;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -40,11 +45,25 @@
   width: 100%;
 }
 
+/* Form Section Layout */
 .form-section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
+.form-section h2 {
+  color: #3b9996;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.form-section p {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+/* Footer styling */
 .footer {
   text-align: center;
   padding: 20px;
