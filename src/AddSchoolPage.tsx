@@ -1,6 +1,7 @@
-import './ResourcesPage.css'; // ✅ Use the same CSS structure for consistency
-import AddSchoolForm from './AddSchoolForm';
+import './AddSchoolForm.css';
+import './ResourcesPage.css'; // Use consistent layout
 import Logo from './assets/logo.png';
+import AddSchoolForm from './AddSchoolForm';
 
 function AddSchoolPage() {
   return (
@@ -22,17 +23,17 @@ function AddSchoolPage() {
       </section>
 
       <section className="resources-hero">
-  <h2 className="resources-hero-title">Add a School</h2>
-  <p className="resources-hero-subtext">
-    Help us expand the FallenClassmate directory. By adding a school, you enable others to create heartfelt tributes, connect with alumni, and preserve legacies that matter. 
-  </p>
-</section>
+        <h2 className="resources-hero-title">Add a School</h2>
+        <p className="resources-hero-subtext">
+          Help us expand the FallenClassmate directory. By submitting a school, you help classmates build lasting memorials, reconnect, and honor those we've lost.
+        </p>
+      </section>
 
-<section className="resources-cards-container">
-  <div className="resource-card">
-    <AddSchoolForm />
-  </div>
-</section>
+      <section className="resources-cards-container">
+        <div className="resource-card">
+          <AddSchoolForm />
+        </div>
+      </section>
 
       <footer className="resources-footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
@@ -42,3 +43,44 @@ function AddSchoolPage() {
 }
 
 export default AddSchoolPage;
+✅ AddSchoolForm.css
+css
+Copy
+Edit
+.add-school-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+
+.add-school-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-school-form button {
+  background-color: #3b9996;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.add-school-form button:hover {
+  background-color: #317f7c;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+}
