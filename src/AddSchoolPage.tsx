@@ -22,15 +22,17 @@ function AddSchoolPage() {
       </section>
 
       <section className="resources-hero">
-        <h2 className="resources-hero-title">Add a School</h2>
-        <p className="resources-hero-subtext">
-          Help us grow the database. Please enter accurate information to support others creating memorials.
-        </p>
-      </section>
+  <h2 className="resources-hero-title">Add a School</h2>
+  <p className="resources-hero-subtext">
+    Help us expand the FallenClassmate directory. By adding a school, you enable others to create heartfelt tributes, connect with alumni, and preserve legacies that matter. 
+  </p>
+</section>
 
-      <section className="form-section">
-        <AddSchoolForm />
-      </section>
+<section className="resources-cards-container">
+  <div className="resource-card">
+    <AddSchoolForm />
+  </div>
+</section>
 
       <footer className="resources-footer">
         <p>&copy; {new Date().getFullYear()} FallenClassmate • Never Forget</p>
