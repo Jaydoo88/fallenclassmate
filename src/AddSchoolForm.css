@@ -1,19 +1,19 @@
 .add-school-form {
   background-color: white;
-  padding: 30px;
+  padding: 40px;
   border-radius: 12px;
-  max-width: 600px; /* Increased width */
+  max-width: 800px; /* Increased to 800px */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .add-school-form input,
 .add-school-form select {
-  padding: 14px;
-  font-size: 1em;
+  padding: 16px;
+  font-size: 1.05em;
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
@@ -27,7 +27,7 @@
 }
 
 .add-school-form button {
-  padding: 14px;
+  padding: 16px;
   font-weight: bold;
   background-color: #3b9996;
   color: white;
@@ -35,7 +35,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  width: 200px;
+  width: 220px;
   margin: 0 auto;
 }
 
@@ -44,13 +44,13 @@
 }
 
 .form-status {
-  margin-top: 10px;
+  margin-top: 12px;
   text-align: center;
   font-style: italic;
   color: #444;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .add-school-form {
     max-width: 90%;
     padding: 20px;
