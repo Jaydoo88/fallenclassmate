@@ -1,40 +1,82 @@
-.add-school-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
-  gap: 12px;
-  padding: 20px;
+.add-school-page-container {
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
 }
 
-.add-school-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-.add-school-form button {
+/* Navbar */
+.add-school-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #3b9996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.add-school-navbar nav a {
+  margin: 0 15px;
   color: white;
-  border: none;
-  padding: 12px;
+  text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
+  position: relative;
 }
 
-.add-school-form button:hover {
-  background-color: #317f7c;
+.add-school-navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
 }
 
-.form-status {
-  margin-top: 10px;
-  font-style: italic;
-  color: #444;
+.add-school-navbar nav a:hover::after {
+  width: 100%;
 }
 
+/* Logo */
+.add-school-logo-bar {
+  text-align: center;
+  padding: 24px 0;
+  background-color: #f9fdfd;
+}
+
+.add-school-logo-img {
+  height: 90px;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+/* Form Section */
 .form-section {
   padding: 40px 20px;
   text-align: center;
+}
+
+.add-school-title {
+  font-size: 1.9em;
+  color: #3b9996;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.add-school-subtext {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+.add-school-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b9996;
+  color: white;
+  font-size: 0.9em;
 }
