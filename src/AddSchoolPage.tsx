@@ -16,7 +16,7 @@ function AddSchoolPage() {
           <a href="/plans">Plans & Features</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
-          <a href="/add-school" className="active-link">Add a School</a>
+          <Link to="/add-school">Add a School</Link>
         </nav>
       </header>
 
