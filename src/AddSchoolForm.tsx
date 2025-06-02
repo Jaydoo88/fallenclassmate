@@ -7,7 +7,7 @@ function AddSchoolForm() {
     city: '',
     state: '',
     county: '',
-    country: 'USA',
+    country: '',
     school_link: ''
   });
 
