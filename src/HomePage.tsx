@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Logo from './assets/logo.png';
-import HeroImage from './assets/highschoolcover.png';
+import HeroImage from './assets/Casket1.jpg';
 import Sample1 from './assets/Sample1.jpg';
 import Sample2 from './assets/Sample2.jpg';
 import Sample3 from './assets/Sample3.jpg';
