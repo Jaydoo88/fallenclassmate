@@ -78,24 +78,27 @@ function HomePage() {
       </header>
 
       <section
-        className="hero-image"
-        style={{ backgroundImage: `url(${HeroImage})` }}
-      >
-        <div className="hero-overlay-box">
-          <h1>Never Forget!</h1>
-          <p className="hero-sub">
-            <em>Gone from the halls, never from our hearts.</em>
-          </p>
-          <div className="hero-buttons">
-            <a className="button primary" href="/schools">
-              Find a School
-            </a>
-            <a className="button primary" href="/plans">
-              Create Memorial
-            </a>
-          </div>
-        </div>
-      </section>
+  className="hero-image"
+  style={{
+    backgroundImage: `url(${HeroImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',     // show the whole image inside the box
+    backgroundPosition: 'right center', // keeps the faces/frames visible
+    backgroundColor: '#f6fbf9',    // optional: fills any empty edges
+    minHeight: '520px'             // adjust to your desired hero height
+  }}
+>
+  <div className="hero-overlay-box">
+    <h1>Never Forget!</h1>
+    <p className="hero-sub">
+      <em>Gone from the halls, never from our hearts.</em>
+    </p>
+    <div className="hero-buttons">
+      <a className="button primary" href="/schools">Find a School</a>
+      <a className="button primary" href="/plans">Create Memorial</a>
+    </div>
+  </div>
+</section>
 
       <section className="community-stats">
         <h2>Together in Tribute</h2>
