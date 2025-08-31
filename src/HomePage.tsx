@@ -82,10 +82,10 @@ function HomePage() {
   style={{
     backgroundImage: `url(${HeroImage})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',     // show the whole image inside the box
-    backgroundPosition: 'right center', // keeps the faces/frames visible
-    backgroundColor: '#f6fbf9',    // optional: fills any empty edges
-    minHeight: '520px'             // adjust to your desired hero height
+    backgroundSize: 'cover',       // fill the whole section
+    backgroundPosition: 'center',  // center the important parts
+    minHeight: '520px',            // adjust the hero section height
+    width: '100%'                  // make sure it spans full width
   }}
 >
   <div className="hero-overlay-box">
@@ -94,8 +94,12 @@ function HomePage() {
       <em>Gone from the halls, never from our hearts.</em>
     </p>
     <div className="hero-buttons">
-      <a className="button primary" href="/schools">Find a School</a>
-      <a className="button primary" href="/plans">Create Memorial</a>
+      <a className="button primary" href="/schools">
+        Find a School
+      </a>
+      <a className="button primary" href="/plans">
+        Create Memorial
+      </a>
     </div>
   </div>
 </section>
