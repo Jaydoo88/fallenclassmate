@@ -1,1 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FallenClassmate — Never Forget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+          </div>
+
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span>
+              <span class="fade-2 offset-1">🎓</span>
+              <span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span>
+              <span class="fade-5 offset-2">🎓</span>
+              <span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span>
+              <span class="fade-8 offset-1">🎓</span>
+              <span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span>
+              <span class="fade-11 offset-0">🎓</span>
+              <span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span>
+              <span class="fade-14 offset-1">🎓</span>
+              <span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                id="siteSearch"
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="/">Home</a>
+            <a href="/schools">Schools</a>
+            <a href="/resources">Resources</a>
+            <a href="/plans">Plans & Features</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/add-school">Add a School</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero-image">
+        <div class="hero-overlay-box">
+          <h1>Never Forget!</h1>
+          <p class="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+          <div class="hero-buttons">
+            <a class="button primary" href="/schools">Find a School</a>
+            <a class="button primary" href="/plans">Create Memorial</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-stats">
+        <h2>Together in Tribute</h2>
+        <div class="stats-grid">
+          <div>
+            <h3>276</h3>
+            <p>Classmates</p>
+          </div>
+          <div>
+            <h3>228</h3>
+            <p>Viewers</p>
+          </div>
+          <div>
+            <h3>716</h3>
+            <p>Shared Memories</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="newest-classmates">
+        <h2>Newest Classmates Added</h2>
+
+        <div class="classmate-grid">
+          <div class="classmate-card">
+            <img src="./assets/Sample1.jpg" alt="Classmate 1" loading="lazy" />
+            <h4>Jessica Moore</h4>
+            <p>Lincoln High School</p>
+          </div>
+
+          <div class="classmate-card">
+            <img src="./assets/Sample2.jpg" alt="Classmate 2" loading="lazy" />
+            <h4>Andre Johnson</h4>
+            <p>River Valley High</p>
+          </div>
+
+          <div class="classmate-card">
+            <img src="./assets/Sample3.jpg" alt="Classmate 3" loading="lazy" />
+            <h4>Sophia Lee</h4>
+            <p>West Ridge Academy</p>
+          </div>
+
+          <div class="classmate-card">
+            <img src="./assets/Sample4.jpg" alt="Classmate 4" loading="lazy" />
+            <h4>Marcus Allen</h4>
+            <p>Eastbrook High School</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <blockquote>
+          <p>
+            <em>
+              “To live in hearts we leave behind is not to die.”
+              <br />
+              — Thomas Campbell
+            </em>
+          </p>
+        </blockquote>
+      </section>
+
+      <section class="info-cards">
+        <div class="card">
+          <h3>Honor a Classmate</h3>
+          <p>Share stories and moments that celebrate the lives of those we've lost.</p>
+        </div>
+
+        <div class="card">
+          <h3>Reconnect & Reflect</h3>
+          <p>Remember familiar faces, revisit shared memories, and rekindle bonds.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          &copy; <span id="year"></span> FallenClassmate • A place to remember, reconnect, and reflect.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
