@@ -1,1 +1,108 @@
+/* State header */
+.state-hero{
+  background-color: #e7f5f5;
+  padding: 28px 20px;
+  text-align: center;
+}
 
+.state-hero-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.breadcrumb{
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a{
+  color: #2d7d7a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover{
+  text-decoration: underline;
+}
+
+.state-title{
+  margin: 0;
+  color: #2d7d7a;
+  font-style: italic;
+  font-size: 48px;
+}
+
+.state-sub{
+  margin: 10px 0 0;
+  color: #333;
+}
+
+/* Main layout */
+.state-wrap{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background: #f9fdfd;
+}
+
+.state-left{
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.state-image{
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.state-right{
+  width: 420px;
+}
+
+.counties-title{
+  margin: 0 0 14px;
+  color: #2d7d7a;
+}
+
+.counties-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.county-link{
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.county-link:hover{
+  text-decoration: underline;
+}
+
+.state-ctas{
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .state-wrap{
+    flex-direction: column;
+    align-items: center;
+  }
+  .state-left, .state-right{
+    width: 100%;
+    max-width: 520px;
+  }
+  .state-title{
+    font-size: 40px;
+  }
+}
