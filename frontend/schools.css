@@ -7,31 +7,56 @@
 .schools-map-section {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
   flex-wrap: wrap;
   padding: 40px 20px;
 }
 
 .map-item {
   text-align: center;
-  max-width: 520px;
+  width: min(560px, 100%);
 }
 
 .map-item h3 {
-  margin-bottom: 12px;
+  margin: 0 0 14px;
   color: #3b9996;
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.map-item img {
+.map-link {
+  text-decoration: none;
+  display: inline-block;
   width: 100%;
-  max-width: 520px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  transition: transform 0.25s ease;
 }
 
-.map-item img:hover {
+/* SAME SIZE frame for both images */
+.map-frame {
+  width: 100%;
+  height: 320px;              /* <-- adjust this height if you want bigger/smaller */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s ease;
+}
+
+.map-frame:hover {
   transform: translateY(-4px);
+}
+
+/* NO distortion */
+.map-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* <-- key: keeps aspect ratio, no stretching */
+  object-position: center;
+  padding: 14px;              /* gives breathing room around image */
 }
 
 /* Newly added schools */
