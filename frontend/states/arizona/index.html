@@ -1,96 +1,138 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arizona Counties | FallenClassmate</title>
 
-  <!-- Global site CSS (use whichever you actually have) -->
-  <!-- If your main stylesheet is different, change this path -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- Page-specific CSS (this file will sit next to this index.html) -->
+  <!-- IMPORTANT:
+       This page lives at /states/arizona/
+       So to reach the global styles/assets in /frontend root,
+       we go up TWO levels: ../../
+  -->
+  <link rel="stylesheet" href="../../styles.css" />
   <link rel="stylesheet" href="./arizona.css" />
 </head>
 
 <body>
-  <!-- NAVBAR (same vibe as your original) -->
-  <header class="navbar">
-    <div class="nav-logo">
-      <!-- Update this path if your logo lives somewhere else -->
-      <img src="/assets/logo.png" alt="FallenClassmate Logo" />
+  <div class="state-page-container">
+    <div class="page-container">
+      <!-- Shared Header (copied from contact.html) -->
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <a href="../../index.html">
+              <img src="../../assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
+          </div>
+
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span>
+              <span class="fade-2 offset-1">🎓</span>
+              <span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span>
+              <span class="fade-5 offset-2">🎓</span>
+              <span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span>
+              <span class="fade-8 offset-1">🎓</span>
+              <span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span>
+              <span class="fade-11 offset-0">🎓</span>
+              <span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span>
+              <span class="fade-14 offset-1">🎓</span>
+              <span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                id="siteSearch"
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../schools.html">Schools</a>
+            <a href="../../resources.html">Resources</a>
+            <a href="../../plans.html">Plans & Features</a>
+            <a href="../../about.html">About</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- State header section (styled similar to contact header) -->
+      <section class="state-header-section">
+        <p class="state-breadcrumb">
+          <a href="../../schools/usa/index.html">← Back to USA</a>
+        </p>
+
+        <h2>Arizona</h2>
+        <p class="state-intro">
+          Select a county to find schools and memorials.
+        </p>
+      </section>
+
+      <!-- State content -->
+      <section class="state-content">
+        <div class="state-left">
+          <!-- These images must be inside: frontend/states/arizona/ -->
+          <img class="state-image" src="./arizona-outline.png" alt="Arizona outline" />
+          <img class="state-image" src="./arizona-flag.png" alt="Arizona flag" />
+        </div>
+
+        <div class="state-right">
+          <h3 class="counties-title">Counties</h3>
+
+          <div class="counties-list">
+            <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
+            <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
+            <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
+            <a class="county-link" href="/states/arizona/gila-county/">Gila County</a>
+            <a class="county-link" href="/states/arizona/graham-county/">Graham County</a>
+            <a class="county-link" href="/states/arizona/greenlee-county/">Greenlee County</a>
+            <a class="county-link" href="/states/arizona/la-paz-county/">La Paz County</a>
+            <a class="county-link" href="/states/arizona/maricopa-county/">Maricopa County</a>
+            <a class="county-link" href="/states/arizona/mohave-county/">Mohave County</a>
+            <a class="county-link" href="/states/arizona/navajo-county/">Navajo County</a>
+            <a class="county-link" href="/states/arizona/pima-county/">Pima County</a>
+            <a class="county-link" href="/states/arizona/pinal-county/">Pinal County</a>
+            <a class="county-link" href="/states/arizona/santa-cruz-county/">Santa Cruz County</a>
+            <a class="county-link" href="/states/arizona/yavapai-county/">Yavapai County</a>
+            <a class="county-link" href="/states/arizona/yuma-county/">Yuma County</a>
+          </div>
+
+          <div class="state-ctas">
+            <a class="submit-button" href="../../schools.html">Find Your School</a>
+            <a class="submit-button" href="../../add-school.html">Add a School</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shared footer style -->
+      <footer class="footer">
+        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
+      </footer>
     </div>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="/schools/usa">Find School</a>
-      <a href="/create">Create Memorial</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- STATE HEADER -->
-  <section class="state-hero">
-    <div class="state-hero-inner">
-      <div class="breadcrumb">
-        <a href="/schools/usa">← Back to USA</a>
-      </div>
-
-      <h1 class="state-title">Arizona</h1>
-      <p class="state-sub"><em>Select a county to find schools and memorials.</em></p>
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT -->
-  <main class="state-wrap">
-    <!-- LEFT: State outline + flag -->
-    <aside class="state-left">
-      <!-- Put these images inside: frontend/states/arizona/ -->
-      <img class="state-image" src="./arizona-outline.png" alt="Arizona outline" />
-      <img class="state-image" src="./arizona-flag.png" alt="Arizona flag" />
-    </aside>
-
-    <!-- RIGHT: Counties list -->
-    <section class="state-right">
-      <h2 class="counties-title">Counties</h2>
-
-      <div class="counties-list">
-        <!-- County links assume folders like:
-             frontend/states/arizona/maricopa-county/index.html
-             so URL becomes /states/arizona/maricopa-county/
-        -->
-        <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
-        <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
-        <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
-        <a class="county-link" href="/states/arizona/gila-county/">Gila County</a>
-        <a class="county-link" href="/states/arizona/graham-county/">Graham County</a>
-        <a class="county-link" href="/states/arizona/greenlee-county/">Greenlee County</a>
-        <a class="county-link" href="/states/arizona/la-paz-county/">La Paz County</a>
-        <a class="county-link" href="/states/arizona/maricopa-county/">Maricopa County</a>
-        <a class="county-link" href="/states/arizona/mohave-county/">Mohave County</a>
-        <a class="county-link" href="/states/arizona/navajo-county/">Navajo County</a>
-        <a class="county-link" href="/states/arizona/pima-county/">Pima County</a>
-        <a class="county-link" href="/states/arizona/pinal-county/">Pinal County</a>
-        <a class="county-link" href="/states/arizona/santa-cruz-county/">Santa Cruz County</a>
-        <a class="county-link" href="/states/arizona/yavapai-county/">Yavapai County</a>
-        <a class="county-link" href="/states/arizona/yuma-county/">Yuma County</a>
-      </div>
-
-      <div class="state-ctas">
-        <a class="button primary" href="/schools/usa">Find Your School</a>
-        <a class="button primary" href="/create">Create Memorial</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> FallenClassmate — Never Forget</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <!-- Same shared JS as contact page -->
+    <script src="../../script.js" defer></script>
+  </div>
 </body>
 </html>
