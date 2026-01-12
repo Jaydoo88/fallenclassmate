@@ -1,1 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arizona Counties | FallenClassmate</title>
 
+  <!-- Global site CSS (use whichever you actually have) -->
+  <!-- If your main stylesheet is different, change this path -->
+  <link rel="stylesheet" href="/App.css" />
+
+  <!-- Page-specific CSS (this file will sit next to this index.html) -->
+  <link rel="stylesheet" href="./arizona.css" />
+</head>
+
+<body>
+  <!-- NAVBAR (same vibe as your original) -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <!-- Update this path if your logo lives somewhere else -->
+      <img src="/assets/logo.png" alt="FallenClassmate Logo" />
+    </div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/schools/usa">Find School</a>
+      <a href="/create">Create Memorial</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- STATE HEADER -->
+  <section class="state-hero">
+    <div class="state-hero-inner">
+      <div class="breadcrumb">
+        <a href="/schools/usa">← Back to USA</a>
+      </div>
+
+      <h1 class="state-title">Arizona</h1>
+      <p class="state-sub"><em>Select a county to find schools and memorials.</em></p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="state-wrap">
+    <!-- LEFT: State outline + flag -->
+    <aside class="state-left">
+      <!-- Put these images inside: frontend/states/arizona/ -->
+      <img class="state-image" src="./arizona-outline.png" alt="Arizona outline" />
+      <img class="state-image" src="./arizona-flag.png" alt="Arizona flag" />
+    </aside>
+
+    <!-- RIGHT: Counties list -->
+    <section class="state-right">
+      <h2 class="counties-title">Counties</h2>
+
+      <div class="counties-list">
+        <!-- County links assume folders like:
+             frontend/states/arizona/maricopa-county/index.html
+             so URL becomes /states/arizona/maricopa-county/
+        -->
+        <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
+        <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
+        <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
+        <a class="county-link" href="/states/arizona/gila-county/">Gila County</a>
+        <a class="county-link" href="/states/arizona/graham-county/">Graham County</a>
+        <a class="county-link" href="/states/arizona/greenlee-county/">Greenlee County</a>
+        <a class="county-link" href="/states/arizona/la-paz-county/">La Paz County</a>
+        <a class="county-link" href="/states/arizona/maricopa-county/">Maricopa County</a>
+        <a class="county-link" href="/states/arizona/mohave-county/">Mohave County</a>
+        <a class="county-link" href="/states/arizona/navajo-county/">Navajo County</a>
+        <a class="county-link" href="/states/arizona/pima-county/">Pima County</a>
+        <a class="county-link" href="/states/arizona/pinal-county/">Pinal County</a>
+        <a class="county-link" href="/states/arizona/santa-cruz-county/">Santa Cruz County</a>
+        <a class="county-link" href="/states/arizona/yavapai-county/">Yavapai County</a>
+        <a class="county-link" href="/states/arizona/yuma-county/">Yuma County</a>
+      </div>
+
+      <div class="state-ctas">
+        <a class="button primary" href="/schools/usa">Find Your School</a>
+        <a class="button primary" href="/create">Create Memorial</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> FallenClassmate — Never Forget</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
