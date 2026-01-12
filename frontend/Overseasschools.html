@@ -1,1 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overseas High Schools | FallenClassmate</title>
 
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./Overseasschools.css" />
+</head>
+
+<body>
+  <div class="overseas-schools-page-container">
+    <div class="page-container">
+      <!-- Shared Header -->
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <a href="./index.html">
+              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
+          </div>
+
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span>
+              <span class="fade-2 offset-1">🎓</span>
+              <span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span>
+              <span class="fade-5 offset-2">🎓</span>
+              <span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span>
+              <span class="fade-8 offset-1">🎓</span>
+              <span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span>
+              <span class="fade-11 offset-0">🎓</span>
+              <span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span>
+              <span class="fade-14 offset-1">🎓</span>
+              <span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                id="siteSearch"
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="./index.html">Home</a>
+            <a href="./schools.html" class="active">Schools</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./plans.html">Plans & Features</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Banner -->
+      <section class="overseas-schools-map-banner">
+        <h3 class="overseas-map-title">Overseas High Schools</h3>
+        <img src="./assets/asia_map.jpg" alt="Overseas Map Banner" />
+      </section>
+
+      <!-- Content -->
+      <section class="overseas-schools-content">
+        <h2>Explore High Schools by Country</h2>
+        <p class="overseas-schools-note">
+          Select a country to view schools and memorials from that region.
+        </p>
+
+        <div class="overseas-schools-grid">
+          <a class="country-tile" href="./schools/overseas/germany.html">Germany</a>
+          <a class="country-tile" href="./schools/overseas/united-kingdom.html">United Kingdom</a>
+          <a class="country-tile" href="./schools/overseas/italy.html">Italy</a>
+          <a class="country-tile" href="./schools/overseas/spain.html">Spain</a>
+          <a class="country-tile" href="./schools/overseas/puerto-rico.html">Puerto Rico</a>
+
+          <a class="country-tile" href="./schools/overseas/netherlands.html">Netherlands</a>
+          <a class="country-tile" href="./schools/overseas/cuba.html">Cuba</a>
+          <a class="country-tile" href="./schools/overseas/belgium.html">Belgium</a>
+          <a class="country-tile" href="./schools/overseas/turkey.html">Turkey</a>
+          <a class="country-tile" href="./schools/overseas/japan.html">Japan</a>
+
+          <a class="country-tile" href="./schools/overseas/korea.html">Korea</a>
+          <a class="country-tile" href="./schools/overseas/guam.html">Guam</a>
+          <a class="country-tile" href="./schools/overseas/bahrain.html">Bahrain</a>
+        </div>
+      </section>
+
+      <!-- Shared Footer -->
+      <footer class="footer">
+        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
+      </footer>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </div>
+</body>
+</html>
