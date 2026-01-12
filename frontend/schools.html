@@ -1,1 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schools | FallenClassmate</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./schools.css" />
+</head>
 
+<body>
+  <div class="page-container">
+    <!-- HEADER (same as your other pages) -->
+    <header>
+      <div class="logo-bar">
+        <div class="logo-section">
+          <a href="./index.html">
+            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
+
+        <div class="center-section">
+          <div class="cap-row" aria-hidden="true">
+            <span class="fade-1 offset-2">🎓</span><span class="fade-2 offset-1">🎓</span><span class="fade-3 offset-0">🎓</span>
+            <span class="fade-4 offset-1">🎓</span><span class="fade-5 offset-2">🎓</span><span class="fade-6 offset-1">🎓</span>
+            <span class="fade-7 offset-0">🎓</span><span class="fade-8 offset-1">🎓</span><span class="fade-9 offset-2">🎓</span>
+            <span class="fade-10 offset-1">🎓</span><span class="fade-11 offset-0">🎓</span><span class="fade-12 offset-1">🎓</span>
+            <span class="fade-13 offset-2">🎓</span><span class="fade-14 offset-1">🎓</span><span class="fade-15 offset-0">🎓</span>
+          </div>
+        </div>
+
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              id="siteSearch"
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
+
+          <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            &#9776;
+          </button>
+        </div>
+      </div>
+
+      <div class="navbar" id="navbar">
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./schools.html">Schools</a>
+          <a href="./resources.html">Resources</a>
+          <a href="./plans.html">Plans & Features</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAP SECTION -->
+    <section class="schools-map-section">
+      <div class="map-item">
+        <h3>USA High Schools</h3>
+        <!-- IMPORTANT: this must match your real file name -->
+        <a href="./USASchools.html">
+          <img src="./assets/usa_map.png" alt="USA High Schools Map" />
+        </a>
+      </div>
+
+      <div class="map-item">
+        <h3>Overseas and Other High Schools</h3>
+        <!-- create this file later as OverseasSchools.html OR overseas.html (your choice, just be consistent) -->
+        <a href="./overseas.html">
+          <img src="./assets/asia_map.jpg" alt="Overseas High Schools Map" />
+        </a>
+      </div>
+    </section>
+
+    <!-- NEWLY ADDED SCHOOLS -->
+    <section class="schools-featured">
+      <h2>Newly Added Schools</h2>
+
+      <div class="schools-listing">
+        <div class="schools-card">
+          <h3>Lincoln High School</h3>
+          <p>Phoenix, AZ</p>
+        </div>
+        <div class="schools-card">
+          <h3>Roosevelt Academy</h3>
+          <p>Tucson, AZ</p>
+        </div>
+        <div class="schools-card">
+          <h3>Jefferson Prep</h3>
+          <p>Flagstaff, AZ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DID YOU KNOW -->
+    <section class="schools-spotlight">
+      <h2>Did You Know?</h2>
+      <div class="spotlight-box">
+        <p id="spotlightText"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
+    </footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+  <script>
+    (function () {
+      const messages = [
+        "West Point High School has over 60 classmates memorialized from 1980 to 2020.",
+        "Over 12,000 tributes have been posted by classmates across all regions.",
+        "Cleveland High’s Class of ’99 has a full wall of memory submitted by alumni.",
+        "Lincoln High in Phoenix has 24 tributes and 14 shared memories.",
+        "Many DoDEA schools overseas have listings from multiple countries and decades."
+      ];
+
+      const el = document.getElementById("spotlightText");
+      if (!el) return;
+
+      const pick = () => messages[Math.floor(Math.random() * messages.length)];
+      el.textContent = pick();
+
+      setInterval(() => {
+        el.textContent = pick();
+      }, 10000);
+    })();
+  </script>
+</body>
+</html>
