@@ -1,1 +1,115 @@
+/* =========================
+   ABOUT PAGE (about.css)
+   Works with global styles.css
+   ========================= */
 
+.about-page-container {
+  background-color: #f9fdfd;
+  color: #333;
+  min-height: 100vh;
+
+  /* Keep this if you want About to use Segoe UI like the old AboutPage.css.
+     If you want it to match the rest of the site (Georgia), delete this line. */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Optional: About page spacing baseline */
+.about-page-container .page-container {
+  /* keeps the same max-width behavior from styles.css */
+}
+
+/* Header Section */
+.about-header-section {
+  background-color: #f1f8f8;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about-header-title {
+  font-size: 1.8em;
+  color: #3b9996;
+  margin: 0 0 12px;
+  font-weight: bold;
+}
+
+.about-header-subtext {
+  font-size: 1.1em;
+  color: #555;
+  margin: 0;
+}
+
+/* Main Content */
+.about-main-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.about-main-content strong {
+  color: #3b9996;
+}
+
+.about-main-content em {
+  color: #3b9996;
+  font-style: italic;
+}
+
+/* Why We Created Section */
+.about-why-section {
+  background-color: #e7f5f5;
+  border-left: 6px solid #3b9996;
+  padding: 30px 24px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.about-why-title {
+  font-size: 1.5em;
+  color: #3b9996;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.about-why-section p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.about-why-section p:last-child {
+  margin-bottom: 0;
+}
+
+.about-why-signature {
+  text-align: right;
+  font-style: italic;
+  color: #3b9996;
+  margin-top: 10px;
+}
+
+/* Optional: if you decide to use an About-specific footer later
+   (Right now you're using the shared .footer from styles.css) */
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3b9996;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-header-section {
+    padding: 40px 16px;
+  }
+
+  .about-main-content,
+  .about-why-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
