@@ -5,111 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | FallenClassmate</title>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./about.css" />
 </head>
 
 <body>
-  <div class="page-container">
-    <!-- HEADER (match your homepage header/nav) -->
-    <header>
-      <div class="logo-bar">
-        <div class="logo-section">
-          <a href="./index.html">
-            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
-          </a>
-        </div>
+  <div class="about-page-container">
+    <div class="page-container">
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <a href="./index.html">
+              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
+          </div>
 
-        <div class="center-section">
-          <div class="cap-row">
-            <span class="fade-1 offset-2">🎓</span>
-            <span class="fade-2 offset-1">🎓</span>
-            <span class="fade-3 offset-0">🎓</span>
-            <span class="fade-4 offset-1">🎓</span>
-            <span class="fade-5 offset-2">🎓</span>
-            <span class="fade-6 offset-1">🎓</span>
-            <span class="fade-7 offset-0">🎓</span>
-            <span class="fade-8 offset-1">🎓</span>
-            <span class="fade-9 offset-2">🎓</span>
-            <span class="fade-10 offset-1">🎓</span>
-            <span class="fade-11 offset-0">🎓</span>
-            <span class="fade-12 offset-1">🎓</span>
-            <span class="fade-13 offset-2">🎓</span>
-            <span class="fade-14 offset-1">🎓</span>
-            <span class="fade-15 offset-0">🎓</span>
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span>
+              <span class="fade-2 offset-1">🎓</span>
+              <span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span>
+              <span class="fade-5 offset-2">🎓</span>
+              <span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span>
+              <span class="fade-8 offset-1">🎓</span>
+              <span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span>
+              <span class="fade-11 offset-0">🎓</span>
+              <span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span>
+              <span class="fade-14 offset-1">🎓</span>
+              <span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                id="siteSearch"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
           </div>
         </div>
 
-        <div class="search-section">
-          <div class="search-container">
-            <input
-              type="text"
-              class="styled-search-input"
-              placeholder="Find a Classmate or School"
-              id="siteSearch"
-            />
-            <span class="search-icon">&#128269;</span>
-          </div>
-
-          <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
-            &#9776;
-          </div>
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="./index.html">Home</a>
+            <a href="./schools.html">Schools</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./plans.html">Plans & Features</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./add-school.html">Add a School</a>
+          </nav>
         </div>
-      </div>
+      </header>
 
-      <div class="navbar">
-        <nav>
-          <a href="./index.html">Home</a>
-          <a href="./schools.html">Schools</a>
-          <a href="./resources.html">Resources</a>
-          <a href="./plans.html">Plans & Features</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-          <a href="./add-school.html">Add a School</a>
-        </nav>
-      </div>
-    </header>
+      <section class="about-header-section">
+        <h2 class="about-header-title">About FallenClassmate</h2>
+        <p class="about-header-subtext">Honoring the memories of those we lost — together.</p>
+      </section>
 
-    <!-- PAGE CONTENT -->
-    <section style="padding: 40px 20px; text-align:center;">
-      <h2 style="color:#3b9996; margin-bottom: 10px;">About FallenClassmate</h2>
-      <p style="margin: 0; color:#666;">Honoring the memories of those we lost — together.</p>
-    </section>
+      <section class="about-main-content">
+        <p>
+          FallenClassmate was created with one purpose: to ensure no classmate is ever forgotten. From every school and every generation, we provide a dedicated place where friends, families, and former classmates can come together to remember those who are no longer with us.
+        </p>
+        <p>
+          We believe that every life deserves to be remembered — not just through a name on a yearbook page, but with heartfelt stories, shared memories, photos, and tributes. Whether it’s lighting a candle, writing a message, or simply reading through memories, this platform is built for healing, reconnection, and reflection.
+        </p>
+        <p>
+          Our mission is simple: <strong>To build a community of remembrance, one classmate at a time.</strong>
+        </p>
+        <p>
+          Thank you for being a part of this journey.<br />
+          <em>Together, we remember. Together, we honor. Together, we heal.</em>
+        </p>
+      </section>
 
-    <section style="padding: 0 20px 30px; line-height: 1.7;">
-      <p>
-        FallenClassmate was created with one purpose: to ensure no classmate is ever forgotten. From every school and every generation, we provide a dedicated place where friends, families, and former classmates can come together to remember those who are no longer with us.
-      </p>
-      <p>
-        We believe that every life deserves to be remembered — not just through a name on a yearbook page, but with heartfelt stories, shared memories, photos, and tributes. Whether it’s lighting a candle, writing a message, or simply reading through memories, this platform is built for healing, reconnection, and reflection.
-      </p>
-      <p>
-        Our mission is simple: <strong>To build a community of remembrance, one classmate at a time.</strong>
-      </p>
-      <p>
-        Thank you for being a part of this journey.<br />
-        <em>Together, we remember. Together, we honor. Together, we heal.</em>
-      </p>
-    </section>
+      <section class="about-why-section">
+        <h3 class="about-why-title">🕯️ Why We Created FallenClassmate</h3>
+        <p>
+          We’ve all had that moment — scrolling through social media or talking with an old friend — when we suddenly hear about a classmate who passed away. The news hits hard, not just because of the loss, but because it often feels like there was no place to remember them properly.
+        </p>
+        <p>
+          FallenClassmate was born from that feeling. We created this space so no classmate is forgotten, no matter how much time has passed. Whether it was someone you knew well or only from a distance, they were part of your journey — part of your school, your community, your memories.
+        </p>
+        <p>
+          This platform is our way of saying: your life mattered, and you’ll always be part of the class.
+        </p>
+        <p class="about-why-signature">– The FallenClassmate Team</p>
+      </section>
 
-    <section style="padding: 30px 20px; background:#fff; border-top:4px solid #3b9996; border-bottom:4px solid #3b9996;">
-      <h3 style="color:#3b9996; margin-top:0;">🕯️ Why We Created FallenClassmate</h3>
-      <p style="line-height:1.7;">
-        We’ve all had that moment — scrolling through social media or talking with an old friend — when we suddenly hear about a classmate who passed away. The news hits hard, not just because of the loss, but because it often feels like there was no place to remember them properly.
-      </p>
-      <p style="line-height:1.7;">
-        FallenClassmate was born from that feeling. We created this space so no classmate is forgotten, no matter how much time has passed. Whether it was someone you knew well or only from a distance, they were part of your journey — part of your school, your community, your memories.
-      </p>
-      <p style="line-height:1.7;">
-        This platform is our way of saying: your life mattered, and you’ll always be part of the class.
-      </p>
-      <p style="margin-bottom:0; font-style: italic; color:#3b9996;">– The FallenClassmate Team</p>
-    </section>
+      <footer class="footer">
+        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
+      </footer>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-    </footer>
+    <script src="./script.js" defer></script>
   </div>
-
-  <script src="./script.js" defer></script>
 </body>
 </html>
