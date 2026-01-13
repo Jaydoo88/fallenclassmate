@@ -26,6 +26,7 @@
   padding: 18px;
 }
 
+/* Seal circle */
 .county-seal-wrap{
   width: 110px;
   height: 110px;
@@ -37,12 +38,19 @@
   border: 2px solid rgba(0,0,0,0.08);
   overflow: hidden;
   flex: 0 0 auto;
+
+  /* helps with seal png whitespace + gives breathing room */
+  padding: 10px;
 }
 
 .county-seal{
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
+
+  /* If your seal artwork has uneven whitespace, nudge here */
+  transform: translateX(0px) translateY(0px);
 }
 
 .county-header-text h2{
@@ -92,6 +100,7 @@
   color: #1f2a2a;
 }
 
+/* Schools Grid */
 .schools-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -141,14 +150,49 @@
   margin-top: 12px;
 }
 
-/* Use your existing submit-button but shrink it */
+/* NEW: nicer School → link as a pill button */
+.school-link-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  background: #3b9996;
+  color: #fff;
+  border: 2px solid #3b9996;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.school-link-btn:hover{
+  background: #2f7f7c;
+  border-color: #2f7f7c;
+  transform: translateY(-1px);
+}
+
+.school-link-btn span{
+  font-size: 1.05em;
+}
+
+/* If you still use submit-button.small anywhere, keep it functional */
 .submit-button.small{
   padding: 10px 14px;
   font-size: 0.95rem;
 }
 
+/* Center and space CTA buttons at bottom */
 .county-ctas{
-  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+/* This assumes you're using: <div class="county-ctas ctas-grid"> ... */
+.county-ctas.ctas-grid{
+  gap: 18px;
+  width: 100%;
+  max-width: 520px;
 }
 
 /* Responsive */
@@ -170,5 +214,9 @@
   .school-media{
     width: 100%;
     height: 120px;
+  }
+
+  .county-stats{
+    justify-content: center;
   }
 }
