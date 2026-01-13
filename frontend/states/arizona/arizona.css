@@ -1,6 +1,6 @@
-/* Make this page match site spacing */
+/* ===== Header area ===== */
 .state-header-section{
-  background: #eef6f6;
+  background: linear-gradient(180deg, #eef6f6 0%, #f9fdfd 100%);
   padding: 40px 20px;
   text-align: center;
 }
@@ -10,6 +10,7 @@
   color: #2d7d7a;
   font-size: 42px;
   font-style: italic;
+  letter-spacing: 0.2px;
 }
 
 .state-intro{
@@ -33,6 +34,7 @@
   text-decoration: underline;
 }
 
+/* ===== Layout ===== */
 .state-content{
   display: flex;
   gap: 50px;
@@ -53,6 +55,12 @@
   border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   display: block;
+  background: #fff;
+}
+
+/* Optional: make the seal feel “special” */
+.state-seal{
+  border-radius: 24px;
 }
 
 .state-right{
@@ -65,22 +73,55 @@
   font-size: 26px;
 }
 
-.counties-list{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* ===== County cards ===== */
+.counties-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
+/* Card base */
 .county-link{
-  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: #ffffff;
+  border: 1px solid #e6efef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+
   text-decoration: none;
+  color: #0f2f2e;
   font-size: 18px;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
+/* Arrow */
+.county-link::after{
+  content: "→";
+  color: #3b9996;
+  font-weight: 800;
+  margin-left: 16px;
+}
+
+/* Hover/focus states (feel clickable) */
 .county-link:hover{
-  text-decoration: underline;
+  transform: translateY(-1px);
+  border-color: #cfe3e3;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
 }
 
+.county-link:focus{
+  outline: none;
+  border-color: #3b9996;
+  box-shadow: 0 0 0 3px rgba(59,153,150,0.18), 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* ===== CTAs ===== */
 .state-ctas{
   margin-top: 22px;
   display: flex;
@@ -88,7 +129,7 @@
   flex-wrap: wrap;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 900px){
   .state-content{
     flex-direction: column;
