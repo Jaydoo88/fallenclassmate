@@ -34,7 +34,7 @@
   text-decoration: underline;
 }
 
-/* ===== Quick stats pills (stay in header) ===== */
+/* ===== Quick stats pills ===== */
 .state-stats{
   margin: 18px auto 0;
   display: flex;
@@ -73,26 +73,36 @@
   padding: 50px 20px;
 }
 
-/* ===== Left: badges row ===== */
+/* ===== Left: badges + blurb ===== */
+.state-left{
+  width: 420px;
+}
+
+.state-badges{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 .badge{
   background: #ffffff;
   border: 1px solid #e6efef;
   border-radius: 18px;
-  overflow: hidden; /* makes the label bar snap perfectly */
+  overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
   text-align: center;
 }
 
 .badge-media{
   padding: 14px;
-  min-height: 170px;          /* forces both cards to align */
+  min-height: 170px; /* keeps both cards same height */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .badge-label-bar{
-  background: #3b9996;        /* your site teal */
+  background: #3b9996;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
@@ -100,7 +110,7 @@
   letter-spacing: 0.2px;
 }
 
-/* Keep your existing image styles but remove extra shadows if you want */
+/* Images */
 .seal-badge{
   width: 130px;
   height: 130px;
@@ -120,9 +130,17 @@
   display: block;
 }
 
+.state-blurb{
+  margin: 14px 6px 0;
+  color: #354746;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
 /* ===== Right column ===== */
 .state-right{
-  width: 520px; /* a little wider so 2 columns breathe */
+  width: 560px;
 }
 
 .counties-title{
@@ -131,7 +149,7 @@
   font-size: 26px;
 }
 
-/* ===== County cards (2 columns on desktop) ===== */
+/* ===== County cards (2 columns) ===== */
 .counties-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -181,9 +199,12 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1000px){
+@media (max-width: 1100px){
   .counties-grid{
     grid-template-columns: 1fr;
+  }
+  .state-right{
+    width: 520px;
   }
 }
 
@@ -195,6 +216,16 @@
 
   .state-left, .state-right{
     width: 100%;
-    max-width: 620px;
+    max-width: 720px;
+  }
+
+  .state-badges{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px){
+  .state-badges{
+    grid-template-columns: 1fr;
   }
 }
