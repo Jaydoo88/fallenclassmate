@@ -1,8 +1,12 @@
 <!-- =========================================================
      Ganado High School (AZ) — School Page (FULL HTML)
-     Uses BOTH:
+     Live URL: https://www.fallenclassmate.com/schools/ganado-high-school/
+     CSS:
        1) ../../../styles.css   (global site theme)
        2) ../../schools.css     (shared school-page components)
+     Notes:
+       - All internal links now point back to the live school page
+       - Tabs + year buttons use query params (future-proof)
      ========================================================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +22,10 @@
 
 <body>
 
-  <!-- SITE HEADER / NAV (keep consistent with your global styles.css) -->
+  <!-- SITE HEADER / NAV (keeps your global styles.css look) -->
   <header class="navbar">
     <div class="nav-logo">
       <a href="/" aria-label="FallenClassmate Home">
-        <!-- If your global header uses a logo image, swap this in:
-        <img src="/assets/logo.png" alt="FallenClassmate Logo" />
-        -->
         <span class="brand-text">FallenClassmate</span>
       </a>
     </div>
@@ -64,9 +65,13 @@
             <a class="btn btn-primary" href="/create-memorial/?school=ganado-high-school">
               Create Memorial
             </a>
-            <a class="btn btn-secondary" href="/schools/ganado-high-school/alumni/">
+
+            <!-- keep this pointing to the main school page until you build a dedicated alumni page -->
+            <a class="btn btn-secondary" href="/schools/ganado-high-school/?tab=alumni">
               Find a Classmate
             </a>
+
+            <!-- if you have an official school site later, replace # with it -->
             <a class="btn btn-outline" href="#" target="_blank" rel="noopener">
               School Link
             </a>
@@ -112,19 +117,21 @@
           <option value="faculty">Faculty</option>
         </select>
 
+        <!-- search button doesn't need to navigate yet (MVP placeholder) -->
         <button class="btn btn-primary" type="button">Search</button>
       </div>
     </section>
 
     <!-- =========================================================
          TABS
+         (All tabs point to the same school page with a ?tab= param)
          ========================================================= -->
     <section class="school-tabs" aria-label="School sections">
 
       <div class="tab-bar" role="tablist" aria-label="School tabs">
-        <a class="tab active" role="tab" aria-selected="true" href="#tab-memorials">Memorials</a>
-        <a class="tab" role="tab" aria-selected="false" href="#tab-alumni-wall">Alumni Wall</a>
-        <a class="tab" role="tab" aria-selected="false" href="#tab-years">Years</a>
+        <a class="tab active" role="tab" aria-selected="true" href="/schools/ganado-high-school/?tab=memorials">Memorials</a>
+        <a class="tab" role="tab" aria-selected="false" href="/schools/ganado-high-school/?tab=alumni">Alumni Wall</a>
+        <a class="tab" role="tab" aria-selected="false" href="/schools/ganado-high-school/?tab=years">Years</a>
       </div>
 
       <!-- =========================
@@ -143,8 +150,8 @@
               <h3 class="memorial-name">Name Placeholder</h3>
               <p class="memorial-sub">Class of 2006 • Forever in our hearts</p>
               <div class="memorial-actions">
-                <a class="btn btn-secondary btn-block" href="#">View Memorial</a>
-                <a class="btn btn-ghost btn-block" href="#">Leave a Tribute</a>
+                <a class="btn btn-secondary btn-block" href="/schools/ganado-high-school/?tab=memorials">View Memorial</a>
+                <a class="btn btn-ghost btn-block" href="/schools/ganado-high-school/?tab=alumni">Leave a Tribute</a>
               </div>
             </div>
           </article>
@@ -155,8 +162,8 @@
               <h3 class="memorial-name">Name Placeholder</h3>
               <p class="memorial-sub">Class of 1998 • Remembered always</p>
               <div class="memorial-actions">
-                <a class="btn btn-secondary btn-block" href="#">View Memorial</a>
-                <a class="btn btn-ghost btn-block" href="#">Leave a Tribute</a>
+                <a class="btn btn-secondary btn-block" href="/schools/ganado-high-school/?tab=memorials">View Memorial</a>
+                <a class="btn btn-ghost btn-block" href="/schools/ganado-high-school/?tab=alumni">Leave a Tribute</a>
               </div>
             </div>
           </article>
@@ -167,15 +174,16 @@
               <h3 class="memorial-name">Name Placeholder</h3>
               <p class="memorial-sub">Class of 2014 • Gone, never forgotten</p>
               <div class="memorial-actions">
-                <a class="btn btn-secondary btn-block" href="#">View Memorial</a>
-                <a class="btn btn-ghost btn-block" href="#">Leave a Tribute</a>
+                <a class="btn btn-secondary btn-block" href="/schools/ganado-high-school/?tab=memorials">View Memorial</a>
+                <a class="btn btn-ghost btn-block" href="/schools/ganado-high-school/?tab=alumni">Leave a Tribute</a>
               </div>
             </div>
           </article>
         </div>
 
         <div class="section-footer">
-          <a class="btn btn-outline" href="/schools/ganado-high-school/memorials/">
+          <!-- until you have a memorials subpage, keep it on the main school page -->
+          <a class="btn btn-outline" href="/schools/ganado-high-school/?tab=memorials">
             See all memorials
           </a>
         </div>
@@ -230,7 +238,7 @@
               <p class="activity-time">2 hours ago</p>
             </div>
             <div class="activity-action">
-              <a class="btn btn-small btn-secondary" href="#">View Memorial</a>
+              <a class="btn btn-small btn-secondary" href="/schools/ganado-high-school/?tab=memorials">View</a>
             </div>
           </article>
 
@@ -244,7 +252,7 @@
               <p class="activity-time">Yesterday</p>
             </div>
             <div class="activity-action">
-              <a class="btn btn-small btn-secondary" href="#">Read Story</a>
+              <a class="btn btn-small btn-secondary" href="/schools/ganado-high-school/?tab=memorials">Read</a>
             </div>
           </article>
 
@@ -257,7 +265,7 @@
               <p class="activity-time">3 days ago</p>
             </div>
             <div class="activity-action">
-              <a class="btn btn-small btn-secondary" href="#">Read Memory</a>
+              <a class="btn btn-small btn-secondary" href="/schools/ganado-high-school/?tab=alumni">Read</a>
             </div>
           </article>
 
@@ -270,7 +278,7 @@
               <p class="activity-time">Last week</p>
             </div>
             <div class="activity-action">
-              <a class="btn btn-small btn-secondary" href="#">View Post</a>
+              <a class="btn btn-small btn-secondary" href="/schools/ganado-high-school/?tab=alumni">View</a>
             </div>
           </article>
 
@@ -292,24 +300,24 @@
       <div id="tab-years" class="tab-panel" role="tabpanel">
         <header class="section-header">
           <h2>Years</h2>
-          <p>Jump to a class year to view memorials, alumni activity, and faculty entries.</p>
+          <p>Jump to a class year to view memorials and alumni activity.</p>
         </header>
 
         <div class="decade-jump" aria-label="Jump by decade">
-          <a class="pill-link" href="#decade-1980">80s</a>
-          <a class="pill-link" href="#decade-1990">90s</a>
-          <a class="pill-link" href="#decade-2000">00s</a>
-          <a class="pill-link" href="#decade-2010">10s</a>
-          <a class="pill-link" href="#decade-2020">20s</a>
+          <a class="pill-link" href="/schools/ganado-high-school/?tab=years#decade-1980">80s</a>
+          <a class="pill-link" href="/schools/ganado-high-school/?tab=years#decade-1990">90s</a>
+          <a class="pill-link" href="/schools/ganado-high-school/?tab=years#decade-2000">00s</a>
+          <a class="pill-link" href="/schools/ganado-high-school/?tab=years#decade-2010">10s</a>
+          <a class="pill-link" href="/schools/ganado-high-school/?tab=years#decade-2020">20s</a>
         </div>
 
-        <!-- Extra sauce: Class-of banner (static placeholder) -->
+        <!-- Extra sauce: Class-of banner (static placeholder, uses query params) -->
         <div class="class-banner" aria-label="Class of banner">
           <h3>Class of <span class="class-year">2004</span></h3>
           <div class="class-banner-actions">
-            <a class="btn btn-secondary" href="#">View Memorials (12)</a>
-            <a class="btn btn-ghost" href="#">Post a Memory</a>
-            <a class="btn btn-outline" href="#">Find Alumni</a>
+            <a class="btn btn-secondary" href="/schools/ganado-high-school/?tab=memorials&year=2004">View Memorials</a>
+            <a class="btn btn-ghost" href="/schools/ganado-high-school/?tab=alumni&year=2004">Post a Memory</a>
+            <a class="btn btn-outline" href="/schools/ganado-high-school/?tab=alumni&year=2004">Find Alumni</a>
           </div>
         </div>
 
@@ -317,70 +325,71 @@
 
           <div class="year-grid-header" id="decade-1980"><h4>1980s</h4></div>
           <div class="year-grid">
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1983/">1983</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1984/">1984</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1985/">1985</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1986/">1986</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1987/">1987</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1988/">1988</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1989/">1989</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1983">1983</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1984">1984</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1985">1985</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1986">1986</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1987">1987</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1988">1988</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1989">1989</a>
           </div>
 
           <div class="year-grid-header" id="decade-1990"><h4>1990s</h4></div>
           <div class="year-grid">
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1990/">1990</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1991/">1991</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1992/">1992</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1993/">1993</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1994/">1994</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1995/">1995</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1996/">1996</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1997/">1997</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1998/">1998</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/1999/">1999</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1990">1990</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1991">1991</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1992">1992</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1993">1993</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1994">1994</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1995">1995</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1996">1996</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1997">1997</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1998">1998</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=1999">1999</a>
           </div>
 
           <div class="year-grid-header" id="decade-2000"><h4>2000s</h4></div>
           <div class="year-grid">
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2000/">2000</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2001/">2001</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2002/">2002</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2003/">2003</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2004/">2004</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2005/">2005</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2006/">2006</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2007/">2007</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2008/">2008</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2009/">2009</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2000">2000</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2001">2001</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2002">2002</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2003">2003</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2004">2004</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2005">2005</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2006">2006</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2007">2007</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2008">2008</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2009">2009</a>
           </div>
 
           <div class="year-grid-header" id="decade-2010"><h4>2010s</h4></div>
           <div class="year-grid">
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2010/">2010</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2011/">2011</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2012/">2012</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2013/">2013</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2014/">2014</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2015/">2015</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2016/">2016</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2017/">2017</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2018/">2018</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2019/">2019</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2010">2010</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2011">2011</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2012">2012</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2013">2013</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2014">2014</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2015">2015</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2016">2016</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2017">2017</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2018">2018</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2019">2019</a>
           </div>
 
           <div class="year-grid-header" id="decade-2020"><h4>2020s</h4></div>
           <div class="year-grid">
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2020/">2020</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2021/">2021</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2022/">2022</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2023/">2023</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2024/">2024</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2025/">2025</a>
-            <a class="year-btn" href="/schools/ganado-high-school/class-of/2026/">2026</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2020">2020</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2021">2021</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2022">2022</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2023">2023</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2024">2024</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2025">2025</a>
+            <a class="year-btn" href="/schools/ganado-high-school/?tab=years&year=2026">2026</a>
           </div>
 
+          <!-- keep this on the main page until you build a faculty subpage -->
           <div class="faculty-link">
-            <a class="btn btn-outline" href="/schools/ganado-high-school/faculty/">
+            <a class="btn btn-outline" href="/schools/ganado-high-school/?tab=faculty">
               View Faculty
             </a>
           </div>
@@ -397,13 +406,12 @@
       <div class="remember-roll-inner">
         <span class="remember-label">Newest tributes:</span>
         <span class="remember-items">🕯️ Emily T. • 🌹 Robert L. • 🕊️ Dana S. • 🕯️ Jason R.</span>
-        <a class="remember-link" href="/schools/ganado-high-school/memorials/">View all</a>
+        <a class="remember-link" href="/schools/ganado-high-school/?tab=memorials">View all</a>
       </div>
     </section>
 
   </main>
 
-  <!-- SITE FOOTER (keep consistent with your global styles.css) -->
   <footer class="footer">
     <p>&copy; 2026 FallenClassmate — Never Forget</p>
   </footer>
