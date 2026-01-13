@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arizona Counties | FallenClassmate</title>
 
-  <!-- IMPORTANT:
-       This page lives at /states/arizona/
-       So to reach the global styles/assets in /frontend root,
-       we go up TWO levels: ../../
-  -->
   <link rel="stylesheet" href="../../styles.css" />
   <link rel="stylesheet" href="./arizona.css" />
 </head>
@@ -77,7 +72,7 @@
         </div>
       </header>
 
-      <!-- State header section (styled similar to contact header) -->
+      <!-- State header section -->
       <section class="state-header-section">
         <p class="state-breadcrumb">
           <a href="../../USAschools.html">← Back to USA</a>
@@ -92,15 +87,15 @@
       <!-- State content -->
       <section class="state-content">
         <div class="state-left">
-          <!-- These images must be inside: frontend/states/arizona/ -->
-          <img class="state-image" src="/assets/ArizonaSeal.png" alt="Arizona outline" />
-<img class="state-image" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
+          <img class="state-image state-seal" src="/assets/ArizonaSeal.png" alt="Arizona seal" />
+          <img class="state-image" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
         </div>
 
         <div class="state-right">
           <h3 class="counties-title">Counties</h3>
 
-          <div class="counties-list">
+          <!-- UPDATED: added counties-grid class -->
+          <div class="counties-list counties-grid">
             <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
             <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
             <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
@@ -125,13 +120,11 @@
         </div>
       </section>
 
-      <!-- Shared footer style -->
       <footer class="footer">
         <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
       </footer>
     </div>
 
-    <!-- Same shared JS as contact page -->
     <script src="../../script.js" defer></script>
   </div>
 </body>
