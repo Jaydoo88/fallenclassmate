@@ -34,6 +34,36 @@
   text-decoration: underline;
 }
 
+/* ===== Quick stats pills ===== */
+.state-stats{
+  margin: 18px auto 0;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat{
+  background: #ffffff;
+  border: 1px solid #e6efef;
+  border-radius: 999px;
+  padding: 10px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.stat strong{
+  font-size: 18px;
+  color: #2d7d7a;
+}
+
+.stat span{
+  font-size: 13px;
+  color: #4b5b5a;
+}
+
 /* ===== Layout ===== */
 .state-content{
   display: flex;
@@ -43,6 +73,7 @@
   padding: 50px 20px;
 }
 
+/* ===== Left image column ===== */
 .state-left{
   width: 420px;
   display: flex;
@@ -50,19 +81,34 @@
   gap: 18px;
 }
 
+.state-figure{
+  margin: 0;
+}
+
 .state-image{
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   display: block;
-  background: #fff;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border: 1px solid #e6efef;
 }
 
-/* Optional: make the seal feel “special” */
+/* Make the seal feel “premium” */
 .state-seal{
-  border-radius: 24px;
+  border-radius: 999px;
+  padding: 14px;
+  background: #ffffff;
 }
 
+.state-caption{
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: #4b5b5a;
+}
+
+/* ===== Right column ===== */
 .state-right{
   width: 420px;
 }
@@ -80,27 +126,21 @@
   gap: 12px;
 }
 
-/* Card base */
 .county-link{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 12px 14px;
   border-radius: 14px;
-
   background: #ffffff;
   border: 1px solid #e6efef;
   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-
   text-decoration: none;
   color: #0f2f2e;
   font-size: 18px;
-
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-/* Arrow */
 .county-link::after{
   content: "→";
   color: #3b9996;
@@ -108,7 +148,6 @@
   margin-left: 16px;
 }
 
-/* Hover/focus states (feel clickable) */
 .county-link:hover{
   transform: translateY(-1px);
   border-color: #cfe3e3;
