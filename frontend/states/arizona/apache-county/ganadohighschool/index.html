@@ -22,21 +22,64 @@
 
 <body>
 
-  <!-- SITE HEADER / NAV -->
-<header class="navbar">
-  <div class="nav-logo">
-    <a href="/" aria-label="FallenClassmate Home">
-      <img src="/assets/logo.png" alt="FallenClassmate Logo" />
-    </a>
+<!-- Shared Header (copied from your county page for consistency) -->
+<header>
+  <div class="logo-bar">
+    <div class="logo-section">
+      <a href="../../../../index.html">
+        <img src="../../../../assets/logo.png" alt="FallenClassmate Logo" />
+      </a>
+    </div>
+
+    <div class="center-section">
+      <div class="cap-row" aria-hidden="true">
+        <span class="fade-1 offset-2">🎓</span>
+        <span class="fade-2 offset-1">🎓</span>
+        <span class="fade-3 offset-0">🎓</span>
+        <span class="fade-4 offset-1">🎓</span>
+        <span class="fade-5 offset-2">🎓</span>
+        <span class="fade-6 offset-1">🎓</span>
+        <span class="fade-7 offset-0">🎓</span>
+        <span class="fade-8 offset-1">🎓</span>
+        <span class="fade-9 offset-2">🎓</span>
+        <span class="fade-10 offset-1">🎓</span>
+        <span class="fade-11 offset-0">🎓</span>
+        <span class="fade-12 offset-1">🎓</span>
+        <span class="fade-13 offset-2">🎓</span>
+        <span class="fade-14 offset-1">🎓</span>
+        <span class="fade-15 offset-0">🎓</span>
+      </div>
+    </div>
+
+    <div class="search-section">
+      <div class="search-container">
+        <input
+          id="siteSearch"
+          type="text"
+          class="styled-search-input"
+          placeholder="Find a Classmate or School"
+          autocomplete="off"
+        />
+        <span class="search-icon" aria-hidden="true">&#128269;</span>
+      </div>
+
+      <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        &#9776;
+      </button>
+    </div>
   </div>
 
-  <nav aria-label="Primary Navigation">
-    <a href="/">Home</a>
-    <a href="/schools/">Find School</a>
-    <a href="/create/">Create Memorial</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-  </nav>
+  <div class="navbar" id="navbar">
+    <nav>
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../../schools.html">Schools</a>
+      <a href="../../../../resources.html">Resources</a>
+      <a href="../../../../plans.html">Plans & Features</a>
+      <a href="../../../../about.html">About</a>
+      <a href="../../../../contact.html">Contact</a>
+      <a href="../../../../add-school.html">Add a School</a>
+    </nav>
+  </div>
 </header>
   <main class="school-page">
 
