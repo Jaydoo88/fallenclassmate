@@ -74,35 +74,41 @@
 }
 
 /* ===== Left: badges row ===== */
-.state-left{
-  width: 420px;
-}
-
-.state-badges{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
 .badge{
   background: #ffffff;
   border: 1px solid #e6efef;
   border-radius: 18px;
-  padding: 14px;
+  overflow: hidden; /* makes the label bar snap perfectly */
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
   text-align: center;
 }
 
+.badge-media{
+  padding: 14px;
+  min-height: 170px;          /* forces both cards to align */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-label-bar{
+  background: #3b9996;        /* your site teal */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 10px;
+  letter-spacing: 0.2px;
+}
+
+/* Keep your existing image styles but remove extra shadows if you want */
 .seal-badge{
   width: 130px;
   height: 130px;
   border-radius: 999px;
   display: block;
-  margin: 0 auto;
   background: #fff;
   border: 1px solid #e6efef;
   padding: 8px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .flag-badge{
@@ -111,22 +117,7 @@
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid #e6efef;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
   display: block;
-}
-
-.badge-label{
-  margin-top: 10px;
-  font-size: 13px;
-  color: #4b5b5a;
-}
-
-.state-blurb{
-  margin: 14px 6px 0;
-  color: #354746;
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
 }
 
 /* ===== Right column ===== */
