@@ -143,10 +143,12 @@
   width: 560px;
 }
 
+/* Center the Counties header */
 .counties-title{
   margin: 0 0 16px;
   color: #2d7d7a;
   font-size: 26px;
+  text-align: center;
 }
 
 /* ===== County cards (2 columns) ===== */
@@ -190,12 +192,20 @@
   box-shadow: 0 0 0 3px rgba(59,153,150,0.18), 0 10px 22px rgba(0,0,0,0.08);
 }
 
-/* ===== CTAs ===== */
+/* ===== CTAs aligned to 2 columns ===== */
 .state-ctas{
-  margin-top: 22px;
-  display: flex;
+  margin-top: 18px;
+}
+
+.ctas-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-  flex-wrap: wrap;
+}
+
+.ctas-grid .submit-button{
+  width: 100%;
+  text-align: center;
 }
 
 /* ===== Responsive ===== */
@@ -203,6 +213,11 @@
   .counties-grid{
     grid-template-columns: 1fr;
   }
+
+  .ctas-grid{
+    grid-template-columns: 1fr;
+  }
+
   .state-right{
     width: 520px;
   }
