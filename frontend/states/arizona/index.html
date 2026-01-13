@@ -83,7 +83,7 @@
           Select a county to find schools and memorials.
         </p>
 
-        <!-- Quick stats -->
+        <!-- Quick stats (stays in header) -->
         <div class="state-stats">
           <div class="stat"><strong>15</strong><span>Counties</span></div>
           <div class="stat"><strong>—</strong><span>Schools</span></div>
@@ -93,18 +93,26 @@
 
       <!-- State content -->
       <section class="state-content">
+        <!-- Left: small seal + small flag (side by side) -->
         <div class="state-left">
-          <figure class="state-figure">
-            <img class="state-image state-seal" src="/assets/ArizonaSeal.png" alt="Arizona seal" />
-            <figcaption class="state-caption">State Seal</figcaption>
-          </figure>
+          <div class="state-badges">
+            <div class="badge">
+              <img class="seal-badge" src="/assets/ArizonaSeal.png" alt="Arizona seal" />
+              <div class="badge-label">State Seal</div>
+            </div>
 
-          <figure class="state-figure">
-            <img class="state-image" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
-            <figcaption class="state-caption">State Flag</figcaption>
-          </figure>
+            <div class="badge">
+              <img class="flag-badge" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
+              <div class="badge-label">State Flag</div>
+            </div>
+          </div>
+
+          <p class="state-blurb">
+            Browse by county to find schools, classmates, and memorial pages across Arizona.
+          </p>
         </div>
 
+        <!-- Right: counties list -->
         <div class="state-right">
           <h3 class="counties-title">Counties</h3>
 
@@ -133,7 +141,7 @@
         </div>
       </section>
 
-      <!-- Shared footer style -->
+      <!-- Footer -->
       <footer class="footer">
         <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
       </footer>
