@@ -5,46 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ganado High School — Class of 1988 | FallenClassmate</title>
 
-  <!-- Global site theme (your deployed root is /) -->
- <link rel="stylesheet" href="../../../../../styles.css" />
-<link rel="stylesheet" href="../../../../classyear.css" />
+  <!-- Global theme -->
+  <link rel="stylesheet" href="../../../../../styles.css" />
+
+  <!-- Class-year page styles (shared across states) -->
+  <link rel="stylesheet" href="../../../../classyear.css" />
 </head>
 
 <body>
-  <header class="fc-header">
-    <div class="fc-header-inner">
-      <a class="fc-brand" href="/index.html">
-        <img src="/assets/logo.png" alt="FallenClassmate Logo" />
-      </a>
+  <div class="classyear-page-container">
+    <div class="page-container">
 
-      <nav class="fc-nav">
-        <a href="/index.html">Home</a>
-        <a href="/states/arizona/apache-county/ganadohighschool/index.html">Ganado High School</a>
-        <a class="active" href="index.html">Class of 1988</a>
-      </nav>
+      <!-- THEMED HEADER (matches About page) -->
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <a href="../../../../../index.html">
+              <img src="../../../../../assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
+          </div>
+
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span>
+              <span class="fade-2 offset-1">🎓</span>
+              <span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span>
+              <span class="fade-5 offset-2">🎓</span>
+              <span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span>
+              <span class="fade-8 offset-1">🎓</span>
+              <span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span>
+              <span class="fade-11 offset-0">🎓</span>
+              <span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span>
+              <span class="fade-14 offset-1">🎓</span>
+              <span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                id="siteSearch"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="../../../../../index.html">Home</a>
+            <a href="../../../../../schools.html">Schools</a>
+            <a href="../../../../../resources.html">Resources</a>
+            <a href="../../../../../plans.html">Plans & Features</a>
+            <a href="../../../../../about.html">About</a>
+            <a href="../../../../../contact.html">Contact</a>
+            <a href="../../../../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- PAGE HEADER (your class year title) -->
+      <section class="classyear-header-section">
+        <h2 class="classyear-title">Class of 1988</h2>
+        <p class="classyear-subtext">Ganado High School Yearbook</p>
+      </section>
+
+      <!-- YEARBOOK CARDS (rendered by classyear.js from memorials.json) -->
+      <section class="classyear-cards" id="cards"></section>
+
+      <!-- Empty state if no records -->
+      <section class="classyear-empty" id="emptyState" style="display:none;">
+        <h3>No memorials have been added yet for the Class of 1988.</h3>
+        <p>Be the first to create a memorial for a classmate.</p>
+        <a class="primary-button" href="../../../../../create-memorial.html">Create Memorial</a>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
+      </footer>
     </div>
-  </header>
 
-  <main class="year-page">
-    <header class="year-header">
-      <h1>Class of 1988</h1>
-      <div class="sub">Ganado High School Yearbook</div>
-      <p class="helper">Select a classmate to view their memorial.</p>
-    </header>
+    <!-- Global theme JS (hamburger, footer year, etc.) -->
+    <script src="../../../../../script.js" defer></script>
 
-    <section class="cards" id="cards"></section>
-
-    <section class="empty" id="emptyState" style="display:none;">
-      <h3>No memorials yet for Class of 1988</h3>
-      <p>Be the first to create a memorial for a classmate from this year.</p>
-      <a class="btn primary" href="/create-memorial.html">Create Memorial</a>
-    </section>
-  </main>
-
-  <footer class="fc-footer">
-    <p>&copy; <span id="yearNow"></span> FallenClassmate — Never Forget</p>
-  </footer>
-
-  <script src="classyear.js"></script>
+    <!-- Page-specific JS (loads memorials.json + renders cards) -->
+    <script src="./classyear.js" defer></script>
+  </div>
 </body>
 </html>
