@@ -180,6 +180,28 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+/* Put share buttons in the top-right corner of the hero card */
+.school-hero-inner {
+  position: relative;
+}
+
+.share-row.share-top-right {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Optional: keep them from wrapping weird on small screens */
+@media (max-width: 680px) {
+  .share-row.share-top-right {
+    position: static;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+}
 
 /* ---------- Search Strip ---------- */
 .school-search {
