@@ -32,13 +32,29 @@ body{
 }
 
 /* -------------------------------------------------------
-   CLASS YEAR HEADER (matches screenshot style)
+   CLASS YEAR HEADER (matches screenshot style + breadcrumb)
 -------------------------------------------------------- */
 .classyear-header-section{
   max-width: 1100px;
   margin: 0 auto;
   padding: 26px 18px 10px;
   text-align:center;
+}
+
+/* Breadcrumb like other pages */
+.classyear-breadcrumb{
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.classyear-breadcrumb a{
+  color: var(--teal-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.classyear-breadcrumb a:hover{
+  text-decoration: underline;
 }
 
 .classyear-title{
@@ -57,30 +73,6 @@ body{
   font-family: Georgia, "Times New Roman", serif;
   letter-spacing: 1px;
   color: var(--text);
-}
-.back-link{
-  display:inline-flex;
-  align-items:center;
-  gap: 10px;
-  margin: 0 auto 14px;
-  text-decoration:none;
-  font-weight: 800;
-  color: var(--teal-dark);
-  border: 1px solid var(--border);
-  background: #fff;
-  padding: 10px 14px;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-}
-
-.back-link:hover{
-  background: var(--panel);
-  transform: translateY(-1px);
-}
-
-.back-arrow{
-  font-size: 18px;
-  line-height: 1;
 }
 
 /* -------------------------------------------------------
