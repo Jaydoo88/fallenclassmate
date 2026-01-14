@@ -10,6 +10,22 @@
 
   <!-- Class-year page styles (shared across states) -->
   <link rel="stylesheet" href="../../../../classyear.css" />
+
+  <!-- Small helper styles so the whole card is clickable -->
+  <style>
+    .yearbook-card-link{
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .yearbook-card-link:focus{
+      outline: 3px solid rgba(47,143,139,.35);
+      outline-offset: 4px;
+    }
+    .yearbook-card-link:hover .yearbook-btn{
+      background: #f6f8f8;
+    }
+  </style>
 </head>
 
 <body>
@@ -82,10 +98,92 @@
         <p class="classyear-subtext">Ganado High School Yearbook</p>
       </section>
 
-      <!-- YEARBOOK CARDS (rendered by classyear.js from memorials.json) -->
-      <section class="classyear-cards" id="cards"></section>
+      <!-- YEARBOOK CARDS (STATIC FOR NOW) -->
+      <section class="classyear-cards">
 
-      <!-- Empty state if no records -->
+        <!-- Ghost Profile 1 -->
+        <a class="yearbook-card-link" href="../memorials/placeholder-1/index.html" aria-label="View memorial for Classmate One">
+          <article class="yearbook-card">
+            <div class="yearbook-photo-wrap">
+              <img class="yearbook-photo" src="../../../../../assets/placeholder-person.jpg" alt="Classmate One photo" />
+            </div>
+            <div class="yearbook-info">
+              <h3 class="yearbook-name">Classmate One</h3>
+              <p class="yearbook-dates">January 12, 1970 – March 4, 2011</p>
+              <span class="yearbook-btn">
+                View Memorial <span class="arrow">›</span>
+              </span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Ghost Profile 2 -->
+        <a class="yearbook-card-link" href="../memorials/placeholder-2/index.html" aria-label="View memorial for Classmate Two">
+          <article class="yearbook-card">
+            <div class="yearbook-photo-wrap">
+              <img class="yearbook-photo" src="../../../../../assets/placeholder-person.jpg" alt="Classmate Two photo" />
+            </div>
+            <div class="yearbook-info">
+              <h3 class="yearbook-name">Classmate Two “Ace”</h3>
+              <p class="yearbook-dates">October 3, 1969 – July 19, 2009</p>
+              <span class="yearbook-btn">
+                View Memorial <span class="arrow">›</span>
+              </span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Ghost Profile 3 -->
+        <a class="yearbook-card-link" href="../memorials/placeholder-3/index.html" aria-label="View memorial for Classmate Three">
+          <article class="yearbook-card">
+            <div class="yearbook-photo-wrap">
+              <img class="yearbook-photo" src="../../../../../assets/placeholder-person.jpg" alt="Classmate Three photo" />
+            </div>
+            <div class="yearbook-info">
+              <h3 class="yearbook-name">Classmate Three</h3>
+              <p class="yearbook-dates">May 28, 1970 – November 2, 2016</p>
+              <span class="yearbook-btn">
+                View Memorial <span class="arrow">›</span>
+              </span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Ghost Profile 4 -->
+        <a class="yearbook-card-link" href="../memorials/placeholder-4/index.html" aria-label="View memorial for Classmate Four">
+          <article class="yearbook-card">
+            <div class="yearbook-photo-wrap">
+              <img class="yearbook-photo" src="../../../../../assets/placeholder-person.jpg" alt="Classmate Four photo" />
+            </div>
+            <div class="yearbook-info">
+              <h3 class="yearbook-name">Classmate Four</h3>
+              <p class="yearbook-dates">1970 – 2018</p>
+              <span class="yearbook-btn">
+                View Memorial <span class="arrow">›</span>
+              </span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Ghost Profile 5 -->
+        <a class="yearbook-card-link" href="../memorials/placeholder-5/index.html" aria-label="View memorial for Classmate Five">
+          <article class="yearbook-card">
+            <div class="yearbook-photo-wrap">
+              <img class="yearbook-photo" src="../../../../../assets/placeholder-person.jpg" alt="Classmate Five photo" />
+            </div>
+            <div class="yearbook-info">
+              <h3 class="yearbook-name">Classmate Five</h3>
+              <p class="yearbook-dates">March 9, 1970 – Date Unknown</p>
+              <span class="yearbook-btn">
+                View Memorial <span class="arrow">›</span>
+              </span>
+            </div>
+          </article>
+        </a>
+
+      </section>
+
+      <!-- Empty state if no records (kept for later; hidden now) -->
       <section class="classyear-empty" id="emptyState" style="display:none;">
         <h3>No memorials have been added yet for the Class of 1988.</h3>
         <p>Be the first to create a memorial for a classmate.</p>
@@ -100,7 +198,7 @@
     <!-- Global theme JS (hamburger, footer year, etc.) -->
     <script src="../../../../../script.js" defer></script>
 
-    <!-- Page-specific JS (loads memorials.json + renders cards) -->
+    <!-- Page-specific JS (not needed for static right now; safe to keep) -->
     <script src="./classyear.js" defer></script>
   </div>
 </body>
