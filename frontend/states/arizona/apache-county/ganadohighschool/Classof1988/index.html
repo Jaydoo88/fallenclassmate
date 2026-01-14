@@ -1,1 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganado High School — Class of 1988 | FallenClassmate</title>
 
+  <!-- If you have a global styles.css at /frontend/styles.css -->
+  <link rel="stylesheet" href="../../../../../styles.css" />
+
+  <!-- Local page styling -->
+  <link rel="stylesheet" href="./classyear.css" />
+</head>
+
+<body>
+  <!-- Simple header (optional) -->
+  <header class="fc-header">
+    <div class="fc-header-inner">
+      <a class="fc-brand" href="../../../../../index.html">
+        <img src="../../../../../assets/logo.png" alt="FallenClassmate Logo" />
+      </a>
+
+      <nav class="fc-nav">
+        <a href="../../../../../index.html">Home</a>
+        <a href="../index.html">Ganado High School</a>
+        <a class="active" href="./index.html">Class of 1988</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="year-page">
+    <header class="year-header">
+      <h1>Class of 1988</h1>
+      <div class="sub">Ganado High School Yearbook</div>
+      <p class="helper">
+        Select a classmate to view their memorial.
+      </p>
+    </header>
+
+    <!-- Cards render here -->
+    <section class="cards" id="cards"></section>
+
+    <!-- Empty state -->
+    <section class="empty" id="emptyState" style="display:none;">
+      <h3>No memorials yet for Class of 1988</h3>
+      <p>
+        Be the first to create a memorial for a classmate from this year.
+      </p>
+      <a class="btn primary" href="../../../../../create-memorial.html">Create Memorial</a>
+    </section>
+  </main>
+
+  <footer class="fc-footer">
+    <p>&copy; <span id="yearNow"></span> FallenClassmate — Never Forget</p>
+  </footer>
+
+  <script src="./classyear.js"></script>
+</body>
+</html>
