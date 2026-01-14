@@ -129,59 +129,60 @@
 }
 
 /* -------------------------------------------------------
-   ✅ COUNTY-STYLE STAT CARDS (exact big-card feel)
+   ✅ COUNTY-STYLE STAT CARDS (MATCH county.css SIZE)
+   This matches:
+   border-radius: 10px;
+   padding: 10px 14px;
+   min-width: 110px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 -------------------------------------------------------- */
+
 .county-stats{
   display: flex;
   gap: 18px;
+  margin-top: 14px;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
+/* Match county.css exactly */
 .county-stats .stat{
   background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-width: 110px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 
-  width: 180px;         /* same consistent card width */
-  min-height: 78px;     /* same consistent card height */
-  padding: 14px 18px;
+  /* remove the “big card” behavior */
+  width: auto;
+  min-height: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
+/* Match county.css typography */
 .county-stats .stat strong{
-  display: block;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--teal-dark);
+  display:block;
+  font-size: 1.2rem;
+  color: #3b9996;
   line-height: 1.1;
 }
 
 .county-stats .stat span{
-  display: block;
-  margin-top: 6px;
-  font-size: 14px;
-  color: #1f2a2a;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2px;
 }
 
-/* Clickable "School Link" card — single line only */
+/* Clickable "School Link" card behaves like a stat card */
 .stat-card-link{
   text-decoration: none;
   color: inherit;
 }
 
-.stat-card-link strong{
-  font-size: 18px; /* fits on one line cleanly */
-  margin: 0;
-}
-
-/* Hover/focus like a card */
 .stat-card-link:hover{
   transform: translateY(-1px);
 }
@@ -189,7 +190,7 @@
 .stat-card-link:focus{
   outline: 3px solid rgba(59,153,150,.35);
   outline-offset: 4px;
-  border-radius: 14px;
+  border-radius: 10px;
 }
 
 /* -------------------------------------------------------
