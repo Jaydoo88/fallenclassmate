@@ -18,183 +18,202 @@ body{
   background:#fff;
 }
 
-/* Page container (matches your county/state layout spacing) */
-.year-page{
+/* -------------------------------------------------------
+   PAGE WRAPPER (works with your themed header wrapper)
+-------------------------------------------------------- */
+.classyear-page-container{
+  background:#fff;
+}
+
+/* If your global layout already defines .page-container in styles.css,
+   this won't fight it; it just ensures sane spacing if not. */
+.page-container{
+  width: 100%;
+}
+
+/* -------------------------------------------------------
+   CLASS YEAR HEADER (matches screenshot style)
+-------------------------------------------------------- */
+.classyear-header-section{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 26px 18px 60px;
-}
-
-/* Top title area */
-.year-header{
+  padding: 26px 18px 10px;
   text-align:center;
-  margin: 16px 0 22px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px 16px;
 }
 
-.year-header h1{
+.classyear-title{
   margin: 0;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 1.1;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 1.05;
   color: var(--teal);
-  letter-spacing: .2px;
+  letter-spacing: .5px;
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.year-header .sub{
-  margin-top: 10px;
+.classyear-subtext{
+  margin: 10px 0 0;
   font-size: 18px;
-  color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: .6px;
+  letter-spacing: 1px;
+  color: var(--text);
 }
 
-.year-header .helper{
-  margin: 12px auto 0;
-  max-width: 720px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* Card list */
-.cards{
+/* -------------------------------------------------------
+   CARD LIST CONTAINER
+-------------------------------------------------------- */
+.classyear-cards{
+  max-width: 1100px;
+  margin: 18px auto 40px;
+  padding: 0 18px;
   display:flex;
   flex-direction:column;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 26px;
 }
 
-/* Memorial card = same “clean white card” vibe used elsewhere */
-.memorial-card{
+/* Make the whole card clickable (used in HTML wrapper <a>) */
+.yearbook-card-link{
+  text-decoration: none;
+  color: inherit;
+  display:block;
+}
+
+.yearbook-card-link:focus{
+  outline: 3px solid rgba(59,153,150,.35);
+  outline-offset: 4px;
+}
+
+/* -------------------------------------------------------
+   YEARBOOK CARD (screenshot look)
+-------------------------------------------------------- */
+.yearbook-card{
   border: 1px solid var(--border);
   background: var(--bg);
   box-shadow: var(--shadow);
-  border-radius: 14px;
-  padding: 18px;
+  padding: 22px;
   display:flex;
   align-items:center;
-  gap: 20px;
+  gap: 26px;
 }
 
-/* Photo */
-.photo-wrap{
-  width: 210px;
-  min-width: 210px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background:#fff;
+.yearbook-photo-wrap{
+  width: 220px;
+  min-width: 220px;
   padding: 10px;
+  border: 1px solid var(--border);
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.photo{
+.yearbook-photo{
   width: 100%;
   height: 220px;
   object-fit: cover;
-  display:block;
-  border-radius: 10px;
   background:#f3f6f6;
+  display:block;
 }
 
-.memorial-info{
+/* Text area */
+.yearbook-info{
   flex:1;
   padding-right: 8px;
 }
 
-.name{
-  margin: 0 0 8px;
-  font-size: 24px;
+.yearbook-name{
+  margin: 0 0 10px;
+  font-size: 26px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--teal-dark);
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.dates{
-  margin: 0 0 14px;
+.yearbook-dates{
+  margin: 0 0 18px;
   color: var(--text);
   font-size: 16px;
+  letter-spacing: .2px;
 }
 
-/* Buttons (match your site button behavior) */
-.btn{
+/* Button look like screenshot (outlined, simple) */
+.yearbook-btn{
   display:inline-flex;
   align-items:center;
-  justify-content:center;
   gap: 10px;
   padding: 10px 16px;
-  border-radius: 10px;
-  border: 2px solid var(--teal);
+  border: 1px solid #222;
   background:#fff;
-  color: var(--teal-dark);
+  color:#111;
   text-decoration:none;
-  font-weight: 800;
-  transition: background .2s ease, transform .08s ease;
+  font-weight: 700;
+  letter-spacing:.2px;
+  transition: transform .08s ease, background .2s ease;
 }
 
-.btn:hover{
-  background: var(--teal);
-  color:#fff;
+.yearbook-btn:hover{
+  background:#f6f8f8;
   transform: translateY(-1px);
 }
 
-.btn.primary{
-  background: var(--teal);
-  border-color: var(--teal);
-  color:#fff;
-}
-
-.btn.primary:hover{
-  background: var(--teal-dark);
-  border-color: var(--teal-dark);
-}
-
-.btn .arrow{
+.yearbook-btn .arrow{
   font-size: 18px;
   line-height: 1;
 }
 
-/* Empty state */
-.empty{
-  margin-top: 18px;
+/* Hover behavior when the entire card is a link */
+.yearbook-card-link:hover .yearbook-btn{
+  background:#f6f8f8;
+}
+
+/* -------------------------------------------------------
+   EMPTY STATE (kept for later)
+-------------------------------------------------------- */
+.classyear-empty{
+  max-width: 1100px;
+  margin: 18px auto 40px;
+  padding: 24px 18px;
   border: 1px dashed var(--border);
-  border-radius: 14px;
-  padding: 24px;
   text-align:center;
   color: var(--muted);
-  background: #fff;
+  background:#fff;
 }
 
-/* Footer – let your global footer exist, but if you keep a local footer, make it match */
-.fc-footer{
-  text-align:center;
-  padding: 22px 12px;
-  background:#f2f6f6;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
+/* If your global styles.css already defines .primary-button, this won't override.
+   Otherwise, this provides a reasonable fallback. */
+.primary-button{
+  display:inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--teal);
+  color:#fff;
+  text-decoration:none;
+  font-weight: 800;
 }
 
-/* Responsive */
+.primary-button:hover{
+  background: var(--teal-dark);
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------------- */
 @media (max-width: 760px){
-  .year-header h1{ font-size: 36px; }
+  .classyear-title{ font-size: 44px; }
 
-  .memorial-card{
+  .yearbook-card{
     flex-direction:column;
     align-items:stretch;
   }
 
-  .photo-wrap{
-    width: 100%;
-    min-width: 0;
+  .yearbook-photo-wrap{
+    width:100%;
+    min-width:0;
   }
 
-  .photo{
-    height: 260px;
+  .yearbook-photo{
+    height:260px;
   }
 }
