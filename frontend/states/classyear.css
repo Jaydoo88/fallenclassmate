@@ -58,6 +58,30 @@ body{
   letter-spacing: 1px;
   color: var(--text);
 }
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  margin: 0 auto 14px;
+  text-decoration:none;
+  font-weight: 800;
+  color: var(--teal-dark);
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.back-link:hover{
+  background: var(--panel);
+  transform: translateY(-1px);
+}
+
+.back-arrow{
+  font-size: 18px;
+  line-height: 1;
+}
 
 /* -------------------------------------------------------
    CARD LIST CONTAINER
