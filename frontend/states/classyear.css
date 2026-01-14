@@ -20,8 +20,6 @@ body{
 
 /* -------------------------------------------------------
    PAGE WRAPPER
-   - Keeps your global header intact
-   - Adds the same soft “panel” feel as county/school pages
 -------------------------------------------------------- */
 .classyear-page-container{
   background:#fff;
@@ -31,31 +29,29 @@ body{
   width: 100%;
 }
 
-/* Optional: if your class year content is inside <main class="year-page"> */
+/* If your HTML uses <main class="year-page"> (from your class-of HTML) */
 .year-page{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 18px 50px;
+  padding: 18px 18px 60px;
 }
 
 /* -------------------------------------------------------
-   CLASS YEAR HEADER (matches county/school vibe)
+   CLASS YEAR HEADER (matches your theme)
 -------------------------------------------------------- */
 .classyear-header-section{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 18px 10px;
-}
-
-/* If your HTML uses .year-header instead */
-.year-header{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 18px 18px 10px;
+  padding: 26px 18px 10px;
   text-align:center;
 }
 
-/* Breadcrumb like other pages */
+/* If your HTML uses .year-header instead of .classyear-header-section */
+.year-header{
+  text-align:center;
+  margin: 14px 0 26px;
+}
+
 .classyear-breadcrumb{
   margin: 0 0 10px;
   text-align: left;
@@ -71,16 +67,10 @@ body{
   text-decoration: underline;
 }
 
-/* If your HTML uses .fc-nav / breadcrumb links */
-.fc-nav a{
-  color: inherit;
-}
-
-/* Title styles (supports both your classyear HTML and older sample HTML) */
 .classyear-title,
 .year-header h1{
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 56px;
   line-height: 1.05;
   color: var(--teal);
@@ -99,9 +89,70 @@ body{
 
 .year-header .helper{
   margin: 14px auto 0;
-  max-width: 720px;
+  max-width: 640px;
   color: var(--muted);
   font-size: 15px;
+}
+
+/* -------------------------------------------------------
+   ✅ COUNTY-STYLE STAT CARDS (for School Link / Memorials / Support)
+   Use these anywhere on the class year page:
+   <div class="county-stats">
+     <a class="stat stat-card-link" ...>...</a>
+     <div class="stat">...</div>
+     <div class="stat">...</div>
+   </div>
+-------------------------------------------------------- */
+.county-stats{
+  display:flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px 0 6px;
+}
+
+.county-stats .stat{
+  background:#fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  min-width: 160px;
+  text-align:center;
+  box-shadow: var(--shadow);
+}
+
+.county-stats .stat strong{
+  display:block;
+  font-size: 22px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.county-stats .stat span{
+  display:block;
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Clickable stat card (looks identical to other stat cards) */
+.stat-card-link{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+}
+
+.stat-card-link:hover{
+  transform: translateY(-1px);
+}
+
+.stat-card-link:focus{
+  outline: 3px solid rgba(59,153,150,.35);
+  outline-offset: 4px;
+  border-radius: 14px;
 }
 
 /* -------------------------------------------------------
@@ -130,13 +181,12 @@ body{
 }
 
 /* -------------------------------------------------------
-   YEARBOOK CARD
-   - Closer to the site theme: soft panel + rounded corners
+   YEARBOOK CARD (screenshot look)
 -------------------------------------------------------- */
 .yearbook-card,
 .memorial-card{
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--bg);
   box-shadow: var(--shadow);
   border-radius: 14px;
   padding: 22px;
@@ -145,7 +195,6 @@ body{
   gap: 26px;
 }
 
-/* Photo wrap */
 .yearbook-photo-wrap,
 .photo-wrap{
   width: 220px;
@@ -181,7 +230,7 @@ body{
   margin: 0 0 10px;
   font-size: 26px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--teal-dark);
   font-family: Georgia, "Times New Roman", serif;
 }
@@ -194,10 +243,7 @@ body{
   letter-spacing: .2px;
 }
 
-/* -------------------------------------------------------
-   BUTTONS
-   - Matches your site’s “teal + rounded” vibe, but still clean
--------------------------------------------------------- */
+/* Button look (outlined, simple) */
 .yearbook-btn,
 .btn{
   display:inline-flex;
@@ -205,20 +251,19 @@ body{
   gap: 10px;
   padding: 10px 16px;
   border-radius: 10px;
-  border: 1px solid var(--teal);
+  border: 1px solid #222;
   background:#fff;
-  color: var(--teal-dark);
+  color:#111;
   text-decoration:none;
   font-weight: 800;
   letter-spacing:.2px;
-  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+  transition: transform .08s ease, background .2s ease;
 }
 
 .yearbook-btn:hover,
 .btn:hover{
-  background: var(--panel);
+  background:#f6f8f8;
   transform: translateY(-1px);
-  border-color: var(--teal-dark);
 }
 
 .yearbook-btn .arrow,
@@ -229,21 +274,7 @@ body{
 
 /* Hover behavior when the entire card is a link */
 .yearbook-card-link:hover .yearbook-btn{
-  background: var(--panel);
-}
-
-/* Primary button support if you use it */
-.primary-button,
-.btn.primary{
-  background: var(--teal);
-  border-color: var(--teal);
-  color:#fff;
-}
-
-.primary-button:hover,
-.btn.primary:hover{
-  background: var(--teal-dark);
-  border-color: var(--teal-dark);
+  background:#f6f8f8;
 }
 
 /* -------------------------------------------------------
@@ -261,15 +292,19 @@ body{
   background:#fff;
 }
 
-/* -------------------------------------------------------
-   FOOTER
-   - Let styles.css handle the real footer, but this is safe if needed
--------------------------------------------------------- */
-.fc-footer{
-  text-align:center;
-  padding: 24px 12px;
-  background: var(--panel);
-  color: var(--muted);
+.primary-button{
+  display:inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--teal);
+  color:#fff;
+  text-decoration:none;
+  font-weight: 800;
+}
+
+.primary-button:hover{
+  background: var(--teal-dark);
 }
 
 /* -------------------------------------------------------
@@ -278,6 +313,10 @@ body{
 @media (max-width: 760px){
   .classyear-title,
   .year-header h1{ font-size: 44px; }
+
+  .county-stats .stat{
+    min-width: 140px;
+  }
 
   .yearbook-card,
   .memorial-card{
