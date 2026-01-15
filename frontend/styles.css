@@ -283,14 +283,14 @@ body{
 }
 
 /* QUOTE */
-.quote-section{
-  background-color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.2em;
-  border-top: 4px solid var(--teal);
-  border-bottom: 4px solid var(--teal);
+.quote-section blockquote{
+  color: #333; /* keeps the main quote dark */
+}
+
+.quote-section blockquote cite,
+.quote-section blockquote .quote-author{
+  color: var(--teal);
+  font-weight: 600;
 }
 
 /* NEWEST CLASSMATES section background stays teal like yours */
