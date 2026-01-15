@@ -27,9 +27,20 @@ img{ max-width:100%; display:block; }
 /* =========================
    NAV (centered, not full bleed)
 ========================= */
+/* NAV stays visible */
 .nav-wrap{
-  background:#fff; /* keeps white around it */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;     /* keeps the white behind the centered teal bar */
   padding: 0 0 12px;
+}
+
+/* Push page content down so it doesn't hide behind fixed nav */
+body{
+  padding-top: 68px;  /* adjust if your nav height changes */
 }
 
 .navbar{
@@ -193,7 +204,7 @@ img{ max-width:100%; display:block; }
 .hero-overlay-box{
   position: absolute;
   top: 70px;
-  left: 240px;
+  left: 140px;
 
   background-color: rgba(59,153,150,.92);
   padding: 40px;
