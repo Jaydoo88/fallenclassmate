@@ -188,9 +188,12 @@ img{ max-width:100%; display:block; }
    HERO (full width + less crop)
 ========================= */
 .hero-image{
-  background-size: cover;
-  background-position: 75% center;  /* ✅ shows more of the right side */
+  width:100%;
+  min-height: 520px;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;          /* ✅ no crop */
+  background-color: #0f4b49;         /* fills any empty space */
 }
 
   /* Shows more of the right-side collage (less cut off) */
