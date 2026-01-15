@@ -280,7 +280,7 @@ img{ max-width:100%; display:block; }
    NEWEST CLASSMATES
 ========================= */
 .newest-classmates{
-  padding:50px 20px 34px; /* reduced bottom padding to tighten gap */
+  padding:50px 20px 34px;
   text-align:center;
   background-color:var(--teal);
   color:#fff;
@@ -327,7 +327,6 @@ img{ max-width:100%; display:block; }
   transform:scale(1.02);
 }
 
-/* CTA pill */
 .classmate-cta{
   position:absolute;
   left:50%;
@@ -373,12 +372,12 @@ img{ max-width:100%; display:block; }
 }
 
 /* =========================
-   QUOTE (tightened spacing)
+   QUOTE (tight)
 ========================= */
 .quote-section{
   text-align:center;
-  padding:26px 20px;   /* reduced */
-  margin:12px 0;       /* reduced */
+  padding:26px 20px;
+  margin:12px 0;
 }
 
 .quote-section blockquote{
@@ -398,41 +397,149 @@ img{ max-width:100%; display:block; }
 }
 
 /* =========================
-   INFO CARDS
+   INFO SECTION (2 wide cards like screenshot)
 ========================= */
-.info-cards{
+.info-section{
+  background:#f1f8f8;
+  padding:70px 20px;
+}
+
+.info-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.info-card-wide{
+  text-align:left;
+  max-width:520px;
+  margin:0 auto;
+}
+
+.info-icon{
+  width:58px;
+  height:58px;
+  border-radius:999px;
+  background:#e9f3f3;
   display:flex;
+  align-items:center;
   justify-content:center;
-  gap:40px;
-  padding:40px 20px;
-  background-color:#f1f8f8;
-  margin-top:12px; /* reduced gap above cards */
+  font-size:22px;
+  margin:0 0 18px;
 }
 
-.card{
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  width:280px;
-  box-shadow:var(--shadow-sm);
-  text-align:center;
-}
-
-.card h3{
-  font-size:1.2em;
-  margin-bottom:10px;
+.info-card-wide h3{
+  margin:0 0 14px;
   color:var(--teal);
-  font-weight:bold;
+  font-size:1.6em;
+  font-weight:700;
 }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:20px;
-  background-color:var(--teal);
+.info-card-wide p{
+  margin:0 0 22px;
+  line-height:1.6;
+  color:#3b4a4a;
+}
+
+.info-btn{
+  display:inline-block;
+  padding:10px 18px;
+  border:1.5px solid var(--teal);
+  color:var(--teal);
+  border-radius:3px;
+  text-decoration:none;
+  font-weight:600;
+  background:transparent;
+  transition:background .2s ease, color .2s ease;
+}
+
+.info-btn:hover{
+  background:var(--teal);
   color:#fff;
-  font-size:0.9em;
-  font-style:italic;
+}
+
+/* =========================
+   FOOTER (3 columns + divider like screenshot)
+========================= */
+.site-footer{
+  background:#6f8687;
+  color:#eef6f6;
+  padding:60px 20px 24px;
+}
+
+.footer-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+.site-footer h4{
+  margin:0 0 14px;
+  font-size:1.25em;
+  color:#ffffff;
+}
+
+.site-footer p{
+  margin:0;
+  color:#e9f3f3;
+  line-height:1.6;
+}
+
+.footer-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+
+.footer-links a{
+  color:#e9f3f3;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+
+.footer-social{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+}
+
+.footer-social .social{
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.footer-divider{
+  max-width:var(--max);
+  margin:40px auto 18px;
+  height:1px;
+  background:rgba(255,255,255,.18);
+}
+
+.footer-bottom{
+  max-width:var(--max);
+  margin:0 auto;
+  text-align:center;
+  color:rgba(255,255,255,.75);
+  font-size:.9em;
 }
 
 /* RESPONSIVE */
@@ -450,7 +557,6 @@ img{ max-width:100%; display:block; }
     width:min(360px, 90vw);
   }
 
-  /* keep overlay centered on smaller screens */
   .hero-overlay-box{
     position:static;
     width:auto;
@@ -461,6 +567,16 @@ img{ max-width:100%; display:block; }
   .hero-media{
     padding:0 16px;
   }
+
+  .info-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
 }
 
 @media (max-width:768px){
@@ -470,11 +586,6 @@ img{ max-width:100%; display:block; }
     flex-direction:column;
     gap:12px;
     align-items:flex-start;
-  }
-
-  .info-cards{
-    flex-direction:column;
-    align-items:center;
   }
 
   .classmate-grid{
