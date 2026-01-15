@@ -8,18 +8,33 @@
   </head>
 
   <body>
-    <!-- Header stays in container -->
-    <div class="page-container">
-      <header class="site-header">
+    <!-- TOP NAV (full width) -->
+    <div class="navbar" id="navbar">
+      <div class="page-container nav-inner">
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./schools.html">Schools</a>
+          <a href="./resources.html">Resources</a>
+          <a href="./plans.html">Plans & Features</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- LOGO / CAPS / SEARCH (below nav) -->
+    <header class="site-header">
+      <div class="page-container">
         <div class="logo-bar">
-          <!-- LEFT: Logo -->
+          <!-- LEFT -->
           <div class="logo-section">
             <a href="./index.html" aria-label="FallenClassmate Home">
               <img src="./assets/logo.png" alt="FallenClassmate Logo" />
             </a>
           </div>
 
-          <!-- CENTER: Caps (shortened to 8) -->
+          <!-- CENTER -->
           <div class="center-section" aria-hidden="true">
             <div class="cap-row">
               <span class="cap">🎓</span>
@@ -33,7 +48,7 @@
             </div>
           </div>
 
-          <!-- RIGHT: Search + Hamburger -->
+          <!-- RIGHT -->
           <div class="search-section">
             <div class="search-container">
               <input
@@ -57,34 +72,24 @@
             </button>
           </div>
         </div>
-
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="./index.html">Home</a>
-            <a href="./schools.html">Schools</a>
-            <a href="./resources.html">Resources</a>
-            <a href="./plans.html">Plans & Features</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
-    </div>
+      </div>
+    </header>
 
     <!-- HERO (full width) -->
-    <section class="hero-image" style="background-image: url('assets/hero.png');">
-      <div class="hero-overlay-box">
-        <h1>Never Forget!</h1>
-        <p class="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
-        <div class="hero-buttons">
-          <a class="button primary" href="./schools.html">Find a School</a>
-          <a class="button primary" href="./plans.html">Create Memorial</a>
+    <section class="hero-image" style="background-image: url('assets/Casket1.jpg');">
+      <div class="hero-inner">
+        <div class="hero-overlay-box">
+          <h1>Never Forget!</h1>
+          <p class="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+          <div class="hero-buttons">
+            <a class="button primary" href="./schools.html">Find a School</a>
+            <a class="button primary" href="./plans.html">Create Memorial</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Rest of page back in container -->
+    <!-- REST OF PAGE -->
     <div class="page-container">
       <section class="community-stats">
         <h2>Together in Tribute</h2>
