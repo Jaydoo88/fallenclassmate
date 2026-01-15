@@ -2,7 +2,7 @@
   --teal:#3b9996;
   --teal-dark:#2f7f7c;
   --bg:#f9fdfd;
-  --text:#1f2a2a;
+  --text:#333;
   --muted:#667777;
   --border:#e4ecec;
   --panel:#ffffff;
@@ -17,10 +17,9 @@ body{
   margin:0;
   font-family: 'Georgia', serif;
   background: var(--bg);
-  color:#333;
+  color: var(--text);
 }
 img{ max-width:100%; display:block; }
-a{ color:inherit; }
 
 /* CONTAINER */
 .page-container{
@@ -30,19 +29,66 @@ a{ color:inherit; }
 }
 
 /* =========================
-   HEADER (logo / caps / search)
+   TOP NAVBAR (full-width)
+========================= */
+.navbar{
+  width:100%;
+  background-color: var(--teal);
+  color:#fff;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:center;
+}
+
+.navbar nav{
+  display:flex;
+  justify-content:center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  position:relative;
+}
+
+.navbar nav a::after{
+  content:'';
+  position:absolute;
+  width:0;
+  height:2px;
+  bottom:-4px;
+  left:0;
+  background:#fff;
+  transition: width .25s ease;
+}
+
+.navbar nav a:hover::after{
+  width:100%;
+}
+
+/* =========================
+   HEADER STRIP (logo/caps/search)
 ========================= */
 .site-header{
   background:#fff;
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-/* three equal columns, centered content */
 .logo-bar{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items:center;
-  padding: 14px 24px;
-  background:#fff;
+  padding: 14px 0;
   gap: 16px;
 }
 
@@ -64,21 +110,20 @@ a{ color:inherit; }
   justify-content:center;
 }
 
-/* CAPS: shortened to 8 in HTML; teal like screenshot */
+/* CAPS (teal look like screenshot) */
 .cap-row{
   display:flex;
   justify-content:center;
   align-items:center;
   gap: 10px;
   font-size: 18px;
-  line-height: 1;
+  line-height:1;
   white-space:nowrap;
 }
 .cap-row .cap{
   display:inline-block;
-  /* teal caps: emoji inherits color in many browsers; if not, this still helps the overall look */
-  filter: hue-rotate(155deg) saturate(2.2) brightness(1.05);
-  opacity: .55;
+  filter: hue-rotate(155deg) saturate(2.4) brightness(1.05);
+  opacity: .65;
 }
 
 /* RIGHT */
@@ -105,12 +150,14 @@ a{ color:inherit; }
   color: #333;
   width: 320px;
   box-shadow: 0 1px 3px rgba(0,0,0,.08);
-  outline: none;
+  outline:none;
 }
+
 .styled-search-input::placeholder{
   color: #7b9494;
   font-weight: 500;
 }
+
 .styled-search-input:focus{
   border-color: rgba(59,153,150,.55);
   box-shadow: 0 0 0 4px rgba(59,153,150,.12);
@@ -124,7 +171,7 @@ a{ color:inherit; }
   pointer-events:none;
 }
 
-/* hamburger (shown on mobile) */
+/* Hamburger */
 .hamburger{
   display:none;
   width: 44px;
@@ -138,55 +185,38 @@ a{ color:inherit; }
 }
 
 /* =========================
-   NAVBAR (top teal bar)
-========================= */
-.navbar{
-  background-color: var(--teal);
-  color: #fff;
-  padding: 12px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,.15);
-}
-.navbar nav{
-  display:flex;
-  justify-content:center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 0 16px;
-}
-.navbar nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  position:relative;
-}
-.navbar nav a::after{
-  content:'';
-  position:absolute;
-  width:0;
-  height:2px;
-  bottom:-4px;
-  left:0;
-  background:#fff;
-  transition: width .25s ease;
-}
-.navbar nav a:hover::after{
-  width:100%;
-}
-
-/* =========================
-   HERO (full-width)
+   HERO (full width + less crop)
 ========================= */
 .hero-image{
   width:100%;
-  background-size: cover;
-  background-position: center;
   min-height: 520px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Shows more of the right-side collage (less cut off) */
+  background-position: right center;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  margin: 0;
+  margin:0;
+  position: relative;
 }
 
+/* inner layout for positioning overlay "between left and collage" */
+.hero-inner{
+  width:100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 16px;
+
+  /* overlay placement */
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+/* overlay box sits in the open space left of the collage */
 .hero-overlay-box{
   background-color: rgba(59,153,150,.92);
   padding: 40px;
@@ -195,6 +225,9 @@ a{ color:inherit; }
   color: white;
   max-width: 520px;
   box-shadow: 0 10px 26px rgba(0,0,0,.25);
+
+  /* This pushes it into the “middle open space” like your screenshot */
+  margin-left: clamp(40px, 18vw, 320px);
 }
 
 .hero-overlay-box h1{
@@ -222,6 +255,7 @@ a{ color:inherit; }
   text-align:center;
   display:inline-block;
 }
+
 .hero-buttons .button:hover{
   background: transparent;
   color:#fff;
@@ -232,8 +266,8 @@ a{ color:inherit; }
    COMMUNITY STATS
 ========================= */
 .community-stats{
-  background:#fff;
-  text-align:center;
+  background: #ffffff;
+  text-align: center;
   padding: 50px 20px;
   color: var(--teal);
 }
@@ -244,8 +278,8 @@ a{ color:inherit; }
 }
 
 .stats-grid{
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
   margin-top: 20px;
@@ -253,75 +287,23 @@ a{ color:inherit; }
 
 .stats-grid div h3{
   font-size: 2em;
-  margin:0;
+  margin: 0;
   color: var(--teal);
 }
 
 .stats-grid div p{
   font-size: 1em;
-  margin:5px 0 0;
-  color:#666;
+  margin: 5px 0 0;
+  color: #666;
 }
 
 /* =========================
-   NEWEST CLASSMATES
-========================= */
-.newest-classmates{
-  padding: 50px 20px;
-  text-align:center;
-  background-color: var(--teal);
-  color:#fff;
-}
-.newest-classmates h2{
-  font-size: 1.8em;
-  margin-bottom: 30px;
-}
-.classmate-grid{
-  display:flex;
-  justify-content:center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.classmate-card{
-  background:#fff;
-  border-radius: 10px;
-  box-shadow: var(--shadow-sm);
-  padding: 20px;
-  width: 220px;
-  text-align:center;
-  transition: transform .25s ease;
-  color:#333;
-}
-.classmate-card img{
-  width:100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-.classmate-card h4{
-  margin:0;
-  font-size: 1.1em;
-  font-weight:bold;
-  color: var(--teal);
-}
-.classmate-card p{
-  margin-top:6px;
-  font-size: .95em;
-  color: var(--teal);
-  font-weight: normal;
-}
-.classmate-card:hover{
-  transform: translateY(-5px);
-}
-
-/* =========================
-   QUOTE
+   QUOTE SECTION
 ========================= */
 .quote-section{
-  background:#fff;
+  background-color: #fff;
   padding: 40px 20px;
-  text-align:center;
+  text-align: center;
   font-style: italic;
   font-size: 1.2em;
   border-top: 4px solid var(--teal);
@@ -329,39 +311,99 @@ a{ color:inherit; }
 }
 
 /* =========================
+   NEWEST CLASSMATES
+========================= */
+.newest-classmates{
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--teal);
+  color: #ffffff;
+}
+
+.newest-classmates h2{
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.classmate-grid{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.classmate-card{
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+  color: #333;
+}
+
+.classmate-card img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.classmate-card h4{
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--teal);
+}
+
+.classmate-card p{
+  margin-top: 6px;
+  font-size: 0.95em;
+  color: var(--teal);
+}
+
+.classmate-card:hover{
+  transform: translateY(-5px);
+}
+
+/* =========================
    INFO CARDS
 ========================= */
 .info-cards{
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   gap: 40px;
   padding: 40px 20px;
   background-color: #f1f8f8;
 }
+
 .card{
-  background:#fff;
+  background: white;
   padding: 20px;
   border-radius: 10px;
   width: 280px;
   box-shadow: var(--shadow-sm);
-  text-align:center;
+  text-align: center;
 }
+
 .card h3{
   font-size: 1.2em;
   margin-bottom: 10px;
   color: var(--teal);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 /* =========================
    FOOTER
 ========================= */
 .footer{
-  text-align:center;
+  text-align: center;
   padding: 20px;
   background-color: var(--teal);
-  color:#fff;
-  font-size: .9em;
+  color: white;
+  font-size: 0.9em;
   font-style: italic;
 }
 
@@ -373,49 +415,60 @@ a{ color:inherit; }
     grid-template-columns: 1fr;
     text-align:center;
   }
+
   .search-section{
     flex-direction: column;
   }
+
   .styled-search-input{
     width: min(360px, 90vw);
   }
-  .cap-row{
-    gap: 8px;
+
+  .hero-overlay-box{
+    margin-left: 0;
+  }
+
+  .hero-inner{
+    justify-content:center;
   }
 }
 
 @media (max-width: 768px){
   .hamburger{ display:block; }
 
-  /* nav collapsible (works with your script toggling a class) */
+  /* optional: collapse nav for mobile if you want to keep using your existing JS */
   .navbar{
     padding: 0 24px;
     max-height: 0;
-    overflow:hidden;
+    overflow: hidden;
   }
-  .navbar.open{
+
+  /* support BOTH class names: open OR is-open */
+  .navbar.open,
+  .navbar.is-open{
     max-height: 500px;
     padding: 12px 24px;
   }
+
   .navbar nav{
     flex-direction: column;
     gap: 12px;
-    align-items:flex-start;
+    align-items: flex-start;
   }
 
   .hero-overlay-box{
     padding: 22px;
-    margin: 0 16px;
+    margin: 0;
   }
 
   .info-cards{
     flex-direction: column;
-    align-items:center;
+    align-items: center;
   }
 
   .classmate-grid{
     flex-direction: column;
-    align-items:center;
+    align-items: center;
   }
 
   .classmate-card{
