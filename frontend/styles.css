@@ -293,7 +293,7 @@ body{
   border-bottom: 4px solid var(--teal);
 }
 
-/* NEWEST CLASSMATES */
+/* NEWEST CLASSMATES section background stays teal like yours */
 .newest-classmates{
   padding: 50px 20px;
   text-align: center;
@@ -301,52 +301,97 @@ body{
   color: #ffffff;
 }
 
-.newest-classmates h2{
-  font-size: 1.8em;
-  margin-bottom: 30px;
-}
-
+/* grid spacing similar to screenshot */
 .classmate-grid{
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
   flex-wrap: wrap;
 }
 
+/* Card: no white board, clean edges */
 .classmate-card{
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: var(--shadow-sm);
-  padding: 20px;
-  width: 220px;
-  text-align: center;
-  transition: transform 0.3s;
-  color: #333;
+  width: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: transparent; /* ✅ no white board around the whole card */
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
 }
 
-.classmate-card img{
+/* Make entire card clickable */
+.classmate-link{
+  display: block;
+  text-decoration: none;
+  background: transparent;
+}
+
+/* Image area */
+.classmate-media{
+  position: relative;
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  height: 320px; /* card image height like screenshot */
+  overflow: hidden;
 }
 
-.classmate-card h4{
-  margin: 0;
-  font-size: 1.1em;
+.classmate-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ fills perfectly */
+  display: block;
+  transition: filter .25s ease, transform .25s ease;
+}
+
+/* Darken image on hover */
+.classmate-link:hover .classmate-media img{
+  filter: brightness(0.78);
+  transform: scale(1.02); /* subtle, not bouncy */
+}
+
+/* CTA button (hidden until hover) */
+.classmate-cta{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.95);
+  color: var(--teal);
   font-weight: bold;
-  color: var(--teal);
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .22s ease, transform .22s ease;
 }
 
-.classmate-card p{
-  margin-top: 6px;
-  font-size: 0.95em;
-  color: var(--teal);
+/* Show CTA on hover */
+.classmate-link:hover .classmate-cta{
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.classmate-card:hover{
-  transform: translateY(-5px);
+/* Text area below image (like screenshot: name teal, school black) */
+.classmate-meta{
+  background: #fff;
+  padding: 16px 16px 18px;
+  text-align: center;
+}
+
+.classmate-meta h4{
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: var(--teal); /* ✅ teal name */
+}
+
+.classmate-meta p{
+  margin: 6px 0 0;
+  font-size: 0.85em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #222; /* ✅ black school text */
 }
 
 /* INFO CARDS */
