@@ -283,14 +283,11 @@ body{
 }
 
 /* QUOTE */
-.quote-section blockquote{
-  color: #333; /* keeps the main quote dark */
-}
-
-.quote-section blockquote cite,
-.quote-section blockquote .quote-author{
-  color: var(--teal);
-  font-weight: 600;
+.quote-section .quote-author{
+  color: var(--teal) !important;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
 /* NEWEST CLASSMATES section background stays teal like yours */
