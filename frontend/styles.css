@@ -283,11 +283,25 @@ body{
 }
 
 /* QUOTE */
-.quote-section .quote-author{
-  color: var(--teal) !important;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+.quote-section,
+.quote-section blockquote,
+.quote-section blockquote p {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* (optional) tighten spacing so it looks like your screenshot */
+.quote-section blockquote {
+  margin: 0 auto;
+}
+
+.quote-section blockquote p {
+  margin: 0;
+}
+
+.quote-section blockquote p + p {
+  margin-top: 16px;
 }
 
 /* NEWEST CLASSMATES section background stays teal like yours */
