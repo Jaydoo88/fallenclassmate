@@ -462,10 +462,10 @@ img{ max-width:100%; display:block; }
 }
 
 /* =========================
-   FOOTER (3 columns + divider like screenshot)
+   FOOTER (TEAL + 3 columns + divider)
 ========================= */
 .site-footer{
-  background:#6f8687;
+  background:var(--teal);
   color:#eef6f6;
   padding:60px 20px 24px;
 }
@@ -518,7 +518,7 @@ img{ max-width:100%; display:block; }
   width:34px;
   height:34px;
   border-radius:999px;
-  background:rgba(255,255,255,.12);
+  background:rgba(255,255,255,.18);
   color:#fff;
   display:flex;
   align-items:center;
@@ -531,14 +531,14 @@ img{ max-width:100%; display:block; }
   max-width:var(--max);
   margin:40px auto 18px;
   height:1px;
-  background:rgba(255,255,255,.18);
+  background:rgba(255,255,255,.22);
 }
 
 .footer-bottom{
   max-width:var(--max);
   margin:0 auto;
   text-align:center;
-  color:rgba(255,255,255,.75);
+  color:rgba(255,255,255,.85);
   font-size:.9em;
 }
 
