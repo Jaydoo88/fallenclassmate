@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <!-- Keep header inside your container -->
     <div class="page-container">
       <header>
         <div class="logo-bar">
@@ -55,28 +56,32 @@
 
         <div class="navbar" id="navbar">
           <nav>
-  <a href="./index.html">Home</a>
-  <a href="./schools.html">Schools</a>
-  <a href="./resources.html">Resources</a>
-  <a href="./plans.html">Plans & Features</a>
-  <a href="./about.html">About</a>
-  <a href="./contact.html">Contact</a>
-  <a href="./add-school.html">Add a School</a>
-</nav>
+            <a href="./index.html">Home</a>
+            <a href="./schools.html">Schools</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./plans.html">Plans & Features</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./add-school.html">Add a School</a>
+          </nav>
         </div>
       </header>
-
-      <section class="hero-image" style="background-image: url('assets/Casket1.jpg');">
-  <div class="hero-overlay-box">
-    <h1>Never Forget!</h1>
-    <p class="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
-    <div class="hero-buttons">
-      <a class="button primary" href="./schools.html">Find a School</a>
-<a class="button primary" href="./plans.html">Create Memorial</a>
     </div>
-  </div>
-</section>
 
+    <!-- HERO MOVED OUTSIDE page-container so it can go full width -->
+    <section class="hero-image" style="background-image: url('assets/Casket1.jpg');">
+      <div class="hero-overlay-box">
+        <h1>Never Forget!</h1>
+        <p class="hero-sub"><em>Gone from the halls, never from our hearts.</em></p>
+        <div class="hero-buttons">
+          <a class="button primary" href="./schools.html">Find a School</a>
+          <a class="button primary" href="./plans.html">Create Memorial</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Put the rest of the page back inside the container -->
+    <div class="page-container">
       <section class="community-stats">
         <h2>Together in Tribute</h2>
         <div class="stats-grid">
