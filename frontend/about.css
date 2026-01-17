@@ -1,115 +1,106 @@
 /* =========================
-   ABOUT PAGE (about.css)
-   Works with global styles.css
-   ========================= */
+   ABOUT PAGE (page-specific only)
+   Global header/nav/footer/fonts are handled by /styles.css
+========================= */
 
-.about-page-container {
-  background-color: #f9fdfd;
-  color: #333;
-  min-height: 100vh;
-
-  /* Keep this if you want About to use Segoe UI like the old AboutPage.css.
-     If you want it to match the rest of the site (Georgia), delete this line. */
-  font-family: 'Segoe UI', sans-serif;
+.about-header-section{
+  background:#f1f8f8;
+  text-align:center;
+  padding: var(--section-y) 18px;
+  border-radius: 12px;
+  margin-top: var(--section-y-sm);
 }
 
-/* Optional: About page spacing baseline */
-.about-page-container .page-container {
-  /* keeps the same max-width behavior from styles.css */
+.about-header-title{
+  font-size: 1.9em;
+  color: var(--teal);
+  margin: 0 0 10px;
+  font-weight: 800;
 }
 
-/* Header Section */
-.about-header-section {
-  background-color: #f1f8f8;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.about-header-title {
-  font-size: 1.8em;
-  color: #3b9996;
-  margin: 0 0 12px;
-  font-weight: bold;
-}
-
-.about-header-subtext {
-  font-size: 1.1em;
+.about-header-subtext{
+  font-size: 1.05em;
   color: #555;
   margin: 0;
+  line-height: 1.65;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Main Content */
-.about-main-content {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* Main content */
+.about-main-content{
+  max-width: 860px;
+  margin: var(--section-y) auto;
+  padding: 0 6px;
   font-size: 1.05em;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #333;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.about-main-content strong {
-  color: #3b9996;
+.about-main-content p{
+  margin: 0 0 14px;
 }
 
-.about-main-content em {
-  color: #3b9996;
+.about-main-content strong{
+  color: var(--teal);
+}
+
+.about-main-content em{
+  color: var(--teal);
   font-style: italic;
 }
 
-/* Why We Created Section */
-.about-why-section {
-  background-color: #e7f5f5;
-  border-left: 6px solid #3b9996;
-  padding: 30px 24px;
-  margin: 40px auto;
-  max-width: 800px;
-  border-radius: 8px;
+/* Why section */
+.about-why-section{
+  background:#e7f5f5;
+  border-left: 6px solid var(--teal);
+  padding: 28px 22px;
+  margin: 0 auto var(--section-y);
+  max-width: 860px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
 }
 
-.about-why-title {
+.about-why-title{
   font-size: 1.5em;
-  color: #3b9996;
+  color: var(--teal);
   margin: 0 0 16px;
   text-align: center;
+  font-weight: 800;
 }
 
-.about-why-section p {
+.about-why-section p{
   font-size: 1.05em;
-  line-height: 1.6;
-  color: #333;
-  margin: 0 0 16px;
+  line-height: 1.7;
+  color:#2b3b3b;
+  margin: 0 0 14px;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.about-why-section p:last-child {
+.about-why-section p:last-child{
   margin-bottom: 0;
 }
 
-.about-why-signature {
-  text-align: right;
+.about-why-signature{
+  text-align:right;
   font-style: italic;
-  color: #3b9996;
-  margin-top: 10px;
+  color: var(--teal);
+  margin-top: 8px;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Optional: if you decide to use an About-specific footer later
-   (Right now you're using the shared .footer from styles.css) */
-.about-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #3b9996;
-  color: white;
-  font-size: 0.9em;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .about-header-section {
-    padding: 40px 16px;
+/* Responsive */
+@media (max-width: 768px){
+  .about-header-section{
+    padding: var(--section-y-sm) 16px;
   }
 
-  .about-main-content,
-  .about-why-section {
-    padding-left: 16px;
-    padding-right: 16px;
+  .about-main-content{
+    margin: var(--section-y-sm) auto;
+    padding: 0 6px;
+  }
+
+  .about-why-section{
+    padding: 22px 16px;
   }
 }
