@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- TOP NAV (fixed, centered like Home) -->
+  <!-- TOP NAV (fixed + centered like the rest) -->
   <div class="nav-wrap">
     <div class="page-container">
       <div class="navbar" id="navbar">
@@ -31,14 +31,12 @@
   <header class="site-header">
     <div class="page-container">
       <div class="logo-bar">
-        <!-- LEFT -->
         <div class="logo-section">
           <a href="./index.html" aria-label="FallenClassmate Home">
             <img src="./assets/logo.png" alt="FallenClassmate Logo" />
           </a>
         </div>
 
-        <!-- CENTER -->
         <div class="center-section" aria-hidden="true">
           <div class="cap-row">
             <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
@@ -46,7 +44,6 @@
           </div>
         </div>
 
-        <!-- RIGHT -->
         <div class="search-section">
           <div class="search-container">
             <input
@@ -75,12 +72,15 @@
 
   <!-- PAGE CONTENT -->
   <main class="page-container">
-    <!-- Banner -->
+    <!-- Banner / Map -->
     <section class="usa-schools-map-banner">
       <h1 class="usa-map-title">USA High Schools</h1>
-      <div class="usa-map-frame">
-        <img src="./assets/usa_map.png" alt="USA High Schools Map" />
-      </div>
+
+      <a class="usa-map-link" href="./schools.html" aria-label="Back to Schools">
+        <div class="usa-map-frame">
+          <img src="./assets/usa_map.png" alt="USA High Schools Map" />
+        </div>
+      </a>
     </section>
 
     <!-- Content -->
@@ -145,7 +145,7 @@
     </section>
   </main>
 
-  <!-- UNIFIED FOOTER (same as Home) -->
+  <!-- UNIFIED FOOTER (matches rest of site) -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-col">
