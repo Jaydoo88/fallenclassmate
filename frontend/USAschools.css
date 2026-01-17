@@ -1,130 +1,187 @@
-/* =========================
-   USA Schools Page (USAschools.css)
-   Page-specific only — nav/header/footer/fonts are global in styles.css
-========================= */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USA High Schools | FallenClassmate</title>
 
-.usa-schools-map-banner{
-  padding: var(--section-y-sm) 0 10px;
-  text-align: center;
-}
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./USAschools.css" />
+</head>
 
-.usa-map-title{
-  margin: 0 0 14px;
-  color: var(--teal);
-  font-size: 1.85em;
-  font-family: 'Graduate', serif;
-  font-weight: 400;
-  letter-spacing: 0.4px;
-}
+<body>
+  <!-- TOP NAV (fixed + centered like home) -->
+  <div class="nav-wrap">
+    <div class="page-container">
+      <div class="navbar" id="navbar">
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./schools.html" class="active">Schools</a>
+          <a href="./resources.html">Resources</a>
+          <a href="./plans.html">Plans &amp; Features</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-.usa-map-link{
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-}
+  <!-- LOGO / CAPS / SEARCH -->
+  <header class="site-header">
+    <div class="page-container">
+      <div class="logo-bar">
+        <div class="logo-section">
+          <a href="./index.html">
+            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
 
-.usa-map-frame{
-  width: 100%;
-  max-width: 980px;          /* keeps it from being gigantic */
-  height: 320px;             /* controls the “visual size” */
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
-  border: 1px solid #e6efef;
+        <div class="center-section">
+          <div class="cap-row" aria-hidden="true">
+            <span class="fade-1 offset-2">🎓</span><span class="fade-2 offset-1">🎓</span><span class="fade-3 offset-0">🎓</span>
+            <span class="fade-4 offset-1">🎓</span><span class="fade-5 offset-2">🎓</span><span class="fade-6 offset-1">🎓</span>
+            <span class="fade-7 offset-0">🎓</span><span class="fade-8 offset-1">🎓</span><span class="fade-9 offset-2">🎓</span>
+            <span class="fade-10 offset-1">🎓</span><span class="fade-11 offset-0">🎓</span><span class="fade-12 offset-1">🎓</span>
+            <span class="fade-13 offset-2">🎓</span><span class="fade-14 offset-1">🎓</span><span class="fade-15 offset-0">🎓</span>
+          </div>
+        </div>
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-}
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              id="siteSearch"
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
 
-.usa-map-frame img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;       /* no cropping, no distortion */
-  display: block;
-}
+          <!-- Hamburger stays for mobile (script.js uses it) -->
+          <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-/* Content */
-.usa-schools-content{
-  text-align: center;
-  padding: var(--section-y-sm) 0 var(--section-y);
-}
+  <!-- PAGE CONTENT -->
+  <main class="usa-schools-page-container">
+    <div class="page-container">
+      <!-- Banner -->
+      <section class="usa-schools-map-banner">
+        <h3 class="usa-map-title">USA High Schools</h3>
+        <img src="./assets/usa_map.png" alt="USA Map Banner" />
+      </section>
 
-.usa-schools-content h2{
-  color: var(--teal);
-  font-size: 1.6em;
-  margin: 0 0 10px;
-  font-family: 'Graduate', serif;
-  font-weight: 400;
-}
+      <!-- Content -->
+      <section class="usa-schools-content">
+        <h2>Explore High Schools by State</h2>
+        <p class="usa-schools-note">
+          Select a state to view schools and memorials from that region.
+        </p>
 
-.usa-schools-note{
-  font-size: 1em;
-  margin: 0 auto 18px;
-  color: #4b5b5a;
-  max-width: 860px;
-  line-height: 1.6;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
+        <div class="usa-schools-grid">
+          <a class="state-tile" href="/states/alabama/">Alabama</a>
+          <a class="state-tile" href="/states/alaska/">Alaska</a>
+          <a class="state-tile" href="/states/arizona/">Arizona</a>
+          <a class="state-tile" href="/states/arkansas/">Arkansas</a>
+          <a class="state-tile" href="/states/california/">California</a>
+          <a class="state-tile" href="/states/colorado/">Colorado</a>
+          <a class="state-tile" href="/states/connecticut/">Connecticut</a>
+          <a class="state-tile" href="/states/delaware/">Delaware</a>
+          <a class="state-tile" href="/states/florida/">Florida</a>
+          <a class="state-tile" href="/states/georgia/">Georgia</a>
+          <a class="state-tile" href="/states/hawaii/">Hawaii</a>
+          <a class="state-tile" href="/states/idaho/">Idaho</a>
+          <a class="state-tile" href="/states/illinois/">Illinois</a>
+          <a class="state-tile" href="/states/indiana/">Indiana</a>
+          <a class="state-tile" href="/states/iowa/">Iowa</a>
+          <a class="state-tile" href="/states/kansas/">Kansas</a>
+          <a class="state-tile" href="/states/kentucky/">Kentucky</a>
+          <a class="state-tile" href="/states/louisiana/">Louisiana</a>
+          <a class="state-tile" href="/states/maine/">Maine</a>
+          <a class="state-tile" href="/states/maryland/">Maryland</a>
+          <a class="state-tile" href="/states/massachusetts/">Massachusetts</a>
+          <a class="state-tile" href="/states/michigan/">Michigan</a>
+          <a class="state-tile" href="/states/minnesota/">Minnesota</a>
+          <a class="state-tile" href="/states/mississippi/">Mississippi</a>
+          <a class="state-tile" href="/states/missouri/">Missouri</a>
+          <a class="state-tile" href="/states/montana/">Montana</a>
+          <a class="state-tile" href="/states/nebraska/">Nebraska</a>
+          <a class="state-tile" href="/states/nevada/">Nevada</a>
+          <a class="state-tile" href="/states/new-hampshire/">New Hampshire</a>
+          <a class="state-tile" href="/states/new-jersey/">New Jersey</a>
+          <a class="state-tile" href="/states/new-mexico/">New Mexico</a>
+          <a class="state-tile" href="/states/new-york/">New York</a>
+          <a class="state-tile" href="/states/north-carolina/">North Carolina</a>
+          <a class="state-tile" href="/states/north-dakota/">North Dakota</a>
+          <a class="state-tile" href="/states/ohio/">Ohio</a>
+          <a class="state-tile" href="/states/oklahoma/">Oklahoma</a>
+          <a class="state-tile" href="/states/oregon/">Oregon</a>
+          <a class="state-tile" href="/states/pennsylvania/">Pennsylvania</a>
+          <a class="state-tile" href="/states/rhode-island/">Rhode Island</a>
+          <a class="state-tile" href="/states/south-carolina/">South Carolina</a>
+          <a class="state-tile" href="/states/south-dakota/">South Dakota</a>
+          <a class="state-tile" href="/states/tennessee/">Tennessee</a>
+          <a class="state-tile" href="/states/texas/">Texas</a>
+          <a class="state-tile" href="/states/utah/">Utah</a>
+          <a class="state-tile" href="/states/vermont/">Vermont</a>
+          <a class="state-tile" href="/states/virginia/">Virginia</a>
+          <a class="state-tile" href="/states/washington/">Washington</a>
+          <a class="state-tile" href="/states/west-virginia/">West Virginia</a>
+          <a class="state-tile" href="/states/wisconsin/">Wisconsin</a>
+          <a class="state-tile" href="/states/wyoming/">Wyoming</a>
+        </div>
+      </section>
+    </div>
+  </main>
 
-/* State Grid */
-.usa-schools-grid{
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding-top: 8px;
-}
+  <!-- SHARED FOOTER (3-col + trust links + divider + copyright spacing) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>FallenClassmate</h4>
+        <p>
+          Honoring the memories of those who have left our halls but never our hearts.
+          A dedicated space for remembrance and tribute.
+        </p>
+      </div>
 
-.state-tile{
-  background-color: #ffffff;
-  color: var(--teal);
-  border: 2px solid var(--teal);
-  border-radius: 10px;
-  padding: 12px 12px;
-  text-decoration: none;
-  font-weight: 900;
-  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="./schools.html">Find a School</a></li>
+          <li><a href="./plans.html">Create a Memorial</a></li>
+          <li><a href="./resources.html">Grief Resources</a></li>
+        </ul>
+      </div>
 
-.state-tile:hover{
-  background-color: var(--teal);
-  color: #ffffff;
-  transform: translateY(-1px);
-}
+      <div class="footer-col">
+        <h4>Trust &amp; Safety</h4>
+        <ul class="footer-links">
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./terms.html">Terms</a></li>
+          <li><a href="/report/">Report / Flag Content</a></li>
+        </ul>
 
-.state-tile:focus{
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59,153,150,0.18);
-}
+        <div class="footer-social">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Twitter">t</a>
+        </div>
+      </div>
+    </div>
 
-/* Responsive */
-@media (max-width: 1100px){
-  .usa-schools-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .usa-map-frame{ max-width: 920px; }
-}
+    <div class="footer-divider"></div>
 
-@media (max-width: 900px){
-  .usa-schools-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .usa-map-frame{ height: 280px; }
-}
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+    </div>
+  </footer>
 
-@media (max-width: 640px){
-  .usa-map-title{ font-size: 1.55em; }
-  .usa-schools-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .usa-map-frame{ height: 240px; padding: 10px; }
-}
-
-@media (max-width: 420px){
-  .usa-schools-grid{ grid-template-columns: 1fr; }
-  .usa-map-frame{ height: 210px; }
-}
+  <script src="./script.js" defer></script>
+</body>
+</html>
