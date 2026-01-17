@@ -3,39 +3,36 @@
    IMPORTANT: Do not style navbar/footer here.
    ========================================================= */
 
-.usa-schools-page-container{
-  background: #f9fdfd;
-  color: #333;
+/* Page wrapper (global body already has padding-top: 86px) */
+.usa-schools-page{
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
-
-  /* Since the header is fixed via .nav-wrap in styles.css,
-     this prevents the page from sliding under it.
-     Adjust if your fixed header is taller/shorter. */
-  padding-top: 160px;
+  padding: 18px 0 60px;
 }
 
 /* Banner */
 .usa-schools-map-banner{
-  padding: 26px 0 10px;
+  padding: 18px 0 10px;
   text-align: center;
 }
 
 .usa-map-title{
   margin: 0 0 16px;
-  color: #2d7d7a;
-  font-size: 42px;
+  color: var(--teal-dark);
+  font-size: clamp(30px, 3.4vw, 44px);
   font-style: italic;
   letter-spacing: 0.2px;
 }
 
-/* Make the USA image NOT massive */
+/* Map frame (prevents huge image) */
 .usa-map-frame{
   width: min(980px, 100%);
   margin: 0 auto;
   background: #ffffff;
-  border: 1px solid #e6efef;
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
   padding: 14px;
 }
@@ -43,7 +40,7 @@
 .usa-map-frame img{
   width: 100%;
   height: auto;
-  max-height: 360px;     /* keeps it from taking over the page */
+  max-height: 380px;     /* keeps it from taking over the page */
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -52,12 +49,12 @@
 /* Content */
 .usa-schools-content{
   text-align: center;
-  padding: 28px 0 70px;
+  padding: 26px 0 0;
 }
 
 .usa-schools-content h2{
   margin: 0 0 10px;
-  color: #2d7d7a;
+  color: var(--teal-dark);
   font-size: 26px;
 }
 
@@ -66,6 +63,7 @@
   max-width: 850px;
   color: #4b5b5a;
   line-height: 1.6;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /* State Grid */
@@ -84,16 +82,17 @@
   min-height: 46px;
 
   background: #ffffff;
-  border: 1px solid #e6efef;
+  border: 1px solid var(--border);
   border-radius: 14px;
 
   text-decoration: none;
   color: #0f2f2e;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .state-tile:hover{
@@ -104,7 +103,7 @@
 
 .state-tile:focus{
   outline: none;
-  border-color: #3b9996;
+  border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(59,153,150,0.18), 0 10px 22px rgba(0,0,0,0.08);
 }
 
@@ -114,13 +113,11 @@
 }
 
 @media (max-width: 900px){
-  .usa-schools-page-container{ padding-top: 175px; }
   .usa-schools-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px){
-  .usa-map-title{ font-size: 32px; }
-  .usa-map-frame img{ max-height: 280px; }
+  .usa-map-frame img{ max-height: 300px; }
   .usa-schools-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
