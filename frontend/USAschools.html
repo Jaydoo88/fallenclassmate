@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- TOP NAV (fixed + centered like the rest) -->
+  <!-- TOP NAV (fixed + centered like home) -->
   <div class="nav-wrap">
     <div class="page-container">
       <div class="navbar" id="navbar">
@@ -27,20 +27,23 @@
     </div>
   </div>
 
-  <!-- LOGO / CAPS / SEARCH (below nav) -->
+  <!-- LOGO / CAPS / SEARCH -->
   <header class="site-header">
     <div class="page-container">
       <div class="logo-bar">
         <div class="logo-section">
-          <a href="./index.html" aria-label="FallenClassmate Home">
+          <a href="./index.html">
             <img src="./assets/logo.png" alt="FallenClassmate Logo" />
           </a>
         </div>
 
-        <div class="center-section" aria-hidden="true">
-          <div class="cap-row">
-            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
-            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+        <div class="center-section">
+          <div class="cap-row" aria-hidden="true">
+            <span class="fade-1 offset-2">🎓</span><span class="fade-2 offset-1">🎓</span><span class="fade-3 offset-0">🎓</span>
+            <span class="fade-4 offset-1">🎓</span><span class="fade-5 offset-2">🎓</span><span class="fade-6 offset-1">🎓</span>
+            <span class="fade-7 offset-0">🎓</span><span class="fade-8 offset-1">🎓</span><span class="fade-9 offset-2">🎓</span>
+            <span class="fade-10 offset-1">🎓</span><span class="fade-11 offset-0">🎓</span><span class="fade-12 offset-1">🎓</span>
+            <span class="fade-13 offset-2">🎓</span><span class="fade-14 offset-1">🎓</span><span class="fade-15 offset-0">🎓</span>
           </div>
         </div>
 
@@ -56,13 +59,8 @@
             <span class="search-icon" aria-hidden="true">&#128269;</span>
           </div>
 
-          <button
-            class="hamburger"
-            id="menuToggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="navbar"
-          >
+          <!-- Hamburger stays for mobile (script.js uses it) -->
+          <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
             &#9776;
           </button>
         </div>
@@ -71,81 +69,78 @@
   </header>
 
   <!-- PAGE CONTENT -->
-  <main class="page-container">
-    <!-- Banner / Map -->
-    <section class="usa-schools-map-banner">
-      <h1 class="usa-map-title">USA High Schools</h1>
+  <main class="usa-schools-page-container">
+    <div class="page-container">
+      <!-- Banner -->
+      <section class="usa-schools-map-banner">
+        <h3 class="usa-map-title">USA High Schools</h3>
+        <img src="./assets/usa_map.png" alt="USA Map Banner" />
+      </section>
 
-      <a class="usa-map-link" href="./schools.html" aria-label="Back to Schools">
-        <div class="usa-map-frame">
-          <img src="./assets/usa_map.png" alt="USA High Schools Map" />
+      <!-- Content -->
+      <section class="usa-schools-content">
+        <h2>Explore High Schools by State</h2>
+        <p class="usa-schools-note">
+          Select a state to view schools and memorials from that region.
+        </p>
+
+        <div class="usa-schools-grid">
+          <a class="state-tile" href="/states/alabama/">Alabama</a>
+          <a class="state-tile" href="/states/alaska/">Alaska</a>
+          <a class="state-tile" href="/states/arizona/">Arizona</a>
+          <a class="state-tile" href="/states/arkansas/">Arkansas</a>
+          <a class="state-tile" href="/states/california/">California</a>
+          <a class="state-tile" href="/states/colorado/">Colorado</a>
+          <a class="state-tile" href="/states/connecticut/">Connecticut</a>
+          <a class="state-tile" href="/states/delaware/">Delaware</a>
+          <a class="state-tile" href="/states/florida/">Florida</a>
+          <a class="state-tile" href="/states/georgia/">Georgia</a>
+          <a class="state-tile" href="/states/hawaii/">Hawaii</a>
+          <a class="state-tile" href="/states/idaho/">Idaho</a>
+          <a class="state-tile" href="/states/illinois/">Illinois</a>
+          <a class="state-tile" href="/states/indiana/">Indiana</a>
+          <a class="state-tile" href="/states/iowa/">Iowa</a>
+          <a class="state-tile" href="/states/kansas/">Kansas</a>
+          <a class="state-tile" href="/states/kentucky/">Kentucky</a>
+          <a class="state-tile" href="/states/louisiana/">Louisiana</a>
+          <a class="state-tile" href="/states/maine/">Maine</a>
+          <a class="state-tile" href="/states/maryland/">Maryland</a>
+          <a class="state-tile" href="/states/massachusetts/">Massachusetts</a>
+          <a class="state-tile" href="/states/michigan/">Michigan</a>
+          <a class="state-tile" href="/states/minnesota/">Minnesota</a>
+          <a class="state-tile" href="/states/mississippi/">Mississippi</a>
+          <a class="state-tile" href="/states/missouri/">Missouri</a>
+          <a class="state-tile" href="/states/montana/">Montana</a>
+          <a class="state-tile" href="/states/nebraska/">Nebraska</a>
+          <a class="state-tile" href="/states/nevada/">Nevada</a>
+          <a class="state-tile" href="/states/new-hampshire/">New Hampshire</a>
+          <a class="state-tile" href="/states/new-jersey/">New Jersey</a>
+          <a class="state-tile" href="/states/new-mexico/">New Mexico</a>
+          <a class="state-tile" href="/states/new-york/">New York</a>
+          <a class="state-tile" href="/states/north-carolina/">North Carolina</a>
+          <a class="state-tile" href="/states/north-dakota/">North Dakota</a>
+          <a class="state-tile" href="/states/ohio/">Ohio</a>
+          <a class="state-tile" href="/states/oklahoma/">Oklahoma</a>
+          <a class="state-tile" href="/states/oregon/">Oregon</a>
+          <a class="state-tile" href="/states/pennsylvania/">Pennsylvania</a>
+          <a class="state-tile" href="/states/rhode-island/">Rhode Island</a>
+          <a class="state-tile" href="/states/south-carolina/">South Carolina</a>
+          <a class="state-tile" href="/states/south-dakota/">South Dakota</a>
+          <a class="state-tile" href="/states/tennessee/">Tennessee</a>
+          <a class="state-tile" href="/states/texas/">Texas</a>
+          <a class="state-tile" href="/states/utah/">Utah</a>
+          <a class="state-tile" href="/states/vermont/">Vermont</a>
+          <a class="state-tile" href="/states/virginia/">Virginia</a>
+          <a class="state-tile" href="/states/washington/">Washington</a>
+          <a class="state-tile" href="/states/west-virginia/">West Virginia</a>
+          <a class="state-tile" href="/states/wisconsin/">Wisconsin</a>
+          <a class="state-tile" href="/states/wyoming/">Wyoming</a>
         </div>
-      </a>
-    </section>
-
-    <!-- Content -->
-    <section class="usa-schools-content">
-      <h2>Explore High Schools by State</h2>
-      <p class="usa-schools-note">
-        Select a state to view schools and memorials from that region.
-      </p>
-
-      <div class="usa-schools-grid">
-        <a class="state-tile" href="/states/alabama/">Alabama</a>
-        <a class="state-tile" href="/states/alaska/">Alaska</a>
-        <a class="state-tile" href="/states/arizona/">Arizona</a>
-        <a class="state-tile" href="/states/arkansas/">Arkansas</a>
-        <a class="state-tile" href="/states/california/">California</a>
-        <a class="state-tile" href="/states/colorado/">Colorado</a>
-        <a class="state-tile" href="/states/connecticut/">Connecticut</a>
-        <a class="state-tile" href="/states/delaware/">Delaware</a>
-        <a class="state-tile" href="/states/florida/">Florida</a>
-        <a class="state-tile" href="/states/georgia/">Georgia</a>
-        <a class="state-tile" href="/states/hawaii/">Hawaii</a>
-        <a class="state-tile" href="/states/idaho/">Idaho</a>
-        <a class="state-tile" href="/states/illinois/">Illinois</a>
-        <a class="state-tile" href="/states/indiana/">Indiana</a>
-        <a class="state-tile" href="/states/iowa/">Iowa</a>
-        <a class="state-tile" href="/states/kansas/">Kansas</a>
-        <a class="state-tile" href="/states/kentucky/">Kentucky</a>
-        <a class="state-tile" href="/states/louisiana/">Louisiana</a>
-        <a class="state-tile" href="/states/maine/">Maine</a>
-        <a class="state-tile" href="/states/maryland/">Maryland</a>
-        <a class="state-tile" href="/states/massachusetts/">Massachusetts</a>
-        <a class="state-tile" href="/states/michigan/">Michigan</a>
-        <a class="state-tile" href="/states/minnesota/">Minnesota</a>
-        <a class="state-tile" href="/states/mississippi/">Mississippi</a>
-        <a class="state-tile" href="/states/missouri/">Missouri</a>
-        <a class="state-tile" href="/states/montana/">Montana</a>
-        <a class="state-tile" href="/states/nebraska/">Nebraska</a>
-        <a class="state-tile" href="/states/nevada/">Nevada</a>
-        <a class="state-tile" href="/states/new-hampshire/">New Hampshire</a>
-        <a class="state-tile" href="/states/new-jersey/">New Jersey</a>
-        <a class="state-tile" href="/states/new-mexico/">New Mexico</a>
-        <a class="state-tile" href="/states/new-york/">New York</a>
-        <a class="state-tile" href="/states/north-carolina/">North Carolina</a>
-        <a class="state-tile" href="/states/north-dakota/">North Dakota</a>
-        <a class="state-tile" href="/states/ohio/">Ohio</a>
-        <a class="state-tile" href="/states/oklahoma/">Oklahoma</a>
-        <a class="state-tile" href="/states/oregon/">Oregon</a>
-        <a class="state-tile" href="/states/pennsylvania/">Pennsylvania</a>
-        <a class="state-tile" href="/states/rhode-island/">Rhode Island</a>
-        <a class="state-tile" href="/states/south-carolina/">South Carolina</a>
-        <a class="state-tile" href="/states/south-dakota/">South Dakota</a>
-        <a class="state-tile" href="/states/tennessee/">Tennessee</a>
-        <a class="state-tile" href="/states/texas/">Texas</a>
-        <a class="state-tile" href="/states/utah/">Utah</a>
-        <a class="state-tile" href="/states/vermont/">Vermont</a>
-        <a class="state-tile" href="/states/virginia/">Virginia</a>
-        <a class="state-tile" href="/states/washington/">Washington</a>
-        <a class="state-tile" href="/states/west-virginia/">West Virginia</a>
-        <a class="state-tile" href="/states/wisconsin/">Wisconsin</a>
-        <a class="state-tile" href="/states/wyoming/">Wyoming</a>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <!-- UNIFIED FOOTER (matches rest of site) -->
+  <!-- SHARED FOOTER (3-col + trust links + divider + copyright spacing) -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-col">
@@ -173,7 +168,7 @@
           <li><a href="/report/">Report / Flag Content</a></li>
         </ul>
 
-        <div class="footer-social" aria-label="Social links">
+        <div class="footer-social">
           <a class="social" href="#" aria-label="Facebook">f</a>
           <a class="social" href="#" aria-label="Twitter">t</a>
         </div>
