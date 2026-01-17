@@ -1,157 +1,176 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overseas High Schools | FallenClassmate</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overseas High Schools | FallenClassmate</title>
 
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./Overseasschools.css" />
-</head>
+    <!-- Same fonts as the rest of the site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <!-- TOP NAV (fixed, centered like Home) -->
-  <div class="nav-wrap">
-    <div class="page-container">
-      <div class="navbar" id="navbar">
-        <nav>
-          <a href="./index.html">Home</a>
-          <a href="./schools.html" class="active">Schools</a>
-          <a href="./resources.html">Resources</a>
-          <a href="./plans.html">Plans &amp; Features</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-          <a href="./add-school.html">Add a School</a>
-        </nav>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./Overseasschools.css" />
+  </head>
+
+  <body>
+    <!-- TOP NAV (exactly like main site) -->
+    <div class="nav-wrap">
+      <div class="page-container">
+        <div class="navbar" id="navbar">
+          <nav class="nav-links" id="navLinks">
+            <a href="./index.html">Home</a>
+            <a href="./schools.html">Schools</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./plans.html">Plans &amp; Features</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./add-school.html">Add a School</a>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- LOGO / CAPS / SEARCH (below nav) -->
-  <header class="site-header">
-    <div class="page-container">
-      <div class="logo-bar">
-        <!-- LEFT -->
-        <div class="logo-section">
-          <a href="./index.html" aria-label="FallenClassmate Home">
-            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
-          </a>
-        </div>
-
-        <!-- CENTER -->
-        <div class="center-section" aria-hidden="true">
-          <div class="cap-row">
-            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
-            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
-          </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="search-section">
-          <div class="search-container">
-            <input
-              id="siteSearch"
-              type="text"
-              class="styled-search-input"
-              placeholder="Find a Classmate or School"
-              autocomplete="off"
-            />
-            <span class="search-icon" aria-hidden="true">&#128269;</span>
+    <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+    <header class="site-header">
+      <div class="page-container">
+        <div class="logo-bar">
+          <!-- LEFT -->
+          <div class="logo-section">
+            <a href="./index.html" aria-label="FallenClassmate Home">
+              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
           </div>
 
-          <button
-            class="hamburger"
-            id="menuToggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="navbar"
-          >
-            &#9776;
-          </button>
+          <!-- CENTER -->
+          <div class="center-section" aria-hidden="true">
+            <div class="cap-row">
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                id="siteSearch"
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button
+              class="hamburger"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navbar"
+            >
+              &#9776;
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- PAGE CONTENT -->
-  <main class="page-container">
-    <!-- Banner -->
-    <section class="overseas-schools-map-banner">
-      <h1 class="overseas-map-title">Overseas High Schools</h1>
-      <div class="overseas-map-frame">
-        <img src="./assets/asia_map.jpg" alt="Overseas High Schools Map" />
+    <!-- PAGE CONTENT -->
+    <main class="overseas-schools-page">
+      <div class="page-container">
+        <!-- Banner -->
+        <section class="overseas-schools-map-banner">
+          <h1 class="overseas-map-title">Overseas High Schools</h1>
+
+          <div class="overseas-map-frame">
+            <img src="./assets/asia_map.jpg" alt="Overseas High Schools Map" />
+          </div>
+        </section>
+
+        <!-- Content -->
+        <section class="overseas-schools-content">
+          <h2>Explore High Schools by Country</h2>
+          <p class="overseas-schools-note">
+            Select a country to view schools and memorials from that region.
+          </p>
+
+          <div class="overseas-schools-grid">
+            <a class="country-tile" href="./schools/overseas/germany.html">Germany</a>
+            <a class="country-tile" href="./schools/overseas/united-kingdom.html">United Kingdom</a>
+            <a class="country-tile" href="./schools/overseas/italy.html">Italy</a>
+            <a class="country-tile" href="./schools/overseas/spain.html">Spain</a>
+            <a class="country-tile" href="./schools/overseas/puerto-rico.html">Puerto Rico</a>
+
+            <a class="country-tile" href="./schools/overseas/netherlands.html">Netherlands</a>
+            <a class="country-tile" href="./schools/overseas/cuba.html">Cuba</a>
+            <a class="country-tile" href="./schools/overseas/belgium.html">Belgium</a>
+            <a class="country-tile" href="./schools/overseas/turkey.html">Turkey</a>
+            <a class="country-tile" href="./schools/overseas/japan.html">Japan</a>
+
+            <a class="country-tile" href="./schools/overseas/korea.html">Korea</a>
+            <a class="country-tile" href="./schools/overseas/guam.html">Guam</a>
+            <a class="country-tile" href="./schools/overseas/bahrain.html">Bahrain</a>
+          </div>
+        </section>
       </div>
-    </section>
+    </main>
 
-    <!-- Content -->
-    <section class="overseas-schools-content">
-      <h2>Explore High Schools by Country</h2>
-      <p class="overseas-schools-note">
-        Select a country to view schools and memorials from that region.
-      </p>
+    <!-- FOOTER (identical to your global footer) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>FallenClassmate</h4>
+          <p>
+            Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+            remembrance and tribute.
+          </p>
+        </div>
 
-      <div class="overseas-schools-grid">
-        <a class="country-tile" href="./schools/overseas/germany.html">Germany</a>
-        <a class="country-tile" href="./schools/overseas/united-kingdom.html">United Kingdom</a>
-        <a class="country-tile" href="./schools/overseas/italy.html">Italy</a>
-        <a class="country-tile" href="./schools/overseas/spain.html">Spain</a>
-        <a class="country-tile" href="./schools/overseas/puerto-rico.html">Puerto Rico</a>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./schools.html">Find Your School</a></li>
+            <li><a href="./plans.html">Create a Memorial</a></li>
+            <li><a href="./resources.html">Grief Resources</a></li>
 
-        <a class="country-tile" href="./schools/overseas/netherlands.html">Netherlands</a>
-        <a class="country-tile" href="./schools/overseas/cuba.html">Cuba</a>
-        <a class="country-tile" href="./schools/overseas/belgium.html">Belgium</a>
-        <a class="country-tile" href="./schools/overseas/turkey.html">Turkey</a>
-        <a class="country-tile" href="./schools/overseas/japan.html">Japan</a>
+            <li class="footer-link-divider"></li>
 
-        <a class="country-tile" href="./schools/overseas/korea.html">Korea</a>
-        <a class="country-tile" href="./schools/overseas/guam.html">Guam</a>
-        <a class="country-tile" href="./schools/overseas/bahrain.html">Bahrain</a>
-      </div>
-    </section>
-  </main>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/report/">Report / Flag Content</a></li>
+          </ul>
+        </div>
 
-  <!-- UNIFIED FOOTER (same as Home) -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <h4>FallenClassmate</h4>
-        <p>
-          Honoring the memories of those who have left our halls but never our hearts.
-          A dedicated space for remembrance and tribute.
-        </p>
-      </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p>Stay updated with our community tributes.</p>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="./schools.html">Find a School</a></li>
-          <li><a href="./plans.html">Create a Memorial</a></li>
-          <li><a href="./resources.html">Grief Resources</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Trust &amp; Safety</h4>
-        <ul class="footer-links">
-          <li><a href="./privacy.html">Privacy Policy</a></li>
-          <li><a href="./terms.html">Terms</a></li>
-          <li><a href="/report/">Report / Flag Content</a></li>
-        </ul>
-
-        <div class="footer-social" aria-label="Social links">
-          <a class="social" href="#" aria-label="Facebook">f</a>
-          <a class="social" href="#" aria-label="Twitter">t</a>
+          <div class="footer-social">
+            <a class="social" href="#" aria-label="Facebook">f</a>
+            <a class="social" href="#" aria-label="Twitter">t</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer-divider"></div>
+      <div class="footer-divider"></div>
 
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
-    </div>
-  </footer>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+      </div>
+    </footer>
 
-  <script src="./script.js" defer></script>
-</body>
+    <script src="./script.js" defer></script>
+  </body>
 </html>
