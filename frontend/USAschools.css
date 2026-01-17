@@ -1,105 +1,105 @@
 /* =========================================================
-   USAschools.css
-   Page-specific ONLY (does not override shared header/footer)
+   USA Schools Page (page-specific only)
+   IMPORTANT: Do not style navbar/footer here.
    ========================================================= */
 
 .usa-schools-page-container{
   background: #f9fdfd;
   color: #333;
   min-height: 100vh;
+
+  /* Since the header is fixed via .nav-wrap in styles.css,
+     this prevents the page from sliding under it.
+     Adjust if your fixed header is taller/shorter. */
+  padding-top: 160px;
 }
 
 /* Banner */
 .usa-schools-map-banner{
-  text-align: center;
   padding: 26px 0 10px;
+  text-align: center;
 }
 
 .usa-map-title{
-  margin: 6px 0 14px;
-  font-size: 34px;
-  font-weight: 800;
+  margin: 0 0 16px;
   color: #2d7d7a;
-  letter-spacing: .2px;
+  font-size: 42px;
+  font-style: italic;
+  letter-spacing: 0.2px;
 }
 
-/* Framed map (prevents the "giant image" issue) */
+/* Make the USA image NOT massive */
 .usa-map-frame{
-  width: min(1100px, 100%);
-  height: 280px;
+  width: min(980px, 100%);
   margin: 0 auto;
   background: #ffffff;
   border: 1px solid #e6efef;
   border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 14px;
 }
 
 .usa-map-frame img{
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 360px;     /* keeps it from taking over the page */
   object-fit: contain;
-  object-position: center;
-  padding: 18px;  /* breathing room so it feels like other pages */
+  display: block;
+  margin: 0 auto;
 }
 
 /* Content */
 .usa-schools-content{
   text-align: center;
-  padding: 18px 0 10px;
+  padding: 28px 0 70px;
 }
 
 .usa-schools-content h2{
-  margin: 10px 0 10px;
+  margin: 0 0 10px;
   color: #2d7d7a;
   font-size: 26px;
-  font-weight: 800;
 }
 
 .usa-schools-note{
-  margin: 0 auto 18px;
-  max-width: 860px;
-  color: #556;
+  margin: 0 auto 20px;
+  max-width: 850px;
+  color: #4b5b5a;
   line-height: 1.6;
 }
 
-/* State tiles grid */
+/* State Grid */
 .usa-schools-grid{
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 10px 0 40px;
 }
 
 .state-tile{
-  background: #ffffff;
-  color: #2d7d7a;
-  border: 1px solid #cfe3e3;
-  border-radius: 14px;
-  padding: 12px 10px;
-  text-decoration: none;
-  font-weight: 700;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 46px;
+
+  background: #ffffff;
+  border: 1px solid #e6efef;
+  border-radius: 14px;
+
+  text-decoration: none;
+  color: #0f2f2e;
+  font-size: 16px;
+  font-weight: 700;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background-color .15s ease;
-  min-height: 44px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .state-tile:hover{
   transform: translateY(-1px);
-  border-color: #3b9996;
+  border-color: #cfe3e3;
   box-shadow: 0 10px 22px rgba(0,0,0,0.08);
-  background: #f1f8f8;
 }
 
 .state-tile:focus{
@@ -108,24 +108,19 @@
   box-shadow: 0 0 0 3px rgba(59,153,150,0.18), 0 10px 22px rgba(0,0,0,0.08);
 }
 
-/* Keep active nav link consistent (optional; harmless if styles.css already handles it) */
-.navbar nav a.active{
-  text-decoration: underline;
-}
-
 /* Responsive */
 @media (max-width: 1100px){
   .usa-schools-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .usa-map-frame{ height: 260px; }
 }
 
 @media (max-width: 900px){
+  .usa-schools-page-container{ padding-top: 175px; }
   .usa-schools-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px){
-  .usa-map-title{ font-size: 28px; }
-  .usa-map-frame{ height: 230px; }
+  .usa-map-title{ font-size: 32px; }
+  .usa-map-frame img{ max-height: 280px; }
   .usa-schools-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
