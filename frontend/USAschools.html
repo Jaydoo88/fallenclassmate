@@ -10,71 +10,65 @@
 </head>
 
 <body>
-  <!-- TOP NAV (fixed + centered like home) -->
-  <div class="nav-wrap">
+  <div class="usa-schools-page-container">
     <div class="page-container">
-      <div class="navbar" id="navbar">
-        <nav>
-          <a href="./index.html">Home</a>
-          <a href="./schools.html" class="active">Schools</a>
-          <a href="./resources.html">Resources</a>
-          <a href="./plans.html">Plans &amp; Features</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html">Contact</a>
-          <a href="./add-school.html">Add a School</a>
-        </nav>
-      </div>
-    </div>
-  </div>
+      <!-- Shared Header -->
+      <header>
+        <div class="logo-bar">
+          <div class="logo-section">
+            <a href="./index.html">
+              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
+            </a>
+          </div>
 
-  <!-- LOGO / CAPS / SEARCH -->
-  <header class="site-header">
-    <div class="page-container">
-      <div class="logo-bar">
-        <div class="logo-section">
-          <a href="./index.html">
-            <img src="./assets/logo.png" alt="FallenClassmate Logo" />
-          </a>
-        </div>
+          <div class="center-section">
+            <div class="cap-row" aria-hidden="true">
+              <span class="fade-1 offset-2">🎓</span><span class="fade-2 offset-1">🎓</span><span class="fade-3 offset-0">🎓</span>
+              <span class="fade-4 offset-1">🎓</span><span class="fade-5 offset-2">🎓</span><span class="fade-6 offset-1">🎓</span>
+              <span class="fade-7 offset-0">🎓</span><span class="fade-8 offset-1">🎓</span><span class="fade-9 offset-2">🎓</span>
+              <span class="fade-10 offset-1">🎓</span><span class="fade-11 offset-0">🎓</span><span class="fade-12 offset-1">🎓</span>
+              <span class="fade-13 offset-2">🎓</span><span class="fade-14 offset-1">🎓</span><span class="fade-15 offset-0">🎓</span>
+            </div>
+          </div>
 
-        <div class="center-section">
-          <div class="cap-row" aria-hidden="true">
-            <span class="fade-1 offset-2">🎓</span><span class="fade-2 offset-1">🎓</span><span class="fade-3 offset-0">🎓</span>
-            <span class="fade-4 offset-1">🎓</span><span class="fade-5 offset-2">🎓</span><span class="fade-6 offset-1">🎓</span>
-            <span class="fade-7 offset-0">🎓</span><span class="fade-8 offset-1">🎓</span><span class="fade-9 offset-2">🎓</span>
-            <span class="fade-10 offset-1">🎓</span><span class="fade-11 offset-0">🎓</span><span class="fade-12 offset-1">🎓</span>
-            <span class="fade-13 offset-2">🎓</span><span class="fade-14 offset-1">🎓</span><span class="fade-15 offset-0">🎓</span>
+          <div class="search-section">
+            <div class="search-container">
+              <input
+                id="siteSearch"
+                type="text"
+                class="styled-search-input"
+                placeholder="Find a Classmate or School"
+                autocomplete="off"
+              />
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+            </div>
+
+            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+              &#9776;
+            </button>
           </div>
         </div>
 
-        <div class="search-section">
-          <div class="search-container">
-            <input
-              id="siteSearch"
-              type="text"
-              class="styled-search-input"
-              placeholder="Find a Classmate or School"
-              autocomplete="off"
-            />
-            <span class="search-icon" aria-hidden="true">&#128269;</span>
-          </div>
-
-          <!-- Hamburger stays for mobile (script.js uses it) -->
-          <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-            &#9776;
-          </button>
+        <div class="navbar" id="navbar">
+          <nav>
+            <a href="./index.html">Home</a>
+            <a href="./schools.html" class="active">Schools</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./plans.html">Plans & Features</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./add-school.html">Add a School</a>
+          </nav>
         </div>
-      </div>
-    </div>
-  </header>
+      </header>
 
-  <!-- PAGE CONTENT -->
-  <main class="usa-schools-page-container">
-    <div class="page-container">
       <!-- Banner -->
       <section class="usa-schools-map-banner">
         <h3 class="usa-map-title">USA High Schools</h3>
-        <img src="./assets/usa_map.png" alt="USA Map Banner" />
+
+        <div class="usa-map-frame">
+          <img src="./assets/usa_map.png" alt="USA High Schools Map" />
+        </div>
       </section>
 
       <!-- Content -->
@@ -137,51 +131,47 @@
           <a class="state-tile" href="/states/wyoming/">Wyoming</a>
         </div>
       </section>
-    </div>
-  </main>
 
-  <!-- SHARED FOOTER (3-col + trust links + divider + copyright spacing) -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-col">
-        <h4>FallenClassmate</h4>
-        <p>
-          Honoring the memories of those who have left our halls but never our hearts.
-          A dedicated space for remembrance and tribute.
-        </p>
-      </div>
+      <!-- Shared Footer (trust links) -->
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>FallenClassmate</h4>
+            <p>
+              Honoring the memories of those who have left our halls but never our hearts.
+              A dedicated space for remembrance and tribute.
+            </p>
+          </div>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="./schools.html">Find a School</a></li>
-          <li><a href="./plans.html">Create a Memorial</a></li>
-          <li><a href="./resources.html">Grief Resources</a></li>
-        </ul>
-      </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="./schools.html">Find a School</a>
+            <a href="./plans.html">Create a Memorial</a>
+            <a href="./resources.html">Grief Resources</a>
+          </div>
 
-      <div class="footer-col">
-        <h4>Trust &amp; Safety</h4>
-        <ul class="footer-links">
-          <li><a href="./privacy.html">Privacy Policy</a></li>
-          <li><a href="./terms.html">Terms</a></li>
-          <li><a href="/report/">Report / Flag Content</a></li>
-        </ul>
+          <div class="footer-col">
+            <h4>Trust &amp; Safety</h4>
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/report/">Report / Flag Content</a>
 
-        <div class="footer-social">
-          <a class="social" href="#" aria-label="Facebook">f</a>
-          <a class="social" href="#" aria-label="Twitter">t</a>
+            <div class="footer-social" aria-label="Social links">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Twitter">t</a>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          © <span id="year"></span> FallenClassmate. All rights reserved.
+        </div>
+      </footer>
     </div>
 
-    <div class="footer-divider"></div>
-
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="./script.js" defer></script>
+    <script src="./script.js" defer></script>
+  </div>
 </body>
 </html>
