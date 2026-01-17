@@ -3,214 +3,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plans & Features | FallenClassmate</title>
+  <title>Plans &amp; Features | FallenClassmate</title>
 
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./plans.css" />
+  <!-- High-school / varsity vibe fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global + page-specific CSS (root-relative for Vercel) -->
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/plans.css" />
 </head>
 
 <body>
-  <div class="plans-page-container">
+  <!-- TOP NAV (centered, NOT full width) -->
+  <div class="nav-wrap">
     <div class="page-container">
-      <!-- Shared Header -->
-      <header>
-        <div class="logo-bar">
-          <div class="logo-section">
-            <a href="./index.html">
-              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
-            </a>
-          </div>
+      <div class="navbar" id="navbar">
+        <nav class="nav-links" id="navLinks">
+          <a href="/index.html">Home</a>
+          <a href="/schools.html">Schools</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/plans.html">Plans &amp; Features</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
-            </div>
-          </div>
+  <!-- LOGO / CAPS / SEARCH (below nav) -->
+  <header class="site-header">
+    <div class="page-container">
+      <div class="logo-bar">
+        <!-- LEFT -->
+        <div class="logo-section">
+          <a href="/index.html" aria-label="FallenClassmate Home">
+            <img src="/assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
 
-          <div class="search-section">
-            <div class="search-container">
-              <input
-                id="siteSearch"
-                type="text"
-                class="styled-search-input"
-                placeholder="Find a Classmate or School"
-                autocomplete="off"
-              />
-              <span class="search-icon" aria-hidden="true">&#128269;</span>
-            </div>
-
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-              &#9776;
-            </button>
+        <!-- CENTER -->
+        <div class="center-section" aria-hidden="true">
+          <div class="cap-row">
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
           </div>
         </div>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="./index.html">Home</a>
-            <a href="./schools.html">Schools</a>
-            <a href="./resources.html">Resources</a>
-            <a href="./plans.html" class="active">Plans & Features</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./add-school.html">Add a School</a>
-          </nav>
+        <!-- RIGHT -->
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              id="siteSearch"
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            &#9776;
+          </button>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
-      <!-- Page Header -->
-      <section class="plans-header-section">
-        <h2 class="plans-header-title">Start Free or Keep Their Memory Forever</h2>
-        <p class="plans-header-subtext">Find the right way to remember your classmate — free or forever.</p>
+  <!-- PAGE CONTENT -->
+  <main class="page-container">
+    <!-- PAGE HEADER -->
+    <section class="plans-header-section">
+      <h1 class="plans-header-title">Start Free or Keep Their Memory Forever</h1>
+      <p class="plans-header-subtext">Find the right way to remember your classmate — free or forever.</p>
 
-        <div class="billing-toggle" aria-label="Billing Cycle Toggle">
-          <span id="labelMonthly" class="active">Monthly</span>
+      <div class="billing-toggle" aria-label="Billing Cycle Toggle">
+        <span id="labelMonthly" class="active">Monthly</span>
 
-          <label class="switch">
-            <input id="billingToggle" type="checkbox" />
-            <span class="slider"></span>
-          </label>
+        <label class="switch">
+          <input id="billingToggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
 
-          <span id="labelYearly">Yearly</span>
+        <span id="labelYearly">Yearly</span>
+      </div>
+    </section>
+
+    <!-- PLAN CARDS -->
+    <section class="plan-cards">
+      <div class="plan-card">
+        <h3>Hall Pass</h3>
+        <p class="plan-price">Free</p>
+        <p class="plan-desc">Always free. A heartfelt way to honor a fallen classmate.</p>
+        <a href="#" class="button primary">Select</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Memory Lane</h3>
+        <p class="plan-price" id="memoryLanePrice">$4.95/mo</p>
+        <p class="plan-savings-label" id="memoryLaneSavings" hidden>Save 21% when paid in full</p>
+        <p class="plan-desc">Unlock enhanced ways to remember and share your classmate’s legacy.</p>
+        <a href="#" class="button primary">Select</a>
+      </div>
+
+      <div class="plan-card popular">
+        <span class="popular-badge">Most Popular</span>
+        <h3>Legacy Locker</h3>
+        <p class="plan-price">$129.00</p>
+        <p class="plan-desc">Preserve your classmate’s legacy with a permanent memorial.</p>
+        <a href="#" class="button primary">Select</a>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="comparison-table">
+      <h2>Compare Features</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Hall Pass</th>
+              <th>Memory Lane</th>
+              <th>Legacy Locker</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr><td>No Ads</td><td>❌</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Custom Themes</td><td>Limited</td><td>Full Access</td><td>Full Access</td></tr>
+            <tr><td>Photo Gallery</td><td>Up to 5</td><td>Unlimited</td><td>Unlimited</td></tr>
+            <tr><td>Add Music/Videos</td><td>❌</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Collaborators</td><td>❌</td><td>Unlimited</td><td>Unlimited</td></tr>
+            <tr><td>Privacy Settings</td><td>Basic</td><td>Advanced</td><td>Advanced</td></tr>
+            <tr><td>Permanent Memorial</td><td>❌</td><td>❌</td><td>✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- SAME FOOTER AS HOME -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>FallenClassmate</h4>
+        <p>
+          Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+          remembrance and tribute.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/schools.html">Find Your School</a></li>
+          <li><a href="/plans.html">Create a Memorial</a></li>
+          <li><a href="/resources.html">Grief Resources</a></li>
+
+          <li class="footer-link-divider"></li>
+
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/report/">Report / Flag Content</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p>Stay updated with our community tributes.</p>
+
+        <div class="footer-social">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Twitter">t</a>
         </div>
-      </section>
-
-      <!-- Plan Cards -->
-      <section class="plan-cards">
-        <div class="plan-card">
-          <h3>Hall Pass</h3>
-          <p class="plan-price">Free</p>
-          <p class="plan-desc">Always free. A heartfelt way to honor a fallen classmate.</p>
-          <a href="#" class="button primary">Select</a>
-        </div>
-
-        <div class="plan-card">
-          <h3>Memory Lane</h3>
-          <p class="plan-price" id="memoryLanePrice">$4.95/mo</p>
-          <p class="plan-savings-label" id="memoryLaneSavings" hidden>Save 21% when paid in full</p>
-          <p class="plan-desc">Unlock enhanced ways to remember and share your classmate’s legacy.</p>
-          <a href="#" class="button primary">Select</a>
-        </div>
-
-        <div class="plan-card popular">
-          <span class="popular-badge">Most Popular</span>
-          <h3>Legacy Locker</h3>
-          <p class="plan-price">$129.00</p>
-          <p class="plan-desc">Preserve your classmate’s legacy with a permanent memorial.</p>
-          <a href="#" class="button primary">Select</a>
-        </div>
-      </section>
-
-      <!-- Comparison Table -->
-      <section class="comparison-table">
-        <h2>Compare Features</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Hall Pass</th>
-                <th>Memory Lane</th>
-                <th>Legacy Locker</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>No Ads</td>
-                <td>❌</td>
-                <td>✅</td>
-                <td>✅</td>
-              </tr>
-              <tr>
-                <td>Custom Themes</td>
-                <td>Limited</td>
-                <td>Full Access</td>
-                <td>Full Access</td>
-              </tr>
-              <tr>
-                <td>Photo Gallery</td>
-                <td>Up to 5</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Add Music/Videos</td>
-                <td>❌</td>
-                <td>✅</td>
-                <td>✅</td>
-              </tr>
-              <tr>
-                <td>Collaborators</td>
-                <td>❌</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Privacy Settings</td>
-                <td>Basic</td>
-                <td>Advanced</td>
-                <td>Advanced</td>
-              </tr>
-              <tr>
-                <td>Permanent Memorial</td>
-                <td>❌</td>
-                <td>❌</td>
-                <td>✅</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Shared Footer -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
+      </div>
     </div>
 
-    <script src="./script.js" defer></script>
+    <div class="footer-divider"></div>
 
-    <!-- Plans toggle logic -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.getElementById("billingToggle");
-        const labelMonthly = document.getElementById("labelMonthly");
-        const labelYearly = document.getElementById("labelYearly");
-        const price = document.getElementById("memoryLanePrice");
-        const savings = document.getElementById("memoryLaneSavings");
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+    </div>
+  </footer>
 
-        const setCycle = (cycle) => {
-          const isYearly = cycle === "yearly";
-          labelMonthly.classList.toggle("active", !isYearly);
-          labelYearly.classList.toggle("active", isYearly);
+  <script src="/script.js" defer></script>
 
-          price.textContent = isYearly ? "$47.00/yr" : "$4.95/mo";
-          savings.hidden = !isYearly;
-          toggle.checked = isYearly;
-        };
+  <!-- Plans toggle logic (page-only) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("billingToggle");
+      const labelMonthly = document.getElementById("labelMonthly");
+      const labelYearly = document.getElementById("labelYearly");
+      const price = document.getElementById("memoryLanePrice");
+      const savings = document.getElementById("memoryLaneSavings");
 
-        // default to monthly
-        setCycle("monthly");
+      const setCycle = (cycle) => {
+        const isYearly = cycle === "yearly";
+        labelMonthly.classList.toggle("active", !isYearly);
+        labelYearly.classList.toggle("active", isYearly);
 
-        toggle.addEventListener("change", () => {
-          setCycle(toggle.checked ? "yearly" : "monthly");
-        });
+        price.textContent = isYearly ? "$47.00/yr" : "$4.95/mo";
+        savings.hidden = !isYearly;
+        toggle.checked = isYearly;
+      };
+
+      // default to monthly
+      setCycle("monthly");
+
+      toggle.addEventListener("change", () => {
+        setCycle(toggle.checked ? "yearly" : "monthly");
       });
-    </script>
-  </div>
+    });
+  </script>
 </body>
 </html>
