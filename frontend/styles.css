@@ -15,16 +15,7 @@ body{
   font-family:'Georgia', serif;
   background:var(--bg);
   color:var(--text);
-  padding-top:68px; /* space for fixed nav */
-}
-
-img{ max-width:100%; display:block; }
-
-/* CONTAINER */
-.page-container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 16px;
+  padding-top:86px; /* updated to match fixed nav height */
 }
 
 /* =========================
@@ -37,7 +28,8 @@ img{ max-width:100%; display:block; }
   width:100%;
   z-index:9999;
   background:#fff;
-  padding:0 0 12px;
+  padding:10px 0; /* simplified so height is predictable */
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 .navbar{
@@ -45,24 +37,25 @@ img{ max-width:100%; display:block; }
   color:#fff;
   padding:12px 18px;
   border-radius:0;
-  box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
 
-.navbar nav{
+.navbar .nav-links{
   display:flex;
   justify-content:center;
   gap:30px;
   flex-wrap:wrap;
+  margin:0;
+  padding:0;
 }
 
-.navbar nav a{
+.navbar .nav-links a{
   color:#fff;
   text-decoration:none;
   font-weight:bold;
   position:relative;
 }
 
-.navbar nav a::after{
+.navbar .nav-links a::after{
   content:'';
   position:absolute;
   width:0;
@@ -73,8 +66,29 @@ img{ max-width:100%; display:block; }
   transition:width .25s ease;
 }
 
-.navbar nav a:hover::after{
+.navbar .nav-links a:hover::after{
   width:100%;
+}
+
+/* MOBILE NAV (collapsed until opened) */
+@media (max-width:768px){
+  .hamburger{ display:block; }
+
+  .navbar{
+    padding:12px 14px;
+  }
+
+  .navbar .nav-links{
+    display:none;              /* hidden by default */
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+    padding-top:12px;
+  }
+
+  .navbar.open .nav-links{
+    display:flex;              /* shown when toggled */
+  }
 }
 
 /* =========================
