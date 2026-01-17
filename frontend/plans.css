@@ -1,233 +1,229 @@
 /* =========================
-   PLANS PAGE (plans.css)
-   Works with global styles.css
-   ========================= */
+   PLANS PAGE (page-specific only)
+   Global header/nav/footer/fonts are handled by /styles.css
+========================= */
 
-.plans-page-container {
-  background-color: #f9fdfd;
-  color: #333;
-  min-height: 100vh;
-
-  /* Optional: keep if you want to match old PlansPage look.
-     Remove if you want Georgia from styles.css everywhere. */
-  font-family: 'Segoe UI', sans-serif;
+.plans-header-section{
+  background-color:#f1f8f8;
+  text-align:center;
+  padding: var(--section-y) 18px;
+  border-radius: 12px;
+  margin-top: var(--section-y-sm);
 }
 
-.plans-header-section {
-  background-color: #f1f8f8;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.plans-header-title {
-  margin: 0 0 12px;
-  color: #3b9996;
-  font-size: 1.85em;
+.plans-header-title{
+  margin: 0 0 10px;
+  color: var(--teal);
+  font-size: 1.9em;
   font-weight: 800;
 }
 
-.plans-header-subtext {
-  margin: 0 auto 22px;
+.plans-header-subtext{
+  margin: 0 auto 18px;
   max-width: 900px;
-  color: #555;
+  color:#555;
   font-size: 1.05em;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Toggle */
-.billing-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  border-radius: 999px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  border: 1px solid #d9e6e6;
+/* TOGGLE */
+.billing-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+  border-radius:999px;
+  background:#ffffff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  border:1px solid #d9e6e6;
 }
 
-.billing-toggle span {
+.billing-toggle span{
   font-weight: 800;
-  color: #6e8a8a;
+  color:#6e8a8a;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.billing-toggle span.active {
-  color: #3b9996;
+.billing-toggle span.active{
+  color: var(--teal);
 }
 
-/* Switch */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 56px;
-  height: 30px;
+/* SWITCH */
+.switch{
+  position:relative;
+  display:inline-block;
+  width:56px;
+  height:30px;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.switch input{
+  opacity:0;
+  width:0;
+  height:0;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #cfe8e8;
-  transition: 0.2s;
-  border-radius: 999px;
+.slider{
+  position:absolute;
+  cursor:pointer;
+  inset:0;
+  background-color:#cfe8e8;
+  transition:0.2s;
+  border-radius:999px;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 24px;
-  width: 24px;
-  left: 3px;
-  top: 3px;
-  background-color: white;
-  transition: 0.2s;
-  border-radius: 50%;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+.slider:before{
+  position:absolute;
+  content:"";
+  height:24px;
+  width:24px;
+  left:3px;
+  top:3px;
+  background-color:white;
+  transition:0.2s;
+  border-radius:50%;
+  box-shadow:0 1px 5px rgba(0,0,0,0.18);
 }
 
-.switch input:checked + .slider {
-  background-color: #3b9996;
+.switch input:checked + .slider{
+  background-color: var(--teal);
 }
 
-.switch input:checked + .slider:before {
+.switch input:checked + .slider:before{
   transform: translateX(26px);
 }
 
-/* Cards */
-.plan-cards {
-  display: grid;
+/* CARDS */
+.plan-cards{
+  display:grid;
   grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 22px;
-  padding: 40px 20px;
+  gap:22px;
+  padding: var(--section-y) 0;
 }
 
-.plan-card {
-  position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 26px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  border: 1px solid #e6f0f0;
-  text-align: center;
+.plan-card{
+  position:relative;
+  background:#ffffff;
+  border-radius:12px;
+  padding:26px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  border:1px solid #e6f0f0;
+  text-align:center;
 }
 
-.plan-card h3 {
-  margin: 0 0 10px;
-  color: #3b9996;
-  font-size: 1.35em;
+.plan-card h3{
+  margin:0 0 10px;
+  color: var(--teal);
+  font-size:1.35em;
 }
 
-.plan-price {
-  margin: 0 0 10px;
-  font-size: 1.8em;
-  font-weight: 900;
-  color: #333;
+.plan-price{
+  margin:0 0 10px;
+  font-size:1.8em;
+  font-weight:900;
+  color:#333;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.plan-desc {
-  margin: 0 0 18px;
-  color: #555;
-  line-height: 1.6;
+.plan-desc{
+  margin:0 0 18px;
+  color:#555;
+  line-height:1.6;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.plan-savings-label {
-  margin: -4px 0 14px;
-  color: #3b9996;
-  font-weight: 800;
-  font-size: 0.95em;
+.plan-savings-label{
+  margin:-4px 0 14px;
+  color: var(--teal);
+  font-weight:800;
+  font-size:0.95em;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.plan-card .button.primary {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 8px;
-  background: #3b9996;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 900;
-  border: 2px solid #3b9996;
+/* Keep your button class, but make it match nicely */
+.plan-card .button.primary{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:8px;
+  background: var(--teal);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:900;
+  border:2px solid var(--teal);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
 }
 
-.plan-card .button.primary:hover {
-  opacity: 0.92;
+.plan-card .button.primary:hover{
+  opacity:0.92;
 }
 
-/* Popular */
-.plan-card.popular {
-  border: 2px solid #3b9996;
+/* POPULAR */
+.plan-card.popular{
+  border:2px solid var(--teal);
 }
 
-.popular-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: #3b9996;
-  color: #fff;
-  font-weight: 900;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.85em;
+.popular-badge{
+  position:absolute;
+  top:14px;
+  right:14px;
+  background: var(--teal);
+  color:#fff;
+  font-weight:900;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:0.85em;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Table */
-.comparison-table {
-  padding: 30px 20px 50px;
+/* TABLE */
+.comparison-table{
+  padding: var(--section-y-sm) 0 var(--section-y);
 }
 
-.comparison-table h2 {
-  text-align: center;
-  margin: 0 0 18px;
-  color: #3b9996;
-  font-size: 1.6em;
+.comparison-table h2{
+  text-align:center;
+  margin:0 0 18px;
+  color: var(--teal);
+  font-size:1.6em;
 }
 
-.table-wrap {
-  overflow-x: auto;
+.table-wrap{
+  overflow-x:auto;
 }
 
-.comparison-table table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+.comparison-table table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .comparison-table th,
-.comparison-table td {
-  padding: 14px 14px;
-  border-bottom: 1px solid #e6f0f0;
-  text-align: center;
+.comparison-table td{
+  padding:14px 14px;
+  border-bottom:1px solid #e6f0f0;
+  text-align:center;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .comparison-table th:first-child,
-.comparison-table td:first-child {
-  text-align: left;
-  font-weight: 800;
-  color: #333;
+.comparison-table td:first-child{
+  text-align:left;
+  font-weight:800;
+  color:#333;
 }
 
-.comparison-table thead th {
-  background: #e7f5f5;
-  color: #3b9996;
-  font-weight: 900;
+.comparison-table thead th{
+  background:#e7f5f5;
+  color: var(--teal);
+  font-weight:900;
 }
 
-/* Active nav link underline (optional) */
-.navbar nav a.active {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 960px) {
-  .plan-cards {
+/* RESPONSIVE */
+@media (max-width: 960px){
+  .plan-cards{
     grid-template-columns: 1fr;
   }
 }
