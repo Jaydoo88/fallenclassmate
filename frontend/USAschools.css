@@ -1,6 +1,6 @@
 /* =========================
    USA Schools Page (USAschools.css)
-   Page-specific only — header/nav/footer/fonts live in styles.css
+   Page-specific only — nav/header/footer/fonts are global in styles.css
 ========================= */
 
 .usa-schools-map-banner{
@@ -17,19 +17,34 @@
   letter-spacing: 0.4px;
 }
 
+.usa-map-link{
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+}
+
 .usa-map-frame{
+  width: 100%;
+  max-width: 980px;          /* keeps it from being gigantic */
+  height: 320px;             /* controls the “visual size” */
+  margin: 0 auto;
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0,0,0,0.10);
   border: 1px solid #e6efef;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
 }
 
 .usa-map-frame img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;       /* no cropping, no distortion */
   display: block;
-  object-fit: contain;
 }
 
 /* Content */
@@ -95,17 +110,21 @@
 /* Responsive */
 @media (max-width: 1100px){
   .usa-schools-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .usa-map-frame{ max-width: 920px; }
 }
 
 @media (max-width: 900px){
   .usa-schools-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .usa-map-frame{ height: 280px; }
 }
 
 @media (max-width: 640px){
   .usa-map-title{ font-size: 1.55em; }
   .usa-schools-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .usa-map-frame{ height: 240px; padding: 10px; }
 }
 
 @media (max-width: 420px){
   .usa-schools-grid{ grid-template-columns: 1fr; }
+  .usa-map-frame{ height: 210px; }
 }
