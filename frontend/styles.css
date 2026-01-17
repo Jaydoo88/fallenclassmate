@@ -201,17 +201,21 @@ img{ max-width:100%; display:block; }
   display:block;
 }
 
-/* overlay placed visually in the left open area (responsive + smaller) */
+/* =========================
+   HERO OVERLAY (position + size)
+========================= */
 .hero-overlay-box{
   position:absolute;
-  top: clamp(56px, 6vw, 96px);
-  left: clamp(28px, 6vw, 120px);
 
-  /* key change: smaller responsive width */
-  width: min(420px, 42vw);
+  /* moved LEFT + DOWN (responsive) */
+  left: clamp(18px, 4vw, 95px);
+  top:  clamp(95px, 10vw, 160px);
+
+  /* slightly narrower so it fits cleanly */
+  width: min(420px, 38vw);
 
   background-color: rgba(59,153,150,.92);
-  padding: 26px 24px;              /* was 40px */
+  padding: 26px 24px;
   border-radius: 10px;
   text-align: center;
   color:#fff;
@@ -219,22 +223,46 @@ img{ max-width:100%; display:block; }
 }
 
 .hero-overlay-box h1{
-  font-size: clamp(1.6rem, 2.2vw, 2.05rem); /* slightly smaller */
+  font-size: clamp(1.6rem, 2.1vw, 2.05rem);
   margin: 0;
   letter-spacing: .5px;
 }
 
 .hero-sub{
-  margin: 10px 0 18px; /* tighter */
+  margin: 10px 0 18px;
   font-style: italic;
-  font-size: clamp(.95rem, 1.2vw, 1.05rem);
+  font-size: clamp(.95rem, 1.1vw, 1.05rem);
+}
+
+/* =========================
+   HERO BUTTONS (force button look back)
+========================= */
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top: 6px;
 }
 
 .hero-buttons .button{
-  margin: 0 8px;
-  padding: 9px 14px;      /* smaller buttons */
-  min-width: 140px;       /* was 160 */
-  border-radius: 6px;
+  display:inline-block;
+  padding: 10px 18px;
+  background:#ffffff;
+  color: var(--teal) !important;      /* force text color */
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none !important;  /* force no underline */
+  min-width: 150px;
+  text-align:center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+.hero-buttons .button:hover{
+  background: transparent;
+  color:#fff !important;
+  border-color:#fff;
 }
 
 /* =========================
