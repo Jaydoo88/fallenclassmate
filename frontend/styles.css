@@ -562,11 +562,19 @@ img{ max-width:100%; display:block; }
   list-style:none;
 }
 
+.footer-divider{
+  max-width:var(--max);
+  margin:34px auto 0;              /* more space above divider */
+  height:1px;
+  background:rgba(255,255,255,.22);
+}
+
 .footer-bottom{
   max-width:var(--max);
   margin:0 auto;
+  padding:16px 0 4px;              /* adds breathing room below divider */
   text-align:center;
-  color:rgba(255,255,255,.85);
+  color:rgba(255,255,255,.88);
   font-size:.9em;
 }
 
