@@ -6,6 +6,10 @@
   --border:#e4ecec;
   --shadow-sm: 0 6px 14px rgba(0,0,0,.08);
   --max:1200px;
+
+  /* tighter spacing system */
+  --section-y:44px;
+  --section-y-sm:28px;
 }
 
 *{ box-sizing:border-box; }
@@ -15,7 +19,16 @@ body{
   font-family:'Georgia', serif;
   background:var(--bg);
   color:var(--text);
-  padding-top:86px; /* updated to match fixed nav height */
+  padding-top:86px; /* space for fixed nav */
+}
+
+img{ max-width:100%; display:block; }
+
+/* CONTAINER */
+.page-container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 16px;
 }
 
 /* =========================
@@ -28,7 +41,7 @@ body{
   width:100%;
   z-index:9999;
   background:#fff;
-  padding:10px 0; /* simplified so height is predictable */
+  padding:10px 0; /* predictable height */
   box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
@@ -70,27 +83,6 @@ body{
   width:100%;
 }
 
-/* MOBILE NAV (collapsed until opened) */
-@media (max-width:768px){
-  .hamburger{ display:block; }
-
-  .navbar{
-    padding:12px 14px;
-  }
-
-  .navbar .nav-links{
-    display:none;              /* hidden by default */
-    flex-direction:column;
-    gap:12px;
-    align-items:flex-start;
-    padding-top:12px;
-  }
-
-  .navbar.open .nav-links{
-    display:flex;              /* shown when toggled */
-  }
-}
-
 /* =========================
    HEADER STRIP (logo/caps/search)
 ========================= */
@@ -100,7 +92,7 @@ body{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   align-items:center;
-  padding:16px 0 20px;
+  padding:16px 0 18px; /* tightened */
   gap:16px;
 }
 
@@ -194,7 +186,7 @@ body{
 ========================= */
 .hero-frame{
   background:#fff;
-  padding:0 0 24px;
+  padding:0 0 14px; /* tightened (was 24px) */
 }
 
 .hero-media{
@@ -261,13 +253,13 @@ body{
 .community-stats{
   background:#fff;
   text-align:center;
-  padding:50px 20px;
+  padding:var(--section-y) 20px; /* tightened */
   color:var(--teal);
 }
 
 .community-stats h2{
   font-size:1.8em;
-  margin-bottom:30px;
+  margin-bottom:18px; /* tightened */
 }
 
 .stats-grid{
@@ -275,7 +267,7 @@ body{
   justify-content:center;
   gap:60px;
   flex-wrap:wrap;
-  margin-top:20px;
+  margin-top:10px; /* tightened */
 }
 
 .stats-grid div h3{
@@ -294,10 +286,14 @@ body{
    NEWEST CLASSMATES
 ========================= */
 .newest-classmates{
-  padding:50px 20px 34px;
+  padding:var(--section-y) 20px 26px; /* tightened */
   text-align:center;
   background-color:var(--teal);
   color:#fff;
+}
+
+.newest-classmates h2{
+  margin:0 0 18px;
 }
 
 .classmate-grid{
@@ -390,8 +386,8 @@ body{
 ========================= */
 .quote-section{
   text-align:center;
-  padding:26px 20px;
-  margin:12px 0;
+  padding:var(--section-y-sm) 20px; /* tightened */
+  margin:8px 0; /* tightened */
 }
 
 .quote-section blockquote{
@@ -411,11 +407,11 @@ body{
 }
 
 /* =========================
-   INFO SECTION (2 wide cards like screenshot)
+   INFO SECTION (2 wide cards)
 ========================= */
 .info-section{
   background:#f1f8f8;
-  padding:70px 20px;
+  padding:52px 20px; /* tightened */
 }
 
 .info-inner{
@@ -423,7 +419,7 @@ body{
   margin:0 auto;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:70px;
+  gap:44px; /* tightened */
   align-items:start;
 }
 
@@ -481,7 +477,7 @@ body{
 .site-footer{
   background:var(--teal);
   color:#eef6f6;
-  padding:60px 20px 24px;
+  padding:44px 20px 18px; /* tightened */
 }
 
 .footer-inner{
@@ -489,7 +485,7 @@ body{
   margin:0 auto;
   display:grid;
   grid-template-columns:1.2fr 1fr 1fr;
-  gap:70px;
+  gap:44px; /* tightened */
   align-items:start;
 }
 
@@ -543,7 +539,7 @@ body{
 
 .footer-divider{
   max-width:var(--max);
-  margin:40px auto 18px;
+  margin:28px auto 14px; /* tightened */
   height:1px;
   background:rgba(255,255,255,.22);
 }
@@ -554,6 +550,11 @@ body{
   text-align:center;
   color:rgba(255,255,255,.85);
   font-size:.9em;
+}
+
+/* Helpful for anchor links with fixed nav */
+.page-container > section{
+  scroll-margin-top:100px;
 }
 
 /* RESPONSIVE */
@@ -596,10 +597,17 @@ body{
 @media (max-width:768px){
   .hamburger{ display:block; }
 
-  .navbar nav{
+  /* mobile nav is collapsed until .navbar.open is set by script */
+  .navbar .nav-links{
+    display:none;
     flex-direction:column;
     gap:12px;
     align-items:flex-start;
+    padding-top:12px;
+  }
+
+  .navbar.open .nav-links{
+    display:flex;
   }
 
   .classmate-grid{
