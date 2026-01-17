@@ -5,207 +5,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | FallenClassmate</title>
 
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./contact.css" />
+  <!-- High-school / varsity vibe fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global + page-specific CSS (root-relative for Vercel) -->
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
 </head>
 
 <body>
-  <div class="contact-page-container">
+  <!-- TOP NAV (centered, NOT full width) -->
+  <div class="nav-wrap">
     <div class="page-container">
-      <!-- Shared Header -->
-      <header>
-        <div class="logo-bar">
-          <div class="logo-section">
-            <a href="./index.html">
-              <img src="./assets/logo.png" alt="FallenClassmate Logo" />
-            </a>
-          </div>
+      <div class="navbar" id="navbar">
+        <nav class="nav-links" id="navLinks">
+          <a href="/index.html">Home</a>
+          <a href="/schools.html">Schools</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/plans.html">Plans &amp; Features</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
-            </div>
-          </div>
+  <!-- LOGO / CAPS / SEARCH (below nav) -->
+  <header class="site-header">
+    <div class="page-container">
+      <div class="logo-bar">
+        <!-- LEFT -->
+        <div class="logo-section">
+          <a href="/index.html" aria-label="FallenClassmate Home">
+            <img src="/assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
 
-          <div class="search-section">
-            <div class="search-container">
-              <input
-                id="siteSearch"
-                type="text"
-                class="styled-search-input"
-                placeholder="Find a Classmate or School"
-                autocomplete="off"
-              />
-              <span class="search-icon" aria-hidden="true">&#128269;</span>
-            </div>
-
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-              &#9776;
-            </button>
+        <!-- CENTER -->
+        <div class="center-section" aria-hidden="true">
+          <div class="cap-row">
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
           </div>
         </div>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="./index.html">Home</a>
-            <a href="./schools.html">Schools</a>
-            <a href="./resources.html">Resources</a>
-            <a href="./plans.html">Plans & Features</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html" class="active">Contact</a>
-            <a href="./add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
+        <!-- RIGHT -->
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              id="siteSearch"
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
 
-      <!-- Contact header -->
-      <section class="contact-header-section">
-        <h2>Contact Customer Support</h2>
-        <p class="contact-intro">
-          Have questions or ideas about FallenClassmate.com? Please use the contact form below,
-          and a customer service representative will get back to you shortly.
+          <button
+            class="hamburger"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="page-container">
+    <!-- Contact header -->
+    <section class="contact-header-section">
+      <h1>Contact Customer Support</h1>
+      <p class="contact-intro">
+        Have questions or ideas about FallenClassmate.com? Please use the contact form below,
+        and a customer service representative will get back to you shortly.
+      </p>
+    </section>
+
+    <!-- Thank-you (hidden by default, shown after submit) -->
+    <section class="thank-you-message" id="thankYou" hidden>
+      <h2>Thank you for contacting us!</h2>
+      <p>We will get back to you shortly.</p>
+    </section>
+
+    <!-- Form + sidebar -->
+    <section class="contact-form-wrapper" id="formWrapper">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row half-width">
+          <label for="typeInquiry">How can we help?</label>
+          <select id="typeInquiry" required>
+            <option value="" disabled selected>Make a selection...</option>
+            <option value="General Question">General Question</option>
+            <option value="Billing Question">Billing Question</option>
+            <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
+            <option value="Share Feedback">Share Feedback</option>
+            <option value="Testimonials">Testimonials</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-row half-width">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-row half-width">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="Email address" required />
+        </div>
+
+        <div class="form-row half-width">
+          <label for="emailConfirm">Re-enter Email</label>
+          <input id="emailConfirm" type="email" placeholder="Re-enter email" required />
+        </div>
+
+        <div class="form-row half-width">
+          <label for="classmateName">Classmate Name <small>(if applies)</small></label>
+          <input id="classmateName" type="text" placeholder="Classmate's name" />
+        </div>
+
+        <div class="form-row half-width">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="Please add your subject here" required />
+        </div>
+
+        <div class="form-row full-width">
+          <label for="message" class="sr-only">Message</label>
+          <textarea
+            id="message"
+            placeholder="Please enter the specific details of your request. Please provide as much information as possible so we can help you quickly."
+            rows="6"
+            required
+          ></textarea>
+          <p class="contact-error" id="emailError" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+
+      <aside class="contact-sidebar">
+        <div class="sidebar-box">
+          <h3>Learn more about FallenClassmate</h3>
+          <p>
+            Discover how FallenClassmate helps honor memories and connect communities.
+            <br />
+            <a href="/about.html" class="sidebar-link">About Us</a>
+          </p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- SAME FOOTER AS HOME -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>FallenClassmate</h4>
+        <p>
+          Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+          remembrance and tribute.
         </p>
-      </section>
+      </div>
 
-      <!-- Thank-you (hidden by default, shown after submit) -->
-      <section class="thank-you-message" id="thankYou" hidden>
-        <h3>Thank you for contacting us!</h3>
-        <p>We will get back to you shortly.</p>
-      </section>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/schools.html">Find Your School</a></li>
+          <li><a href="/plans.html">Create a Memorial</a></li>
+          <li><a href="/resources.html">Grief Resources</a></li>
 
-      <!-- Form + sidebar -->
-      <section class="contact-form-wrapper" id="formWrapper">
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row half-width">
-            <label for="typeInquiry">How can we help?</label>
-            <select id="typeInquiry" required>
-              <option value="" disabled selected>Make a selection...</option>
-              <option value="General Question">General Question</option>
-              <option value="Billing Question">Billing Question</option>
-              <option value="Suggestion for FallenClassmate">Suggestion for FallenClassmate</option>
-              <option value="Share Feedback">Share Feedback</option>
-              <option value="Testimonials">Testimonials</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+          <li class="footer-link-divider"></li>
 
-          <div class="form-row half-width">
-            <label for="name">Your Name</label>
-            <input id="name" type="text" placeholder="Your name" required />
-          </div>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/report/">Report / Flag Content</a></li>
+        </ul>
+      </div>
 
-          <div class="form-row half-width">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="Email address" required />
-          </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p>Stay updated with our community tributes.</p>
 
-          <div class="form-row half-width">
-            <label for="emailConfirm">Re-enter Email</label>
-            <input id="emailConfirm" type="email" placeholder="Re-enter email" required />
-          </div>
-
-          <div class="form-row half-width">
-            <label for="classmateName">Classmate Name <small>(if applies)</small></label>
-            <input id="classmateName" type="text" placeholder="Classmate's name" />
-          </div>
-
-          <div class="form-row half-width">
-            <label for="subject">Your Message</label>
-            <input id="subject" type="text" placeholder="Please add your subject here" required />
-          </div>
-
-          <div class="form-row full-width">
-            <label for="message" class="sr-only">Message</label>
-            <textarea
-              id="message"
-              placeholder="Please enter the specific details of your request. Please provide as much information as possible so we can help you quickly."
-              rows="6"
-              required
-            ></textarea>
-            <p class="contact-error" id="emailError" aria-live="polite"></p>
-          </div>
-
-          <button type="submit" class="submit-button">Submit</button>
-        </form>
-
-        <aside class="contact-sidebar">
-          <div class="sidebar-box">
-            <h3>Learn more about FallenClassmate</h3>
-            <p>
-              Discover how FallenClassmate helps honor memories and connect communities.
-              <br />
-              <a href="./about.html" class="sidebar-link">About Us</a>
-            </p>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Shared footer style -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
+        <div class="footer-social">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Twitter">t</a>
+        </div>
+      </div>
     </div>
 
-    <script src="./script.js" defer></script>
+    <div class="footer-divider"></div>
 
-    <!-- Contact page logic (kept inline so you don’t need another JS file) -->
-    <script>
-      // Contact form -> mailto + basic validation + thank-you swap
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("contactForm");
-        const thankYou = document.getElementById("thankYou");
-        const formWrapper = document.getElementById("formWrapper");
-        const emailError = document.getElementById("emailError");
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+    </div>
+  </footer>
 
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          emailError.textContent = "";
+  <script src="/script.js" defer></script>
 
-          const typeInquiry = document.getElementById("typeInquiry").value.trim();
-          const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const emailConfirm = document.getElementById("emailConfirm").value.trim();
-          const classmateName = document.getElementById("classmateName").value.trim();
-          const subject = document.getElementById("subject").value.trim();
-          const message = document.getElementById("message").value.trim();
+  <!-- Contact page logic (inline is fine) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const thankYou = document.getElementById("thankYou");
+      const formWrapper = document.getElementById("formWrapper");
+      const emailError = document.getElementById("emailError");
 
-          if (!typeInquiry || !name || !email || !emailConfirm || !subject || !message) {
-            emailError.textContent = "Please fill in all required fields.";
-            return;
-          }
+      if (!form) return;
 
-          if (email.toLowerCase() !== emailConfirm.toLowerCase()) {
-            emailError.textContent = "Email addresses do not match. Please re-enter them.";
-            return;
-          }
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        emailError.textContent = "";
 
-          const mailSubject = encodeURIComponent(subject || `Contact Inquiry: ${typeInquiry}`);
-          const mailBody = encodeURIComponent(
-            `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nClassmate Name: ${classmateName}\n\nMessage:\n${message}`
-          );
+        const typeInquiry = document.getElementById("typeInquiry").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const emailConfirm = document.getElementById("emailConfirm").value.trim();
+        const classmateName = document.getElementById("classmateName").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-          window.location.href = `mailto:jaydoo88@yahoo.com?subject=${mailSubject}&body=${mailBody}`;
+        if (!typeInquiry || !name || !email || !emailConfirm || !subject || !message) {
+          emailError.textContent = "Please fill in all required fields.";
+          return;
+        }
 
-          // show thank you message (user may or may not send; this still feels good UX)
-          formWrapper.hidden = true;
-          thankYou.hidden = false;
-        });
+        if (email.toLowerCase() !== emailConfirm.toLowerCase()) {
+          emailError.textContent = "Email addresses do not match. Please re-enter them.";
+          return;
+        }
+
+        const mailSubject = encodeURIComponent(subject || `Contact Inquiry: ${typeInquiry}`);
+        const mailBody = encodeURIComponent(
+          `Type of Inquiry: ${typeInquiry}\nName: ${name}\nEmail: ${email}\nClassmate Name: ${classmateName}\n\nMessage:\n${message}`
+        );
+
+        window.location.href = `mailto:jaydoo88@yahoo.com?subject=${mailSubject}&body=${mailBody}`;
+
+        // swap UI
+        formWrapper.hidden = true;
+        thankYou.hidden = false;
       });
-    </script>
-  </div>
+    });
+  </script>
 </body>
 </html>
