@@ -1,45 +1,60 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apache County, Arizona | FallenClassmate</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apache County, Arizona | FallenClassmate</title>
 
-  <!-- Same theme setup as your state page -->
-  <link rel="stylesheet" href="../../../styles.css" />
-  <link rel="stylesheet" href="../../county.css" />
-</head>
+    <!-- Fonts (same as home) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <div class="county-page-container">
-    <div class="page-container">
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../county.css" />
+  </head>
 
-      <!-- Shared Header (copied from your state page for consistency) -->
-      <header>
+  <body>
+    <!-- TOP NAV (exactly like main site) -->
+    <div class="nav-wrap">
+      <div class="page-container">
+        <div class="navbar" id="navbar">
+          <nav class="nav-links" id="navLinks">
+            <a href="../../../index.html">Home</a>
+            <a href="../../../schools.html">Schools</a>
+            <a href="../../../resources.html">Resources</a>
+            <a href="../../../plans.html">Plans &amp; Features</a>
+            <a href="../../../about.html">About</a>
+            <a href="../../../contact.html">Contact</a>
+            <a href="../../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+    <header class="site-header">
+      <div class="page-container">
         <div class="logo-bar">
           <div class="logo-section">
-            <a href="../../../index.html">
+            <a href="../../../index.html" aria-label="FallenClassmate Home">
               <img src="../../../assets/logo.png" alt="FallenClassmate Logo" />
             </a>
           </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
+          <div class="center-section" aria-hidden="true">
+            <div class="cap-row">
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
             </div>
           </div>
 
@@ -55,150 +70,185 @@
               <span class="search-icon" aria-hidden="true">&#128269;</span>
             </div>
 
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="hamburger"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navbar"
+            >
               &#9776;
             </button>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../../index.html">Home</a>
-            <a href="../../../schools.html">Schools</a>
-            <a href="../../../resources.html">Resources</a>
-            <a href="../../../plans.html">Plans & Features</a>
-            <a href="../../../about.html">About</a>
-            <a href="../../../contact.html">Contact</a>
-            <a href="../../../add-school.html">Add a School</a>
-          </nav>
+    <!-- PAGE CONTENT -->
+    <main class="county-page">
+      <div class="page-container">
+        <!-- County header section -->
+        <section class="county-header-section">
+          <p class="county-breadcrumb">
+            <a href="/states/arizona/">← Back to Arizona</a>
+          </p>
+
+          <div class="county-header-row">
+            <div class="county-seal-wrap">
+              <img
+                class="county-seal"
+                src="/assets/AZApacheCountySeal.jpeg"
+                alt="Seal of Apache County, Arizona"
+              />
+            </div>
+
+            <div class="county-header-text">
+              <h2>Apache County</h2>
+              <p class="county-intro">Select a school to view memorials and school support totals.</p>
+
+              <div class="county-stats">
+                <div class="stat"><strong>5</strong><span>Schools</span></div>
+                <div class="stat"><strong>5</strong><span>Memorials</span></div>
+                <div class="stat"><strong>$100</strong><span>School Support</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- County content -->
+        <section class="county-content">
+          <h3 class="schools-title">Schools</h3>
+
+          <div class="schools-grid">
+            <!-- Ganado -->
+            <div class="school-card">
+              <div class="school-media">
+                <img src="/assets/AZganado.png" alt="Ganado High School mascot" />
+              </div>
+              <div class="school-details">
+                <h4>Ganado High School</h4>
+                <div class="school-actions">
+                  <a class="school-link-btn" href="/states/arizona/apache-county/ganadohighschool/">
+                    View School <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Many Farms -->
+            <div class="school-card">
+              <div class="school-media">
+                <img src="/assets/AZmanyfarms.png" alt="Many Farms High School mascot" />
+              </div>
+              <div class="school-details">
+                <h4>Many Farms High School</h4>
+                <div class="school-actions">
+                  <a class="school-link-btn" href="/states/arizona/apache-county/many-farms-high-school/">
+                    View School <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Red Mesa -->
+            <div class="school-card">
+              <div class="school-media">
+                <img src="/assets/AZredmesa.png" alt="Red Mesa High School mascot" />
+              </div>
+              <div class="school-details">
+                <h4>Red Mesa High School</h4>
+                <div class="school-actions">
+                  <a class="school-link-btn" href="/states/arizona/apache-county/red-mesa-high-school/">
+                    View School <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Red Valley/Cove -->
+            <div class="school-card">
+              <div class="school-media">
+                <img src="/assets/AZredvalleycove.png" alt="Red Valley/Cove High School mascot" />
+              </div>
+              <div class="school-details">
+                <h4>Red Valley/Cove High School</h4>
+                <div class="school-actions">
+                  <a class="school-link-btn" href="/states/arizona/apache-county/red-valley-cove-high-school/">
+                    View School <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rock Point Community School -->
+            <div class="school-card">
+              <div class="school-media">
+                <img src="/assets/AZrockpoint.jpeg" alt="Rock Point Community School mascot" />
+              </div>
+              <div class="school-details">
+                <h4>Rock Point Community School</h4>
+                <div class="school-actions">
+                  <a class="school-link-btn" href="/states/arizona/apache-county/rock-point-community-school/">
+                    View School <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- County CTAs -->
+          <div class="county-ctas ctas-grid">
+            <a class="submit-button" href="../../../schools.html">Find Your School</a>
+            <a class="submit-button" href="../../../add-school.html">Add a School</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER (identical to your global footer) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>FallenClassmate</h4>
+          <p>
+            Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+            remembrance and tribute.
+          </p>
         </div>
-      </header>
 
-      <!-- County header section -->
-      <section class="county-header-section">
-        <p class="county-breadcrumb">
-          <a href="/states/arizona/">← Back to Arizona</a>
-        </p>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../../../schools.html">Find Your School</a></li>
+            <li><a href="../../../plans.html">Create a Memorial</a></li>
+            <li><a href="../../../resources.html">Grief Resources</a></li>
 
-        <div class="county-header-row">
-          <div class="county-seal-wrap">
-            <img
-              class="county-seal"
-              src="/assets/AZApacheCountySeal.jpeg"
-              alt="Seal of Apache County, Arizona"
-            />
-          </div>
+            <li class="footer-link-divider"></li>
 
-          <div class="county-header-text">
-            <h2>Apache County</h2>
-            <p class="county-intro">Select a school to view memorials and school support totals.</p>
-
-            <div class="county-stats">
-              <div class="stat"><strong>5</strong><span>Schools</span></div>
-              <div class="stat"><strong>5</strong><span>Memorials</span></div>
-              <div class="stat"><strong>$100</strong><span>School Support</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- County content -->
-      <section class="county-content">
-        <h3 class="schools-title">Schools</h3>
-
-        <div class="schools-grid">
-          <!-- Ganado -->
-          <div class="school-card">
-            <div class="school-media">
-              <img src="/assets/AZganado.png" alt="Ganado High School mascot" />
-            </div>
-            <div class="school-details">
-              <h4>Ganado High School</h4>
-              <div class="school-actions">
-                <!-- internal link placeholder (keep on your site) -->
-                <a class="school-link-btn" href="/states/arizona/apache-county/ganadohighschool/">
-                  View School <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Many Farms -->
-          <div class="school-card">
-            <div class="school-media">
-              <img src="/assets/AZmanyfarms.png" alt="Many Farms High School mascot" />
-            </div>
-            <div class="school-details">
-              <h4>Many Farms High School</h4>
-              <div class="school-actions">
-                <a class="school-link-btn" href="/schools/many-farms-high-school/">
-                  View School <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Red Mesa -->
-          <div class="school-card">
-            <div class="school-media">
-              <img src="/assets/AZredmesa.png" alt="Red Mesa High School mascot" />
-            </div>
-            <div class="school-details">
-              <h4>Red Mesa High School</h4>
-              <div class="school-actions">
-                <a class="school-link-btn" href="/schools/red-mesa-high-school/">
-                  View School <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Red Valley/Cove -->
-          <div class="school-card">
-            <div class="school-media">
-              <img src="/assets/AZredvalleycove.png" alt="Red Valley/Cove High School mascot" />
-            </div>
-            <div class="school-details">
-              <h4>Red Valley/Cove High School</h4>
-              <div class="school-actions">
-                <a class="school-link-btn" href="/schools/red-valley-cove-high-school/">
-                  View School <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Rock Point Community School -->
-          <div class="school-card">
-            <div class="school-media">
-              <img src="/assets/AZrockpoint.jpeg" alt="Rock Point Community School mascot" />
-            </div>
-            <div class="school-details">
-              <h4>Rock Point Community School</h4>
-              <div class="school-actions">
-                <a class="school-link-btn" href="/schools/rock-point-community-school/">
-                  View School <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/report/">Report / Flag Content</a></li>
+          </ul>
         </div>
 
-        <!-- County CTAs (same vibe as state page) -->
-        <div class="county-ctas ctas-grid">
-          <a class="submit-button" href="../../../schools.html">Find Your School</a>
-          <a class="submit-button" href="../../../add-school.html">Add a School</a>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p>Stay updated with our community tributes.</p>
+
+          <div class="footer-social">
+            <a class="social" href="#" aria-label="Facebook">f</a>
+            <a class="social" href="#" aria-label="Twitter">t</a>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
+      <div class="footer-divider"></div>
 
-    </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="../../../script.js" defer></script>
-  </div>
-</body>
+  </body>
 </html>
