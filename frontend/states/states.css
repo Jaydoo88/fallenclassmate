@@ -3,6 +3,45 @@
    Page-specific only — global header/nav/footer/fonts live in /styles.css
 ========================= */
 
+/* =========================
+   Breadcrumb bar (shared look)
+========================= */
+.crumbbar{
+  max-width: 1100px;
+  margin: 0 auto 10px;
+  padding: 0 18px;
+  text-align: left;
+}
+
+.crumbs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  color: var(--teal-dark);
+}
+
+.crumbs a{
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+.crumbs a:hover{
+  text-decoration: underline;
+}
+
+.crumb-sep{
+  color: #9bbbbb;
+  font-weight: 900;
+}
+
+.crumb-current{
+  color: var(--teal);
+  font-weight: 900;
+}
+
 /* ===== Header area ===== */
 .state-header-section{
   background: linear-gradient(180deg, #eef6f6 0%, #f9fdfd 100%);
@@ -17,8 +56,6 @@
   color: var(--teal-dark);
   font-size: 40px;
   letter-spacing: 0.2px;
-
-  /* Use varsity font for the big headline */
   font-family: 'Graduate', serif;
   font-weight: 400;
 }
@@ -29,21 +66,6 @@
   color: #333;
   line-height: 1.6;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-.state-breadcrumb{
-  margin: 0 0 10px;
-}
-
-.state-breadcrumb a{
-  color: var(--teal-dark);
-  text-decoration: none;
-  font-weight: 800;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-.state-breadcrumb a:hover{
-  text-decoration: underline;
 }
 
 /* ===== Quick stats pills ===== */
@@ -110,7 +132,7 @@
 
 .badge-media{
   padding: 14px;
-  min-height: 170px; /* keeps both cards same height */
+  min-height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +182,6 @@
   width: 560px;
 }
 
-/* Center the Counties header */
 .counties-title{
   margin: 0 0 14px;
   color: var(--teal-dark);
@@ -190,7 +211,6 @@
   color: #0f2f2e;
   font-size: 17px;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 800;
 }
