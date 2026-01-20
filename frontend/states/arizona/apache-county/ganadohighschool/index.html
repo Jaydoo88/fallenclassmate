@@ -1,15 +1,3 @@
-<!-- =========================================================
-     Ganado High School (AZ) — School Page (LEAN + YEARBOOK INDEX)
-     File location:
-       frontend/states/arizona/apache-county/ganadohighschool/index.html
-
-     CSS paths:
-       ../../../../styles.css
-       ../../../schools.css
-
-     JS:
-       ../../../../script.js
-     ========================================================= -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,253 +5,287 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ganado High School, Arizona | FallenClassmate</title>
 
+  <!-- Fonts (same as home) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="../../../../styles.css" />
   <link rel="stylesheet" href="../../../schools.css" />
 </head>
 
 <body>
-  <div class="county-page-container">
+  <!-- TOP NAV (exactly like main site) -->
+  <div class="nav-wrap">
+    <div class="page-container">
+      <div class="navbar" id="navbar">
+        <nav class="nav-links" id="navLinks">
+          <a href="../../../../index.html">Home</a>
+          <a href="../../../../schools.html">Schools</a>
+          <a href="../../../../resources.html">Resources</a>
+          <a href="../../../../plans.html">Plans &amp; Features</a>
+          <a href="../../../../about.html">About</a>
+          <a href="../../../../contact.html">Contact</a>
+          <a href="../../../../add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+  <header class="site-header">
+    <div class="page-container">
+      <div class="logo-bar">
+        <div class="logo-section">
+          <a href="../../../../index.html" aria-label="FallenClassmate Home">
+            <img src="../../../../assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
+
+        <div class="center-section" aria-hidden="true">
+          <div class="cap-row">
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+          </div>
+        </div>
+
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              id="siteSearch"
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="school-page">
     <div class="page-container">
 
-      <!-- Shared Header (same as county page) -->
-      <header>
-        <div class="logo-bar">
-          <div class="logo-section">
-            <a href="../../../../index.html">
-              <img src="../../../../assets/logo.png" alt="FallenClassmate Logo" />
-            </a>
+      <!-- Breadcrumb -->
+      <section class="school-breadcrumb-row">
+        <p class="school-breadcrumb">
+          <a href="../../../../USAschools.html">USA</a>
+          <span class="crumb-sep">/</span>
+          <a href="../../index.html">Arizona</a>
+          <span class="crumb-sep">/</span>
+          <a href="../index.html">Apache County</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current">Ganado High School</span>
+        </p>
+      </section>
+
+      <!-- SCHOOL HEADER PANEL -->
+      <section class="school-header-section" aria-label="School Header">
+        <div class="school-header-row">
+
+          <div class="school-crest-wrap">
+            <img class="school-crest" src="../../../../assets/AZganado.png" alt="Ganado High School mascot" />
           </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
+          <div class="school-header-text">
+            <div class="school-share">
+              <button class="linkish-btn" type="button">Share This School</button>
+              <button class="linkish-btn" type="button">Copy Link</button>
+            </div>
+
+            <h2 class="school-title">Ganado High School</h2>
+            <p class="school-subtitle">Ganado, Arizona</p>
+
+            <div class="school-stats" aria-label="School stats">
+              <a class="stat stat-card-link" href="https://ghs.ganado.k12.az.us/" target="_blank" rel="noopener">
+                <strong>School Link</strong>
+                <span>Website</span>
+              </a>
+
+              <div class="stat">
+                <strong>5</strong>
+                <span>Memorials</span>
+              </div>
+
+              <div class="stat">
+                <strong>$100</strong>
+                <span>School Support</span>
+              </div>
             </div>
           </div>
 
-          <div class="search-section">
-            <div class="search-container">
-              <input
-                id="siteSearch"
-                type="text"
-                class="styled-search-input"
-                placeholder="Find a Classmate or School"
-                autocomplete="off"
-              />
-              <span class="search-icon" aria-hidden="true">&#128269;</span>
-            </div>
+        </div>
+      </section>
 
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-              &#9776;
-            </button>
+      <!-- YEARS -->
+      <section class="school-years" aria-label="Years">
+        <header class="school-years-header">
+          <h3 class="years-title">Years</h3>
+          <p class="years-sub">Select a class year to view classmates and memorials.</p>
+        </header>
+
+        <div class="decade-block" id="decade-1920">
+          <h4 class="decade-title">1920s</h4>
+          <div class="year-links">
+            <a href="Classof1926/">1926</a>
+            <a href="Classof1927/">1927</a>
+            <a href="Classof1928/">1928</a>
+            <a href="Classof1929/">1929</a>
           </div>
         </div>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../../../index.html">Home</a>
-            <a href="../../../../schools.html">Schools</a>
-            <a href="../../../../resources.html">Resources</a>
-            <a href="../../../../plans.html">Plans & Features</a>
-            <a href="../../../../about.html">About</a>
-            <a href="../../../../contact.html">Contact</a>
-            <a href="../../../../add-school.html">Add a School</a>
-          </nav>
+        <div class="decade-block" id="decade-1930">
+          <h4 class="decade-title">1930s</h4>
+          <div class="year-links">
+            <a href="Classof1930/">1930</a><a href="Classof1931/">1931</a><a href="Classof1932/">1932</a><a href="Classof1933/">1933</a><a href="Classof1934/">1934</a>
+            <a href="Classof1935/">1935</a><a href="Classof1936/">1936</a><a href="Classof1937/">1937</a><a href="Classof1938/">1938</a><a href="Classof1939/">1939</a>
+          </div>
         </div>
-      </header>
 
-      <main class="school-page">
-
-        <!-- School breadcrumb like county pages -->
-        <section class="school-breadcrumb-row">
-          <p class="school-breadcrumb">
-            <a href="../../index.html">← Back to Arizona</a>
-            <span class="crumb-sep">/</span>
-            <a href="../index.html">Apache County</a>
-          </p>
-        </section>
-
-        <!-- SCHOOL HEADER PANEL (county-style) -->
-        <section class="school-header-section" aria-label="School Header">
-          <div class="school-header-row">
-
-            <div class="school-crest-wrap">
-              <img class="school-crest" src="../../../../assets/AZganado.png" alt="Ganado High School mascot" />
-            </div>
-
-            <div class="school-header-text">
-              <!-- Share / Copy top-right inside this header area -->
-              <div class="school-share">
-                <button class="linkish-btn" type="button">Share This School</button>
-                <button class="linkish-btn" type="button">Copy Link</button>
-              </div>
-
-              <h2 class="school-title">Ganado High School</h2>
-              <p class="school-subtitle">Ganado, Arizona</p>
-
-              <!-- County-style stat cards (3) -->
-              <div class="county-stats school-stats" aria-label="School cards">
-                <a class="stat stat-card-link" href="https://ghs.ganado.k12.az.us/" target="_blank" rel="noopener">
-                  <strong>School Link</strong>
-                </a>
-
-                <div class="stat">
-                  <strong>5</strong>
-                  <span>Memorials</span>
-                </div>
-
-                <div class="stat">
-                  <strong>$100</strong>
-                  <span>School Support</span>
-                </div>
-              </div>
-            </div>
-
+        <div class="decade-block" id="decade-1940">
+          <h4 class="decade-title">1940s</h4>
+          <div class="year-links">
+            <a href="Classof1940/">1940</a><a href="Classof1941/">1941</a><a href="Classof1942/">1942</a><a href="Classof1943/">1943</a><a href="Classof1944/">1944</a>
+            <a href="Classof1945/">1945</a><a href="Classof1946/">1946</a><a href="Classof1947/">1947</a><a href="Classof1948/">1948</a><a href="Classof1949/">1949</a>
           </div>
-        </section>
+        </div>
 
-        <!-- YEARS (Yearbook Index — clean directory) -->
-        <section class="school-years" aria-label="Years">
-          <header class="school-years-header">
-            <h3 class="years-title">Years</h3>
-            <p class="years-sub">Select a class year to view classmates and memorials.</p>
-          </header>
-
-          <!-- 1920s -->
-          <div class="decade-block" id="decade-1920">
-            <h4 class="decade-title">1920s</h4>
-            <div class="year-links">
-              <a href="Classof1926/">1926</a>
-              <a href="Classof1927/">1927</a>
-              <a href="Classof1928/">1928</a>
-              <a href="Classof1929/">1929</a>
-            </div>
+        <div class="decade-block" id="decade-1950">
+          <h4 class="decade-title">1950s</h4>
+          <div class="year-links">
+            <a href="Classof1950/">1950</a><a href="Classof1951/">1951</a><a href="Classof1952/">1952</a><a href="Classof1953/">1953</a><a href="Classof1954/">1954</a>
+            <a href="Classof1955/">1955</a><a href="Classof1956/">1956</a><a href="Classof1957/">1957</a><a href="Classof1958/">1958</a><a href="Classof1959/">1959</a>
           </div>
+        </div>
 
-          <!-- 1930s -->
-          <div class="decade-block" id="decade-1930">
-            <h4 class="decade-title">1930s</h4>
-            <div class="year-links">
-              <a href="Classof1930/">1930</a><a href="Classof1931/">1931</a><a href="Classof1932/">1932</a><a href="Classof1933/">1933</a><a href="Classof1934/">1934</a>
-              <a href="Classof1935/">1935</a><a href="Classof1936/">1936</a><a href="Classof1937/">1937</a><a href="Classof1938/">1938</a><a href="Classof1939/">1939</a>
-            </div>
+        <div class="decade-block" id="decade-1960">
+          <h4 class="decade-title">1960s</h4>
+          <div class="year-links">
+            <a href="Classof1960/">1960</a><a href="Classof1961/">1961</a><a href="Classof1962/">1962</a><a href="Classof1963/">1963</a><a href="Classof1964/">1964</a>
+            <a href="Classof1965/">1965</a><a href="Classof1966/">1966</a><a href="Classof1967/">1967</a><a href="Classof1968/">1968</a><a href="Classof1969/">1969</a>
           </div>
+        </div>
 
-          <!-- 1940s -->
-          <div class="decade-block" id="decade-1940">
-            <h4 class="decade-title">1940s</h4>
-            <div class="year-links">
-              <a href="Classof1940/">1940</a><a href="Classof1941/">1941</a><a href="Classof1942/">1942</a><a href="Classof1943/">1943</a><a href="Classof1944/">1944</a>
-              <a href="Classof1945/">1945</a><a href="Classof1946/">1946</a><a href="Classof1947/">1947</a><a href="Classof1948/">1948</a><a href="Classof1949/">1949</a>
-            </div>
+        <div class="decade-block" id="decade-1970">
+          <h4 class="decade-title">1970s</h4>
+          <div class="year-links">
+            <a href="Classof1970/">1970</a><a href="Classof1971/">1971</a><a href="Classof1972/">1972</a><a href="Classof1973/">1973</a><a href="Classof1974/">1974</a>
+            <a href="Classof1975/">1975</a><a href="Classof1976/">1976</a><a href="Classof1977/">1977</a><a href="Classof1978/">1978</a><a href="Classof1979/">1979</a>
           </div>
+        </div>
 
-          <!-- 1950s -->
-          <div class="decade-block" id="decade-1950">
-            <h4 class="decade-title">1950s</h4>
-            <div class="year-links">
-              <a href="Classof1950/">1950</a><a href="Classof1951/">1951</a><a href="Classof1952/">1952</a><a href="Classof1953/">1953</a><a href="Classof1954/">1954</a>
-              <a href="Classof1955/">1955</a><a href="Classof1956/">1956</a><a href="Classof1957/">1957</a><a href="Classof1958/">1958</a><a href="Classof1959/">1959</a>
-            </div>
+        <div class="decade-block" id="decade-1980">
+          <h4 class="decade-title">1980s</h4>
+          <div class="year-links">
+            <a href="Classof1980/">1980</a><a href="Classof1981/">1981</a><a href="Classof1982/">1982</a><a href="Classof1983/">1983</a><a href="Classof1984/">1984</a>
+            <a href="Classof1985/">1985</a><a href="Classof1986/">1986</a><a href="Classof1987/">1987</a>
+            <a href="Classof1988/">1988</a>
+            <a href="Classof1989/">1989</a>
           </div>
+        </div>
 
-          <!-- 1960s -->
-          <div class="decade-block" id="decade-1960">
-            <h4 class="decade-title">1960s</h4>
-            <div class="year-links">
-              <a href="Classof1960/">1960</a><a href="Classof1961/">1961</a><a href="Classof1962/">1962</a><a href="Classof1963/">1963</a><a href="Classof1964/">1964</a>
-              <a href="Classof1965/">1965</a><a href="Classof1966/">1966</a><a href="Classof1967/">1967</a><a href="Classof1968/">1968</a><a href="Classof1969/">1969</a>
-            </div>
+        <div class="decade-block" id="decade-1990">
+          <h4 class="decade-title">1990s</h4>
+          <div class="year-links">
+            <a href="Classof1990/">1990</a><a href="Classof1991/">1991</a><a href="Classof1992/">1992</a><a href="Classof1993/">1993</a><a href="Classof1994/">1994</a>
+            <a href="Classof1995/">1995</a><a href="Classof1996/">1996</a><a href="Classof1997/">1997</a><a href="Classof1998/">1998</a><a href="Classof1999/">1999</a>
           </div>
+        </div>
 
-          <!-- 1970s -->
-          <div class="decade-block" id="decade-1970">
-            <h4 class="decade-title">1970s</h4>
-            <div class="year-links">
-              <a href="Classof1970/">1970</a><a href="Classof1971/">1971</a><a href="Classof1972/">1972</a><a href="Classof1973/">1973</a><a href="Classof1974/">1974</a>
-              <a href="Classof1975/">1975</a><a href="Classof1976/">1976</a><a href="Classof1977/">1977</a><a href="Classof1978/">1978</a><a href="Classof1979/">1979</a>
-            </div>
+        <div class="decade-block" id="decade-2000">
+          <h4 class="decade-title">2000s</h4>
+          <div class="year-links">
+            <a href="Classof2000/">2000</a><a href="Classof2001/">2001</a><a href="Classof2002/">2002</a><a href="Classof2003/">2003</a><a href="Classof2004/">2004</a>
+            <a href="Classof2005/">2005</a><a href="Classof2006/">2006</a><a href="Classof2007/">2007</a><a href="Classof2008/">2008</a><a href="Classof2009/">2009</a>
           </div>
+        </div>
 
-          <!-- 1980s -->
-          <div class="decade-block" id="decade-1980">
-            <h4 class="decade-title">1980s</h4>
-            <div class="year-links">
-              <a href="Classof1980/">1980</a><a href="Classof1981/">1981</a><a href="Classof1982/">1982</a><a href="Classof1983/">1983</a><a href="Classof1984/">1984</a>
-              <a href="Classof1985/">1985</a><a href="Classof1986/">1986</a><a href="Classof1987/">1987</a>
-              <!-- ✅ your existing built year -->
-              <a href="Classof1988/">1988</a>
-              <a href="Classof1989/">1989</a>
-            </div>
+        <div class="decade-block" id="decade-2010">
+          <h4 class="decade-title">2010s</h4>
+          <div class="year-links">
+            <a href="Classof2010/">2010</a><a href="Classof2011/">2011</a><a href="Classof2012/">2012</a><a href="Classof2013/">2013</a><a href="Classof2014/">2014</a>
+            <a href="Classof2015/">2015</a><a href="Classof2016/">2016</a><a href="Classof2017/">2017</a><a href="Classof2018/">2018</a><a href="Classof2019/">2019</a>
           </div>
+        </div>
 
-          <!-- 1990s -->
-          <div class="decade-block" id="decade-1990">
-            <h4 class="decade-title">1990s</h4>
-            <div class="year-links">
-              <a href="Classof1990/">1990</a><a href="Classof1991/">1991</a><a href="Classof1992/">1992</a><a href="Classof1993/">1993</a><a href="Classof1994/">1994</a>
-              <a href="Classof1995/">1995</a><a href="Classof1996/">1996</a><a href="Classof1997/">1997</a><a href="Classof1998/">1998</a><a href="Classof1999/">1999</a>
-            </div>
+        <div class="decade-block" id="decade-2020">
+          <h4 class="decade-title">2020s</h4>
+          <div class="year-links">
+            <a href="Classof2020/">2020</a><a href="Classof2021/">2021</a><a href="Classof2022/">2022</a><a href="Classof2023/">2023</a>
+            <a href="Classof2024/">2024</a><a href="Classof2025/">2025</a><a href="Classof2026/">2026</a>
           </div>
+        </div>
 
-          <!-- 2000s -->
-          <div class="decade-block" id="decade-2000">
-            <h4 class="decade-title">2000s</h4>
-            <div class="year-links">
-              <a href="Classof2000/">2000</a><a href="Classof2001/">2001</a><a href="Classof2002/">2002</a><a href="Classof2003/">2003</a><a href="Classof2004/">2004</a>
-              <a href="Classof2005/">2005</a><a href="Classof2006/">2006</a><a href="Classof2007/">2007</a><a href="Classof2008/">2008</a><a href="Classof2009/">2009</a>
-            </div>
+        <div class="decade-block" id="faculty">
+          <h4 class="decade-title">Faculty</h4>
+          <div class="year-links">
+            <a href="Faculty/">Faculty</a>
           </div>
+        </div>
 
-          <!-- 2010s -->
-          <div class="decade-block" id="decade-2010">
-            <h4 class="decade-title">2010s</h4>
-            <div class="year-links">
-              <a href="Classof2010/">2010</a><a href="Classof2011/">2011</a><a href="Classof2012/">2012</a><a href="Classof2013/">2013</a><a href="Classof2014/">2014</a>
-              <a href="Classof2015/">2015</a><a href="Classof2016/">2016</a><a href="Classof2017/">2017</a><a href="Classof2018/">2018</a><a href="Classof2019/">2019</a>
-            </div>
-          </div>
+      </section>
+    </div>
+  </main>
 
-          <!-- 2020s -->
-          <div class="decade-block" id="decade-2020">
-            <h4 class="decade-title">2020s</h4>
-            <div class="year-links">
-              <a href="Classof2020/">2020</a><a href="Classof2021/">2021</a><a href="Classof2022/">2022</a><a href="Classof2023/">2023</a>
-              <a href="Classof2024/">2024</a><a href="Classof2025/">2025</a><a href="Classof2026/">2026</a>
-            </div>
-          </div>
+  <!-- FOOTER (identical to your global footer) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>FallenClassmate</h4>
+        <p>
+          Honoring the memories of those who have left our halls but never our hearts.
+          A dedicated space for remembrance and tribute.
+        </p>
+      </div>
 
-          <!-- Faculty -->
-          <div class="decade-block" id="faculty">
-            <h4 class="decade-title">Faculty</h4>
-            <div class="year-links">
-              <a href="Faculty/">Faculty</a>
-            </div>
-          </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../../../../schools.html">Find Your School</a></li>
+          <li><a href="../../../../plans.html">Create a Memorial</a></li>
+          <li><a href="../../../../resources.html">Grief Resources</a></li>
 
-        </section>
-      </main>
+          <li class="footer-link-divider"></li>
 
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/report/">Report / Flag Content</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p>Stay updated with our community tributes.</p>
+        <div class="footer-social">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Twitter">t</a>
+        </div>
+      </div>
     </div>
 
-    <script src="../../../../script.js" defer></script>
-  </div>
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../../../script.js" defer></script>
 </body>
 </html>
