@@ -4,6 +4,48 @@
    Page-specific only — header/nav/footer live in /styles.css
 ========================= */
 
+/* -------------------------
+   Breadcrumb bar (same vibe as Arizona page)
+-------------------------- */
+.crumbbar{
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  padding: 0 18px;
+  text-align: left;
+}
+
+.crumbs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  color: var(--teal-dark);
+}
+
+.crumbs a{
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+.crumbs a:hover{
+  text-decoration: underline;
+}
+
+.crumb-sep{
+  color: #9bbbbb;
+  font-weight: 900;
+}
+
+.crumb-current{
+  color: var(--teal);
+  font-weight: 900;
+}
+
+/* -------------------------
+   Page wrapper
+-------------------------- */
 .county-page{
   min-height: 100vh;
   padding: 18px 0 60px;
@@ -15,22 +57,9 @@
   padding: 26px 0 10px;
 }
 
-.county-breadcrumb{
-  margin: 0 0 14px;
-  font-size: 0.95rem;
-}
-
-.county-breadcrumb a{
-  color: var(--teal-dark);
-  text-decoration: none;
-  font-weight: 800;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-.county-breadcrumb a:hover{
-  text-decoration: underline;
-}
-
+/* -------------------------
+   Header panel
+-------------------------- */
 .county-header-row{
   display:flex;
   gap:20px;
@@ -68,12 +97,16 @@
   margin:0;
   font-size:1.85rem;
   color: var(--teal-dark);
+  font-family: 'Graduate', serif;
+  font-weight: 400;
 }
 
 .county-intro{
   margin:8px 0 0;
   color:#333;
   line-height: 1.6;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
 }
 
 /* Stats */
@@ -84,6 +117,7 @@
   flex-wrap:wrap;
 }
 
+/* Match Arizona’s pill vibe */
 .county-stats .stat{
   background:#fff;
   border-radius:999px;
@@ -108,7 +142,9 @@
   font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Content */
+/* -------------------------
+   Content
+-------------------------- */
 .county-content{
   padding: 20px 0 34px;
 }
@@ -167,9 +203,11 @@
   margin:0;
   font-size:1.15rem;
   color:#2c4a4a;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
 }
 
-/* Button (match home hover vibe) */
+/* Button hover (matches site vibe) */
 .school-actions{
   margin-top:12px;
 }
@@ -214,7 +252,9 @@
   max-width:520px;
 }
 
-/* Responsive */
+/* -------------------------
+   Responsive
+-------------------------- */
 @media (max-width: 850px){
   .county-header-row{
     flex-direction:column;
