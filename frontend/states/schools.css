@@ -1,32 +1,22 @@
-:root{
-  --teal:#3b9996;
-  --teal-dark:#2f7f7c;
-  --text:#1f2a2a;
-  --muted:#6b7b7b;
-  --border:#e6ecec;
-  --panel:#e7f5f5;     /* same light panel vibe */
-  --shadow:0 2px 10px rgba(0,0,0,.06);
-}
+/* =========================
+   SCHOOL PAGE (schools.css)
+   Page-specific only — vars/header/nav/footer live in /styles.css
+========================= */
 
-/* -------------------------------------------------------
-   SCHOOL PAGE WRAPPER
--------------------------------------------------------- */
 .school-page{
-  padding: 18px 0 40px;
+  padding: 18px 0 50px;
 }
 
-/* -------------------------------------------------------
-   BREADCRUMB ROW (like county pages)
--------------------------------------------------------- */
+/* Breadcrumb */
 .school-breadcrumb-row{
-  max-width: 1100px;
   margin: 0 auto;
-  padding: 6px 18px 0;
+  padding: 6px 0 0;
 }
 
 .school-breadcrumb{
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .school-breadcrumb a{
@@ -43,23 +33,26 @@
   color: #9bbbbb;
 }
 
-/* -------------------------------------------------------
-   SCHOOL HEADER PANEL (county-style block)
--------------------------------------------------------- */
+.crumb-current{
+  color: #354746;
+  font-weight: 800;
+}
+
+/* Header panel */
 .school-header-section{
-  max-width: 1100px;
   margin: 10px auto 0;
-  padding: 0 18px;
+  padding: 0;
 }
 
 .school-header-row{
   display: flex;
   align-items: center;
   gap: 22px;
-  background: var(--panel);
+  background: #e7f5f5;
   border-radius: 14px;
   padding: 22px;
-  border: 1px solid rgba(0,0,0,.04);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
 /* Crest */
@@ -70,7 +63,6 @@
   border-radius: 14px;
   background: #fff;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,13 +76,12 @@
   display: block;
 }
 
-/* Text block */
+/* Text */
 .school-header-text{
   flex: 1;
   position: relative;
 }
 
-/* Share / copy in top-right */
 .school-share{
   position: absolute;
   top: 0;
@@ -106,7 +97,7 @@
   color: var(--teal-dark);
   font-weight: 800;
   cursor: pointer;
-  text-decoration: none;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .linkish-btn:hover{
@@ -117,45 +108,35 @@
   margin: 0;
   font-size: 40px;
   line-height: 1.1;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #222;
+  font-family: 'Graduate', serif;
+  font-weight: 400;
+  color: var(--teal-dark);
 }
 
 .school-subtitle{
   margin: 6px 0 14px;
   font-size: 18px;
   font-weight: 700;
-  color: #444;
+  color: #354746;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* -------------------------------------------------------
-   ✅ COUNTY-STYLE STAT CARDS (MATCH county.css SIZE)
-   This matches:
-   border-radius: 10px;
-   padding: 10px 14px;
-   min-width: 110px;
-   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
--------------------------------------------------------- */
-
-.county-stats{
+/* Stats (match new theme hover) */
+.school-stats{
   display: flex;
-  gap: 18px;
-  margin-top: 14px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 14px;
 }
 
-/* Match county.css exactly */
-.county-stats .stat{
+.school-stats .stat{
   background: #fff;
-  border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 110px;
+  border-radius: 999px;
+  padding: 9px 14px;
+  min-width: 140px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-
-  /* remove the “big card” behavior */
-  width: auto;
-  min-height: 0;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 
   display: flex;
   flex-direction: column;
@@ -163,96 +144,100 @@
   justify-content: center;
 }
 
-/* Match county.css typography */
-.county-stats .stat strong{
-  display:block;
-  font-size: 1.2rem;
-  color: #3b9996;
+.school-stats .stat strong{
+  display: block;
+  font-size: 18px;
+  color: var(--teal-dark);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 900;
   line-height: 1.1;
 }
 
-.county-stats .stat span{
-  font-size: 0.9rem;
-  color: #555;
+.school-stats .stat span{
+  font-size: 13px;
+  color: #4b5b5a;
   margin-top: 2px;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Clickable "School Link" card behaves like a stat card */
 .stat-card-link{
   text-decoration: none;
-  color: inherit;
 }
 
 .stat-card-link:hover{
-  transform: translateY(-1px);
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.stat-card-link:hover strong,
+.stat-card-link:hover span{
+  color: #fff;
 }
 
 .stat-card-link:focus{
-  outline: 3px solid rgba(59,153,150,.35);
-  outline-offset: 4px;
-  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,153,150,0.18), 0 10px 22px rgba(0,0,0,0.10);
 }
 
-/* -------------------------------------------------------
-   YEARS (Yearbook Index — no pills, no boxes)
--------------------------------------------------------- */
+/* Years */
 .school-years{
-  max-width: 1100px;
-  margin: 16px auto 0;
-  padding: 0 18px;
+  margin: 18px auto 0;
 }
 
 .school-years-header{
   margin-top: 18px;
+  text-align: left;
 }
 
 .years-title{
   margin: 0;
   font-size: 28px;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #222;
+  font-family: 'Graduate', serif;
+  font-weight: 400;
+  color: var(--teal-dark);
 }
 
 .years-sub{
   margin: 6px 0 0;
-  color: var(--muted);
+  color: #4b5b5a;
   font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /* decade blocks */
 .decade-block{
   margin-top: 18px;
   padding-top: 10px;
-  border-top: 1px solid rgba(0,0,0,.06);
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 .decade-title{
   margin: 0 0 10px;
   font-size: 18px;
-  color: #222;
+  color: #1f2a2a;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
 }
 
-/* the links appear like a directory */
 .year-links{
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 12px; /* row gap / col gap */
+  gap: 10px 12px;
 }
 
 .year-links a{
   color: var(--teal-dark);
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 15px;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .year-links a:hover{
-  color: #1c5f5d;
+  color: var(--teal);
 }
 
-/* -------------------------------------------------------
-   RESPONSIVE
--------------------------------------------------------- */
+/* Responsive */
 @media (max-width: 900px){
   .school-share{
     position: static;
@@ -277,11 +262,11 @@
     font-size: 34px;
   }
 
-  .county-stats{
+  .school-stats{
     justify-content: center;
   }
 
-  .county-stats .stat{
-    width: 160px;
+  .school-stats .stat{
+    min-width: 160px;
   }
 }
