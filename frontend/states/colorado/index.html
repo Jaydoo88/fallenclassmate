@@ -1,46 +1,60 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Colorado Counties | FallenClassmate</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorado Counties | FallenClassmate</title>
 
-  <link rel="stylesheet" href="../../styles.css" />
-  <link rel="stylesheet" href="../states.css" />
-</head>
+    <!-- Fonts (same as home) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <div class="state-page-container">
-    <div class="page-container">
-      <!-- Shared Header -->
-      <header>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../states.css" />
+  </head>
+
+  <body>
+    <!-- TOP NAV (exactly like main site) -->
+    <div class="nav-wrap">
+      <div class="page-container">
+        <div class="navbar" id="navbar">
+          <nav class="nav-links" id="navLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../schools.html">Schools</a>
+            <a href="../../resources.html">Resources</a>
+            <a href="../../plans.html">Plans &amp; Features</a>
+            <a href="../../about.html">About</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+    <header class="site-header">
+      <div class="page-container">
         <div class="logo-bar">
+          <!-- LEFT -->
           <div class="logo-section">
-            <a href="../../index.html">
+            <a href="../../index.html" aria-label="FallenClassmate Home">
               <img src="../../assets/logo.png" alt="FallenClassmate Logo" />
             </a>
           </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
+          <!-- CENTER -->
+          <div class="center-section" aria-hidden="true">
+            <div class="cap-row">
+              <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+              <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
             </div>
           </div>
 
+          <!-- RIGHT -->
           <div class="search-section">
             <div class="search-container">
               <input
@@ -53,153 +67,191 @@
               <span class="search-icon" aria-hidden="true">&#128269;</span>
             </div>
 
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="hamburger"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navbar"
+            >
               &#9776;
             </button>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../schools.html">Schools</a>
-            <a href="../../resources.html">Resources</a>
-            <a href="../../plans.html">Plans & Features</a>
-            <a href="../../about.html">About</a>
-            <a href="../../contact.html">Contact</a>
-            <a href="../../add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
-
-      <!-- State header section -->
-      <section class="state-header-section">
-        <p class="state-breadcrumb">
-          <a href="../../USAschools.html">← Back to USA</a>
-        </p>
-
-        <h2>Colorado</h2>
-        <p class="state-intro">Select a county to find schools and memorials.</p>
-
-        <!-- Quick stats stays here -->
-        <div class="state-stats">
-          <div class="stat"><strong>64</strong><span>Counties</span></div>
-          <div class="stat"><strong>—</strong><span>Schools</span></div>
-          <div class="stat"><strong>—</strong><span>Memorials</span></div>
-        </div>
-      </section>
-
-      <!-- State content -->
-      <section class="state-content">
-        <!-- Left: badge cards side-by-side -->
-        <div class="state-left">
-          <div class="state-badges">
-            <div class="badge">
-              <div class="badge-media">
-                <img class="seal-badge" src="/assets/ColoradoSeal.png" alt="Colorado seal" />
-              </div>
-              <div class="badge-label-bar">State Seal</div>
-            </div>
-
-            <div class="badge">
-              <div class="badge-media">
-                <img class="flag-badge" src="/assets/ColoradoFlag.png" alt="Colorado flag" />
-              </div>
-              <div class="badge-label-bar">State Flag</div>
-            </div>
+    <!-- PAGE CONTENT -->
+    <main class="state-page">
+      <div class="page-container">
+        <!-- State header section -->
+        <section class="state-header-section">
+          <!-- Breadcrumb strip (like your newer pages) -->
+          <div class="crumb-bar" aria-label="Breadcrumb">
+            <a class="crumb-link" href="../../USAschools.html">USA</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current">Colorado</span>
           </div>
 
-          <p class="state-blurb">
-            Browse by county to find schools, classmates, and memorial pages across Colorado.
+          <h2>Colorado</h2>
+          <p class="state-intro">Select a county to find schools and memorials.</p>
+
+          <div class="state-stats">
+            <div class="stat"><strong>64</strong><span>Counties</span></div>
+            <div class="stat"><strong>—</strong><span>Schools</span></div>
+            <div class="stat"><strong>—</strong><span>Memorials</span></div>
+          </div>
+        </section>
+
+        <!-- State content -->
+        <section class="state-content">
+          <!-- Left: badge cards -->
+          <div class="state-left">
+            <div class="state-badges">
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="seal-badge" src="/assets/ColoradoSeal.png" alt="Colorado seal" />
+                </div>
+                <div class="badge-label-bar">State Seal</div>
+              </div>
+
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="flag-badge" src="/assets/ColoradoFlag.png" alt="Colorado flag" />
+                </div>
+                <div class="badge-label-bar">State Flag</div>
+              </div>
+            </div>
+
+            <p class="state-blurb">
+              Browse by county to find schools, classmates, and memorial pages across Colorado.
+            </p>
+          </div>
+
+          <!-- Right: counties -->
+          <div class="state-right">
+            <h3 class="counties-title">Counties</h3>
+
+            <div class="counties-list counties-grid">
+              <a class="county-link" href="/states/colorado/adams-county/">Adams County</a>
+              <a class="county-link" href="/states/colorado/alamosa-county/">Alamosa County</a>
+              <a class="county-link" href="/states/colorado/arapahoe-county/">Arapahoe County</a>
+              <a class="county-link" href="/states/colorado/archuleta-county/">Archuleta County</a>
+              <a class="county-link" href="/states/colorado/baca-county/">Baca County</a>
+              <a class="county-link" href="/states/colorado/bent-county/">Bent County</a>
+              <a class="county-link" href="/states/colorado/boulder-county/">Boulder County</a>
+              <a class="county-link" href="/states/colorado/city-and-county-of-broomfield/">City and County of Broomfield</a>
+              <a class="county-link" href="/states/colorado/chaffee-county/">Chaffee County</a>
+              <a class="county-link" href="/states/colorado/cheyenne-county/">Cheyenne County</a>
+              <a class="county-link" href="/states/colorado/clear-creek-county/">Clear Creek County</a>
+              <a class="county-link" href="/states/colorado/conejos-county/">Conejos County</a>
+              <a class="county-link" href="/states/colorado/costilla-county/">Costilla County</a>
+              <a class="county-link" href="/states/colorado/crowley-county/">Crowley County</a>
+              <a class="county-link" href="/states/colorado/custer-county/">Custer County</a>
+              <a class="county-link" href="/states/colorado/delta-county/">Delta County</a>
+              <a class="county-link" href="/states/colorado/city-and-county-of-denver/">City and County of Denver</a>
+              <a class="county-link" href="/states/colorado/dolores-county/">Dolores County</a>
+              <a class="county-link" href="/states/colorado/douglas-county/">Douglas County</a>
+              <a class="county-link" href="/states/colorado/eagle-county/">Eagle County</a>
+              <a class="county-link" href="/states/colorado/el-paso-county/">El Paso County</a>
+              <a class="county-link" href="/states/colorado/elbert-county/">Elbert County</a>
+              <a class="county-link" href="/states/colorado/fremont-county/">Fremont County</a>
+              <a class="county-link" href="/states/colorado/garfield-county/">Garfield County</a>
+              <a class="county-link" href="/states/colorado/gilpin-county/">Gilpin County</a>
+              <a class="county-link" href="/states/colorado/grand-county/">Grand County</a>
+              <a class="county-link" href="/states/colorado/gunnison-county/">Gunnison County</a>
+              <a class="county-link" href="/states/colorado/hinsdale-county/">Hinsdale County</a>
+              <a class="county-link" href="/states/colorado/huerfano-county/">Huerfano County</a>
+              <a class="county-link" href="/states/colorado/jackson-county/">Jackson County</a>
+              <a class="county-link" href="/states/colorado/jefferson-county/">Jefferson County</a>
+              <a class="county-link" href="/states/colorado/kiowa-county/">Kiowa County</a>
+              <a class="county-link" href="/states/colorado/kit-carson-county/">Kit Carson County</a>
+              <a class="county-link" href="/states/colorado/la-plata-county/">La Plata County</a>
+              <a class="county-link" href="/states/colorado/lake-county/">Lake County</a>
+              <a class="county-link" href="/states/colorado/larimer-county/">Larimer County</a>
+              <a class="county-link" href="/states/colorado/las-animas-county/">Las Animas County</a>
+              <a class="county-link" href="/states/colorado/lincoln-county/">Lincoln County</a>
+              <a class="county-link" href="/states/colorado/logan-county/">Logan County</a>
+              <a class="county-link" href="/states/colorado/mesa-county/">Mesa County</a>
+              <a class="county-link" href="/states/colorado/mineral-county/">Mineral County</a>
+              <a class="county-link" href="/states/colorado/moffat-county/">Moffat County</a>
+              <a class="county-link" href="/states/colorado/montezuma-county/">Montezuma County</a>
+              <a class="county-link" href="/states/colorado/montrose-county/">Montrose County</a>
+              <a class="county-link" href="/states/colorado/morgan-county/">Morgan County</a>
+              <a class="county-link" href="/states/colorado/otero-county/">Otero County</a>
+              <a class="county-link" href="/states/colorado/ouray-county/">Ouray County</a>
+              <a class="county-link" href="/states/colorado/park-county/">Park County</a>
+              <a class="county-link" href="/states/colorado/phillips-county/">Phillips County</a>
+              <a class="county-link" href="/states/colorado/pitkin-county/">Pitkin County</a>
+              <a class="county-link" href="/states/colorado/prowers-county/">Prowers County</a>
+              <a class="county-link" href="/states/colorado/pueblo-county/">Pueblo County</a>
+              <a class="county-link" href="/states/colorado/rio-blanco-county/">Rio Blanco County</a>
+              <a class="county-link" href="/states/colorado/rio-grande-county/">Rio Grande County</a>
+              <a class="county-link" href="/states/colorado/routt-county/">Routt County</a>
+              <a class="county-link" href="/states/colorado/saguache-county/">Saguache County</a>
+              <a class="county-link" href="/states/colorado/san-juan-county/">San Juan County</a>
+              <a class="county-link" href="/states/colorado/san-miguel-county/">San Miguel County</a>
+              <a class="county-link" href="/states/colorado/sedgwick-county/">Sedgwick County</a>
+              <a class="county-link" href="/states/colorado/summit-county/">Summit County</a>
+              <a class="county-link" href="/states/colorado/teller-county/">Teller County</a>
+              <a class="county-link" href="/states/colorado/washington-county/">Washington County</a>
+              <a class="county-link" href="/states/colorado/weld-county/">Weld County</a>
+              <a class="county-link" href="/states/colorado/yuma-county/">Yuma County</a>
+            </div>
+
+            <div class="state-ctas ctas-grid">
+              <a class="submit-button" href="../../schools.html">Find Your School</a>
+              <a class="submit-button" href="../../add-school.html">Add a School</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER (identical to your global footer) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>FallenClassmate</h4>
+          <p>
+            Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+            remembrance and tribute.
           </p>
         </div>
 
-        <!-- Right: counties -->
-        <div class="state-right">
-  <h3 class="counties-title">Counties</h3>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../../schools.html">Find Your School</a></li>
+            <li><a href="../../plans.html">Create a Memorial</a></li>
+            <li><a href="../../resources.html">Grief Resources</a></li>
 
-  <div class="counties-list counties-grid">
-  <a class="county-link" href="/states/colorado/adams-county/">Adams County</a>
-  <a class="county-link" href="/states/colorado/alamosa-county/">Alamosa County</a>
-  <a class="county-link" href="/states/colorado/arapahoe-county/">Arapahoe County</a>
-  <a class="county-link" href="/states/colorado/archuleta-county/">Archuleta County</a>
-  <a class="county-link" href="/states/colorado/baca-county/">Baca County</a>
-  <a class="county-link" href="/states/colorado/bent-county/">Bent County</a>
-  <a class="county-link" href="/states/colorado/boulder-county/">Boulder County</a>
-  <a class="county-link" href="/states/colorado/city-and-county-of-broomfield/">City and County of Broomfield</a>
-  <a class="county-link" href="/states/colorado/chaffee-county/">Chaffee County</a>
-  <a class="county-link" href="/states/colorado/cheyenne-county/">Cheyenne County</a>
-  <a class="county-link" href="/states/colorado/clear-creek-county/">Clear Creek County</a>
-  <a class="county-link" href="/states/colorado/conejos-county/">Conejos County</a>
-  <a class="county-link" href="/states/colorado/costilla-county/">Costilla County</a>
-  <a class="county-link" href="/states/colorado/crowley-county/">Crowley County</a>
-  <a class="county-link" href="/states/colorado/custer-county/">Custer County</a>
-  <a class="county-link" href="/states/colorado/delta-county/">Delta County</a>
-  <a class="county-link" href="/states/colorado/city-and-county-of-denver/">City and County of Denver</a>
-  <a class="county-link" href="/states/colorado/dolores-county/">Dolores County</a>
-  <a class="county-link" href="/states/colorado/douglas-county/">Douglas County</a>
-  <a class="county-link" href="/states/colorado/eagle-county/">Eagle County</a>
-  <a class="county-link" href="/states/colorado/el-paso-county/">El Paso County</a>
-  <a class="county-link" href="/states/colorado/elbert-county/">Elbert County</a>
-  <a class="county-link" href="/states/colorado/fremont-county/">Fremont County</a>
-  <a class="county-link" href="/states/colorado/garfield-county/">Garfield County</a>
-  <a class="county-link" href="/states/colorado/gilpin-county/">Gilpin County</a>
-  <a class="county-link" href="/states/colorado/grand-county/">Grand County</a>
-  <a class="county-link" href="/states/colorado/gunnison-county/">Gunnison County</a>
-  <a class="county-link" href="/states/colorado/hinsdale-county/">Hinsdale County</a>
-  <a class="county-link" href="/states/colorado/huerfano-county/">Huerfano County</a>
-  <a class="county-link" href="/states/colorado/jackson-county/">Jackson County</a>
-  <a class="county-link" href="/states/colorado/jefferson-county/">Jefferson County</a>
-  <a class="county-link" href="/states/colorado/kiowa-county/">Kiowa County</a>
-  <a class="county-link" href="/states/colorado/kit-carson-county/">Kit Carson County</a>
-  <a class="county-link" href="/states/colorado/la-plata-county/">La Plata County</a>
-  <a class="county-link" href="/states/colorado/lake-county/">Lake County</a>
-  <a class="county-link" href="/states/colorado/larimer-county/">Larimer County</a>
-  <a class="county-link" href="/states/colorado/las-animas-county/">Las Animas County</a>
-  <a class="county-link" href="/states/colorado/lincoln-county/">Lincoln County</a>
-  <a class="county-link" href="/states/colorado/logan-county/">Logan County</a>
-  <a class="county-link" href="/states/colorado/mesa-county/">Mesa County</a>
-  <a class="county-link" href="/states/colorado/mineral-county/">Mineral County</a>
-  <a class="county-link" href="/states/colorado/moffat-county/">Moffat County</a>
-  <a class="county-link" href="/states/colorado/montezuma-county/">Montezuma County</a>
-  <a class="county-link" href="/states/colorado/montrose-county/">Montrose County</a>
-  <a class="county-link" href="/states/colorado/morgan-county/">Morgan County</a>
-  <a class="county-link" href="/states/colorado/otero-county/">Otero County</a>
-  <a class="county-link" href="/states/colorado/ouray-county/">Ouray County</a>
-  <a class="county-link" href="/states/colorado/park-county/">Park County</a>
-  <a class="county-link" href="/states/colorado/phillips-county/">Phillips County</a>
-  <a class="county-link" href="/states/colorado/pitkin-county/">Pitkin County</a>
-  <a class="county-link" href="/states/colorado/prowers-county/">Prowers County</a>
-  <a class="county-link" href="/states/colorado/pueblo-county/">Pueblo County</a>
-  <a class="county-link" href="/states/colorado/rio-blanco-county/">Rio Blanco County</a>
-  <a class="county-link" href="/states/colorado/rio-grande-county/">Rio Grande County</a>
-  <a class="county-link" href="/states/colorado/routt-county/">Routt County</a>
-  <a class="county-link" href="/states/colorado/saguache-county/">Saguache County</a>
-  <a class="county-link" href="/states/colorado/san-juan-county/">San Juan County</a>
-  <a class="county-link" href="/states/colorado/san-miguel-county/">San Miguel County</a>
-  <a class="county-link" href="/states/colorado/sedgwick-county/">Sedgwick County</a>
-  <a class="county-link" href="/states/colorado/summit-county/">Summit County</a>
-  <a class="county-link" href="/states/colorado/teller-county/">Teller County</a>
-  <a class="county-link" href="/states/colorado/washington-county/">Washington County</a>
-  <a class="county-link" href="/states/colorado/weld-county/">Weld County</a>
-  <a class="county-link" href="/states/colorado/yuma-county/">Yuma County</a>
-</div>
+            <li class="footer-link-divider"></li>
 
-  <!-- NEW: CTA grid aligned to 2 columns -->
-  <div class="state-ctas ctas-grid">
-    <a class="submit-button" href="../../schools.html">Find Your School</a>
-    <a class="submit-button" href="../../add-school.html">Add a School</a>
-  </div>
-</div>
-      </section>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/report/">Report / Flag Content</a></li>
+          </ul>
+        </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
-    </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p>Stay updated with our community tributes.</p>
+
+          <div class="footer-social">
+            <a class="social" href="#" aria-label="Facebook">f</a>
+            <a class="social" href="#" aria-label="Twitter">t</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="../../script.js" defer></script>
-  </div>
-</body>
+  </body>
 </html>
