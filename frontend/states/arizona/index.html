@@ -1,46 +1,66 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arizona Counties | FallenClassmate</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arizona Counties | FallenClassmate</title>
 
-  <link rel="stylesheet" href="../../styles.css" />
-  <link rel="stylesheet" href="../states.css" />
-</head>
+    <!-- Fonts (same as home) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <div class="state-page-container">
-    <div class="page-container">
-      <!-- Shared Header -->
-      <header>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../states.css" />
+  </head>
+
+  <body>
+    <!-- TOP NAV (exactly like main site) -->
+    <div class="nav-wrap">
+      <div class="page-container">
+        <div class="navbar" id="navbar">
+          <nav class="nav-links" id="navLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../schools.html">Schools</a>
+            <a href="../../resources.html">Resources</a>
+            <a href="../../plans.html">Plans &amp; Features</a>
+            <a href="../../about.html">About</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+    <header class="site-header">
+      <div class="page-container">
         <div class="logo-bar">
+          <!-- LEFT -->
           <div class="logo-section">
-            <a href="../../index.html">
+            <a href="../../index.html" aria-label="FallenClassmate Home">
               <img src="../../assets/logo.png" alt="FallenClassmate Logo" />
             </a>
           </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
+          <!-- CENTER -->
+          <div class="center-section" aria-hidden="true">
+            <div class="cap-row">
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
+              <span class="cap">🎓</span>
             </div>
           </div>
 
+          <!-- RIGHT -->
           <div class="search-section">
             <div class="search-container">
               <input
@@ -53,104 +73,139 @@
               <span class="search-icon" aria-hidden="true">&#128269;</span>
             </div>
 
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="hamburger"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navbar"
+            >
               &#9776;
             </button>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../schools.html">Schools</a>
-            <a href="../../resources.html">Resources</a>
-            <a href="../../plans.html">Plans & Features</a>
-            <a href="../../about.html">About</a>
-            <a href="../../contact.html">Contact</a>
-            <a href="../../add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
+    <!-- PAGE CONTENT -->
+    <main class="state-page">
+      <div class="page-container">
+        <!-- State header section -->
+        <section class="state-header-section">
+          <p class="state-breadcrumb">
+            <a href="../../USAschools.html">← Back to USA</a>
+          </p>
 
-      <!-- State header section -->
-      <section class="state-header-section">
-        <p class="state-breadcrumb">
-          <a href="../../USAschools.html">← Back to USA</a>
-        </p>
+          <h2>Arizona</h2>
+          <p class="state-intro">Select a county to find schools and memorials.</p>
 
-        <h2>Arizona</h2>
-        <p class="state-intro">Select a county to find schools and memorials.</p>
+          <div class="state-stats">
+            <div class="stat"><strong>15</strong><span>Counties</span></div>
+            <div class="stat"><strong>555</strong><span>Schools</span></div>
+            <div class="stat"><strong>15,000</strong><span>Memorials</span></div>
+          </div>
+        </section>
 
-        <!-- Quick stats stays here -->
-        <div class="state-stats">
-          <div class="stat"><strong>15</strong><span>Counties</span></div>
-          <div class="stat"><strong>555</strong><span>Schools</span></div>
-          <div class="stat"><strong>15,000</strong><span>Memorials</span></div>
-        </div>
-      </section>
-
-      <!-- State content -->
-      <section class="state-content">
-        <!-- Left: badge cards side-by-side -->
-        <div class="state-left">
-          <div class="state-badges">
-            <div class="badge">
-              <div class="badge-media">
-                <img class="seal-badge" src="/assets/ArizonaSeal.png" alt="Arizona seal" />
+        <!-- State content -->
+        <section class="state-content">
+          <!-- Left: badge cards -->
+          <div class="state-left">
+            <div class="state-badges">
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="seal-badge" src="/assets/ArizonaSeal.png" alt="Arizona seal" />
+                </div>
+                <div class="badge-label-bar">State Seal</div>
               </div>
-              <div class="badge-label-bar">State Seal</div>
+
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="flag-badge" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
+                </div>
+                <div class="badge-label-bar">State Flag</div>
+              </div>
             </div>
 
-            <div class="badge">
-              <div class="badge-media">
-                <img class="flag-badge" src="/assets/ArizonaFlag.png" alt="Arizona flag" />
-              </div>
-              <div class="badge-label-bar">State Flag</div>
-            </div>
+            <p class="state-blurb">
+              Browse by county to find schools, classmates, and memorial pages across Arizona.
+            </p>
           </div>
 
-          <p class="state-blurb">
-            Browse by county to find schools, classmates, and memorial pages across Arizona.
+          <!-- Right: counties -->
+          <div class="state-right">
+            <h3 class="counties-title">Counties</h3>
+
+            <div class="counties-list counties-grid">
+              <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
+              <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
+              <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
+              <a class="county-link" href="/states/arizona/gila-county/">Gila County</a>
+              <a class="county-link" href="/states/arizona/graham-county/">Graham County</a>
+              <a class="county-link" href="/states/arizona/greenlee-county/">Greenlee County</a>
+              <a class="county-link" href="/states/arizona/la-paz-county/">La Paz County</a>
+              <a class="county-link" href="/states/arizona/maricopa-county/">Maricopa County</a>
+              <a class="county-link" href="/states/arizona/mohave-county/">Mohave County</a>
+              <a class="county-link" href="/states/arizona/navajo-county/">Navajo County</a>
+              <a class="county-link" href="/states/arizona/pima-county/">Pima County</a>
+              <a class="county-link" href="/states/arizona/pinal-county/">Pinal County</a>
+              <a class="county-link" href="/states/arizona/santa-cruz-county/">Santa Cruz County</a>
+              <a class="county-link" href="/states/arizona/yavapai-county/">Yavapai County</a>
+              <a class="county-link" href="/states/arizona/yuma-county/">Yuma County</a>
+            </div>
+
+            <div class="state-ctas ctas-grid">
+              <a class="submit-button" href="../../schools.html">Find Your School</a>
+              <a class="submit-button" href="../../add-school.html">Add a School</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER (identical to your global footer) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>FallenClassmate</h4>
+          <p>
+            Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+            remembrance and tribute.
           </p>
         </div>
 
-        <!-- Right: counties -->
-        <div class="state-right">
-  <h3 class="counties-title">Counties</h3>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../../schools.html">Find Your School</a></li>
+            <li><a href="../../plans.html">Create a Memorial</a></li>
+            <li><a href="../../resources.html">Grief Resources</a></li>
 
-  <div class="counties-list counties-grid">
-    <a class="county-link" href="/states/arizona/apache-county/">Apache County</a>
-    <a class="county-link" href="/states/arizona/cochise-county/">Cochise County</a>
-    <a class="county-link" href="/states/arizona/coconino-county/">Coconino County</a>
-    <a class="county-link" href="/states/arizona/gila-county/">Gila County</a>
-    <a class="county-link" href="/states/arizona/graham-county/">Graham County</a>
-    <a class="county-link" href="/states/arizona/greenlee-county/">Greenlee County</a>
-    <a class="county-link" href="/states/arizona/la-paz-county/">La Paz County</a>
-    <a class="county-link" href="/states/arizona/maricopa-county/">Maricopa County</a>
-    <a class="county-link" href="/states/arizona/mohave-county/">Mohave County</a>
-    <a class="county-link" href="/states/arizona/navajo-county/">Navajo County</a>
-    <a class="county-link" href="/states/arizona/pima-county/">Pima County</a>
-    <a class="county-link" href="/states/arizona/pinal-county/">Pinal County</a>
-    <a class="county-link" href="/states/arizona/santa-cruz-county/">Santa Cruz County</a>
-    <a class="county-link" href="/states/arizona/yavapai-county/">Yavapai County</a>
-    <a class="county-link" href="/states/arizona/yuma-county/">Yuma County</a>
-  </div>
+            <li class="footer-link-divider"></li>
 
-  <!-- NEW: CTA grid aligned to 2 columns -->
-  <div class="state-ctas ctas-grid">
-    <a class="submit-button" href="../../schools.html">Find Your School</a>
-    <a class="submit-button" href="../../add-school.html">Add a School</a>
-  </div>
-</div>
-      </section>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/report/">Report / Flag Content</a></li>
+          </ul>
+        </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
-    </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p>Stay updated with our community tributes.</p>
+
+          <div class="footer-social">
+            <a class="social" href="#" aria-label="Facebook">f</a>
+            <a class="social" href="#" aria-label="Twitter">t</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="../../script.js" defer></script>
-  </div>
-</body>
+  </body>
 </html>
