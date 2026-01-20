@@ -5,107 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ganado High School — Class of 1988 | FallenClassmate</title>
 
+  <!-- Fonts (same as home) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <!-- Global theme -->
   <link rel="stylesheet" href="../../../../../styles.css" />
-
-  <!-- Class-year page styles (shared across states) -->
+  <!-- Class-year page styles (page-only) -->
   <link rel="stylesheet" href="../../../../classyear.css" />
-
-  <!-- Small helper styles so the whole card is clickable -->
-  <style>
-    .yearbook-card-link{
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .yearbook-card-link:focus{
-      outline: 3px solid rgba(47,143,139,.35);
-      outline-offset: 4px;
-    }
-    .yearbook-card-link:hover .yearbook-btn{
-      background: #f6f8f8;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="classyear-page-container">
+  <!-- TOP NAV (exactly like main site) -->
+  <div class="nav-wrap">
+    <div class="page-container">
+      <div class="navbar" id="navbar">
+        <nav class="nav-links" id="navLinks">
+          <a href="../../../../../index.html">Home</a>
+          <a href="../../../../../schools.html">Schools</a>
+          <a href="../../../../../resources.html">Resources</a>
+          <a href="../../../../../plans.html">Plans &amp; Features</a>
+          <a href="../../../../../about.html">About</a>
+          <a href="../../../../../contact.html">Contact</a>
+          <a href="../../../../../add-school.html">Add a School</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+  <header class="site-header">
+    <div class="page-container">
+      <div class="logo-bar">
+        <div class="logo-section">
+          <a href="../../../../../index.html" aria-label="FallenClassmate Home">
+            <img src="../../../../../assets/logo.png" alt="FallenClassmate Logo" />
+          </a>
+        </div>
+
+        <div class="center-section" aria-hidden="true">
+          <div class="cap-row">
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+            <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+          </div>
+        </div>
+
+        <div class="search-section">
+          <div class="search-container">
+            <input
+              type="text"
+              class="styled-search-input"
+              placeholder="Find a Classmate or School"
+              id="siteSearch"
+              autocomplete="off"
+            />
+            <span class="search-icon" aria-hidden="true">&#128269;</span>
+          </div>
+
+          <button
+            class="hamburger"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            &#9776;
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="classyear-page">
     <div class="page-container">
 
-      <!-- THEMED HEADER (matches About page) -->
-      <header>
-        <div class="logo-bar">
-          <div class="logo-section">
-            <a href="../../../../../index.html">
-              <img src="../../../../../assets/logo.png" alt="FallenClassmate Logo" />
-            </a>
-          </div>
-
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
-            </div>
-          </div>
-
-          <div class="search-section">
-            <div class="search-container">
-              <input
-                type="text"
-                class="styled-search-input"
-                placeholder="Find a Classmate or School"
-                id="siteSearch"
-                autocomplete="off"
-              />
-              <span class="search-icon" aria-hidden="true">&#128269;</span>
-            </div>
-
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-              &#9776;
-            </button>
-          </div>
-        </div>
-
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../../../../index.html">Home</a>
-            <a href="../../../../../schools.html">Schools</a>
-            <a href="../../../../../resources.html">Resources</a>
-            <a href="../../../../../plans.html">Plans & Features</a>
-            <a href="../../../../../about.html">About</a>
-            <a href="../../../../../contact.html">Contact</a>
-            <a href="../../../../../add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
-
-      <!-- PAGE HEADER (your class year title) -->
+      <!-- PAGE HEADER -->
       <section class="classyear-header-section">
-  <p class="classyear-breadcrumb">
-    <a href="../index.html">← Back to Class Years</a>
-  </p>
+        <p class="classyear-breadcrumb">
+          <a href="../index.html">← Back to Class Years</a>
+        </p>
 
-  <h2 class="classyear-title">Class of 1988</h2>
-  <p class="classyear-subtext">Ganado High School Yearbook</p>
-</section>
+        <h2 class="classyear-title">Class of 1988</h2>
+        <p class="classyear-subtext">Ganado High School Yearbook</p>
+      </section>
 
-      <!-- YEARBOOK CARDS (STATIC FOR NOW) -->
+      <!-- YEARBOOK CARDS -->
       <section class="classyear-cards">
 
-        <!-- Ghost Profile 1 -->
         <a class="yearbook-card-link" href="../memorials/placeholder-1/index.html" aria-label="View memorial for Classmate One">
           <article class="yearbook-card">
             <div class="yearbook-photo-wrap">
@@ -114,14 +105,11 @@
             <div class="yearbook-info">
               <h3 class="yearbook-name">Classmate One</h3>
               <p class="yearbook-dates">January 12, 1970 – March 4, 2011</p>
-              <span class="yearbook-btn">
-                View Memorial <span class="arrow">›</span>
-              </span>
+              <span class="yearbook-btn">View Memorial <span class="arrow">›</span></span>
             </div>
           </article>
         </a>
 
-        <!-- Ghost Profile 2 -->
         <a class="yearbook-card-link" href="../memorials/placeholder-2/index.html" aria-label="View memorial for Classmate Two">
           <article class="yearbook-card">
             <div class="yearbook-photo-wrap">
@@ -130,14 +118,11 @@
             <div class="yearbook-info">
               <h3 class="yearbook-name">Classmate Two “Ace”</h3>
               <p class="yearbook-dates">October 3, 1969 – July 19, 2009</p>
-              <span class="yearbook-btn">
-                View Memorial <span class="arrow">›</span>
-              </span>
+              <span class="yearbook-btn">View Memorial <span class="arrow">›</span></span>
             </div>
           </article>
         </a>
 
-        <!-- Ghost Profile 3 -->
         <a class="yearbook-card-link" href="../memorials/placeholder-3/index.html" aria-label="View memorial for Classmate Three">
           <article class="yearbook-card">
             <div class="yearbook-photo-wrap">
@@ -146,14 +131,11 @@
             <div class="yearbook-info">
               <h3 class="yearbook-name">Classmate Three</h3>
               <p class="yearbook-dates">May 28, 1970 – November 2, 2016</p>
-              <span class="yearbook-btn">
-                View Memorial <span class="arrow">›</span>
-              </span>
+              <span class="yearbook-btn">View Memorial <span class="arrow">›</span></span>
             </div>
           </article>
         </a>
 
-        <!-- Ghost Profile 4 -->
         <a class="yearbook-card-link" href="../memorials/placeholder-4/index.html" aria-label="View memorial for Classmate Four">
           <article class="yearbook-card">
             <div class="yearbook-photo-wrap">
@@ -162,14 +144,11 @@
             <div class="yearbook-info">
               <h3 class="yearbook-name">Classmate Four</h3>
               <p class="yearbook-dates">1970 – 2018</p>
-              <span class="yearbook-btn">
-                View Memorial <span class="arrow">›</span>
-              </span>
+              <span class="yearbook-btn">View Memorial <span class="arrow">›</span></span>
             </div>
           </article>
         </a>
 
-        <!-- Ghost Profile 5 -->
         <a class="yearbook-card-link" href="../memorials/placeholder-5/index.html" aria-label="View memorial for Classmate Five">
           <article class="yearbook-card">
             <div class="yearbook-photo-wrap">
@@ -178,32 +157,66 @@
             <div class="yearbook-info">
               <h3 class="yearbook-name">Classmate Five</h3>
               <p class="yearbook-dates">March 9, 1970 – Date Unknown</p>
-              <span class="yearbook-btn">
-                View Memorial <span class="arrow">›</span>
-              </span>
+              <span class="yearbook-btn">View Memorial <span class="arrow">›</span></span>
             </div>
           </article>
         </a>
 
       </section>
 
-      <!-- Empty state if no records (kept for later; hidden now) -->
+      <!-- Empty state (hidden for now) -->
       <section class="classyear-empty" id="emptyState" style="display:none;">
         <h3>No memorials have been added yet for the Class of 1988.</h3>
         <p>Be the first to create a memorial for a classmate.</p>
         <a class="primary-button" href="../../../../../create-memorial.html">Create Memorial</a>
       </section>
 
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
+    </div>
+  </main>
+
+  <!-- GLOBAL FOOTER (identical to site) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>FallenClassmate</h4>
+        <p>
+          Honoring the memories of those who have left our halls but never our hearts.
+          A dedicated space for remembrance and tribute.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../../../../../schools.html">Find a School</a></li>
+          <li><a href="../../../../../plans.html">Create a Memorial</a></li>
+          <li><a href="../../../../../resources.html">Grief Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Trust &amp; Safety</h4>
+        <ul class="footer-links">
+          <li><a href="../../../../../privacy.html">Privacy Policy</a></li>
+          <li><a href="../../../../../terms.html">Terms</a></li>
+          <li><a href="/report/">Report / Flag Content</a></li>
+        </ul>
+
+        <div class="footer-social" aria-label="Social links">
+          <a class="social" href="#" aria-label="Facebook">f</a>
+          <a class="social" href="#" aria-label="Twitter">t</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Global theme JS (hamburger, footer year, etc.) -->
-    <script src="../../../../../script.js" defer></script>
+    <div class="footer-divider"></div>
 
-    <!-- Page-specific JS (not needed for static right now; safe to keep) -->
-    <script src="./classyear.js" defer></script>
-  </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../../../../script.js" defer></script>
+  <script src="./classyear.js" defer></script>
 </body>
 </html>
