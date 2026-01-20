@@ -3,43 +3,38 @@
    Page-specific only — global header/nav/footer/fonts live in /styles.css
 ========================= */
 
-/* =========================
-   Breadcrumb bar (shared look)
-========================= */
-.crumbbar{
-  max-width: 1100px;
-  margin: 0 auto 10px;
-  padding: 0 18px;
-  text-align: left;
-}
-
-.crumbs{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Breadcrumb strip (USA / Arizona) */
+.crumb-bar{
+  display: inline-flex;
   align-items: center;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 800;
-  color: var(--teal-dark);
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
-.crumbs a{
+.crumb-link{
   color: var(--teal-dark);
   text-decoration: none;
+  font-weight: 800;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.crumbs a:hover{
+.crumb-link:hover{
   text-decoration: underline;
 }
 
 .crumb-sep{
   color: #9bbbbb;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .crumb-current{
-  color: var(--teal);
+  color: var(--teal-dark);
   font-weight: 900;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /* ===== Header area ===== */
@@ -49,8 +44,16 @@
   text-align: center;
   border-radius: 12px;
   margin-top: var(--section-y-sm);
+  border: 1px solid var(--border);
 }
 
+.state-header-section .crumb-bar{
+  display: inline-flex;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+/* Big state title */
 .state-header-section h2{
   margin: 0;
   color: var(--teal-dark);
@@ -208,7 +211,10 @@
   border: 1px solid #e6efef;
   box-shadow: 0 2px 10px rgba(0,0,0,0.04);
   text-decoration: none;
+
+  /* ✅ keep text color like the rest of the site */
   color: #0f2f2e;
+
   font-size: 17px;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -252,17 +258,9 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 1100px){
-  .counties-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .ctas-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .state-right{
-    width: 520px;
-  }
+  .counties-grid{ grid-template-columns: 1fr; }
+  .ctas-grid{ grid-template-columns: 1fr; }
+  .state-right{ width: 520px; }
 }
 
 @media (max-width: 900px){
@@ -276,16 +274,10 @@
     width: 100%;
     max-width: 760px;
   }
-
-  .state-badges{
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 520px){
-  .state-badges{
-    grid-template-columns: 1fr;
-  }
+  .state-badges{ grid-template-columns: 1fr; }
 
   .state-header-section h2{
     font-size: 34px;
