@@ -92,9 +92,14 @@
       <div class="page-container">
         <!-- State header section -->
         <section class="state-header-section">
-          <p class="state-breadcrumb">
-            <a href="../../USAschools.html">← Back to USA</a>
-          </p>
+          <!-- ✅ NEW: breadcrumb trail (matches the style you liked) -->
+          <section class="crumbbar">
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <a href="../../USAschools.html">USA</a>
+              <span class="crumb-sep">/</span>
+              <span class="crumb-current" aria-current="page">Arizona</span>
+            </nav>
+          </section>
 
           <h2>Arizona</h2>
           <p class="state-intro">Select a county to find schools and memorials.</p>
