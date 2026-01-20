@@ -89,9 +89,16 @@
       <div class="page-container">
         <!-- County header section -->
         <section class="county-header-section">
-          <p class="county-breadcrumb">
-            <a href="/states/arizona/">← Back to Arizona</a>
-          </p>
+          <!-- ✅ NEW: breadcrumb trail (like the style you liked) -->
+          <section class="crumbbar">
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <a href="../../../USAschools.html">USA</a>
+              <span class="crumb-sep">/</span>
+              <a href="/states/arizona/">Arizona</a>
+              <span class="crumb-sep">/</span>
+              <span class="crumb-current" aria-current="page">Apache County</span>
+            </nav>
+          </section>
 
           <div class="county-header-row">
             <div class="county-seal-wrap">
