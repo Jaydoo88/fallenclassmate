@@ -1,118 +1,160 @@
-/* =========================
-   CLASS YEAR PAGE (classyear.css)
-   Page-specific only — vars/header/nav/footer live in /styles.css
-========================= */
+:root{
+  --teal:#3b9996;
+  --teal-dark:#2f7f7c;
+  --text:#1f2a2a;
+  --muted:#6b7b7b;
+  --border:#e6ecec;
+  --bg:#ffffff;
+  --panel:#f1f8f8;
+  --shadow:0 2px 10px rgba(0,0,0,.06);
+}
 
+/* Let /styles.css control header/nav/footer.
+   This file focuses on the Class Year page area only. */
+body{
+  margin:0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+/* -------------------------------------------------------
+   PAGE WRAPPER
+-------------------------------------------------------- */
 .classyear-page{
-  padding: 18px 0 50px;
+  padding: 18px 0 60px;
+  background: var(--bg);
 }
 
-/* Header section */
-.classyear-header-section{
+/* -------------------------------------------------------
+   ✅ BREADCRUMB BAR (matches county breadcrumb vibe)
+-------------------------------------------------------- */
+.crumbbar{
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 26px 0 10px;
-  text-align: center;
+  margin: 0 auto 12px;
+  padding: 0 18px;
+  text-align: left;
 }
 
-.classyear-breadcrumb{
-  margin: 0 0 10px;
-  text-align: left;
+.crumbs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 800;
+  color: var(--teal-dark);
 }
 
-.classyear-breadcrumb a{
+.crumbs a{
   color: var(--teal-dark);
   text-decoration: none;
 }
 
-.classyear-breadcrumb a:hover{
+.crumbs a:hover{
   text-decoration: underline;
+}
+
+.crumb-sep{
+  color: #9bbbbb;
+  font-weight: 900;
+}
+
+.crumb-current{
+  color: var(--teal);
+  font-weight: 900;
+}
+
+/* -------------------------------------------------------
+   CLASS YEAR HEADER
+-------------------------------------------------------- */
+.classyear-header-section{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 18px 10px;
+  text-align:center;
 }
 
 .classyear-title{
   margin: 0;
+  font-weight: 500;
   font-size: 56px;
   line-height: 1.05;
   color: var(--teal);
   letter-spacing: .5px;
-  font-family: 'Graduate', serif;
-  font-weight: 400;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .classyear-subtext{
   margin: 10px 0 0;
   font-size: 18px;
+  font-family: Georgia, "Times New Roman", serif;
   letter-spacing: 1px;
-  color: #1f2a2a;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 700;
+  color: var(--text);
 }
 
-/* Cards container */
+/* -------------------------------------------------------
+   CARD LIST CONTAINER
+-------------------------------------------------------- */
 .classyear-cards{
   max-width: 1100px;
   margin: 18px auto 40px;
-  display: flex;
-  flex-direction: column;
+  padding: 0 18px;
+  display:flex;
+  flex-direction:column;
   gap: 26px;
 }
 
-/* Whole card clickable helper (moved from inline <style>) */
+/* whole card clickable */
 .yearbook-card-link{
   text-decoration: none;
   color: inherit;
-  display: block;
+  display:block;
 }
 
 .yearbook-card-link:focus{
   outline: 3px solid rgba(59,153,150,.35);
   outline-offset: 4px;
-  border-radius: 14px;
 }
 
-.yearbook-card-link:hover .yearbook-btn{
-  background: #f6f8f8;
-}
-
-/* Card */
+/* -------------------------------------------------------
+   YEARBOOK CARD
+-------------------------------------------------------- */
 .yearbook-card{
   border: 1px solid var(--border);
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  background: var(--bg);
+  box-shadow: var(--shadow);
   border-radius: 14px;
   padding: 22px;
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items:center;
   gap: 26px;
 }
 
-/* Photo */
 .yearbook-photo-wrap{
   width: 220px;
   min-width: 220px;
   padding: 10px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .yearbook-photo{
   width: 100%;
   height: 220px;
   object-fit: cover;
-  background: #f3f6f6;
-  display: block;
+  background:#f3f6f6;
+  display:block;
   border-radius: 10px;
 }
 
-/* Text */
+/* Text area */
 .yearbook-info{
-  flex: 1;
+  flex:1;
   padding-right: 8px;
 }
 
@@ -120,37 +162,36 @@
   margin: 0 0 10px;
   font-size: 26px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--teal-dark);
   font-family: Georgia, "Times New Roman", serif;
 }
 
 .yearbook-dates{
   margin: 0 0 18px;
-  color: #1f2a2a;
+  color: var(--text);
   font-size: 16px;
   letter-spacing: .2px;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 /* Button look */
 .yearbook-btn{
-  display: inline-flex;
-  align-items: center;
+  display:inline-flex;
+  align-items:center;
   gap: 10px;
   padding: 10px 16px;
   border-radius: 10px;
   border: 1px solid #222;
-  background: #fff;
-  color: #111;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
   font-weight: 800;
-  letter-spacing: .2px;
+  letter-spacing:.2px;
   transition: transform .08s ease, background .2s ease;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .yearbook-btn:hover{
-  background: #f6f8f8;
+  background:#f6f8f8;
   transform: translateY(-1px);
 }
 
@@ -159,49 +200,56 @@
   line-height: 1;
 }
 
-/* Empty state */
+.yearbook-card-link:hover .yearbook-btn{
+  background:#f6f8f8;
+}
+
+/* -------------------------------------------------------
+   EMPTY STATE
+-------------------------------------------------------- */
 .classyear-empty{
   max-width: 1100px;
   margin: 18px auto 40px;
   padding: 24px 18px;
   border: 1px dashed var(--border);
   border-radius: 14px;
-  text-align: center;
-  color: #6b7b7b;
-  background: #fff;
+  text-align:center;
+  color: var(--muted);
+  background:#fff;
 }
 
 .primary-button{
-  display: inline-block;
+  display:inline-block;
   margin-top: 10px;
   padding: 10px 16px;
   border-radius: 10px;
   background: var(--teal);
-  color: #fff;
-  text-decoration: none;
+  color:#fff;
+  text-decoration:none;
   font-weight: 800;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .primary-button:hover{
   background: var(--teal-dark);
 }
 
-/* Responsive */
+/* -------------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------------- */
 @media (max-width: 760px){
   .classyear-title{ font-size: 44px; }
 
   .yearbook-card{
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction:column;
+    align-items:stretch;
   }
 
   .yearbook-photo-wrap{
-    width: 100%;
-    min-width: 0;
+    width:100%;
+    min-width:0;
   }
 
   .yearbook-photo{
-    height: 260px;
+    height:260px;
   }
 }
