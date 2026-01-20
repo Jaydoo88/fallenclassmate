@@ -1,46 +1,60 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkansas Counties | FallenClassmate</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arkansas Counties | FallenClassmate</title>
 
-  <link rel="stylesheet" href="../../styles.css" />
-  <link rel="stylesheet" href="../states.css" />
-</head>
+    <!-- Fonts (same as home) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <div class="state-page-container">
-    <div class="page-container">
-      <!-- Shared Header -->
-      <header>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../states.css" />
+  </head>
+
+  <body>
+    <!-- TOP NAV (exactly like main site) -->
+    <div class="nav-wrap">
+      <div class="page-container">
+        <div class="navbar" id="navbar">
+          <nav class="nav-links" id="navLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../schools.html">Schools</a>
+            <a href="../../resources.html">Resources</a>
+            <a href="../../plans.html">Plans &amp; Features</a>
+            <a href="../../about.html">About</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="../../add-school.html">Add a School</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO / CAPS / SEARCH (exactly like main site) -->
+    <header class="site-header">
+      <div class="page-container">
         <div class="logo-bar">
+          <!-- LEFT -->
           <div class="logo-section">
-            <a href="../../index.html">
+            <a href="../../index.html" aria-label="FallenClassmate Home">
               <img src="../../assets/logo.png" alt="FallenClassmate Logo" />
             </a>
           </div>
 
-          <div class="center-section">
-            <div class="cap-row" aria-hidden="true">
-              <span class="fade-1 offset-2">🎓</span>
-              <span class="fade-2 offset-1">🎓</span>
-              <span class="fade-3 offset-0">🎓</span>
-              <span class="fade-4 offset-1">🎓</span>
-              <span class="fade-5 offset-2">🎓</span>
-              <span class="fade-6 offset-1">🎓</span>
-              <span class="fade-7 offset-0">🎓</span>
-              <span class="fade-8 offset-1">🎓</span>
-              <span class="fade-9 offset-2">🎓</span>
-              <span class="fade-10 offset-1">🎓</span>
-              <span class="fade-11 offset-0">🎓</span>
-              <span class="fade-12 offset-1">🎓</span>
-              <span class="fade-13 offset-2">🎓</span>
-              <span class="fade-14 offset-1">🎓</span>
-              <span class="fade-15 offset-0">🎓</span>
+          <!-- CENTER -->
+          <div class="center-section" aria-hidden="true">
+            <div class="cap-row">
+              <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
+              <span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span><span class="cap">🎓</span>
             </div>
           </div>
 
+          <!-- RIGHT -->
           <div class="search-section">
             <div class="search-container">
               <input
@@ -53,162 +67,200 @@
               <span class="search-icon" aria-hidden="true">&#128269;</span>
             </div>
 
-            <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="hamburger"
+              id="menuToggle"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="navbar"
+            >
               &#9776;
             </button>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="navbar" id="navbar">
-          <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../../schools.html">Schools</a>
-            <a href="../../resources.html">Resources</a>
-            <a href="../../plans.html">Plans & Features</a>
-            <a href="../../about.html">About</a>
-            <a href="../../contact.html">Contact</a>
-            <a href="../../add-school.html">Add a School</a>
-          </nav>
-        </div>
-      </header>
-
-      <!-- State header section -->
-      <section class="state-header-section">
-        <p class="state-breadcrumb">
-          <a href="../../USAschools.html">← Back to USA</a>
-        </p>
-
-        <h2>Arkansas</h2>
-        <p class="state-intro">Select a county to find schools and memorials.</p>
-
-        <!-- Quick stats stays here -->
-        <div class="state-stats">
-          <div class="stat"><strong>75</strong><span>Counties</span></div>
-          <div class="stat"><strong>—</strong><span>Schools</span></div>
-          <div class="stat"><strong>—</strong><span>Memorials</span></div>
-        </div>
-      </section>
-
-      <!-- State content -->
-      <section class="state-content">
-        <!-- Left: badge cards side-by-side -->
-        <div class="state-left">
-          <div class="state-badges">
-            <div class="badge">
-              <div class="badge-media">
-                <img class="seal-badge" src="/assets/ArkansasSeal.png" alt="Arkansas seal" />
-              </div>
-              <div class="badge-label-bar">State Seal</div>
-            </div>
-
-            <div class="badge">
-              <div class="badge-media">
-                <img class="flag-badge" src="/assets/ArkansasFlag.png" alt="Arkansas flag" />
-              </div>
-              <div class="badge-label-bar">State Flag</div>
-            </div>
+    <!-- PAGE CONTENT -->
+    <main class="state-page">
+      <div class="page-container">
+        <!-- State header section -->
+        <section class="state-header-section">
+          <!-- ✅ Breadcrumb strip (matches Arizona style) -->
+          <div class="crumb-bar" aria-label="Breadcrumb">
+            <a class="crumb-link" href="../../USAschools.html">USA</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current">Arkansas</span>
           </div>
 
-          <p class="state-blurb">
-            Browse by county to find schools, classmates, and memorial pages across Arkansas.
+          <h2>Arkansas</h2>
+          <p class="state-intro">Select a county to find schools and memorials.</p>
+
+          <div class="state-stats">
+            <div class="stat"><strong>75</strong><span>Counties</span></div>
+            <div class="stat"><strong>—</strong><span>Schools</span></div>
+            <div class="stat"><strong>—</strong><span>Memorials</span></div>
+          </div>
+        </section>
+
+        <!-- State content -->
+        <section class="state-content">
+          <!-- Left: badge cards -->
+          <div class="state-left">
+            <div class="state-badges">
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="seal-badge" src="/assets/ArkansasSeal.png" alt="Arkansas seal" />
+                </div>
+                <div class="badge-label-bar">State Seal</div>
+              </div>
+
+              <div class="badge">
+                <div class="badge-media">
+                  <img class="flag-badge" src="/assets/ArkansasFlag.png" alt="Arkansas flag" />
+                </div>
+                <div class="badge-label-bar">State Flag</div>
+              </div>
+            </div>
+
+            <p class="state-blurb">
+              Browse by county to find schools, classmates, and memorial pages across Arkansas.
+            </p>
+          </div>
+
+          <!-- Right: counties -->
+          <div class="state-right">
+            <h3 class="counties-title">Counties</h3>
+
+            <div class="counties-list counties-grid">
+              <a class="county-link" href="/states/arkansas/arkansas-county/">Arkansas County</a>
+              <a class="county-link" href="/states/arkansas/ashley-county/">Ashley County</a>
+              <a class="county-link" href="/states/arkansas/baxter-county/">Baxter County</a>
+              <a class="county-link" href="/states/arkansas/benton-county/">Benton County</a>
+              <a class="county-link" href="/states/arkansas/boone-county/">Boone County</a>
+              <a class="county-link" href="/states/arkansas/bradley-county/">Bradley County</a>
+              <a class="county-link" href="/states/arkansas/calhoun-county/">Calhoun County</a>
+              <a class="county-link" href="/states/arkansas/carroll-county/">Carroll County</a>
+              <a class="county-link" href="/states/arkansas/chicot-county/">Chicot County</a>
+              <a class="county-link" href="/states/arkansas/clark-county/">Clark County</a>
+              <a class="county-link" href="/states/arkansas/clay-county/">Clay County</a>
+              <a class="county-link" href="/states/arkansas/cleburne-county/">Cleburne County</a>
+              <a class="county-link" href="/states/arkansas/cleveland-county/">Cleveland County</a>
+              <a class="county-link" href="/states/arkansas/columbia-county/">Columbia County</a>
+              <a class="county-link" href="/states/arkansas/conway-county/">Conway County</a>
+              <a class="county-link" href="/states/arkansas/craighead-county/">Craighead County</a>
+              <a class="county-link" href="/states/arkansas/crawford-county/">Crawford County</a>
+              <a class="county-link" href="/states/arkansas/crittenden-county/">Crittenden County</a>
+              <a class="county-link" href="/states/arkansas/cross-county/">Cross County</a>
+              <a class="county-link" href="/states/arkansas/dallas-county/">Dallas County</a>
+              <a class="county-link" href="/states/arkansas/desha-county/">Desha County</a>
+              <a class="county-link" href="/states/arkansas/drew-county/">Drew County</a>
+              <a class="county-link" href="/states/arkansas/faulkner-county/">Faulkner County</a>
+              <a class="county-link" href="/states/arkansas/franklin-county/">Franklin County</a>
+              <a class="county-link" href="/states/arkansas/fulton-county/">Fulton County</a>
+              <a class="county-link" href="/states/arkansas/garland-county/">Garland County</a>
+              <a class="county-link" href="/states/arkansas/grant-county/">Grant County</a>
+              <a class="county-link" href="/states/arkansas/greene-county/">Greene County</a>
+              <a class="county-link" href="/states/arkansas/hempstead-county/">Hempstead County</a>
+              <a class="county-link" href="/states/arkansas/howard-county/">Howard County</a>
+              <a class="county-link" href="/states/arkansas/independence-county/">Independence County</a>
+              <a class="county-link" href="/states/arkansas/izard-county/">Izard County</a>
+              <a class="county-link" href="/states/arkansas/jackson-county/">Jackson County</a>
+              <a class="county-link" href="/states/arkansas/jefferson-county/">Jefferson County</a>
+              <a class="county-link" href="/states/arkansas/johnson-county/">Johnson County</a>
+              <a class="county-link" href="/states/arkansas/lafayette-county/">Lafayette County</a>
+              <a class="county-link" href="/states/arkansas/lawrence-county/">Lawrence County</a>
+              <a class="county-link" href="/states/arkansas/lee-county/">Lee County</a>
+              <a class="county-link" href="/states/arkansas/lincoln-county/">Lincoln County</a>
+              <a class="county-link" href="/states/arkansas/little-river-county/">Little River County</a>
+              <a class="county-link" href="/states/arkansas/logan-county/">Logan County</a>
+              <a class="county-link" href="/states/arkansas/lonoke-county/">Lonoke County</a>
+              <a class="county-link" href="/states/arkansas/madison-county/">Madison County</a>
+              <a class="county-link" href="/states/arkansas/miller-county/">Miller County</a>
+              <a class="county-link" href="/states/arkansas/mississippi-county/">Mississippi County</a>
+              <a class="county-link" href="/states/arkansas/monroe-county/">Monroe County</a>
+              <a class="county-link" href="/states/arkansas/montgomery-county/">Montgomery County</a>
+              <a class="county-link" href="/states/arkansas/nevada-county/">Nevada County</a>
+              <a class="county-link" href="/states/arkansas/newton-county/">Newton County</a>
+              <a class="county-link" href="/states/arkansas/ouachita-county/">Ouachita County</a>
+              <a class="county-link" href="/states/arkansas/perry-county/">Perry County</a>
+              <a class="county-link" href="/states/arkansas/phillips-county/">Phillips County</a>
+              <a class="county-link" href="/states/arkansas/pike-county/">Pike County</a>
+              <a class="county-link" href="/states/arkansas/poinsett-county/">Poinsett County</a>
+              <a class="county-link" href="/states/arkansas/polk-county/">Polk County</a>
+              <a class="county-link" href="/states/arkansas/pope-county/">Pope County</a>
+              <a class="county-link" href="/states/arkansas/prairie-county/">Prairie County</a>
+              <a class="county-link" href="/states/arkansas/pulaski-county/">Pulaski County</a>
+              <a class="county-link" href="/states/arkansas/randolph-county/">Randolph County</a>
+              <a class="county-link" href="/states/arkansas/st-francis-county/">St. Francis County</a>
+              <a class="county-link" href="/states/arkansas/saline-county/">Saline County</a>
+              <a class="county-link" href="/states/arkansas/scott-county/">Scott County</a>
+              <a class="county-link" href="/states/arkansas/searcy-county/">Searcy County</a>
+              <a class="county-link" href="/states/arkansas/sebastian-county/">Sebastian County</a>
+              <a class="county-link" href="/states/arkansas/sevier-county/">Sevier County</a>
+              <a class="county-link" href="/states/arkansas/sharp-county/">Sharp County</a>
+              <a class="county-link" href="/states/arkansas/stone-county/">Stone County</a>
+              <a class="county-link" href="/states/arkansas/union-county/">Union County</a>
+              <a class="county-link" href="/states/arkansas/van-buren-county/">Van Buren County</a>
+              <a class="county-link" href="/states/arkansas/washington-county/">Washington County</a>
+              <a class="county-link" href="/states/arkansas/white-county/">White County</a>
+              <a class="county-link" href="/states/arkansas/woodruff-county/">Woodruff County</a>
+              <a class="county-link" href="/states/arkansas/yell-county/">Yell County</a>
+            </div>
+
+            <div class="state-ctas ctas-grid">
+              <a class="submit-button" href="../../schools.html">Find Your School</a>
+              <a class="submit-button" href="../../add-school.html">Add a School</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER (identical to your global footer) -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>FallenClassmate</h4>
+          <p>
+            Honoring the memories of those who have left our halls but never our hearts. A dedicated space for
+            remembrance and tribute.
           </p>
         </div>
 
-        <!-- Right: counties -->
-        <div class="state-right">
-  <h3 class="counties-title">Counties</h3>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../../schools.html">Find Your School</a></li>
+            <li><a href="../../plans.html">Create a Memorial</a></li>
+            <li><a href="../../resources.html">Grief Resources</a></li>
 
-  <div class="counties-list counties-grid">
-  <a class="county-link" href="/states/arkansas/arkansas-county/">Arkansas County</a>
-  <a class="county-link" href="/states/arkansas/ashley-county/">Ashley County</a>
-  <a class="county-link" href="/states/arkansas/baxter-county/">Baxter County</a>
-  <a class="county-link" href="/states/arkansas/benton-county/">Benton County</a>
-  <a class="county-link" href="/states/arkansas/boone-county/">Boone County</a>
-  <a class="county-link" href="/states/arkansas/bradley-county/">Bradley County</a>
-  <a class="county-link" href="/states/arkansas/calhoun-county/">Calhoun County</a>
-  <a class="county-link" href="/states/arkansas/carroll-county/">Carroll County</a>
-  <a class="county-link" href="/states/arkansas/chicot-county/">Chicot County</a>
-  <a class="county-link" href="/states/arkansas/clark-county/">Clark County</a>
-  <a class="county-link" href="/states/arkansas/clay-county/">Clay County</a>
-  <a class="county-link" href="/states/arkansas/cleburne-county/">Cleburne County</a>
-  <a class="county-link" href="/states/arkansas/cleveland-county/">Cleveland County</a>
-  <a class="county-link" href="/states/arkansas/columbia-county/">Columbia County</a>
-  <a class="county-link" href="/states/arkansas/conway-county/">Conway County</a>
-  <a class="county-link" href="/states/arkansas/craighead-county/">Craighead County</a>
-  <a class="county-link" href="/states/arkansas/crawford-county/">Crawford County</a>
-  <a class="county-link" href="/states/arkansas/crittenden-county/">Crittenden County</a>
-  <a class="county-link" href="/states/arkansas/cross-county/">Cross County</a>
-  <a class="county-link" href="/states/arkansas/dallas-county/">Dallas County</a>
-  <a class="county-link" href="/states/arkansas/desha-county/">Desha County</a>
-  <a class="county-link" href="/states/arkansas/drew-county/">Drew County</a>
-  <a class="county-link" href="/states/arkansas/faulkner-county/">Faulkner County</a>
-  <a class="county-link" href="/states/arkansas/franklin-county/">Franklin County</a>
-  <a class="county-link" href="/states/arkansas/fulton-county/">Fulton County</a>
-  <a class="county-link" href="/states/arkansas/garland-county/">Garland County</a>
-  <a class="county-link" href="/states/arkansas/grant-county/">Grant County</a>
-  <a class="county-link" href="/states/arkansas/greene-county/">Greene County</a>
-  <a class="county-link" href="/states/arkansas/hempstead-county/">Hempstead County</a>
-  <a class="county-link" href="/states/arkansas/howard-county/">Howard County</a>
-  <a class="county-link" href="/states/arkansas/independence-county/">Independence County</a>
-  <a class="county-link" href="/states/arkansas/izard-county/">Izard County</a>
-  <a class="county-link" href="/states/arkansas/jackson-county/">Jackson County</a>
-  <a class="county-link" href="/states/arkansas/jefferson-county/">Jefferson County</a>
-  <a class="county-link" href="/states/arkansas/johnson-county/">Johnson County</a>
-  <a class="county-link" href="/states/arkansas/lafayette-county/">Lafayette County</a>
-  <a class="county-link" href="/states/arkansas/lawrence-county/">Lawrence County</a>
-  <a class="county-link" href="/states/arkansas/lee-county/">Lee County</a>
-  <a class="county-link" href="/states/arkansas/lincoln-county/">Lincoln County</a>
-  <a class="county-link" href="/states/arkansas/little-river-county/">Little River County</a>
-  <a class="county-link" href="/states/arkansas/logan-county/">Logan County</a>
-  <a class="county-link" href="/states/arkansas/lonoke-county/">Lonoke County</a>
-  <a class="county-link" href="/states/arkansas/madison-county/">Madison County</a>
-  <a class="county-link" href="/states/arkansas/miller-county/">Miller County</a>
-  <a class="county-link" href="/states/arkansas/mississippi-county/">Mississippi County</a>
-  <a class="county-link" href="/states/arkansas/monroe-county/">Monroe County</a>
-  <a class="county-link" href="/states/arkansas/montgomery-county/">Montgomery County</a>
-  <a class="county-link" href="/states/arkansas/nevada-county/">Nevada County</a>
-  <a class="county-link" href="/states/arkansas/newton-county/">Newton County</a>
-  <a class="county-link" href="/states/arkansas/ouachita-county/">Ouachita County</a>
-  <a class="county-link" href="/states/arkansas/perry-county/">Perry County</a>
-  <a class="county-link" href="/states/arkansas/phillips-county/">Phillips County</a>
-  <a class="county-link" href="/states/arkansas/pike-county/">Pike County</a>
-  <a class="county-link" href="/states/arkansas/poinsett-county/">Poinsett County</a>
-  <a class="county-link" href="/states/arkansas/polk-county/">Polk County</a>
-  <a class="county-link" href="/states/arkansas/pope-county/">Pope County</a>
-  <a class="county-link" href="/states/arkansas/prairie-county/">Prairie County</a>
-  <a class="county-link" href="/states/arkansas/pulaski-county/">Pulaski County</a>
-  <a class="county-link" href="/states/arkansas/randolph-county/">Randolph County</a>
-  <a class="county-link" href="/states/arkansas/st-francis-county/">St. Francis County</a>
-  <a class="county-link" href="/states/arkansas/saline-county/">Saline County</a>
-  <a class="county-link" href="/states/arkansas/scott-county/">Scott County</a>
-  <a class="county-link" href="/states/arkansas/searcy-county/">Searcy County</a>
-  <a class="county-link" href="/states/arkansas/sebastian-county/">Sebastian County</a>
-  <a class="county-link" href="/states/arkansas/sevier-county/">Sevier County</a>
-  <a class="county-link" href="/states/arkansas/sharp-county/">Sharp County</a>
-  <a class="county-link" href="/states/arkansas/stone-county/">Stone County</a>
-  <a class="county-link" href="/states/arkansas/union-county/">Union County</a>
-  <a class="county-link" href="/states/arkansas/van-buren-county/">Van Buren County</a>
-  <a class="county-link" href="/states/arkansas/washington-county/">Washington County</a>
-  <a class="county-link" href="/states/arkansas/white-county/">White County</a>
-  <a class="county-link" href="/states/arkansas/woodruff-county/">Woodruff County</a>
-  <a class="county-link" href="/states/arkansas/yell-county/">Yell County</a>
-</div>
+            <li class="footer-link-divider"></li>
 
-  <!-- NEW: CTA grid aligned to 2 columns -->
-  <div class="state-ctas ctas-grid">
-    <a class="submit-button" href="../../schools.html">Find Your School</a>
-    <a class="submit-button" href="../../add-school.html">Add a School</a>
-  </div>
-</div>
-      </section>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/report/">Report / Flag Content</a></li>
+          </ul>
+        </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> FallenClassmate • Never Forget</p>
-      </footer>
-    </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <p>Stay updated with our community tributes.</p>
+
+          <div class="footer-social">
+            <a class="social" href="#" aria-label="Facebook">f</a>
+            <a class="social" href="#" aria-label="Twitter">t</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> FallenClassmate. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="../../script.js" defer></script>
-  </div>
-</body>
+  </body>
 </html>
