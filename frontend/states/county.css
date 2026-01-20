@@ -1,7 +1,15 @@
 /* =========================
    COUNTY PAGE STYLES
    states/county.css
-   ========================= */
+   Page-specific only — header/nav/footer live in /styles.css
+========================= */
+
+.county-page{
+  min-height: 100vh;
+  padding: 18px 0 60px;
+  background: var(--bg);
+  color: var(--text);
+}
 
 .county-header-section{
   padding: 26px 0 10px;
@@ -13,193 +21,204 @@
 }
 
 .county-breadcrumb a{
-  color: #3b9996;
-  font-weight: 700;
+  color: var(--teal-dark);
+  text-decoration: none;
+  font-weight: 800;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.county-breadcrumb a:hover{
+  text-decoration: underline;
 }
 
 .county-header-row{
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  background: #e7f5f5;
-  border-radius: 12px;
-  padding: 18px;
+  display:flex;
+  gap:20px;
+  align-items:center;
+  background:#e7f5f5;
+  border-radius:12px;
+  padding:18px;
+  border: 1px solid var(--border);
 }
 
 /* Seal circle */
 .county-seal-wrap{
-  width: 110px;
-  height: 110px;
-  border-radius: 999px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(0,0,0,0.08);
-  overflow: hidden;
-  flex: 0 0 auto;
-
-  /* helps with seal png whitespace + gives breathing room */
-  padding: 10px;
+  width:110px;
+  height:110px;
+  border-radius:999px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,0,0,0.10);
+  overflow:hidden;
+  flex:0 0 auto;
+  padding:10px;
 }
 
 .county-seal{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-
-  /* If your seal artwork has uneven whitespace, nudge here */
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
   transform: translateX(0px) translateY(0px);
 }
 
 .county-header-text h2{
-  margin: 0;
-  font-size: 1.8rem;
+  margin:0;
+  font-size:1.85rem;
+  color: var(--teal-dark);
 }
 
 .county-intro{
-  margin: 8px 0 0;
-  color: #333;
+  margin:8px 0 0;
+  color:#333;
+  line-height: 1.6;
 }
 
+/* Stats */
 .county-stats{
-  display: flex;
-  gap: 18px;
-  margin-top: 14px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:18px;
+  margin-top:14px;
+  flex-wrap:wrap;
 }
 
 .county-stats .stat{
-  background: #fff;
-  border-radius: 10px;
-  padding: 10px 14px;
-  min-width: 110px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background:#fff;
+  border-radius:999px;
+  padding:9px 14px;
+  min-width:110px;
+  text-align:center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border: 1px solid var(--border);
 }
 
 .county-stats .stat strong{
   display:block;
-  font-size: 1.2rem;
-  color: #3b9996;
+  font-size:1.15rem;
+  color: var(--teal-dark);
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:900;
 }
 
 .county-stats .stat span{
-  font-size: 0.9rem;
-  color: #555;
+  font-size:0.85rem;
+  color:#4b5b5a;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+/* Content */
 .county-content{
   padding: 20px 0 34px;
 }
 
 .schools-title{
   margin: 8px 0 16px;
-  font-size: 1.2rem;
-  color: #1f2a2a;
+  font-size: 1.35rem;
+  color: var(--teal-dark);
+  text-align: center;
+  font-family: 'Graduate', serif;
+  font-weight: 400;
 }
 
 /* Schools Grid */
 .schools-grid{
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap:18px;
 }
 
 .school-card{
-  background: #f1f8f8;
-  border-radius: 12px;
-  padding: 18px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  border: 1px solid rgba(0,0,0,0.08);
+  background:#ffffff;
+  border-radius:16px;
+  padding:18px;
+  display:flex;
+  gap:16px;
+  align-items:center;
+  border:1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
 .school-media{
-  width: 140px;
-  height: 90px;
-  background: #fff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  flex: 0 0 auto;
+  width:140px;
+  height:90px;
+  background:#fff;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border:1px solid var(--border);
+  flex:0 0 auto;
 }
 
 .school-media img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
 .school-details{
-  width: 100%;
+  width:100%;
 }
 
 .school-details h4{
-  margin: 0;
-  font-size: 1.15rem;
-  color: #2c4a4a;
+  margin:0;
+  font-size:1.15rem;
+  color:#2c4a4a;
 }
 
+/* Button (match home hover vibe) */
 .school-actions{
-  margin-top: 12px;
+  margin-top:12px;
 }
 
-/* NEW: nicer School → link as a pill button */
 .school-link-btn{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration: none;
-  background: #3b9996;
-  color: #fff;
-  border: 2px solid #3b9996;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+
+  background: var(--teal);
+  color:#fff;
+  border:2px solid var(--teal);
+
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .school-link-btn:hover{
-  background: #2f7f7c;
-  border-color: #2f7f7c;
   transform: translateY(-1px);
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
 }
 
 .school-link-btn span{
-  font-size: 1.05em;
+  font-size:1.05em;
 }
 
-/* If you still use submit-button.small anywhere, keep it functional */
-.submit-button.small{
-  padding: 10px 14px;
-  font-size: 0.95rem;
-}
-
-/* Center and space CTA buttons at bottom */
+/* CTA row at bottom (uses global .submit-button styles) */
 .county-ctas{
-  display: flex;
-  justify-content: center;
-  margin-top: 26px;
+  display:flex;
+  justify-content:center;
+  margin-top:26px;
 }
 
-/* This assumes you're using: <div class="county-ctas ctas-grid"> ... */
 .county-ctas.ctas-grid{
-  gap: 18px;
-  width: 100%;
-  max-width: 520px;
+  gap:18px;
+  width:100%;
+  max-width:520px;
 }
 
 /* Responsive */
 @media (max-width: 850px){
   .county-header-row{
-    flex-direction: column;
-    text-align: center;
+    flex-direction:column;
+    text-align:center;
   }
 
   .schools-grid{
@@ -207,16 +226,16 @@
   }
 
   .school-card{
-    flex-direction: column;
-    text-align: center;
+    flex-direction:column;
+    text-align:center;
   }
 
   .school-media{
-    width: 100%;
-    height: 120px;
+    width:100%;
+    height:120px;
   }
 
   .county-stats{
-    justify-content: center;
+    justify-content:center;
   }
 }
